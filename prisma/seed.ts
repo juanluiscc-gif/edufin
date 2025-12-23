@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { PrismaClient, AgeGroup, GameType } from '@prisma/client';
 
 const prisma = new PrismaClient();
