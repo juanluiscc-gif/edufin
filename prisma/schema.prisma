@@ -1,15 +1,366 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+// EduFin Prisma Schema
+// Financial Education App with Age-Adaptive Features
 
 generator client {
-  provider = "prisma-client"
-  output   = "../src/generated/prisma"
+  provider = "prisma-client-js"
+  engineType = "binary"
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+// Enums
+enum OAuthProvider {
+  google
+  apple
+}
+
+enum AgeCategory {
+  kid
+  adult
+}
+
+enum LessonStatus {
+  not_started
+  in_progress
+  completed
+}
+
+enum AgeGroup {
+  kid
+  adult
+  both
+}
+
+enum GameType {
+  quiz
+  simulation
+  puzzle
+  scenario
+}
+
+enum ConnectionStatus {
+  active
+  inactive
+  error
+}
+
+enum OrderStatus {
+  pending
+  processing
+  completed
+  failed
+}
+
+enum LeaderboardType {
+  global
+  weekly
+  age_group
+}
+
+enum BudgetType {
+  total
+  category
+}
+
+enum InsightType {
+  alert
+  trend
+  pattern
+  suggestion
+}
+
+enum InvoiceStatus {
+  draft
+  sent
+  paid
+  overdue
+}
+
+enum Language {
+  en
+  es
+  fr
+  de
+  ja
+  zh
+}
+
+// User Management
+model User {
+  id                  String         @id @default(uuid())
+  oauth_provider      OAuthProvider
+  oauth_id            String
+  email               String         @unique
+  name                String
+  profile_picture_url String?
+  birthdate           DateTime       @db.Date
+  age_category        AgeCategory
+  preferred_language  Language       @default(en)
+  created_at          DateTime       @default(now())
+  updated_at          DateTime       @updatedAt
+
+  // Relations
+  lesson_progress       UserLessonProgress[]
+  game_scores           GameScore[]
+  expenses              Expense[]
+  integrations          ExternalIntegration[]
+  integration_orders    IntegrationOrder[]
+  leaderboards          Leaderboard[]
+  budgets               Budget[]
+  insights              ExpenseInsight[]
+
+  @@unique([oauth_provider, oauth_id])
+  @@index([email])
+}
+
+// Learning Section
+model Lesson {
+  id                String     @id @default(uuid())
+  title             String
+  description       String     @db.Text
+  content           String     @db.Text
+  difficulty_level  Int
+  age_group         AgeGroup
+  display_order     Int
+  estimated_minutes Int
+  created_at        DateTime   @default(now())
+  updated_at        DateTime   @updatedAt
+
+  // Relations
+  user_progress UserLessonProgress[]
+  translations  ContentTranslation[]
+
+  @@index([age_group])
+  @@index([display_order])
+}
+
+model UserLessonProgress {
+  id                  String        @id @default(uuid())
+  user_id             String
+  lesson_id           String
+  status              LessonStatus  @default(not_started)
+  progress_percentage Int           @default(0)
+  started_at          DateTime?
+  completed_at        DateTime?
+  updated_at          DateTime      @updatedAt
+
+  // Relations
+  user   User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  lesson Lesson @relation(fields: [lesson_id], references: [id], onDelete: Cascade)
+
+  @@unique([user_id, lesson_id])
+  @@index([user_id])
+}
+
+// Games Section
+model Game {
+  id               String    @id @default(uuid())
+  title            String
+  description      String    @db.Text
+  game_type        GameType
+  age_group        AgeGroup
+  difficulty_level Int
+  max_score        Int
+  created_at       DateTime  @default(now())
+
+  // Relations
+  scores       GameScore[]
+  leaderboards Leaderboard[]
+  translations ContentTranslation[]
+
+  @@index([age_group])
+  @@index([game_type])
+}
+
+model GameScore {
+  id                 String   @id @default(uuid())
+  user_id            String
+  game_id            String
+  score              Int
+  time_taken_seconds Int
+  completed          Boolean
+  played_at          DateTime @default(now())
+
+  // Relations
+  user User @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  game Game @relation(fields: [game_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id, game_id])
+  @@index([user_id])
+  @@index([played_at])
+}
+
+model Leaderboard {
+  id               String          @id @default(uuid())
+  game_id          String
+  user_id          String
+  score            Int
+  rank             Int
+  leaderboard_type LeaderboardType
+  age_group        AgeCategory
+  achieved_at      DateTime        @default(now())
+
+  // Relations
+  game Game @relation(fields: [game_id], references: [id], onDelete: Cascade)
+  user User @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([game_id, leaderboard_type, rank])
+  @@index([game_id, age_group, score(sort: Desc)])
+  @@index([user_id])
+}
+
+// Expense Tracking (Adults Only)
+model Expense {
+  id           String   @id @default(uuid())
+  user_id      String
+  amount       Decimal  @db.Decimal(10, 2)
+  category     String
+  description  String?  @db.Text
+  expense_date DateTime @db.Date
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+
+  // Relations
+  user User @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@index([expense_date])
+  @@index([user_id, expense_date])
+}
+
+model Budget {
+  id           String     @id @default(uuid())
+  user_id      String
+  budget_type  BudgetType
+  category     String?
+  amount       Decimal    @db.Decimal(10, 2)
+  period_month Int
+  period_year  Int
+  created_at   DateTime   @default(now())
+  updated_at   DateTime   @updatedAt
+
+  // Relations
+  user User @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@unique([user_id, budget_type, category, period_month, period_year])
+  @@index([user_id])
+}
+
+model ExpenseInsight {
+  id           String      @id @default(uuid())
+  user_id      String
+  insight_text String      @db.Text
+  insight_type InsightType
+  priority     Int
+  generated_at DateTime    @default(now())
+  expires_at   DateTime
+
+  // Relations
+  user User @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id, priority])
+  @@index([expires_at])
+}
+
+// External Integrations (Adults Only)
+model ExternalIntegration {
+  id                String           @id @default(uuid())
+  user_id           String
+  service_name      String
+  api_key_encrypted String           @db.Text
+  connection_status ConnectionStatus @default(active)
+  connected_at      DateTime         @default(now())
+  last_sync_at      DateTime?
+
+  // Relations
+  user               User                  @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  orders             IntegrationOrder[]
+  products           IntegrationProduct[]
+  invoices           IntegrationInvoice[]
+
+  @@index([user_id])
+  @@index([user_id, service_name])
+}
+
+model IntegrationOrder {
+  id              String      @id @default(uuid())
+  user_id         String
+  integration_id  String
+  order_reference String
+  order_data      Json
+  status          OrderStatus @default(pending)
+  created_at      DateTime    @default(now())
+  updated_at      DateTime    @updatedAt
+
+  // Relations
+  user        User                @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  integration ExternalIntegration @relation(fields: [integration_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@index([integration_id])
+  @@index([status])
+  @@index([created_at])
+}
+
+model IntegrationProduct {
+  id                  String   @id @default(uuid())
+  integration_id      String
+  external_product_id String
+  name                String
+  sku                 String?
+  price               Decimal  @db.Decimal(10, 2)
+  stock_quantity      Int
+  product_data        Json
+  synced_at           DateTime @default(now())
+
+  // Relations
+  integration ExternalIntegration @relation(fields: [integration_id], references: [id], onDelete: Cascade)
+
+  @@unique([integration_id, external_product_id])
+  @@index([integration_id])
+}
+
+model IntegrationInvoice {
+  id                  String        @id @default(uuid())
+  integration_id      String
+  external_invoice_id String
+  customer_name       String
+  invoice_number      String
+  amount              Decimal       @db.Decimal(10, 2)
+  status              InvoiceStatus @default(draft)
+  invoice_date        DateTime      @db.Date
+  due_date            DateTime      @db.Date
+  invoice_data        Json
+  synced_at           DateTime      @default(now())
+
+  // Relations
+  integration ExternalIntegration @relation(fields: [integration_id], references: [id], onDelete: Cascade)
+
+  @@unique([integration_id, external_invoice_id])
+  @@index([integration_id])
+  @@index([status])
+}
+
+// Internationalization
+model ContentTranslation {
+  id              String   @id @default(uuid())
+  content_type    String
+  content_id      String
+  field_name      String
+  source_language Language @default(en)
+  target_language Language
+  source_text     String   @db.Text
+  translated_text String   @db.Text
+  translated_at   DateTime @default(now())
+  expires_at      DateTime
+
+  // Relations for polymorphic associations
+  lesson Lesson? @relation(fields: [content_id], references: [id], onDelete: Cascade, map: "ContentTranslation_lesson_fkey")
+  game   Game?   @relation(fields: [content_id], references: [id], onDelete: Cascade, map: "ContentTranslation_game_fkey")
+
+  @@unique([content_type, content_id, field_name, target_language])
+  @@index([expires_at])
 }
