@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Locale } from '../i18n';
+import { Locale } from '@/i18n/request';
 
 export default function LandingPage({ locale }: { locale: Locale }) {
   const t = useTranslations('common');
