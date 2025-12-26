@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "learning": "Aprendizaje",
+    "games": "Juegos",
+    "dashboard": "Panel"
+  },
+  "auth": {
+    "signInWithGoogle": "Iniciar sesión con Google",
+    "signInWithApple": "Iniciar sesión con Apple"
+  }
+}
