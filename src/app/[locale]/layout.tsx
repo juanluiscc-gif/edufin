@@ -20,6 +20,11 @@ export const metadata = {
   description: "Learn financial literacy through interactive lessons and games",
 };
 
+// Generate static params for all locales
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 export default async function LocaleLayout({
   children,
   params,
