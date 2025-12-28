@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "learning": "Learning",
+    "games": "Games",
+    "dashboard": "Dashboard"
+  },
+  "auth": {
+    "signInWithGoogle": "Sign in with Google",
+    "signInWithApple": "Sign in with Apple"
+  }
+}
