@@ -1,6 +1,8 @@
 import LandingPage from '@/components/LandingPage';
 import { Locale, locales } from '@/i18n/request';
 
+export const dynamic = 'force-dynamic';
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
