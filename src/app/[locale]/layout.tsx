@@ -3,11 +3,6 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n/request';
 
-export const metadata = {
-  title: "EduFin",
-  description: "Financial Education",
-};
-
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
