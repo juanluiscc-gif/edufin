@@ -2,7 +2,11 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { verifyToken } from '@/lib/auth';
 import LandingPage from '@/components/LandingPage';
-import { Locale } from '@/i18n';
+import { Locale, locales } from '@/i18n';
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export default async function HomePage({
   params,
