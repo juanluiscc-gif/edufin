@@ -7,7 +7,7 @@ import {
   exchangeAppleCode,
   decodeAppleIdToken,
 } from '@/lib/oauth';
-import { OAuthProvider } from '@/lib/types';
+import { OAuthProvider, AgeCategory } from '@/lib/types';
 
 // Force dynamic rendering to avoid build-time Prisma issues
 export const dynamic = 'force-dynamic';
@@ -77,7 +77,7 @@ export async function GET(request: NextRequest) {
       const token = await generateToken({
         user_id: existingUser.id,
         email: existingUser.email,
-        age_category: existingUser.age_category,
+        age_category: existingUser.age_category as AgeCategory,
       });
 
       const response = NextResponse.redirect(`${request.nextUrl.origin}/${locale}/dashboard`);

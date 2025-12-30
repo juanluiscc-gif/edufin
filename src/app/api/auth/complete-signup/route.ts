@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 import { prisma } from '@/lib/prisma';
 import { generateToken, calculateAgeCategory } from '@/lib/auth';
-import { OAuthProvider, Language } from '@/lib/types';
+import { OAuthProvider, Language, AgeCategory } from '@/lib/types';
 
 // Force dynamic rendering to avoid build-time Prisma issues
 export const dynamic = 'force-dynamic';
@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
     const token = await generateToken({
       user_id: user.id,
       email: user.email,
-      age_category: user.age_category,
+      age_category: user.age_category as AgeCategory,
     });
 
     // Create response
