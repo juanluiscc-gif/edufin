@@ -1,5 +1,5 @@
 import { SignJWT, jwtVerify } from 'jose';
-import { AgeCategory } from '@prisma/client';
+import { AgeCategory } from './types';
 
 const JWT_SECRET = new TextEncoder().encode(
   process.env.JWT_SECRET || 'default-secret-key-change-this-in-production'

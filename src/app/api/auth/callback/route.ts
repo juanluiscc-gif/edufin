@@ -7,7 +7,7 @@ import {
   exchangeAppleCode,
   decodeAppleIdToken,
 } from '@/lib/oauth';
-import { OAuthProvider } from '@prisma/client';
+import { OAuthProvider } from '@/lib/types';
 
 // Force dynamic rendering to avoid build-time Prisma issues
 export const dynamic = 'force-dynamic';

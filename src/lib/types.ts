@@ -4,7 +4,22 @@
 export enum AgeCategory {
   child = 'child',
   teen = 'teen',
-  adult = 'adult'
+  adult = 'adult',
+  kid = 'kid'
 }
 
-export type { AgeCategory };
+export enum Language {
+  en = 'en',
+  es = 'es',
+  fr = 'fr',
+  de = 'de',
+  ja = 'ja',
+  zh = 'zh'
+}
+
+export enum OAuthProvider {
+  google = 'google',
+  apple = 'apple'
+}
+
+export type { AgeCategory, Language, OAuthProvider };

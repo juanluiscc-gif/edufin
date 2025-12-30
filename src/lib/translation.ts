@@ -1,5 +1,5 @@
 import { prisma } from './prisma';
-import { Language } from '@prisma/client';
+import { Language } from './types';
 
 /**
  * AI-powered translation service

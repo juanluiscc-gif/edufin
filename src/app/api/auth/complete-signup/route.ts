@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 import { prisma } from '@/lib/prisma';
 import { generateToken, calculateAgeCategory } from '@/lib/auth';
-import { OAuthProvider, Language } from '@prisma/client';
+import { OAuthProvider, Language } from '@/lib/types';
 
 // Force dynamic rendering to avoid build-time Prisma issues
 export const dynamic = 'force-dynamic';
