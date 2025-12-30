@@ -22,6 +22,10 @@ export default async function middleware(request: NextRequest) {
   // Apply internationalization first
   const response = intlMiddleware(request);
 
+  // Temporarily: just return intl response for debugging
+  // TODO: Re-enable auth after fixing 404
+  return response;
+
   // Public routes that don't need authentication
   const publicRoutes = ['/', '/auth/callback', '/auth/signup'];
 
