@@ -11,6 +11,8 @@ import { OAuthProvider, AgeCategory } from '@/lib/types';
 
 // Force dynamic rendering to avoid build-time Prisma issues
 export const dynamic = 'force-dynamic';
+// Use Node.js runtime for Prisma compatibility
+export const runtime = 'nodejs';
 
 /**
  * OAuth callback endpoint
