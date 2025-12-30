@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
   webpack: (config, { isServer }) => {
     if (!isServer) {
       // Exclude Prisma from client-side bundle
+      config.externals = config.externals || [];
+      if (Array.isArray(config.externals)) {
+        config.externals.push('@prisma/client');
+      }
+
+      // Also set alias to prevent resolution
       config.resolve.alias = {
         ...config.resolve.alias,
         '@prisma/client': false,
@@ -14,7 +20,9 @@ const nextConfig: NextConfig = {
     }
     return config;
   },
-  serverExternalPackages: ['@prisma/client'],
+  experimental: {
+    serverComponentsExternalPackages: ['@prisma/client'],
+  },
 };
 
 export default withNextIntl(nextConfig);
