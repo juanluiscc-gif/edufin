@@ -4,7 +4,17 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin('./src/i18n.ts');
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      // Exclude Prisma from client-side bundle
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '@prisma/client': false,
+      };
+    }
+    return config;
+  },
+  serverExternalPackages: ['@prisma/client'],
 };
 
 export default withNextIntl(nextConfig);
