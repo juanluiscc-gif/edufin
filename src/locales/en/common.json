@@ -2,10 +2,76 @@
   "nav": {
     "learning": "Learning",
     "games": "Games",
+    "expenses": "Expenses",
+    "integrations": "Integrations",
+    "myProgress": "My Progress",
+    "profile": "Profile",
+    "logout": "Logout",
     "dashboard": "Dashboard"
   },
+  "buttons": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "continue": "Continue",
+    "startButton": "Start",
+    "submit": "Submit",
+    "close": "Close",
+    "confirm": "Confirm",
+    "playNow": "Play Now"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!",
+    "welcome": "Welcome",
+    "welcomeBack": "Welcome back, {name}!",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "all": "All",
+    "none": "None",
+    "optional": "Optional",
+    "required": "Required"
+  },
+  "errors": {
+    "somethingWentWrong": "Something went wrong",
+    "tryAgain": "Please try again",
+    "notFound": "Not found",
+    "unauthorized": "Unauthorized",
+    "forbidden": "Access denied"
+  },
   "auth": {
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
     "signInWithGoogle": "Sign in with Google",
-    "signInWithApple": "Sign in with Apple"
+    "signInWithApple": "Sign in with Apple",
+    "enterBirthdate": "Enter your birthdate",
+    "birthdateLabel": "Birthdate",
+    "birthdateHelp": "We use this to customize your experience",
+    "completeSignup": "Complete Sign Up",
+    "authenticating": "Authenticating..."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "learningProgress": "Learning Progress",
+    "lessonsCompleted": "Lessons Completed",
+    "gamesPlayed": "Games Played",
+    "currentStreak": "Current Streak",
+    "days": "days",
+    "continueLearning": "Continue Learning",
+    "quickStats": "Quick Stats",
+    "recentActivity": "Recent Activity"
+  },
+  "footer": {
+    "about": "About",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "copyright": "© 2025 EduFin. All rights reserved."
   }
 }
