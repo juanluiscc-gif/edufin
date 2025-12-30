@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { AgeCategory } from '@prisma/client';
+import { AgeCategory } from '@/lib/types';
 import { locales, localeLabels, Locale } from '@/i18n';
 import { useState } from 'react';
 

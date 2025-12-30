@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { AgeCategory } from '@prisma/client';
+import { AgeCategory } from '@/lib/types';
 import { Locale } from '@/i18n';
 
 interface DashboardContentProps {
