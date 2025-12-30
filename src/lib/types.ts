@@ -21,5 +21,3 @@ export enum OAuthProvider {
   google = 'google',
   apple = 'apple'
 }
-
-export type { AgeCategory, Language, OAuthProvider };
