@@ -66,14 +66,14 @@ export async function POST(request: NextRequest) {
     // Create user
     const user = await prisma.user.create({
       data: {
-        oauth_provider: provider as OAuthProvider,
+        oauth_provider: provider as any,
         oauth_id,
         email,
         name,
         profile_picture_url: profile_picture,
         birthdate: birthdateObj,
-        age_category: ageCategory,
-        preferred_language: preferredLanguage,
+        age_category: ageCategory as any,
+        preferred_language: preferredLanguage as any,
       },
     });
 

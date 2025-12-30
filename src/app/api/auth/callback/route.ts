@@ -66,7 +66,7 @@ export async function GET(request: NextRequest) {
     const existingUser = await prisma.user.findUnique({
       where: {
         oauth_provider_oauth_id: {
-          oauth_provider: provider as OAuthProvider,
+          oauth_provider: provider as any,
           oauth_id: oauthId,
         },
       },
