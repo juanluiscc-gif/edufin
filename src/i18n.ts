@@ -17,12 +17,17 @@ export const localeLabels: Record<Locale, string> = {
   zh: '中文',
 };
 
-export default getRequestConfig(async ({ locale }) => {
+export default getRequestConfig(async (params) => {
+  // Provide a fallback locale if params.locale is undefined
+  const locale = params.locale || defaultLocale;
+
   // Validate that the incoming `locale` parameter is valid
-  if (!locale || !locales.includes(locale as Locale)) notFound();
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
 
   return {
-    locale: locale as string,
+    locale,
     messages: (await import(`./locales/${locale}/common.json`)).default,
   };
 });
