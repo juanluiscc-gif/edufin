@@ -1,0 +1,41 @@
+{
+  "games": {
+    "title": "Educational Games",
+    "playGame": "Play Game",
+    "score": "Score",
+    "highScore": "High Score",
+    "leaderboard": "Leaderboard",
+    "viewLeaderboard": "View Leaderboard",
+    "playAgain": "Play Again",
+    "backToGames": "Back to Games",
+    "difficulty": "Difficulty",
+    "instructions": "Instructions",
+    "hideInstructions": "Hide Instructions",
+    "showInstructions": "Show Instructions",
+    "timeElapsed": "Time Elapsed",
+    "yourScore": "Your Score",
+    "finalScore": "Final Score",
+    "congratulations": "Congratulations!",
+    "gameComplete": "Game Complete!",
+    "tryAgain": "Try Again",
+    "exit": "Exit Game"
+  },
+  "gameTypes": {
+    "quiz": "Quiz",
+    "simulation": "Simulation",
+    "puzzle": "Puzzle",
+    "scenario": "Scenario"
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "global": "Global",
+    "weekly": "This Week",
+    "myAgeGroup": "My Age Group",
+    "rank": "Rank",
+    "player": "Player",
+    "score": "Score",
+    "date": "Date",
+    "yourRank": "Your Rank",
+    "notRanked": "Not Yet Ranked"
+  }
+}
