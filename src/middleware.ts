@@ -24,9 +24,13 @@ export default async function middleware(request: NextRequest) {
 
   // Public routes that don't need authentication
   const publicRoutes = ['/', '/auth/callback', '/auth/signup'];
-  const isPublicRoute = publicRoutes.some((route) =>
-    pathname === route || pathname.match(new RegExp(`^/(${locales.join('|')})${route}$`))
-  );
+
+  // Check if current route is public
+  // Remove locale prefix to check the base route
+  const pathnameWithoutLocale = pathname.replace(new RegExp(`^/(${locales.join('|')})`), '');
+  const basePathname = pathnameWithoutLocale || '/';
+
+  const isPublicRoute = publicRoutes.includes(basePathname);
 
   // Get the pathname after locale handling
   const currentPathname = request.nextUrl.pathname;
