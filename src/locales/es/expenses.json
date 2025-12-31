@@ -1,0 +1,61 @@
+{
+  "expenses": {
+    "title": "Seguimiento de gastos",
+    "addExpense": "Añadir gasto",
+    "editExpense": "Editar gasto",
+    "deleteExpense": "Eliminar gasto",
+    "amount": "Importe",
+    "category": "Categoría",
+    "description": "Descripción",
+    "date": "Fecha",
+    "save": "Guardar gasto",
+    "cancel": "Cancelar",
+    "deleteConfirm": "¿Seguro que desea eliminar este gasto?",
+    "expenseList": "Todos los gastos",
+    "recentExpenses": "Gastos recientes",
+    "viewAll": "Ver todo"
+  },
+  "dashboard": {
+    "title": "Panel de gastos",
+    "totalSpent": "Total gastado este mes",
+    "budgetRemaining": "Presupuesto restante",
+    "topCategory": "Categoría principal",
+    "daysRemaining": "Días restantes",
+    "avgDailyBudget": "Presupuesto diario promediot",
+    "onTrack": "En curso",
+    "overBudget": "Sobrepresupuesto",
+    "spendingOverview": "Resumen de gastos",
+    "insights": "Observaciones de IA"
+  },
+  "budget": {
+    "title": "Configuración de presupuesto",
+    "monthlyBudget": "Presupuesto mensual",
+    "totalBudget": "Presupuesto total",
+    "categoryBudgets": "Presupuestos por categoría",
+    "setAmount": "Establecer importe",
+    "percentage": "Porcentaje",
+    "used": "Usado",
+    "remaining": "Restante",
+    "saveBudget": "Guardar presupuesto"
+  },
+  "categories": {
+    "foodDining": "Comida y bebida",
+    "housing": "Vivienda",
+    "transportation": "Transporte",
+    "shopping": "Compras",
+    "entertainment": "Entretenimiento",
+    "healthcare": "Salud",
+    "utilities": "Servicios públicos",
+    "other": "Otros",
+    "addCategory": "Añadir categoría personalizada"
+  },
+  "filters": {
+    "allCategories": "Todas las categorías",
+    "thisWeek": "Esta semana",
+    "thisMonth": "Este mes",
+    "customRange": "Rango personalizado",
+    "startDate": "Fecha de inicio",
+    "endDate": "Fecha de finalización",
+    "apply": "Aplicar filtros"
+  }
+}
