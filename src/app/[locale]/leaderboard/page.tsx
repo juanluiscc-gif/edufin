@@ -1,11 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useParams, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-
-// Mark this page as dynamic to prevent prerendering during build
-export const dynamic = 'force-dynamic';
 
 interface LeaderboardEntry {
   id: string;
@@ -17,7 +14,7 @@ interface LeaderboardEntry {
   achievedAt: Date;
 }
 
-export default function LeaderboardPage() {
+function LeaderboardContent() {
   const params = useParams();
   const searchParams = useSearchParams();
   const locale = params.locale as string;
@@ -186,5 +183,17 @@ export default function LeaderboardPage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function LeaderboardPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 p-8 flex items-center justify-center">
+        <div className="text-xl text-gray-600 dark:text-gray-400">Loading leaderboard...</div>
+      </div>
+    }>
+      <LeaderboardContent />
+    </Suspense>
   );
 }
