@@ -1,0 +1,64 @@
+{
+  "learning": {
+    "title": "ラーニングセンター",
+    "forEveryone": "すべての人向け",
+    "forAdults": "大人向け",
+    "categories": "カテゴリー",
+    "lessons": "レッスン",
+    "progress": "進捗状況",
+    "completed": "完了",
+    "inProgress": "進行中",
+    "notStarted": "未開始",
+    "startLesson": "レッスンを開始",
+    "continueLesson": "レッスンを続ける",
+    "reviewLesson": "レッスンを復習する",
+    "markComplete": "完了としてマーク",
+    "difficulty": "難易度",
+    "estimatedTime": "推定所要時間",
+    "minutes": "{count} （分",
+    "module": "モジュール",
+    "modules": "モジュール",
+    "of": "の",
+    "backToCategory": "カテゴリーに戻る",
+    "backToLearning": "学習に戻る"
+  },
+  "categories": {
+    "moneyBasics": {
+      "title": "お金の基本",
+      "description": "通貨、価値、交換を理解する"
+    },
+    "earning": {
+      "title": "お金を稼ぐ",
+      "description": "仕事や機会を通じて稼ぐ方法"
+    },
+    "spending": {
+      "title": "賢い支出",
+      "description": "賢い購入の決定をする"
+    },
+    "saving": {
+      "title": "貯蓄目標",
+      "description": "貯蓄目標の設定と達成"
+    },
+    "budgeting": {
+      "title": "予算編成と計画",
+      "description": "毎月の予算の作成と管理"
+    },
+    "investing": {
+      "title": "投資の基本",
+      "description": "株式、債券、退職の概要"
+    },
+    "business": {
+      "title": "ビジネスファイナンス",
+      "description": "事業の収益と費用の管理"
+    },
+    "credit": {
+      "title": "クレジットと負債",
+      "description": "クレジットスコアと負債管理を理解する"
+    }
+  },
+  "ageGroups": {
+    "kid": "子供向け",
+    "adult": "大人向け",
+    "both": "全年齢向け"
+  }
+}
