@@ -7,7 +7,7 @@ interface QuizScoreParams {
   totalQuestions: number;
   timeTakenSeconds: number;
   basePointsPerQuestion?: number;
-  timeBonus Max?: number;
+  timeBonusMax?: number;
 }
 
 interface SimulationScoreParams {
@@ -52,7 +52,7 @@ export function calculateQuizScore(params: QuizScoreParams): number {
 
   // Base points for correct answers
   const basePoints = correctAnswers * basePointsPerQuestion;
-  total Score += basePoints;
+  totalScore += basePoints;
 
   // Time bonus: faster answers get bonus points
   // Formula: max(0, bonusMax - secondsPerQuestion)
