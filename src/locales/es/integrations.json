@@ -1,0 +1,81 @@
+{
+  "integrations": {
+    "title": "Integraciones empresariales",
+    "connectYourBusiness": "Conecta tu negocio",
+    "connected": "Conectado",
+    "notConnected": "No conectado",
+    "connect": "Conectar",
+    "disconnect": "Desconectar",
+    "manage": "Administrar",
+    "status": "Estado",
+    "lastSync": "Última sincronización",
+    "syncNow": "Sincronizar ahora",
+    "disconnectConfirm": "¿Seguro que quieres desconectar esta integración?"
+  },
+  "services": {
+    "shopify": {
+      "name": "Shopify",
+      "description": "Administra los pedidos, productos e inventario de tu tienda Shopify"
+    },
+    "woocommerce": {
+      "name": "WooCommerce",
+      "description": "Conecta tu tienda WooCommerce"
+    },
+    "quickbooks": {
+      "name": "QuickBooks",
+      "description": "Administra facturas y gastos"
+    },
+    "xero": {
+      "name": "Xero",
+      "description": "Informes contables y financieros"
+    }
+  },
+  "tabs": {
+    "orders": "Pedidos",
+    "products": "Productos",
+    "inventory": "Inventario",
+    "invoices": "Facturas",
+    "expenses": "Gastos",
+    "reports": "Informes",
+    "settings": "Configuración"
+  },
+  "orders": {
+    "title": "Pedidos",
+    "orderNumber": "N.º de pedido",
+    "customer": "Cliente",
+    "date": "Fecha",
+    "total": "Total",
+    "status": "Estado",
+    "viewDetails": "Ver detalles",
+    "updateStatus": "Actualizar estado",
+    "refresh": "Actualizar"
+  },
+  "products": {
+    "title": "Productos",
+    "addProduct": "Añadir producto",
+    "editProduct": "Editar producto",
+    "deleteProduct": "Eliminar producto",
+    "productName": "Nombre del producto",
+    "sku": "SKU",
+    "price": "Precio",
+    "stock": "Existencias",
+    "image": "Imagen"
+  },
+  "inventory": {
+    "title": "Inventario",
+    "currentStock": "Existencias actuales",
+    "lowStock": "Inventario bajo",
+    "outOfStock": "Agotado",
+    "updateStock": "Actualizar inventario",
+    "newQuantity": "Nueva cantidad"
+  },
+  "statuses": {
+    "pending": "Pendiente",
+    "processing": "Procesando",
+    "completed": "Completado",
+    "failed": "Fallido",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "error": "Error"
+  }
+}
