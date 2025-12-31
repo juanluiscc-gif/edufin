@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { PrismaClient, LeaderboardType, AgeCategory } from '@prisma/client';
+import { LeaderboardType, AgeCategory } from '@prisma/client';
 import { verifyToken } from '@/lib/auth';
 import { updateLeaderboards, getUserRank } from '@/lib/leaderboard';
-
-const prisma = new PrismaClient();
+import { prisma } from '@/lib/prisma';
 
 /**
  * POST /api/games/submit
