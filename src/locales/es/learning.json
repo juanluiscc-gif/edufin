@@ -1,0 +1,64 @@
+{
+  "learning": {
+    "title": "Centro de aprendizaje",
+    "forEveryone": "Para todos",
+    "forAdults": "Solo para adultos",
+    "categories": "Categorías",
+    "lessons": "Lecciones",
+    "progress": "Progreso",
+    "completed": "Completado",
+    "inProgress": "En progreso",
+    "notStarted": "Sin comenzar",
+    "startLesson": "Iniciar lección",
+    "continueLesson": "Continuar lección",
+    "reviewLesson": "Repasar lección",
+    "markComplete": "Marcar como completa",
+    "difficulty": "Dificultad",
+    "estimatedTime": "Tiempo estimado",
+    "minutes": "{count} Minutos",
+    "module": "Módulo",
+    "modules": "Módulos",
+    "of": "de",
+    "backToCategory": "Volver a la categoría",
+    "backToLearning": "Volver al aprendizaje"
+  },
+  "categories": {
+    "moneyBasics": {
+      "title": "Fundamentos del dinero",
+      "description": "Comprensión de la moneda, el valor y el tipo de cambio"
+    },
+    "earning": {
+      "title": "Ganar dinero",
+      "description": "Maneras de ganar dinero a través del trabajo y las oportunidades"
+    },
+    "spending": {
+      "title": "Gastar inteligentemente",
+      "description": "Tomar decisiones de compra inteligentes"
+    },
+    "saving": {
+      "title": "Objetivos de ahorro",
+      "description": "Establecer y alcanzar objetivos de ahorro"
+    },
+    "budgeting": {
+      "title": "Presupuesto y planificación",
+      "description": "Crear y administrar presupuestos mensuales"
+    },
+    "investing": {
+      "title": "Fundamentos de inversión",
+      "description": "Introducción a las acciones, los bonos y la jubilación"
+    },
+    "business": {
+      "title": "Finanzas empresariales",
+      "description": "Administración de ingresos y gastos empresariales"
+    },
+    "credit": {
+      "title": "Crédito y deuda",
+      "description": "Comprensión de las calificaciones crediticias y la gestión de deudas"
+    }
+  },
+  "ageGroups": {
+    "kid": "Para niños",
+    "adult": "Para adultos",
+    "both": "Para todas las edades"
+  }
+}
