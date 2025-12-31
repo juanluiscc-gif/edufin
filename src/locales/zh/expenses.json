@@ -1,0 +1,61 @@
+{
+  "expenses": {
+    "title": "费用追踪",
+    "addExpense": "添加费用",
+    "editExpense": "编辑费用",
+    "deleteExpense": "删除费用",
+    "amount": "金额",
+    "category": "类别",
+    "description": "描述",
+    "date": "日期",
+    "save": "保存费用",
+    "cancel": "取消",
+    "deleteConfirm": "确定要删除此费用吗",
+    "expenseList": "所有费用",
+    "recentExpenses": "近期费用",
+    "viewAll": "显示全部"
+  },
+  "dashboard": {
+    "title": "费用概览",
+    "totalSpent": "本月总费用",
+    "budgetRemaining": "剩余预算",
+    "topCategory": "主要类别",
+    "daysRemaining": "剩余天数",
+    "avgDailyBudget": "平均每日预算",
+    "onTrack": "预算完成情况",
+    "overBudget": "预算超支",
+    "spendingOverview": "费用汇总",
+    "insights": "AI 分析"
+  },
+  "budget": {
+    "title": "预算设置",
+    "monthlyBudget": "月度预算",
+    "totalBudget": "总预算",
+    "categoryBudgets": "类别预算",
+    "setAmount": "设置金额",
+    "percentage": "百分比",
+    "used": "已用金额",
+    "remaining": "剩余金额",
+    "saveBudget": "保存预算"
+  },
+  "categories": {
+    "foodDining": "食品和饮料",
+    "housing": "住房",
+    "transportation": "交通",
+    "shopping": "购物",
+    "entertainment": "娱乐",
+    "healthcare": "医疗保健",
+    "utilities": "公用事业",
+    "other": "其他",
+    "addCategory": "添加自定义类别"
+  },
+  "filters": {
+    "allCategories": "所有类别",
+    "thisWeek": "本周",
+    "thisMonth": "本月",
+    "customRange": "自定义范围",
+    "startDate": "开始日期",
+    "endDate": "结束日期",
+    "apply": "应用筛选条件"
+  }
+}
