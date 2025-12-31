@@ -1,0 +1,64 @@
+{
+  "learning": {
+    "title": "Centre d'apprentissage",
+    "forEveryone": "Pour tous",
+    "forAdults": "Réservé aux adultes",
+    "categories": "Catégories",
+    "lessons": "Leçons",
+    "progress": "Progression",
+    "completed": "Terminé",
+    "inProgress": "En cours",
+    "notStarted": "Non commencé",
+    "startLesson": "Commencer la leçon",
+    "continueLesson": "Continuer la leçon",
+    "reviewLesson": "Réviser la leçon",
+    "markComplete": "Marquer comme terminé",
+    "difficulty": "Difficulté",
+    "estimatedTime": "Durée estimée",
+    "minutes": "{count} minutes",
+    "module": "Module",
+    "modules": "Modules",
+    "of": "de",
+    "backToCategory": "Retour à la catégorie",
+    "backToLearning": "Retour à l'apprentissage"
+  },
+  "categories": {
+    "moneyBasics": {
+      "title": "Notions de base sur l'argent",
+      "description": "Comprendre la monnaie, sa valeur et le taux de change"
+    },
+    "earning": {
+      "title": "Gagner de l'argent",
+      "description": "Différentes façons de gagner de l'argent grâce au travail et aux opportunités"
+    },
+    "spending": {
+      "title": "Dépenser intelligemment",
+      "description": "Prendre des décisions d'achat judicieuses"
+    },
+    "saving": {
+      "title": "Objectifs d'épargne",
+      "description": "Fixer et atteindre des objectifs d'épargne"
+    },
+    "budgeting": {
+      "title": "Budget et planification",
+      "description": "Créer et gérer des budgets mensuels"
+    },
+    "investing": {
+      "title": "Notions de base sur l'investissement",
+      "description": "Introduction aux actions, aux obligations et à la retraite"
+    },
+    "business": {
+      "title": "Finances d'entreprise",
+      "description": "Gérer les revenus et les dépenses d'une entreprise"
+    },
+    "credit": {
+      "title": "Crédit et dettes",
+      "description": "Comprendre les scores de crédit et la gestion de la dette"
+    }
+  },
+  "ageGroups": {
+    "kid": "Pour les enfants",
+    "adult": "Pour les adultes",
+    "both": "Pour tous les âges"
+  }
+}
