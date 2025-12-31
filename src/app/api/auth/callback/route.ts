@@ -25,18 +25,37 @@ export async function GET(request: NextRequest) {
     const state = searchParams.get('state');
     const error = searchParams.get('error');
 
+    console.log('OAuth callback received:', {
+      hasCode: !!code,
+      hasState: !!state,
+      error,
+      origin: request.nextUrl.origin
+    });
+
     // Handle OAuth errors
     if (error) {
-      console.error('OAuth error:', error);
-      return NextResponse.redirect(`${request.nextUrl.origin}/?error=oauth_failed`);
+      console.error('OAuth error from provider:', error);
+      return NextResponse.redirect(`${request.nextUrl.origin}/?error=oauth_failed&reason=${error}`);
     }
 
     if (!code || !state) {
+      console.error('Missing code or state:', { code: !!code, state: !!state });
       return NextResponse.redirect(`${request.nextUrl.origin}/?error=invalid_callback`);
     }
 
     // Parse state
-    const { provider, locale } = JSON.parse(state);
+    let provider: string;
+    let locale: string;
+
+    try {
+      const parsed = JSON.parse(state);
+      provider = parsed.provider;
+      locale = parsed.locale;
+      console.log('Parsed state:', { provider, locale });
+    } catch (parseError) {
+      console.error('Failed to parse state:', parseError);
+      return NextResponse.redirect(`${request.nextUrl.origin}/?error=invalid_state`);
+    }
 
     let oauthId: string;
     let email: string;
@@ -45,13 +64,21 @@ export async function GET(request: NextRequest) {
 
     // Exchange code for tokens and get user info
     if (provider === 'google') {
-      const tokenResponse = await exchangeGoogleCode(code);
-      const userInfo = await getGoogleUserInfo(tokenResponse.access_token);
+      console.log('Exchanging Google code for tokens...');
+      try {
+        const tokenResponse = await exchangeGoogleCode(code);
+        console.log('Got token response, fetching user info...');
+        const userInfo = await getGoogleUserInfo(tokenResponse.access_token);
+        console.log('Got user info:', { email: userInfo.email, name: userInfo.name });
 
-      oauthId = userInfo.id;
-      email = userInfo.email;
-      name = userInfo.name;
-      profilePicture = userInfo.picture;
+        oauthId = userInfo.id;
+        email = userInfo.email;
+        name = userInfo.name;
+        profilePicture = userInfo.picture;
+      } catch (googleError: any) {
+        console.error('Google OAuth exchange failed:', googleError.message);
+        return NextResponse.redirect(`${request.nextUrl.origin}/?error=oauth_failed&reason=google_exchange_failed`);
+      }
     } else if (provider === 'apple') {
       const tokenResponse = await exchangeAppleCode(code);
       const userInfo = decodeAppleIdToken(tokenResponse.id_token);
