@@ -24,7 +24,7 @@ export async function GET(
     if (token) {
       const payload = await verifyToken(token);
       if (payload) {
-        ageCategory = payload.age_category;
+        ageCategory = payload.age_category as AgeCategory;
       }
     }
 
