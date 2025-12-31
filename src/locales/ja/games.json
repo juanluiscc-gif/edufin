@@ -1,0 +1,41 @@
+{
+  "games": {
+    "title": "教育ゲーム",
+    "playGame": "プレイ",
+    "score": "スコア",
+    "highScore": "ハイスコア",
+    "leaderboard": "リーダーボード",
+    "viewLeaderboard": "リーダーボードの表示",
+    "playAgain": "リプレイ",
+    "backToGames": "ゲームに戻る",
+    "difficulty": "難易度",
+    "instructions": "説明",
+    "hideInstructions": "説明を非表示にする",
+    "showInstructions": "説明を表示する",
+    "timeElapsed": "経過時間",
+    "yourScore": "あなたのスコア",
+    "finalScore": "最終スコア",
+    "congratulations": "おめでとうございます！",
+    "gameComplete": "ゲームオーバー！",
+    "tryAgain": "リトライ",
+    "exit": "ゲーム終了"
+  },
+  "gameTypes": {
+    "quiz": "クイズ",
+    "simulation": "シミュレーション",
+    "puzzle": "パズル",
+    "scenario": "シナリオ"
+  },
+  "leaderboard": {
+    "title": "リーダーボード",
+    "global": "全世界",
+    "weekly": "今週",
+    "myAgeGroup": "年齢層",
+    "rank": "ランク",
+    "player": "プレイヤー",
+    "score": "スコア",
+    "date": "日付",
+    "yourRank": "あなたのランク、",
+    "notRanked": "まだランク付けされていません"
+  }
+}
