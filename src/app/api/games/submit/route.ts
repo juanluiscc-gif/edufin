@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient, LeaderboardType, AgeCategory } from '@prisma/client';
 import { verifyToken } from '@/lib/auth';
 import { updateLeaderboards, getUserRank } from '@/lib/leaderboard';
-import { LeaderboardType } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -96,7 +95,7 @@ export async function POST(request: NextRequest) {
         gameId,
         userId: user_id,
         score,
-        ageCategory: age_category
+        ageCategory: age_category as AgeCategory
       });
     }
 
@@ -104,7 +103,7 @@ export async function POST(request: NextRequest) {
     const [globalRank, weeklyRank, ageGroupRank] = await Promise.all([
       getUserRank(gameId, user_id, LeaderboardType.global),
       getUserRank(gameId, user_id, LeaderboardType.weekly),
-      getUserRank(gameId, user_id, LeaderboardType.age_group, age_category)
+      getUserRank(gameId, user_id, LeaderboardType.age_group, age_category as AgeCategory)
     ]);
 
     // Get average score for this game
