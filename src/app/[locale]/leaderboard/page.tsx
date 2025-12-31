@@ -4,6 +4,9 @@ import { useEffect, useState } from 'react';
 import { useParams, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
+// Mark this page as dynamic to prevent prerendering during build
+export const dynamic = 'force-dynamic';
+
 interface LeaderboardEntry {
   id: string;
   userId: string;
