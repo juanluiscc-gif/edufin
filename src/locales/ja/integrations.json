@@ -1,0 +1,81 @@
+{
+  "integrations": {
+    "title": "ビジネス統合",
+    "connectYourBusiness": "ビジネスを接続",
+    "connected": "接続済み",
+    "notConnected": "未接続",
+    "connect": "接続",
+    "disconnect": "切断",
+    "manage": "管理",
+    "status": "ステータス",
+    "lastSync": "最終同期",
+    "syncNow": "今すぐ同期",
+    "disconnectConfirm": "この統合を切断してもよろしいですか？"
+  },
+  "services": {
+    "shopify": {
+      "name": "Shopify",
+      "description": "Shopifyストアの注文、商品、在庫を管理します。"
+    },
+    "woocommerce": {
+      "name": "WooCommerce",
+      "description": "WooCommerceストアを接続"
+    },
+    "quickbooks": {
+      "name": "QuickBooks",
+      "description": "請求書と経費を管理します。"
+    },
+    "xero": {
+      "name": "Xero",
+      "description": "会計と財務レポート"
+    }
+  },
+  "tabs": {
+    "orders": "注文",
+    "products": "商品",
+    "inventory": "在庫",
+    "invoices": "請求書",
+    "expenses": "経費",
+    "reports": "レポート",
+    "settings": "設定"
+  },
+  "orders": {
+    "title": "注文",
+    "orderNumber": "注文番号",
+    "customer": "顧客",
+    "date": "日付",
+    "total": "合計",
+    "status": "ステータス",
+    "viewDetails": "詳細を表示",
+    "updateStatus": "ステータスを更新",
+    "refresh": "更新"
+  },
+  "products": {
+    "title": "商品",
+    "addProduct": "商品の追加",
+    "editProduct": "商品の編集",
+    "deleteProduct": "商品の削除",
+    "productName": "商品名",
+    "sku": "SKU",
+    "price": "価格",
+    "stock": "在庫",
+    "image": "画像"
+  },
+  "inventory": {
+    "title": "在庫",
+    "currentStock": "現在の在庫",
+    "lowStock": "在庫不足",
+    "outOfStock": "在庫切れ",
+    "updateStock": "在庫を更新",
+    "newQuantity": "数量変更"
+  },
+  "statuses": { 
+    "pending": "保留中",
+    "processing": "完処理中",
+    "completed": "完了",
+    "failed": "失敗",
+    "active": "有効",
+    "inactive": "無効",
+    "error": "エラー"
+  }
+}
