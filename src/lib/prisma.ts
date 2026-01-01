@@ -17,12 +17,12 @@ function createPrismaClient() {
 
   // Create Neon serverless pool
   const pool = new Pool({ connectionString });
-  const adapter = new PrismaNeon(pool);
+  const adapter = new PrismaNeon(pool as any);
 
   return new PrismaClient({
     adapter,
     log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
-  });
+  } as any);
 }
 
 // Create a single instance of PrismaClient
