@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { AgeCategory } from '@/lib/types';
 import { Locale } from '@/i18n';
+import { useEffect, useState } from 'react';
 
 interface DashboardContentProps {
   locale: Locale;
@@ -11,9 +12,36 @@ interface DashboardContentProps {
   userId: string;
 }
 
+interface LessonStats {
+  totalLessons: number;
+  completedLessons: number;
+  inProgressLessons: number;
+  currentStreak: number;
+}
+
 export default function DashboardContent({ locale, ageCategory, userId }: DashboardContentProps) {
   const t = useTranslations('common.dashboard');
   const isAdult = ageCategory === AgeCategory.adult;
+  const [lessonStats, setLessonStats] = useState<LessonStats | null>(null);
+  const [loadingStats, setLoadingStats] = useState(true);
+
+  useEffect(() => {
+    fetchLessonStats();
+  }, []);
+
+  const fetchLessonStats = async () => {
+    try {
+      const response = await fetch('/api/lessons/stats');
+      if (response.ok) {
+        const data = await response.json();
+        setLessonStats(data);
+      }
+    } catch (error) {
+      console.error('Error fetching lesson stats:', error);
+    } finally {
+      setLoadingStats(false);
+    }
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -37,7 +65,9 @@ export default function DashboardContent({ locale, ageCategory, userId }: Dashbo
             </h3>
             <span className="text-3xl">📚</span>
           </div>
-          <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">0</div>
+          <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">
+            {loadingStats ? '...' : lessonStats?.completedLessons || 0}
+          </div>
           <p className="text-sm text-gray-600 dark:text-gray-400">{t('lessonsCompleted')}</p>
           <Link
             href={`/${locale}/learn`}
@@ -73,7 +103,9 @@ export default function DashboardContent({ locale, ageCategory, userId }: Dashbo
             </h3>
             <span className="text-3xl">🔥</span>
           </div>
-          <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2">0</div>
+          <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2">
+            {loadingStats ? '...' : lessonStats?.currentStreak || 0}
+          </div>
           <p className="text-sm text-gray-600 dark:text-gray-400">{t('days')}</p>
         </div>
       </div>
