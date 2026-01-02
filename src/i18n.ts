@@ -26,8 +26,23 @@ export default getRequestConfig(async (params) => {
     notFound();
   }
 
+  // Load all translation files and merge them
+  const [common, learning, games, expenses, integrations] = await Promise.all([
+    import(`./locales/${locale}/common.json`).then((m) => m.default),
+    import(`./locales/${locale}/learning.json`).then((m) => m.default),
+    import(`./locales/${locale}/games.json`).then((m) => m.default),
+    import(`./locales/${locale}/expenses.json`).then((m) => m.default),
+    import(`./locales/${locale}/integrations.json`).then((m) => m.default),
+  ]);
+
   return {
     locale,
-    messages: (await import(`./locales/${locale}/common.json`)).default,
+    messages: {
+      ...common,
+      learning,
+      games,
+      expenses,
+      integrations,
+    },
   };
 });
