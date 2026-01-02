@@ -3,12 +3,10 @@
 
 generator client {
   provider = "prisma-client-js"
-  engineType = "binary"
 }
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
 }
 
 // Enums
@@ -88,6 +86,12 @@ enum Language {
   zh
 }
 
+enum FriendshipStatus {
+  pending
+  accepted
+  blocked
+}
+
 // User Management
 model User {
   id                  String         @id @default(uuid())
@@ -111,9 +115,27 @@ model User {
   leaderboards          Leaderboard[]
   budgets               Budget[]
   insights              ExpenseInsight[]
+  friendships           Friendship[]         @relation("UserFriendships")
+  friend_of             Friendship[]         @relation("FriendFriendships")
 
   @@unique([oauth_provider, oauth_id])
   @@index([email])
+}
+
+// Friendship System
+model Friendship {
+  id         String           @id @default(uuid())
+  user_id    String
+  friend_id  String
+  status     FriendshipStatus @default(pending)
+  created_at DateTime         @default(now())
+
+  user   User @relation("UserFriendships", fields: [user_id], references: [id], onDelete: Cascade)
+  friend User @relation("FriendFriendships", fields: [friend_id], references: [id], onDelete: Cascade)
+
+  @@unique([user_id, friend_id])
+  @@index([user_id])
+  @@index([friend_id])
 }
 
 // Learning Section
