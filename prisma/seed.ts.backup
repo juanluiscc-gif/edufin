@@ -1,0 +1,147 @@
+import 'dotenv/config';
+import { PrismaClient, AgeGroup, GameType } from '@prisma/client';
+
+const prisma = new PrismaClient();
+
+async function main() {
+  console.log('Starting database seed...');
+
+  // Seed Lessons
+  console.log('Seeding lessons...');
+
+  const lessons = [
+    // Money Basics (Both age groups)
+    {
+      title: 'What is Money?',
+      description: 'Learn about the concept of money and why we use it',
+      content: `# What is Money?
+
+Money is something we use to buy things we need and want. But what exactly is money, and why do we need it?
+
+## The Story of Money
+
+Long ago, people didn't have money. They would trade things directly. If you had apples and wanted bread, you'd find someone with bread who wanted apples. This is called **bartering**.
+
+But bartering had problems:
+- What if no one wanted your apples?
+- How many apples equal one loaf of bread?
+- How do you save apples for later? They go bad!
+
+So people invented money. Money is special because:
+- Everyone agrees it has value
+- It doesn't go bad
+- It's easy to carry
+- You can split it into small amounts
+
+## Types of Money
+
+Today, we have different types of money:
+- **Coins** - Metal money for small amounts
+- **Bills** - Paper money for larger amounts
+- **Digital money** - Money in computers and phones
+
+All of these represent value that we can exchange for goods and services.
+
+## Why Money Matters
+
+Money helps us:
+- Buy things we need (food, clothes, shelter)
+- Save for things we want
+- Trade easily with others
+- Measure value consistently
+
+Understanding money is the first step to being financially smart!`,
+      difficulty_level: 1,
+      age_group: AgeGroup.both,
+      display_order: 1,
+      estimated_minutes: 10,
+    },
+    {
+      title: 'Counting Money',
+      description: 'Practice identifying and counting coins and bills',
+      content: `# Counting Money
+
+Being able to count money is an important skill. Let's practice!
+
+## Coins
+
+In the US, we have these common coins:
+- **Penny** = 1 cent (¢) = $0.01
+- **Nickel** = 5 cents = $0.05
+- **Dime** = 10 cents = $0.10
+- **Quarter** = 25 cents = $0.25
+
+## Bills
+
+Common bills include:
+- $1, $5, $10, $20, $50, $100
+
+## Counting Practice
+
+To count money:
+1. Sort by type (all pennies together, all nickels together, etc.)
+2. Count each type
+3. Add them all up
+
+**Example:**
+- 3 quarters = 75¢
+- 2 dimes = 20¢
+- 1 nickel = 5¢
+- Total = 75¢ + 20¢ + 5¢ = 100¢ = $1.00
+
+## Making Change
+
+When you buy something, you need to know if you have enough money and how much change you'll get back.
+
+**Example:** You buy a toy for $3.50 and pay with $5.00
+- Change = $5.00 - $3.50 = $1.50
+
+Practice counting money every day to get better!`,
+      difficulty_level: 1,
+      age_group: AgeGroup.kid,
+      display_order: 2,
+      estimated_minutes: 15,
+    },
+    {
+      title: 'Earning Money',
+      description: 'Learn about different ways people earn money',
+      content: `# Earning Money
+
+Money doesn't grow on trees! People work to earn money. Let's learn how.
+
+## For Kids: Ways to Earn
+
+Kids can earn money by:
+- **Doing chores** - Help around the house
+- **Good grades** - Some families reward school success
+- **Lemonade stand** - Sell things you make
+- **Pet sitting** - Help neighbors with their pets
+- **Yard work** - Rake leaves, pull weeds
+
+## For Adults: Careers and Jobs
+
+Adults earn money through:
+- **Jobs** - Work for a company or organization
+- **Self-employment** - Own your own business
+- **Freelancing** - Do project-based work
+- **Investments** - Money from savings and investments
+
+## Understanding Payment
+
+When you work, you get paid:
+- **Hourly** - Paid for each hour worked ($15/hour)
+- **Salary** - Fixed amount per year ($50,000/year)
+- **Commission** - Based on sales or results
+- **Tips** - Extra money for good service
+
+## The Value of Work
+
+Remember:
+- Working hard leads to earning more
+- Different jobs pay different amounts
+- Skills and education affect earning potential
+- You exchange your time and effort for money
+
+Start thinking about what skills you want to develop!`,
+      difficulty_level: 2,
+ 
