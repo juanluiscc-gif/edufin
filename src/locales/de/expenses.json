@@ -1,0 +1,61 @@
+{
+  "expenses": {
+    "title": "Ausgabenverfolgung",
+    "addExpense": "Ausgabe hinzufügen",
+    "editExpense": "Ausgabe bearbeiten",
+    "deleteExpense": "Ausgabe löschen",
+    "amount": "Betrag",
+    "category": "Kategorie",
+    "description": "Beschreibung",
+    "date": "Datum",
+    "save": "Ausgabe speichern",
+    "cancel": "Abbrechen",
+    "deleteConfirm": "Möchten Sie diese Ausgabe wirklich löschen?",
+    "expenseList": "Alle Ausgaben",
+    "recentExpenses": "Letzte Ausgaben",
+    "viewAll": "Alle anzeigen"
+  },
+  "dashboard": {
+    "title": "Ausgaben-Dashboard",
+    "totalSpent": "Gesamtausgaben diesen Monat",
+    "budgetRemaining": "Verbleibendes Budget",
+    "topCategory": "Top-Kategorie",
+    "daysRemaining": "Verbleibende Tage",
+    "avgDailyBudget": "Durchschnittliches Tagesbudget",
+    "onTrack": "Im Plan",
+    "overBudget": "Über Budget",
+    "spendingOverview": "Ausgabenübersicht",
+    "insights": "KI-Einblicke"
+  },
+  "budget": {
+    "title": "Budgeteinstellungen",
+    "monthlyBudget": "Monatsbudget",
+    "totalBudget": "Gesamtbudget",
+    "categoryBudgets": "Kategoriebudgets",
+    "setAmount": "Betrag festlegen",
+    "percentage": "Prozentsatz",
+    "used": "Verbraucht",
+    "remaining": "Verbleibend",
+    "saveBudget": "Budget speichern"
+  },
+  "categories": {
+    "foodDining": "Essen & Trinken",
+    "housing": "Wohnen",
+    "transportation": "Transport",
+    "shopping": "Einkaufen",
+    "entertainment": "Unterhaltung",
+    "healthcare": "Gesundheitswesen",
+    "utilities": "Versorgung",
+    "other": "Sonstiges",
+    "addCategory": "Benutzerdefinierte Kategorie hinzufügen"
+  },
+  "filters": {
+    "allCategories": "Alle Kategorien",
+    "thisWeek": "Diese Woche",
+    "thisMonth": "Diesen Monat",
+    "customRange": "Benutzerdefinierter Zeitraum",
+    "startDate": "Startdatum",
+    "endDate": "Enddatum",
+    "apply": "Filter anwenden"
+  }
+}
