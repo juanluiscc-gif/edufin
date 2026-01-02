@@ -1,0 +1,81 @@
+{
+  "integrations": {
+    "title": "Business Integrations",
+    "connectYourBusiness": "Connect Your Business",
+    "connected": "Connected",
+    "notConnected": "Not Connected",
+    "connect": "Connect",
+    "disconnect": "Disconnect",
+    "manage": "Manage",
+    "status": "Status",
+    "lastSync": "Last Sync",
+    "syncNow": "Sync Now",
+    "disconnectConfirm": "Are you sure you want to disconnect this integration?"
+  },
+  "services": {
+    "shopify": {
+      "name": "Shopify",
+      "description": "Manage your Shopify store orders, products, and inventory"
+    },
+    "woocommerce": {
+      "name": "WooCommerce",
+      "description": "Connect your WooCommerce store"
+    },
+    "quickbooks": {
+      "name": "QuickBooks",
+      "description": "Manage invoices and expenses"
+    },
+    "xero": {
+      "name": "Xero",
+      "description": "Accounting and financial reports"
+    }
+  },
+  "tabs": {
+    "orders": "Orders",
+    "products": "Products",
+    "inventory": "Inventory",
+    "invoices": "Invoices",
+    "expenses": "Expenses",
+    "reports": "Reports",
+    "settings": "Settings"
+  },
+  "orders": {
+    "title": "Orders",
+    "orderNumber": "Order #",
+    "customer": "Customer",
+    "date": "Date",
+    "total": "Total",
+    "status": "Status",
+    "viewDetails": "View Details",
+    "updateStatus": "Update Status",
+    "refresh": "Refresh"
+  },
+  "products": {
+    "title": "Products",
+    "addProduct": "Add Product",
+    "editProduct": "Edit Product",
+    "deleteProduct": "Delete Product",
+    "productName": "Product Name",
+    "sku": "SKU",
+    "price": "Price",
+    "stock": "Stock",
+    "image": "Image"
+  },
+  "inventory": {
+    "title": "Inventory",
+    "currentStock": "Current Stock",
+    "lowStock": "Low Stock",
+    "outOfStock": "Out of Stock",
+    "updateStock": "Update Stock",
+    "newQuantity": "New Quantity"
+  },
+  "statuses": {
+    "pending": "Pending",
+    "processing": "Processing",
+    "completed": "Completed",
+    "failed": "Failed",
+    "active": "Active",
+    "inactive": "Inactive",
+    "error": "Error"
+  }
+}
