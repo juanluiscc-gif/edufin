@@ -2,10 +2,76 @@
   "nav": {
     "learning": "Lernen",
     "games": "Spiele",
+    "expenses": "Ausgaben",
+    "integrations": "Integrationen",
+    "myProgress": "Mein Fortschritt",
+    "profile": "Profil",
+    "logout": "Abmelden",
     "dashboard": "Dashboard"
   },
+  "buttons": {
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Vorheriges",
+    "continue": "Fortfahren",
+    "startButton": "Start-Button",
+    "submit": "Absenden",
+    "close": "Schließen",
+    "confirm": "Bestätigen",
+    "playNow": "Jetzt spielen"
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "success": "Erfolg!",
+    "welcome": "Willkommen",
+    "welcomeBack": "Willkommen zurück, {name}!",
+    "search": "Suchen",
+    "filter": "Filter",
+    "sort": "Sortieren",
+    "all": "Alle",
+    "none": "Keine",
+    "optional": "Optional",
+    "required": "Erforderlich"
+  },
+  "errors": {
+    "somethingWentWrong": "Etwas ist schiefgelaufen",
+    "tryAgain": "Erneut versuchen",
+    "notFound": "Nicht gefunden",
+    "unauthorized": "Nicht autorisiert",
+    "forbidden": "Verboten"
+  },
   "auth": {
+    "signIn": "Anmelden",
+    "signOut": "Abmelden",
     "signInWithGoogle": "Mit Google anmelden",
-    "signInWithApple": "Mit Apple anmelden"
+    "signInWithApple": "Mit Apple anmelden",
+    "enterBirthdate": "Geburtsdatum eingeben",
+    "birthdateLabel": "Geburtsdatum-Bezeichnung",
+    "birthdateHelp": "Wir nutzen diese Daten, um Ihr Nutzererlebnis zu verbessern",
+    "completeSignup": "Registrierung abschließen",
+    "authenticating": "Authentifizierung..."
+  },
+  "dashboard": {
+    "title": "Panel",
+    "learningProgress": "Lernfortschritt",
+    "lessonsCompleted": "Abgeschlossene Lektionen",
+    "gamesPlayed": "Gespielte Spiele",
+    "currentStreak": "Aktuelle Serie",
+    "days": "Tage",
+    "continueLearning": "Weiterlernen",
+    "quickStats": "Schnellstatistiken",
+    "recentActivity": "Letzte Aktivitäten"
+  },
+  "footer": {
+    "about": "Über uns",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "contact": "Kontakt",
+    "copyright": "© 2025 EduFin. Urheberrecht."
   }
 }
