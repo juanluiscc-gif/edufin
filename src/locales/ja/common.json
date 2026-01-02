@@ -1,11 +1,77 @@
 {
   "nav": {
     "learning": "学習",
-    "games": "ゲーム",
+    "games": "ゲー​​ム",
+    "expenses": "支出",
+    "integrations": "統合",
+    "myProgress": "進捗状況",
+    "profile": "プロフィール",
+    "logout": "ログアウト",
     "dashboard": "ダッシュボード"
   },
+  "buttons": {
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "continue": "続行",
+    "startButton": "スタートボタン",
+    "submit": "送信",
+    "close": "閉じる",
+    "confirm": "確認",
+    "playNow": "今すぐプレイ"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "success": "成功 !",
+    "welcome": "ようこそ",
+    "welcomeBack": "またようこそ, {name}!",
+    "search": "検索",
+    "filter": "フィルター",
+    "sort": "並べ替え",
+    "all": "すべて",
+    "none": "なし",
+    "optional": "オプション",
+    "required": "必須"
+  },
+  "errors": {
+    "somethingWentWrong": "エラーが発生しました",
+    "tryAgain": "再試行",
+    "notFound": "見つかりません",
+    "unauthorized": "権限がありません",
+    "forbidden": "禁止"
+  },
   "auth": {
+    "signIn": "サインイン",
+    "signOut": "サインアウト",
     "signInWithGoogle": "Googleでサインイン",
-    "signInWithApple": "Appleでサインイン"
+    "signInWithApple": "Appleでサインイン",
+    "enterBirthdate": "生年月日を入力",
+    "birthdateLabel": "生年月日",
+    "birthdateHelp": "この情報はお客様の体験をパーソナライズするために使用されます",
+    "completeSignup": "登録完了",
+    "authenticating": "認証..."
+  },
+  "dashboard": {
+    "title": "パネル",
+    "learningProgress": "学習の進捗状況",
+    "lessonsCompleted": "完了したレッスン",
+    "gamesPlayed": "プレイしたゲーム",
+    "currentStreak": "現在の連続記録",
+    "days": "日数",
+    "continueLearning": "学習を続ける",
+    "quickStats": "クイック統計",
+    "recentActivity": "最近のアクティビティ"
+  },
+  "footer": {
+    "about": "概要",
+    "privacy": "プライバシー",
+    "terms": "利用規約",
+    "contact": "お問い合わせ",
+    "copyright": "© 2025 EduFin. すべての権利を留保します."
   }
 }
