@@ -1,0 +1,81 @@
+{
+  "integrations": {
+    "title": "Intégrations d'entreprise",
+    "connectYourBusiness": "Connectez votre entreprise",
+    "connected": "Connecté",
+    "notConnected": "Non connecté",
+    "connect": "Se connecter",
+    "disconnect": "Se déconnecter",
+    "manage": "Gérer",
+    "status": "Statut",
+    "lastSync": "Dernière synchronisation",
+    "syncNow": "Synchroniser maintenant",
+    "disconnectConfirm": "Voulez-vous vraiment déconnecter cette intégration ?"
+  },
+  "services": {
+    "shopify": {
+      "name": "Shopify",
+      "description": "Gérez les commandes, les produits et l'inventaire de votre boutique Shopify"
+    },
+    "woocommerce": {
+      "name": "WooCommerce",
+      "description": "Connectez votre boutique WooCommerce"
+    },
+    "quickbooks": {
+      "name": "QuickBooks",
+      "description": "Gérez les factures et les dépenses"
+    },
+    "xero": {
+      "name": "Xero",
+      "description": "Comptabilité et rapports financiers"
+    }
+  },
+  "tabs": {
+    "orders": "Commandes",
+    "products": "Produits",
+    "inventory": "Inventaire",
+    "invoices": "Factures",
+    "expenses": "Dépenses",
+    "reports": "Rapports",
+    "settings": "Paramètres"
+  },
+  "orders": {
+    "title": "Commandes",
+    "orderNumber": "N° de commande",
+    "customer": "Client",
+    "date": "Date",
+    "total": "Total",
+    "status": "Statut",
+    "viewDetails": "Afficher les détails",
+    "updateStatus": "Mettre à jour le statut",
+    "refresh": "Actualiser"
+  },
+  "products": {
+    "title": "Produits",
+    "addProduct": "Ajouter un produit",
+    "editProduct": "Modifier un produit",
+    "deleteProduct": "Supprimer un produit",
+    "productName": "Nom du produit",
+    "sku": "UGS",
+    "price": "Prix",
+    "stock": "Stock",
+    "image": "mage"
+  },
+  "inventory": {
+    "title": "Inventaire",
+    "currentStock": "Stock actuel",
+    "lowStock": "Stock faible",
+    "outOfStock": "Rupture de stock",
+    "updateStock": "Mettre à jour le stock",
+    "newQuantity": "Nouvelle quantité"
+  },
+  "statuses": {
+    "pending": "En attente",
+    "processing": "En cours de traitement",
+    "completed": "Terminé",
+    "failed": "Échec",
+    "active": "Actif",
+    "inactive": "Inactif",
+    "error": "Erreur"
+  }
+}
