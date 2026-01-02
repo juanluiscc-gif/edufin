@@ -1,0 +1,64 @@
+{
+  "learning": {
+    "title": "Learning Center",
+    "forEveryone": "For Everyone",
+    "forAdults": "For Adults Only",
+    "categories": "Categories",
+    "lessons": "Lessons",
+    "progress": "Progress",
+    "completed": "Completed",
+    "inProgress": "In Progress",
+    "notStarted": "Not Started",
+    "startLesson": "Start Lesson",
+    "continueLesson": "Continue Lesson",
+    "reviewLesson": "Review Lesson",
+    "markComplete": "Mark as Complete",
+    "difficulty": "Difficulty",
+    "estimatedTime": "Estimated Time",
+    "minutes": "{count} minutes",
+    "module": "Module",
+    "modules": "Modules",
+    "of": "of",
+    "backToCategory": "Back to Category",
+    "backToLearning": "Back to Learning"
+  },
+  "categories": {
+    "moneyBasics": {
+      "title": "Money Basics",
+      "description": "Understanding currency, value, and exchange"
+    },
+    "earning": {
+      "title": "Earning Money",
+      "description": "Ways to earn through work and opportunities"
+    },
+    "spending": {
+      "title": "Smart Spending",
+      "description": "Making wise purchasing decisions"
+    },
+    "saving": {
+      "title": "Saving Goals",
+      "description": "Setting and achieving savings goals"
+    },
+    "budgeting": {
+      "title": "Budgeting & Planning",
+      "description": "Creating and managing monthly budgets"
+    },
+    "investing": {
+      "title": "Investing Basics",
+      "description": "Introduction to stocks, bonds, and retirement"
+    },
+    "business": {
+      "title": "Business Finance",
+      "description": "Managing business revenue and expenses"
+    },
+    "credit": {
+      "title": "Credit & Debt",
+      "description": "Understanding credit scores and debt management"
+    }
+  },
+  "ageGroups": {
+    "kid": "For Kids",
+    "adult": "For Adults",
+    "both": "For All Ages"
+  }
+}
