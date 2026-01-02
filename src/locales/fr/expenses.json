@@ -1,0 +1,61 @@
+{
+  "expenses": {
+    "title": "Suivi des dépenses",
+    "addExpense": "Ajouter une dépense",
+    "editExpense": "Modifier une dépense",
+    "deleteExpense": "Supprimer une dépense",
+    "amount": "Montant",
+    "category": "Catégorie",
+    "description": "Description",
+    "date": "Date",
+    "save": "Enregistrer la dépense",
+    "cancel": "Annuler",
+    "deleteConfirm": "Confirmer la suppression de cette dépense ?",
+    "expenseList": "Toutes les dépenses",
+    "recentExpenses": "Dépenses récentes",
+    "viewAll": "Tout afficher"
+  },
+  "dashboard": {
+    "title": "Tableau de bord des dépenses",
+    "totalSpent": "Total des dépenses du mois",
+    "budgetRemaining": "Budget restant",
+    "topCategory": "Catégorie principale",
+    "daysRemaining": "Jours restants",
+    "avgDailyBudget": "Budget quotidien moyen",
+    "onTrack": "Respect du budget",
+    "overBudget": "Dépassement de budget",
+    "spendingOverview": "Récapitulatif des dépenses",
+    "insights": "Analyse IA"
+  },
+  "budget": {
+    "title": "Paramètres du budget",
+    "monthlyBudget": "Budget mensuel",
+    "totalBudget": "Budget total",
+    "categoryBudgets": "Budgets par catégorie",
+    "setAmount": "Définir le montant",
+    "percentage": "Pourcentage",
+    "used": "Dépensé",
+    "remaining": "Restant",
+    "saveBudget": "Enregistrer le budget"
+  },
+  "categories": {
+    "foodDining": "Nourriture et boissons",
+    "housing": "Logement",
+    "transportation": "Transports",
+    "shopping": "Shopping",
+    "entertainment": "Divertissement",
+    "healthcare": "Santé",
+    "utilities": "Services publics",
+    "other": "Autres",
+    "addCategory": "Ajouter une catégorie personnalisée"
+  },
+  "filters": {
+    "allCategories": "Toutes les catégories",
+    "thisWeek": "Cette semaine",
+    "thisMonth": "Ce mois-ci",
+    "customRange": "Période personnalisée",
+    "startDate": "Date de début",
+    "endDate": "Date de fin",
+    "apply": "Appliquer des filtres"
+  }
+}
