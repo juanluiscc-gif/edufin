@@ -1,0 +1,41 @@
+{
+  "games": {
+    "title": "教育游戏",
+    "playGame": "游玩",
+    "score": "得分",
+    "highScore": "最高分",
+    "leaderboard": "排行榜",
+    "viewLeaderboard": "查看排行榜",
+    "playAgain": "重玩",
+    "backToGames": "返回游戏",
+    "difficulty": "难度",
+    "instructions": "说明",
+    "hideInstructions": "隐藏说明",
+    "showInstructions": "显示说明",
+    "timeElapsed": "已用时间",
+    "yourScore": "您的得分",
+    "finalScore": "最终得分",
+    "congratulations": "恭喜！",
+    "gameComplete": "游戏结束！",
+    "tryAgain": "重试",
+    "exit": "退出游戏"
+  },
+  "gameTypes": {
+    "quiz": "测验",
+    "simulation": "模拟",
+    "puzzle": "益智",
+    "scenario": "情景"
+  },
+  "leaderboard": {
+    "title": "排行榜",
+    "global": "全球",
+    "weekly": "本周",
+    "myAgeGroup": "我的年龄组",
+    "rank": "排名",
+    "player": "玩家",
+    "score": "得分",
+    "date": "日期",
+    "yourRank": "您的排名",
+    "notRanked": "尚未排名"
+  }
+}
