@@ -1,0 +1,81 @@
+{
+  "integrations": {
+    "title": "Geschäftsintegrationen",
+    "connectYourBusiness": "Verbinden Sie Ihr Unternehmen",
+    "connected": "Verbunden",
+    "notConnected": "Nicht verbunden",
+    "connect": "Verbinden",
+    "disconnect": "Trennen",
+    "manage": "Verwalten",
+    "status": "Status",
+    "lastSync": "Letzte Synchronisierung",
+    "syncNow": "Jetzt synchronisieren",
+    "disconnectConfirm": "Möchten Sie diese Integration wirklich trennen?"
+  },
+  "services": {
+    "shopify": {
+      "name": "Shopify",
+      "description": "Verwalten Sie Bestellungen, Produkte und Lagerbestände Ihres Shopify-Shops"
+    },
+    "woocommerce": {
+      "name": "WooCommerce",
+      "description": "Verbinden Sie Ihren WooCommerce-Shop"
+    },
+    "quickbooks": {
+      "name": "QuickBooks",
+      "description": "Rechnungen und Ausgaben verwalten"
+    },
+    "xero": {
+      "name": "Xero",
+      "description": "Buchhaltungs- und Finanzberichte"
+    }
+  },
+  "tabs": {
+    "orders": "Bestellungen",
+    "products": "Produkte",
+    "inventory": "Lagerbestand",
+    "invoices": "Rechnungen",
+    "expenses": "Ausgaben",
+    "reports": "Berichte",
+    "settings": "Einstellungen"
+  },
+  "orders": {
+    "title": "Bestellungen",
+    "orderNumber": "Bestellnummer",
+    "customer": "Kunde",
+    "date": "Datum",
+    "total": "Gesamtbetrag",
+    "status": "Status",
+    "viewDetails": "Details anzeigen",
+    "updateStatus": "Status aktualisieren",
+    "refresh": "Aktualisieren"
+  },
+  "products": {
+    "title": "Produkte",
+    "addProduct": "Produkt hinzufügen",
+    "editProduct": "Produkt bearbeiten",
+    "deleteProduct": "Produkt löschen",
+    "productName": "Produktname",
+    "sku": "Artikelnummer",
+    "price": "Preis",
+    "stock": "Lagerbestand",
+    "image": "Bild"
+  },
+  "inventory": {
+    "title": "Lagerbestand",
+    "currentStock": "Aktueller Lagerbestand",
+    "lowStock": "Niedriger Lagerbestand",
+    "outOfStock": "Nicht vorrätig",
+    "updateStock": "Lagerbestand aktualisieren",
+    "newQuantity": "Neue Menge"
+  },
+  "statuses": {
+    "pending": "Ausstehend",
+    "processing": "In Bearbeitung",
+    "completed": "Abgeschlossen",
+    "failed": "Fehlgeschlagen",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "error": "Fehler"
+  }
+}
