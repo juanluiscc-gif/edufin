@@ -1,0 +1,41 @@
+{
+  "games": {
+    "title": "Lernspiele",
+    "playGame": "Spiel starten",
+    "score": "Punktzahl",
+    "highScore": "Highscore",
+    "leaderboard": "Bestenliste",
+    "viewLeaderboard": "Bestenliste ansehen",
+    "playAgain": "Erneut spielen",
+    "backToGames": "Zurück zu den Spielen",
+    "difficulty": "Schwierigkeitsgrad",
+    "instructions": "Anleitung",
+    "hideInstructions": "Anleitung ausblenden",
+    "showInstructions": "Anleitung anzeigen",
+    "timeElapsed": "Spielzeit",
+    "yourScore": "Deine Punktzahl",
+    "finalScore": "Endergebnis",
+    "congratulations": "Glückwunsch!",
+    "gameComplete": "Spiel beendet!",
+    "tryAgain": "Erneut versuchen",
+    "exit": "Spiel beenden"
+  },
+  "gameTypes": {
+    "quiz": "Quiz",
+    "simulation": "Simulation",
+    "puzzle": "Puzzle",
+    "scenario": "Szenario"
+  },
+  "leaderboard": {
+    "title": "Bestenliste",
+    "global": "Weltweit",
+    "weekly": "Diese Woche",
+    "myAgeGroup": "Meine Altersgruppe",
+    "rank": "Rang",
+    "player": "Spieler",
+    "score": "Punktzahl",
+    "date": "Datum",
+    "yourRank": "Dein Rang",
+    "notRanked": "Noch nicht platziert"
+  }
+}
