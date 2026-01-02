@@ -1,0 +1,64 @@
+{
+  "learning": {
+    "title": "学习中心",
+    "forEveryone": "面向所有人",
+    "forAdults": "仅限成人",
+    "categories": "类别",
+    "lessons": "课程",
+    "progress": "进度",
+    "completed": "已完成",
+    "inProgress": "进行中",
+    "notStarted": "未开始",
+    "startLesson": "开始课程",
+    "continueLesson": "继续课程",
+    "reviewLesson": "复习课程",
+    "markComplete": "标记为已完成",
+    "difficulty": "难度",
+    "estimatedTime": "预计时间",
+    "minutes": "{count} 分钟",
+    "module": "模块",
+    "modules": "模块",
+    "of": "共",
+    "backToCategory": "返回类别",
+    "backToLearning": "返回学习"
+  },
+  "categories": {
+    "moneyBasics": {
+      "title": "理财基础",
+      "description": "了解货币、价值和兑换"
+    },
+    "earning": {
+      "title": "赚钱",
+      "description": "通过工作和机会赚钱的方法"
+    },
+    "spending": {
+      "title": "精明消费",
+      "description": "做出明智的购买决策"
+    },
+    "saving": {
+      "title": "储蓄目标",
+      "description": "设定和实现储蓄目标"
+    },
+    "budgeting": {
+      "title": "预算与规划",
+      "description": "创建和管理月度预算"
+    },
+    "investing": {
+      "title": "投资基础",
+      "description": "股票、债券和退休金简介"
+    },
+    "business": {
+      "title": "商业财务",
+      "description": "管理企业收入和支出"
+    },
+    "credit": {
+      "title": "信用与债务",
+      "description": "了解信用评分和债务管理"
+    }
+  },
+  "ageGroups": {
+    "kid": "儿童适用",
+    "adult": "成人适用",
+    "both": "所有年龄段适用"
+  }
+}
