@@ -2,10 +2,76 @@
   "nav": {
     "learning": "Apprentissage",
     "games": "Jeux",
+    "expenses": "Dépenses",
+    "integrations": "Intégrations",
+    "myProgress": "Ma progression",
+    "profile": "Profil",
+    "logout": "Déconnexion",
     "dashboard": "Tableau de bord"
   },
+  "buttons": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "back": "Dos",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "continue": "Continuer",
+    "startButton": "Bouton Démarrer",
+    "submit": "Soumettre",
+    "close": "Fermer",
+    "confirm": "Confirmer",
+    "playNow": "Jouer maintenant"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès!",
+    "welcome": "Bienvenue",
+    "welcomeBack": "Bienvenue à nouveau, {name}!",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "all": "Tout",
+    "none": "Aucun",
+    "optional": "Facultatif",
+    "required": "Obligatoire"
+  },
+  "errors": {
+    "somethingWentWrong": "Une erreur s'est produite",
+    "tryAgain": "Réessayer",
+    "notFound": "Introuvable",
+    "unauthorized": "Non autorisé",
+    "forbidden": "Interdit"
+  },
   "auth": {
+    "signIn": "Se connecter",
+    "signOut": "Se déconnecter",
     "signInWithGoogle": "Se connecter avec Google",
-    "signInWithApple": "Se connecter avec Apple"
+    "signInWithApple": "Se connecter avec Apple",
+    "enterBirthdate": "Saisir la date de naissance",
+    "birthdateLabel": "Date de naissance",
+    "birthdateHelp": "Nous utilisons ces informations pour personnaliser votre expérience",
+    "completeSignup": "Terminer l'inscription",
+    "authenticating": "Authentification..."
+  },
+  "dashboard": {
+    "title": "Panneau",
+    "learningProgress": "Progression de l'apprentissage",
+    "lessonsCompleted": "Leçons terminées",
+    "gamesPlayed": "Jeux joués",
+    "currentStreak": "Série actuelle",
+    "days": "Jours",
+    "continueLearning": "Continuer l'apprentissage",
+    "quickStats": "Statistiques rapides",
+    "recentActivity": "Activité récente"
+  },
+  "footer": {
+    "about": "À propos",
+    "privacy": "Confidentialité",
+    "terms": "TConditions d'utilisation",
+    "contact": "Contact",
+    "copyright": "© 2025 EduFin. Tous droits réservés."
   }
 }
