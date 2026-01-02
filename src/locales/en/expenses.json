@@ -1,0 +1,61 @@
+{
+  "expenses": {
+    "title": "Expense Tracking",
+    "addExpense": "Add Expense",
+    "editExpense": "Edit Expense",
+    "deleteExpense": "Delete Expense",
+    "amount": "Amount",
+    "category": "Category",
+    "description": "Description",
+    "date": "Date",
+    "save": "Save Expense",
+    "cancel": "Cancel",
+    "deleteConfirm": "Are you sure you want to delete this expense?",
+    "expenseList": "All Expenses",
+    "recentExpenses": "Recent Expenses",
+    "viewAll": "View All"
+  },
+  "dashboard": {
+    "title": "Expense Dashboard",
+    "totalSpent": "Total Spent This Month",
+    "budgetRemaining": "Budget Remaining",
+    "topCategory": "Top Category",
+    "daysRemaining": "Days Remaining",
+    "avgDailyBudget": "Avg Daily Budget",
+    "onTrack": "On Track",
+    "overBudget": "Over Budget",
+    "spendingOverview": "Spending Overview",
+    "insights": "AI Insights"
+  },
+  "budget": {
+    "title": "Budget Settings",
+    "monthlyBudget": "Monthly Budget",
+    "totalBudget": "Total Budget",
+    "categoryBudgets": "Category Budgets",
+    "setAmount": "Set Amount",
+    "percentage": "Percentage",
+    "used": "Used",
+    "remaining": "Remaining",
+    "saveBudget": "Save Budget"
+  },
+  "categories": {
+    "foodDining": "Food & Dining",
+    "housing": "Housing",
+    "transportation": "Transportation",
+    "shopping": "Shopping",
+    "entertainment": "Entertainment",
+    "healthcare": "Healthcare",
+    "utilities": "Utilities",
+    "other": "Other",
+    "addCategory": "Add Custom Category"
+  },
+  "filters": {
+    "allCategories": "All Categories",
+    "thisWeek": "This Week",
+    "thisMonth": "This Month",
+    "customRange": "Custom Range",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "apply": "Apply Filters"
+  }
+}
