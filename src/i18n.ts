@@ -38,7 +38,7 @@ export default getRequestConfig(async (params) => {
   return {
     locale,
     messages: {
-      ...common,
+      common,
       learning,
       games,
       expenses,

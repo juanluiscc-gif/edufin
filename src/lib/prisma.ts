@@ -9,10 +9,12 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 function createPrismaClient() {
-  const connectionString = process.env.DATABASE_URL || process.env.POSTGRES_URL;
+  // Use POSTGRES_URL_NON_POOLING for Prisma to avoid encryptedCredentials error on Vercel
+  // Fall back to DATABASE_URL for local development
+  const connectionString = process.env.POSTGRES_URL_NON_POOLING || process.env.DATABASE_URL || process.env.POSTGRES_URL;
 
   if (!connectionString) {
-    throw new Error('DATABASE_URL or POSTGRES_URL must be defined');
+    throw new Error('DATABASE_URL, POSTGRES_URL, or POSTGRES_URL_NON_POOLING must be defined');
   }
 
   // Create Neon serverless pool
