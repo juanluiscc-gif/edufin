@@ -1,0 +1,64 @@
+{
+  "learning": {
+    "title": "Lernzentrum",
+    "forEveryone": "Für alle",
+    "forAdults": "Nur für Erwachsene",
+    "categories": "Kategorien",
+    "lessons": "Lektionen",
+    "progress": "Fortschritt",
+    "completed": "Abgeschlossen",
+    "inProgress": "In Bearbeitung",
+    "notStarted": "Nicht begonnen",
+    "startLesson": "Lektion starten",
+    "continueLesson": "Lektion fortsetzen",
+    "reviewLesson": "Lektion wiederholen",
+    "markComplete": "Als abgeschlossen markieren",
+    "difficulty": "Schwierigkeitsgrad",
+    "estimatedTime": "Geschätzte Zeit",
+    "minutes": "{count} Minuten",
+    "module": "Modul",
+    "modules": "Module",
+    "of": "von",
+    "backToCategory": "Zurück zur Kategorie",
+    "backToLearning": "Zurück zum Lernen"
+  },
+  "categories": {
+    "moneyBasics": {
+      "title": "Grundlagen des Geldes",
+      "description": "Währung, Wert und Wechselkurs verstehen"
+    },
+    "earning": {
+      "title": "Geld verdienen",
+      "description": "Möglichkeiten, durch Arbeit und Chancen Geld zu verdienen"
+    },
+    "spending": {
+      "title": "Clever ausgeben",
+      "description": "Kluge Kaufentscheidungen treffen"
+    },
+    "saving": {
+      "title": "Sparziele",
+      "description": "Sparziele setzen und erreichen"
+    },
+    "budgeting": {
+      "title": "Budgetplanung",
+      "description": "Monatliche Budgets erstellen und verwalten"
+    },
+    "investing": {
+      "title": "Grundlagen des Investierens",
+      "description": "Einführung in Aktien, Anleihen und Altersvorsorge"
+    },
+    "business": {
+      "title": "Unternehmensfinanzierung",
+      "description": "Unternehmenseinnahmen und -ausgaben verwalten"
+    },
+    "credit": {
+      "title": "Kredit und Schulden",
+      "description": "Kreditwürdigkeit und Schuldenmanagement verstehen"
+    }
+  },
+  "ageGroups": {
+    "kid": "Für Kinder",
+    "adult": "Für Erwachsene",
+    "both": "Für alle Altersgruppen"
+  }
+}
