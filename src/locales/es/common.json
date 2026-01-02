@@ -2,10 +2,76 @@
   "nav": {
     "learning": "Aprendizaje",
     "games": "Juegos",
+    "expenses": "Gastos",
+    "integrations": "Integraciones",
+    "myProgress": "Mi progreso",
+    "profile": "Perfil",
+    "logout": "Cerrar sesión",
     "dashboard": "Panel"
   },
+  "buttons": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Borrar",
+    "edit": "Editar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Previo",
+    "continue": "Continuar",
+    "startButton": "Empezar",
+    "submit": "Enviar",
+    "close": "Cerrar",
+    "confirm": "Confirmar",
+    "playNow": "Jugar ahora"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "success": "¡Éxito!",
+    "welcome": "¡Bienvenid@",
+    "welcomeBack": "Bienvenid@ de nuevo, {name}!",
+    "search": "Buscar",
+    "filter": "Filtro",
+    "sort": "Ordenar",
+    "all": "Todos",
+    "none": "Ninguno",
+    "optional": "Opcional",
+    "required": "Requerido"
+  },
+  "errors": {
+    "somethingWentWrong": "Algo salió mal",
+    "tryAgain": "Por favor, intenta de nuevo",
+    "notFound": "No encontrado",
+    "unauthorized": "Sin autorización",
+    "forbidden": "Acceso negado"
+  },
   "auth": {
+    "signIn": "Iniciar sesión",
+    "signOut": "Cerrar sesión",
     "signInWithGoogle": "Iniciar sesión con Google",
-    "signInWithApple": "Iniciar sesión con Apple"
+    "signInWithApple": "Iniciar sesión con Apple",
+    "enterBirthdate": "Ingresa tu fecha de nacimiento",
+    "birthdateLabel": "Fecha de nacimiento",
+    "birthdateHelp": "Usamos estos datos para personalizar tu experiencia",
+    "completeSignup": "Completar registro",
+    "authenticating": "Autenticando..."
+  },
+  "dashboard": {
+    "title": "Panel",
+    "learningProgress": "Progreso de aprendizaje",
+    "lessonsCompleted": "Lecciones completadas",
+    "gamesPlayed": "Juegos jugados",
+    "currentStreak": "Racha",
+    "days": "días",
+    "continueLearning": "Continúa aprendiendo",
+    "quickStats": "Estadisticas rápidas",
+    "recentActivity": "Actividad reciente"
+  },
+  "footer": {
+    "about": "Acerca de",
+    "privacy": "Política de privacidad",
+    "terms": "Términos del servicio",
+    "contact": "Contacto",
+    "copyright": "© 2025 EduFin. Todos los derechos reservados."
   }
 }
