@@ -64,31 +64,42 @@ export async function GET(request: NextRequest) {
 
     // Exchange code for tokens and get user info
     if (provider === 'google') {
-      console.log('Exchanging Google code for tokens...');
+      console.log('[OAuth Callback] Exchanging Google code for tokens...');
       try {
         const tokenResponse = await exchangeGoogleCode(code);
-        console.log('Got token response, fetching user info...');
+        console.log('[OAuth Callback] Got token response, fetching user info...');
         const userInfo = await getGoogleUserInfo(tokenResponse.access_token);
-        console.log('Got user info:', { email: userInfo.email, name: userInfo.name });
+        console.log('[OAuth Callback] Got user info:', { email: userInfo.email, name: userInfo.name });
 
         oauthId = userInfo.id;
         email = userInfo.email;
         name = userInfo.name;
         profilePicture = userInfo.picture;
       } catch (googleError: any) {
-        console.error('Google OAuth exchange failed:', googleError.message);
-        return NextResponse.redirect(`${request.nextUrl.origin}/?error=oauth_failed&reason=google_exchange_failed`);
+        console.error('[OAuth Callback] Google OAuth exchange failed:', googleError);
+        console.error('[OAuth Callback] Error stack:', googleError.stack);
+        return NextResponse.redirect(`${request.nextUrl.origin}/${locale}?error=oauth_failed&reason=google_exchange_failed`);
       }
     } else if (provider === 'apple') {
-      const tokenResponse = await exchangeAppleCode(code);
-      const userInfo = decodeAppleIdToken(tokenResponse.id_token);
+      console.log('[OAuth Callback] Exchanging Apple code for tokens...');
+      try {
+        const tokenResponse = await exchangeAppleCode(code);
+        console.log('[OAuth Callback] Got Apple token response, decoding ID token...');
+        const userInfo = decodeAppleIdToken(tokenResponse.id_token);
+        console.log('[OAuth Callback] Got Apple user info:', { email: userInfo.email });
 
-      oauthId = userInfo.sub;
-      email = userInfo.email;
-      name = email.split('@')[0]; // Apple doesn't always provide name
-      profilePicture = null;
+        oauthId = userInfo.sub;
+        email = userInfo.email;
+        name = email.split('@')[0]; // Apple doesn't always provide name
+        profilePicture = null;
+      } catch (appleError: any) {
+        console.error('[OAuth Callback] Apple OAuth exchange failed:', appleError);
+        console.error('[OAuth Callback] Error stack:', appleError.stack);
+        return NextResponse.redirect(`${request.nextUrl.origin}/${locale}?error=oauth_failed&reason=apple_exchange_failed`);
+      }
     } else {
-      return NextResponse.redirect(`${request.nextUrl.origin}/?error=invalid_provider`);
+      console.error('[OAuth Callback] Invalid provider:', provider);
+      return NextResponse.redirect(`${request.nextUrl.origin}/${locale}?error=invalid_provider`);
     }
 
     // Check if user exists
@@ -143,9 +154,12 @@ export async function GET(request: NextRequest) {
     });
 
     return response;
-  } catch (error) {
-    console.error('OAuth callback error:', error);
-    return NextResponse.redirect(`${request.nextUrl.origin}/?error=oauth_failed`);
+  } catch (error: any) {
+    console.error('[OAuth Callback] Unexpected error:', error);
+    console.error('[OAuth Callback] Error message:', error.message);
+    console.error('[OAuth Callback] Error stack:', error.stack);
+    const locale = 'es'; // fallback locale
+    return NextResponse.redirect(`${request.nextUrl.origin}/${locale}?error=oauth_failed&reason=unexpected_error`);
   }
 }
 

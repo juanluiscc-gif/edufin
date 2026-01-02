@@ -2,6 +2,8 @@
  * OAuth utility functions for Google and Apple authentication
  */
 
+import { SignJWT, importPKCS8 } from 'jose';
+
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 const APPLE_CLIENT_ID = process.env.APPLE_CLIENT_ID;
@@ -47,7 +49,13 @@ interface AppleUserInfo {
  */
 export function getGoogleAuthUrl(locale: string): string {
   if (!GOOGLE_CLIENT_ID) {
-    throw new Error('GOOGLE_CLIENT_ID not configured');
+    console.error('OAuth Error: GOOGLE_CLIENT_ID not configured');
+    throw new Error('Google OAuth not configured');
+  }
+
+  if (!APP_URL) {
+    console.error('OAuth Error: APP_URL not configured');
+    throw new Error('Application URL not configured');
   }
 
   const redirectUri = `${APP_URL}/api/auth/callback`;
@@ -66,6 +74,7 @@ export function getGoogleAuthUrl(locale: string): string {
     state: JSON.stringify({ provider: 'google', locale }),
   });
 
+  console.log('[OAuth] Generated Google auth URL with redirect:', redirectUri);
   return `https://accounts.google.com/o/oauth2/v2/auth?${params.toString()}`;
 }
 
@@ -74,7 +83,13 @@ export function getGoogleAuthUrl(locale: string): string {
  */
 export function getAppleAuthUrl(locale: string): string {
   if (!APPLE_CLIENT_ID) {
-    throw new Error('APPLE_CLIENT_ID not configured');
+    console.error('OAuth Error: APPLE_CLIENT_ID not configured');
+    throw new Error('Apple OAuth not configured');
+  }
+
+  if (!APP_URL) {
+    console.error('OAuth Error: APP_URL not configured');
+    throw new Error('Application URL not configured');
   }
 
   const redirectUri = `${APP_URL}/api/auth/callback`;
@@ -89,6 +104,7 @@ export function getAppleAuthUrl(locale: string): string {
     state: JSON.stringify({ provider: 'apple', locale }),
   });
 
+  console.log('[OAuth] Generated Apple auth URL with redirect:', redirectUri);
   return `https://appleid.apple.com/auth/authorize?${params.toString()}`;
 }
 
@@ -97,10 +113,13 @@ export function getAppleAuthUrl(locale: string): string {
  */
 export async function exchangeGoogleCode(code: string): Promise<GoogleTokenResponse> {
   if (!GOOGLE_CLIENT_ID || !GOOGLE_CLIENT_SECRET) {
+    console.error('OAuth Error: Google credentials not configured');
     throw new Error('Google OAuth credentials not configured');
   }
 
   const redirectUri = `${APP_URL}/api/auth/callback`;
+
+  console.log('[OAuth] Exchanging Google code for tokens');
 
   const response = await fetch('https://oauth2.googleapis.com/token', {
     method: 'POST',
@@ -118,16 +137,25 @@ export async function exchangeGoogleCode(code: string): Promise<GoogleTokenRespo
 
   if (!response.ok) {
     const error = await response.text();
-    throw new Error(`Failed to exchange Google code: ${error}`);
+    console.error('[OAuth] Google token exchange failed:', {
+      status: response.status,
+      statusText: response.statusText,
+      error,
+    });
+    throw new Error(`Failed to exchange Google code: ${response.status} ${response.statusText}`);
   }
 
-  return response.json();
+  const tokenData = await response.json();
+  console.log('[OAuth] Successfully exchanged Google code for tokens');
+  return tokenData;
 }
 
 /**
  * Get Google user info from access token
  */
 export async function getGoogleUserInfo(accessToken: string): Promise<GoogleUserInfo> {
+  console.log('[OAuth] Fetching Google user info');
+
   const response = await fetch('https://www.googleapis.com/oauth2/v2/userinfo', {
     headers: {
       Authorization: `Bearer ${accessToken}`,
@@ -135,39 +163,48 @@ export async function getGoogleUserInfo(accessToken: string): Promise<GoogleUser
   });
 
   if (!response.ok) {
+    const error = await response.text();
+    console.error('[OAuth] Failed to get Google user info:', {
+      status: response.status,
+      error,
+    });
     throw new Error('Failed to get Google user info');
   }
 
-  return response.json();
+  const userInfo = await response.json();
+  console.log('[OAuth] Successfully fetched Google user info for:', userInfo.email);
+  return userInfo;
 }
 
 /**
  * Generate Apple client secret (JWT)
  */
-function generateAppleClientSecret(): string {
+async function generateAppleClientSecret(): Promise<string> {
   if (!APPLE_TEAM_ID || !APPLE_CLIENT_ID || !APPLE_KEY_ID || !APPLE_PRIVATE_KEY) {
     throw new Error('Apple OAuth credentials not configured');
   }
 
-  // For Apple Sign In, we need to generate a JWT
-  // This is a simplified version - in production, use a proper JWT library
-  const header = {
-    alg: 'ES256',
-    kid: APPLE_KEY_ID,
-  };
+  try {
+    // Import the private key - jose expects PKCS8 format
+    const privateKey = await importPKCS8(APPLE_PRIVATE_KEY, 'ES256');
 
-  const now = Math.floor(Date.now() / 1000);
-  const payload = {
-    iss: APPLE_TEAM_ID,
-    iat: now,
-    exp: now + 3600, // 1 hour
-    aud: 'https://appleid.apple.com',
-    sub: APPLE_CLIENT_ID,
-  };
+    const now = Math.floor(Date.now() / 1000);
 
-  // In a real implementation, you'd use jose or another JWT library
-  // For now, return a placeholder that indicates it needs proper implementation
-  return 'APPLE_CLIENT_SECRET_NEEDS_JWT_IMPLEMENTATION';
+    // Generate JWT with Apple's required claims
+    const jwt = await new SignJWT({})
+      .setProtectedHeader({ alg: 'ES256', kid: APPLE_KEY_ID })
+      .setIssuer(APPLE_TEAM_ID)
+      .setIssuedAt(now)
+      .setExpirationTime(now + 3600) // 1 hour
+      .setAudience('https://appleid.apple.com')
+      .setSubject(APPLE_CLIENT_ID)
+      .sign(privateKey);
+
+    return jwt;
+  } catch (error) {
+    console.error('Failed to generate Apple client secret:', error);
+    throw new Error('Failed to generate Apple client secret');
+  }
 }
 
 /**
@@ -175,12 +212,16 @@ function generateAppleClientSecret(): string {
  */
 export async function exchangeAppleCode(code: string): Promise<AppleTokenResponse> {
   if (!APPLE_CLIENT_ID) {
+    console.error('OAuth Error: APPLE_CLIENT_ID not configured');
     throw new Error('Apple OAuth credentials not configured');
   }
 
   const redirectUri = `${APP_URL}/api/auth/callback`;
-  const clientSecret = generateAppleClientSecret();
 
+  console.log('[OAuth] Generating Apple client secret JWT');
+  const clientSecret = await generateAppleClientSecret();
+
+  console.log('[OAuth] Exchanging Apple code for tokens');
   const response = await fetch('https://appleid.apple.com/auth/token', {
     method: 'POST',
     headers: {
@@ -197,10 +238,17 @@ export async function exchangeAppleCode(code: string): Promise<AppleTokenRespons
 
   if (!response.ok) {
     const error = await response.text();
-    throw new Error(`Failed to exchange Apple code: ${error}`);
+    console.error('[OAuth] Apple token exchange failed:', {
+      status: response.status,
+      statusText: response.statusText,
+      error,
+    });
+    throw new Error(`Failed to exchange Apple code: ${response.status} ${response.statusText}`);
   }
 
-  return response.json();
+  const tokenData = await response.json();
+  console.log('[OAuth] Successfully exchanged Apple code for tokens');
+  return tokenData;
 }
 
 /**
@@ -210,14 +258,20 @@ export function decodeAppleIdToken(idToken: string): AppleUserInfo {
   // In production, properly verify and decode the JWT
   // For now, simple base64 decode of the payload
   try {
+    console.log('[OAuth] Decoding Apple ID token');
     const parts = idToken.split('.');
+    if (parts.length !== 3) {
+      throw new Error('Invalid JWT format');
+    }
     const payload = JSON.parse(Buffer.from(parts[1], 'base64').toString());
+    console.log('[OAuth] Successfully decoded Apple ID token for:', payload.email);
     return {
       sub: payload.sub,
       email: payload.email,
-      email_verified: payload.email_verified === 'true',
+      email_verified: payload.email_verified === 'true' || payload.email_verified === true,
     };
   } catch (error) {
+    console.error('[OAuth] Failed to decode Apple ID token:', error);
     throw new Error('Failed to decode Apple ID token');
   }
 }
