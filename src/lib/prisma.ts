@@ -17,9 +17,33 @@ function createPrismaClient() {
     throw new Error('DATABASE_URL, POSTGRES_URL, or POSTGRES_URL_NON_POOLING must be defined');
   }
 
-  // Create Neon serverless pool
-  const pool = new Pool({ connectionString });
+  // Ensure connectionString is actually a string (not an object)
+  const dbUrl = typeof connectionString === 'string' ? connectionString : String(connectionString);
+
+  // CRITICAL FIX: Clear all PG* environment variables before creating Pool
+  // Neon integration creates individual vars (PGHOST, PGUSER, etc.) that pollute Pool config
+  // We need ONLY the connectionString to work properly
+  const originalEnv = {
+    PGHOST: process.env.PGHOST,
+    PGUSER: process.env.PGUSER,
+    PGPASSWORD: process.env.PGPASSWORD,
+    PGDATABASE: process.env.PGDATABASE,
+    PGPORT: process.env.PGPORT,
+  };
+
+  // Temporarily remove PG* vars
+  delete process.env.PGHOST;
+  delete process.env.PGUSER;
+  delete process.env.PGPASSWORD;
+  delete process.env.PGDATABASE;
+  delete process.env.PGPORT;
+
+  // Create Neon serverless pool with ONLY connectionString
+  const pool = new Pool({ connectionString: dbUrl });
   const adapter = new PrismaNeon(pool as any);
+
+  // Restore original env vars (for other code that might need them)
+  Object.assign(process.env, originalEnv);
 
   return new PrismaClient({
     adapter,
