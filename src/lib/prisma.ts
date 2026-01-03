@@ -47,11 +47,31 @@ async function createPrismaClient() {
 
   console.log('[Prisma Init] Pool module imported');
 
-  // Create Neon serverless pool with ONLY connectionString
-  const pool = new Pool({
-    connectionString: dbUrl,
-    ssl: dbUrl.includes('sslmode=require') ? { rejectUnauthorized: false } : undefined
+  // Parse connection string to extract all parameters explicitly
+  // This prevents Pool from reading PG* env vars during connection
+  const url = new URL(dbUrl);
+  const poolConfig = {
+    host: url.hostname,
+    port: parseInt(url.port) || 5432,
+    database: url.pathname.slice(1), // remove leading /
+    user: url.username,
+    password: url.password,
+    ssl: url.searchParams.get('sslmode') === 'require' ? { rejectUnauthorized: false } : undefined,
+    // Explicitly set these to prevent env var fallback
+    application_name: 'edufin',
+  };
+
+  console.log('[Prisma Init] Pool config:', {
+    host: poolConfig.host,
+    port: poolConfig.port,
+    database: poolConfig.database,
+    user: poolConfig.user,
+    hasPassword: !!poolConfig.password,
+    ssl: !!poolConfig.ssl
   });
+
+  // Create Neon serverless pool with explicit config (NOT connectionString)
+  const pool = new Pool(poolConfig as any);
 
   console.log('[Prisma Init] Pool instance created');
 
