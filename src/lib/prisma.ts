@@ -17,8 +17,11 @@ function createPrismaClient() {
     throw new Error('DATABASE_URL, POSTGRES_URL, or POSTGRES_URL_NON_POOLING must be defined');
   }
 
-  // Create Neon serverless pool
-  const pool = new Pool({ connectionString });
+  // Ensure connectionString is actually a string (not an object)
+  const dbUrl = typeof connectionString === 'string' ? connectionString : String(connectionString);
+
+  // Create Neon serverless pool with explicit string
+  const pool = new Pool({ connectionString: dbUrl });
   const adapter = new PrismaNeon(pool as any);
 
   return new PrismaClient({
