@@ -69,30 +69,61 @@ async function createPrismaClient() {
 }
 
 // Create a single instance of PrismaClient (lazy initialization)
-let prismaPromise: Promise<PrismaClient> | null = null;
+let prismaClientPromise: Promise<PrismaClient> | null = null;
+let prismaClientInstance: PrismaClient | null = null;
 
+function getPrismaClient(): Promise<PrismaClient> {
+  if (prismaClientInstance) {
+    return Promise.resolve(prismaClientInstance);
+  }
+
+  if (!prismaClientPromise) {
+    console.log('[Prisma] Initializing Prisma Client...');
+    prismaClientPromise = createPrismaClient().then(client => {
+      console.log('[Prisma] Prisma Client initialized successfully');
+      prismaClientInstance = client;
+      // Store in global for development hot reload
+      if (process.env.NODE_ENV !== 'production') {
+        globalForPrisma.prisma = client;
+      }
+      return client;
+    });
+  }
+
+  return prismaClientPromise;
+}
+
+// Export a proxy that lazily initializes the Prisma Client
 export const prisma = new Proxy({} as PrismaClient, {
   get(target, prop) {
-    if (!prismaPromise) {
-      console.log('[Prisma] Initializing Prisma Client...');
-      prismaPromise = createPrismaClient().then(client => {
-        console.log('[Prisma] Prisma Client initialized successfully');
-        // Store in global for development hot reload
-        if (process.env.NODE_ENV !== 'production') {
-          globalForPrisma.prisma = client;
-        }
-        return client;
-      });
+    // If client is already initialized, return directly
+    if (prismaClientInstance) {
+      return (prismaClientInstance as any)[prop];
     }
 
-    return (...args: any[]) => {
-      return prismaPromise!.then(client => {
-        const method = (client as any)[prop];
-        if (typeof method === 'function') {
-          return method.apply(client, args);
-        }
-        return method;
-      });
-    };
+    // Otherwise, return a proxy that waits for initialization
+    return new Proxy(() => {}, {
+      get(_, subProp) {
+        return (...args: any[]) => {
+          return getPrismaClient().then(client => {
+            const model = (client as any)[prop];
+            const method = model[subProp];
+            if (typeof method === 'function') {
+              return method.apply(model, args);
+            }
+            return method;
+          });
+        };
+      },
+      apply(_, __, args) {
+        return getPrismaClient().then(client => {
+          const method = (client as any)[prop];
+          if (typeof method === 'function') {
+            return method.apply(client, args);
+          }
+          return method;
+        });
+      }
+    });
   }
 });
