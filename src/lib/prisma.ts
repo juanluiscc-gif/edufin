@@ -20,30 +20,43 @@ function createPrismaClient() {
   // Ensure connectionString is actually a string (not an object)
   const dbUrl = typeof connectionString === 'string' ? connectionString : String(connectionString);
 
-  // CRITICAL FIX: Clear all PG* environment variables before creating Pool
-  // Neon integration creates individual vars (PGHOST, PGUSER, etc.) that pollute Pool config
-  // We need ONLY the connectionString to work properly
-  const originalEnv = {
-    PGHOST: process.env.PGHOST,
-    PGUSER: process.env.PGUSER,
-    PGPASSWORD: process.env.PGPASSWORD,
-    PGDATABASE: process.env.PGDATABASE,
-    PGPORT: process.env.PGPORT,
-  };
+  console.log('[Prisma Init] connectionString type:', typeof dbUrl);
+  console.log('[Prisma Init] connectionString length:', dbUrl.length);
+  console.log('[Prisma Init] PGHOST exists:', !!process.env.PGHOST);
+  console.log('[Prisma Init] PGUSER exists:', !!process.env.PGUSER);
 
-  // Temporarily remove PG* vars
-  delete process.env.PGHOST;
-  delete process.env.PGUSER;
-  delete process.env.PGPASSWORD;
-  delete process.env.PGDATABASE;
-  delete process.env.PGPORT;
+  // CRITICAL FIX: Clear ALL PostgreSQL-related environment variables before creating Pool
+  // Neon integration creates individual vars that pollute Pool config
+  const envVarsToClear = [
+    'PGHOST', 'PGUSER', 'PGPASSWORD', 'PGDATABASE', 'PGPORT',
+    'PGHOST_UNPOOLED', 'POSTGRES_HOST', 'POSTGRES_USER',
+    'POSTGRES_PASSWORD', 'POSTGRES_DATABASE', 'PGSSLMODE'
+  ];
+
+  const originalEnv: Record<string, string | undefined> = {};
+
+  // Save and clear all PG* vars
+  envVarsToClear.forEach(key => {
+    originalEnv[key] = process.env[key];
+    delete process.env[key];
+  });
+
+  console.log('[Prisma Init] After clearing - PGHOST exists:', !!process.env.PGHOST);
 
   // Create Neon serverless pool with ONLY connectionString
-  const pool = new Pool({ connectionString: dbUrl });
+  // Explicitly pass only connectionString to prevent any env var pollution
+  const pool = new Pool({
+    connectionString: dbUrl,
+    // Explicitly disable SSL verification if needed
+    ssl: dbUrl.includes('sslmode=require') ? { rejectUnauthorized: false } : undefined
+  });
+
   const adapter = new PrismaNeon(pool as any);
 
   // Restore original env vars (for other code that might need them)
   Object.assign(process.env, originalEnv);
+
+  console.log('[Prisma Init] Pool and adapter created successfully');
 
   return new PrismaClient({
     adapter,
