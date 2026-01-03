@@ -20,8 +20,17 @@ function createPrismaClient() {
   // Ensure connectionString is actually a string (not an object)
   const dbUrl = typeof connectionString === 'string' ? connectionString : String(connectionString);
 
-  // Create Neon serverless pool with explicit string
-  const pool = new Pool({ connectionString: dbUrl });
+  // Create Neon serverless pool with explicit configuration
+  // Pass ONLY the connectionString to avoid any object injection
+  const pool = new Pool({
+    connectionString: dbUrl,
+    // Explicitly set other options to prevent env var pollution
+    host: undefined,
+    user: undefined,
+    password: undefined,
+    database: undefined,
+    port: undefined
+  });
   const adapter = new PrismaNeon(pool as any);
 
   return new PrismaClient({
