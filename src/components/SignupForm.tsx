@@ -18,7 +18,7 @@ interface SignupFormProps {
 }
 
 export default function SignupForm({ locale, oauthData }: SignupFormProps) {
-  const t = useTranslations('common.auth');
+  const t = useTranslations('common');
   const [birthdate, setBirthdate] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -31,7 +31,7 @@ export default function SignupForm({ locale, oauthData }: SignupFormProps) {
     try {
       // Validate birthdate
       if (!birthdate) {
-        setError(t('pleaseEnterBirthdate'));
+        setError(t('auth.pleaseEnterBirthdate'));
         setLoading(false);
         return;
       }
@@ -42,14 +42,14 @@ export default function SignupForm({ locale, oauthData }: SignupFormProps) {
 
       // Check if user is at least 5 years old
       if (age < 5) {
-        setError(t('mustBe5Years'));
+        setError(t('auth.mustBe5Years'));
         setLoading(false);
         return;
       }
 
       // Check if date is not in the future
       if (selectedDate > today) {
-        setError(t('birthdateCannotBeFuture'));
+        setError(t('auth.birthdateCannotBeFuture'));
         setLoading(false);
         return;
       }
@@ -68,13 +68,13 @@ export default function SignupForm({ locale, oauthData }: SignupFormProps) {
 
       if (!response.ok) {
         const data = await response.json();
-        throw new Error(data.error || t('failedToCompleteSignup'));
+        throw new Error(data.error || t('auth.failedToCompleteSignup'));
       }
 
       // Redirect to dashboard
       window.location.href = `/${locale}/dashboard`;
     } catch (err) {
-      setError(err instanceof Error ? err.message : t('somethingWentWrong'));
+      setError(err instanceof Error ? err.message : t('auth.somethingWentWrong'));
       setLoading(false);
     }
   };
@@ -87,10 +87,10 @@ export default function SignupForm({ locale, oauthData }: SignupFormProps) {
           EduFin
         </h1>
         <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
-          {t('completeSignup')}
+          {t('auth.completeSignup')}
         </h2>
         <p className="text-gray-600 dark:text-gray-400">
-          {t('welcome', { name: oauthData.name })}
+          {t('auth.welcome', { name: oauthData.name })}
         </p>
       </div>
 
@@ -102,7 +102,7 @@ export default function SignupForm({ locale, oauthData }: SignupFormProps) {
             htmlFor="birthdate"
             className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
           >
-            {t('birthdateLabel')}
+            {t('auth.birthdateLabel')}
           </label>
           <input
             type="date"
@@ -114,7 +114,7 @@ export default function SignupForm({ locale, oauthData }: SignupFormProps) {
             className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
           />
           <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-            {t('birthdateHelp')}
+            {t('auth.birthdateHelp')}
           </p>
         </div>
 
@@ -153,10 +153,10 @@ export default function SignupForm({ locale, oauthData }: SignupFormProps) {
                   d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                 ></path>
               </svg>
-              {t('authenticating')}
+              {t('auth.authenticating')}
             </>
           ) : (
-            t('completeSignup')
+            t('auth.completeSignup')
           )}
         </button>
       </form>
@@ -164,7 +164,7 @@ export default function SignupForm({ locale, oauthData }: SignupFormProps) {
       {/* Privacy Note */}
       <div className="mt-6 text-center">
         <p className="text-xs text-gray-500 dark:text-gray-400">
-          {t('privacyNote')}
+          {t('auth.privacyNote')}
         </p>
       </div>
     </div>
