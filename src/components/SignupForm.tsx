@@ -31,7 +31,7 @@ export default function SignupForm({ locale, oauthData }: SignupFormProps) {
     try {
       // Validate birthdate
       if (!birthdate) {
-        setError('Please enter your birthdate');
+        setError(t('pleaseEnterBirthdate'));
         setLoading(false);
         return;
       }
@@ -42,14 +42,14 @@ export default function SignupForm({ locale, oauthData }: SignupFormProps) {
 
       // Check if user is at least 5 years old
       if (age < 5) {
-        setError('You must be at least 5 years old to use EduFin');
+        setError(t('mustBe5Years'));
         setLoading(false);
         return;
       }
 
       // Check if date is not in the future
       if (selectedDate > today) {
-        setError('Birthdate cannot be in the future');
+        setError(t('birthdateCannotBeFuture'));
         setLoading(false);
         return;
       }
@@ -68,13 +68,13 @@ export default function SignupForm({ locale, oauthData }: SignupFormProps) {
 
       if (!response.ok) {
         const data = await response.json();
-        throw new Error(data.error || 'Failed to complete signup');
+        throw new Error(data.error || t('failedToCompleteSignup'));
       }
 
       // Redirect to dashboard
       window.location.href = `/${locale}/dashboard`;
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Something went wrong');
+      setError(err instanceof Error ? err.message : t('somethingWentWrong'));
       setLoading(false);
     }
   };
@@ -90,7 +90,7 @@ export default function SignupForm({ locale, oauthData }: SignupFormProps) {
           {t('completeSignup')}
         </h2>
         <p className="text-gray-600 dark:text-gray-400">
-          Welcome, {oauthData.name}!
+          {t('welcome', { name: oauthData.name })}
         </p>
       </div>
 
@@ -164,8 +164,7 @@ export default function SignupForm({ locale, oauthData }: SignupFormProps) {
       {/* Privacy Note */}
       <div className="mt-6 text-center">
         <p className="text-xs text-gray-500 dark:text-gray-400">
-          We use your birthdate to customize your learning experience. Your data is secure and
-          private.
+          {t('privacyNote')}
         </p>
       </div>
     </div>
