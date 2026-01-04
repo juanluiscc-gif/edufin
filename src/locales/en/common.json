@@ -54,18 +54,36 @@
     "birthdateLabel": "Birthdate",
     "birthdateHelp": "We use this to customize your experience",
     "completeSignup": "Complete Sign Up",
-    "authenticating": "Authenticating..."
+    "authenticating": "Authenticating...",
+    "welcome": "Welcome, {name}!",
+    "pleaseEnterBirthdate": "Please enter your birthdate",
+    "mustBe5Years": "You must be at least 5 years old to use EduFin",
+    "birthdateCannotBeFuture": "Birthdate cannot be in the future",
+    "failedToCompleteSignup": "Failed to complete sign up",
+    "somethingWentWrong": "Something went wrong",
+    "privacyNote": "We use your birthdate to personalize your learning experience. Your data is safe and private."
   },
   "dashboard": {
     "title": "Dashboard",
+    "welcomeMessage": "Welcome back! Here's your financial education journey.",
     "learningProgress": "Learning Progress",
     "lessonsCompleted": "Lessons Completed",
     "gamesPlayed": "Games Played",
+    "gamesCompleted": "Games Completed",
     "currentStreak": "Current Streak",
     "days": "days",
     "continueLearning": "Continue Learning",
+    "playNow": "Play Now",
     "quickStats": "Quick Stats",
-    "recentActivity": "Recent Activity"
+    "recentActivity": "Recent Activity",
+    "expenseSummary": "Expense Summary",
+    "thisMonth": "This Month",
+    "budgetRemaining": "Budget Remaining",
+    "viewExpenses": "View Expenses",
+    "businessIntegrations": "Business Integrations",
+    "businessIntegrationsDescription": "Connect your business tools to manage everything in one place.",
+    "connectServices": "Connect Services",
+    "noActivityYet": "Start learning or playing games to see your activity here!"
   },
   "footer": {
     "about": "About",

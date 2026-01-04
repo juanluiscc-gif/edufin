@@ -20,9 +20,7 @@ interface LessonStats {
 }
 
 export default function DashboardContent({ locale, ageCategory, userId }: DashboardContentProps) {
-  const t = useTranslations('common.dashboard');
-  const tCommon = useTranslations('common.common');
-  const tButtons = useTranslations('common.buttons');
+  const t = useTranslations('common');
   const isAdult = ageCategory === AgeCategory.adult;
   const [lessonStats, setLessonStats] = useState<LessonStats | null>(null);
   const [loadingStats, setLoadingStats] = useState(true);
@@ -50,10 +48,10 @@ export default function DashboardContent({ locale, ageCategory, userId }: Dashbo
       {/* Welcome Section */}
       <div className="mb-8">
         <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-          {t('title')}
+          {t('dashboard.title')}
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
-          {t('welcomeMessage')}
+          {t('dashboard.welcomeMessage')}
         </p>
       </div>
 
@@ -63,19 +61,19 @@ export default function DashboardContent({ locale, ageCategory, userId }: Dashbo
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-              {t('learningProgress')}
+              {t('dashboard.learningProgress')}
             </h3>
             <span className="text-3xl">📚</span>
           </div>
           <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">
             {loadingStats ? '...' : lessonStats?.completedLessons || 0}
           </div>
-          <p className="text-sm text-gray-600 dark:text-gray-400">{t('lessonsCompleted')}</p>
+          <p className="text-sm text-gray-600 dark:text-gray-400">{t('dashboard.lessonsCompleted')}</p>
           <Link
             href={`/${locale}/learn`}
             className="mt-4 inline-block text-sm text-indigo-600 dark:text-indigo-400 hover:underline"
           >
-            {t('continueLearning')} →
+            {t('dashboard.continueLearning')} →
           </Link>
         </div>
 
@@ -83,17 +81,17 @@ export default function DashboardContent({ locale, ageCategory, userId }: Dashbo
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-              {t('gamesPlayed')}
+              {t('dashboard.gamesPlayed')}
             </h3>
             <span className="text-3xl">🎮</span>
           </div>
           <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">0</div>
-          <p className="text-sm text-gray-600 dark:text-gray-400">{t('gamesCompleted')}</p>
+          <p className="text-sm text-gray-600 dark:text-gray-400">{t('dashboard.gamesCompleted')}</p>
           <Link
             href={`/${locale}/games`}
             className="mt-4 inline-block text-sm text-green-600 dark:text-green-400 hover:underline"
           >
-            {t('playNow')} →
+            {t('dashboard.playNow')} →
           </Link>
         </div>
 
@@ -101,14 +99,14 @@ export default function DashboardContent({ locale, ageCategory, userId }: Dashbo
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-              {t('currentStreak')}
+              {t('dashboard.currentStreak')}
             </h3>
             <span className="text-3xl">🔥</span>
           </div>
           <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2">
             {loadingStats ? '...' : lessonStats?.currentStreak || 0}
           </div>
-          <p className="text-sm text-gray-600 dark:text-gray-400">{t('days')}</p>
+          <p className="text-sm text-gray-600 dark:text-gray-400">{t('dashboard.days')}</p>
         </div>
       </div>
 
@@ -119,17 +117,17 @@ export default function DashboardContent({ locale, ageCategory, userId }: Dashbo
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                {t('expenseSummary')}
+                {t('dashboard.expenseSummary')}
               </h3>
               <span className="text-3xl">💰</span>
             </div>
             <div className="space-y-2">
               <div className="flex justify-between">
-                <span className="text-sm text-gray-600 dark:text-gray-400">{t('thisMonth')}</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">{t('dashboard.thisMonth')}</span>
                 <span className="text-sm font-medium text-gray-900 dark:text-gray-100">$0.00</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-sm text-gray-600 dark:text-gray-400">{t('budgetRemaining')}</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">{t('dashboard.budgetRemaining')}</span>
                 <span className="text-sm font-medium text-gray-900 dark:text-gray-100">$0.00</span>
               </div>
             </div>
@@ -137,7 +135,7 @@ export default function DashboardContent({ locale, ageCategory, userId }: Dashbo
               href={`/${locale}/expenses`}
               className="mt-4 inline-block text-sm text-indigo-600 dark:text-indigo-400 hover:underline"
             >
-              {t('viewExpenses')} →
+              {t('dashboard.viewExpenses')} →
             </Link>
           </div>
 
@@ -145,18 +143,18 @@ export default function DashboardContent({ locale, ageCategory, userId }: Dashbo
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                {t('businessIntegrations')}
+                {t('dashboard.businessIntegrations')}
               </h3>
               <span className="text-3xl">🔗</span>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-              {t('businessIntegrationsDescription')}
+              {t('dashboard.businessIntegrationsDescription')}
             </p>
             <Link
               href={`/${locale}/integrations`}
               className="inline-block text-sm text-indigo-600 dark:text-indigo-400 hover:underline"
             >
-              {t('connectServices')} →
+              {t('dashboard.connectServices')} →
             </Link>
           </div>
         </div>
@@ -165,10 +163,10 @@ export default function DashboardContent({ locale, ageCategory, userId }: Dashbo
       {/* Recent Activity */}
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
-          {t('recentActivity')}
+          {t('dashboard.recentActivity')}
         </h3>
         <p className="text-center text-gray-600 dark:text-gray-400 py-8">
-          {t('noActivityYet')}
+          {t('dashboard.noActivityYet')}
         </p>
       </div>
     </div>
