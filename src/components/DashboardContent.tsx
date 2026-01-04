@@ -21,6 +21,8 @@ interface LessonStats {
 
 export default function DashboardContent({ locale, ageCategory, userId }: DashboardContentProps) {
   const t = useTranslations('common.dashboard');
+  const tCommon = useTranslations('common.common');
+  const tButtons = useTranslations('common.buttons');
   const isAdult = ageCategory === AgeCategory.adult;
   const [lessonStats, setLessonStats] = useState<LessonStats | null>(null);
   const [loadingStats, setLoadingStats] = useState(true);
@@ -51,7 +53,7 @@ export default function DashboardContent({ locale, ageCategory, userId }: Dashbo
           {t('title')}
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
-          Welcome back! Here's your financial education journey.
+          {t('welcomeMessage')}
         </p>
       </div>
 
@@ -86,12 +88,12 @@ export default function DashboardContent({ locale, ageCategory, userId }: Dashbo
             <span className="text-3xl">🎮</span>
           </div>
           <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">0</div>
-          <p className="text-sm text-gray-600 dark:text-gray-400">Games completed</p>
+          <p className="text-sm text-gray-600 dark:text-gray-400">{t('gamesCompleted')}</p>
           <Link
             href={`/${locale}/games`}
             className="mt-4 inline-block text-sm text-green-600 dark:text-green-400 hover:underline"
           >
-            Play now →
+            {t('playNow')} →
           </Link>
         </div>
 
@@ -117,17 +119,17 @@ export default function DashboardContent({ locale, ageCategory, userId }: Dashbo
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                Expense Summary
+                {t('expenseSummary')}
               </h3>
               <span className="text-3xl">💰</span>
             </div>
             <div className="space-y-2">
               <div className="flex justify-between">
-                <span className="text-sm text-gray-600 dark:text-gray-400">This Month</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">{t('thisMonth')}</span>
                 <span className="text-sm font-medium text-gray-900 dark:text-gray-100">$0.00</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-sm text-gray-600 dark:text-gray-400">Budget Remaining</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">{t('budgetRemaining')}</span>
                 <span className="text-sm font-medium text-gray-900 dark:text-gray-100">$0.00</span>
               </div>
             </div>
@@ -135,7 +137,7 @@ export default function DashboardContent({ locale, ageCategory, userId }: Dashbo
               href={`/${locale}/expenses`}
               className="mt-4 inline-block text-sm text-indigo-600 dark:text-indigo-400 hover:underline"
             >
-              View expenses →
+              {t('viewExpenses')} →
             </Link>
           </div>
 
@@ -143,18 +145,18 @@ export default function DashboardContent({ locale, ageCategory, userId }: Dashbo
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                Business Integrations
+                {t('businessIntegrations')}
               </h3>
               <span className="text-3xl">🔗</span>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-              Connect your business tools to manage everything in one place.
+              {t('businessIntegrationsDescription')}
             </p>
             <Link
               href={`/${locale}/integrations`}
               className="inline-block text-sm text-indigo-600 dark:text-indigo-400 hover:underline"
             >
-              Connect services →
+              {t('connectServices')} →
             </Link>
           </div>
         </div>
@@ -166,7 +168,7 @@ export default function DashboardContent({ locale, ageCategory, userId }: Dashbo
           {t('recentActivity')}
         </h3>
         <p className="text-center text-gray-600 dark:text-gray-400 py-8">
-          Start learning or playing games to see your activity here!
+          {t('noActivityYet')}
         </p>
       </div>
     </div>
