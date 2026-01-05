@@ -1,13 +1,16 @@
 {
   "games": {
     "title": "Juegos educativos",
+    "subtitle": "¡Aprende sobre dinero mientras te diviertes!",
     "playGame": "Jugar",
+    "playNow": "Jugar ahora",
     "score": "Puntuación",
     "highScore": "Puntuación máxima",
     "leaderboard": "Clasificación",
     "viewLeaderboard": "Ver clasificación",
     "playAgain": "Volver a jugar",
     "backToGames": "Volver a juegos",
+    "backToHome": "Volver al inicio",
     "difficulty": "Dificultad",
     "instructions": "Instrucciones",
     "hideInstructions": "Ocultar instrucciones",
@@ -18,7 +21,22 @@
     "congratulations": "¡Felicitaciones!",
     "gameComplete": "¡Juego completo!",
     "tryAgain": "Inténtalo de nuevo",
-    "exit": "Salir del juego"
+    "exit": "Salir del juego",
+    "loadingGames": "Cargando juegos...",
+    "loadingGame": "Cargando juego...",
+    "gameNotFound": "Juego no encontrado",
+    "noGamesFound": "No se encontraron juegos para este filtro",
+    "totalGames": "Total de juegos",
+    "gamesPlayed": "Juegos jugados",
+    "totalScore": "Puntuación total",
+    "profile": "Perfil",
+    "allTypes": "Todos los tipos",
+    "notPlayedYet": "Aún no jugado",
+    "comingSoon": {
+      "simulation": "¡Juegos de simulación próximamente!",
+      "puzzle": "¡Juegos de rompecabezas próximamente!",
+      "scenario": "¡Juegos de escenarios próximamente!"
+    }
   },
   "gameTypes": {
     "quiz": "Cuestionario",

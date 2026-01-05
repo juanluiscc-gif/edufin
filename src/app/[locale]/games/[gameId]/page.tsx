@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import QuizGame from '@/components/games/QuizGame';
 import ResultsModal from '@/components/games/ResultsModal';
 import { GameType } from '@prisma/client';
@@ -37,6 +38,7 @@ export default function GamePage() {
   const router = useRouter();
   const gameId = params.gameId as string;
   const locale = params.locale as string;
+  const t = useTranslations('games');
 
   const [game, setGame] = useState<Game | null>(null);
   const [gameData, setGameData] = useState<any>(null);
@@ -112,7 +114,7 @@ export default function GamePage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
-        <div className="text-xl text-gray-600 dark:text-gray-400">Loading game...</div>
+        <div className="text-xl text-gray-600 dark:text-gray-400">{t('games.loadingGame')}</div>
       </div>
     );
   }
@@ -122,12 +124,12 @@ export default function GamePage() {
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
         <div className="text-center">
           <div className="text-6xl mb-4">😕</div>
-          <div className="text-xl text-gray-600 dark:text-gray-400 mb-4">Game not found</div>
+          <div className="text-xl text-gray-600 dark:text-gray-400 mb-4">{t('games.gameNotFound')}</div>
           <button
             onClick={() => router.push(`/${locale}/games`)}
             className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg"
           >
-            Back to Games
+            {t('games.backToGames')}
           </button>
         </div>
       </div>
@@ -153,13 +155,13 @@ export default function GamePage() {
             <div className="text-center">
               <div className="text-6xl mb-4">🏪</div>
               <div className="text-xl text-gray-600 dark:text-gray-400 mb-4">
-                Simulation games coming soon!
+                {t('games.comingSoon.simulation')}
               </div>
               <button
                 onClick={() => router.push(`/${locale}/games`)}
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg"
               >
-                Back to Games
+                {t('games.backToGames')}
               </button>
             </div>
           </div>
@@ -171,13 +173,13 @@ export default function GamePage() {
             <div className="text-center">
               <div className="text-6xl mb-4">🧩</div>
               <div className="text-xl text-gray-600 dark:text-gray-400 mb-4">
-                Puzzle games coming soon!
+                {t('games.comingSoon.puzzle')}
               </div>
               <button
                 onClick={() => router.push(`/${locale}/games`)}
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg"
               >
-                Back to Games
+                {t('games.backToGames')}
               </button>
             </div>
           </div>
@@ -189,13 +191,13 @@ export default function GamePage() {
             <div className="text-center">
               <div className="text-6xl mb-4">🎭</div>
               <div className="text-xl text-gray-600 dark:text-gray-400 mb-4">
-                Scenario games coming soon!
+                {t('games.comingSoon.scenario')}
               </div>
               <button
                 onClick={() => router.push(`/${locale}/games`)}
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg"
               >
-                Back to Games
+                {t('games.backToGames')}
               </button>
             </div>
           </div>
