@@ -7,12 +7,15 @@
     "title": "Learning Center",
     "subtitle": "Master financial literacy through interactive lessons organized by topic",
     "backToHome": "Back to Home",
+    "backToLearningCenter": "Back to Learning Center",
     "forEveryone": "For Everyone",
     "forAdults": "For Adults Only",
     "categories": "Categories",
     "lessons": "lessons",
     "lessonsCount": "{count} lessons",
+    "lessonsCompleted": "{completed}/{total} lessons completed",
     "progress": "Progress",
+    "overallProgress": "Overall Progress",
     "completed": "Completed",
     "inProgress": "In Progress",
     "notStarted": "Not Started",
@@ -23,6 +26,9 @@
     "reviewLesson": "Review Lesson",
     "markComplete": "Mark as Complete",
     "difficulty": "Difficulty",
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
     "estimatedTime": "Estimated Time",
     "minutes": "{count} min",
     "module": "Module",
@@ -32,8 +38,11 @@
     "backToLearning": "Back to Learning",
     "locked": "Locked",
     "completePrevious": "Complete the previous category to unlock",
+    "completePreviousLesson": "Complete the previous lesson to unlock this one",
     "noLessonsYet": "No lessons yet",
-    "noLessonsDescription": "Lessons will appear here once they are added to the database"
+    "noLessonsDescription": "Lessons will appear here once they are added to the database",
+    "noLessonsInCategory": "No lessons in this category",
+    "checkBackLater": "Check back later for new content!"
   },
   "categories": {
     "moneyBasics": {

@@ -1,35 +1,81 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { getTranslations } from 'next-intl/server';
+import { cookies } from 'next/headers';
+import { verifyToken } from '@/lib/auth';
+import { prisma } from '@/lib/prisma';
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string; categoryId: string }>;
 }): Promise<Metadata> {
-  const { categoryId } = await params;
+  const { locale, categoryId } = await params;
+  const t = await getTranslations({ locale, namespace: 'learning' });
 
   return {
-    title: `${categoryId} Lessons`,
-    description: `Learn about ${categoryId} through interactive lessons`,
+    title: t('learningCenter.title'),
+    description: t('learningCenter.description'),
   };
 }
 
-async function getCategoryLessons(categoryId: string) {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-
+async function getCategoryLessons(categoryId: string, userId: string) {
   try {
-    const response = await fetch(`${baseUrl}/api/lessons/category/${categoryId}`, {
-      cache: 'no-store',
+    // For now, we just show all lessons since we have a single category
+    const lessons = await prisma.lesson.findMany({
+      select: {
+        id: true,
+        title: true,
+        description: true,
+        difficulty_level: true,
+        display_order: true,
+        estimated_minutes: true,
+        age_group: true,
+        user_progress: {
+          where: {
+            user_id: userId,
+          },
+          select: {
+            status: true,
+            progress_percentage: true,
+          },
+        },
+      },
+      orderBy: {
+        display_order: 'asc',
+      },
     });
 
-    if (!response.ok) {
-      if (response.status === 404) return null;
-      console.error('Failed to fetch category lessons:', response.status);
-      return null;
-    }
+    // Transform lessons with progress data
+    const lessonsWithProgress = lessons.map((lesson, index) => {
+      const progress = lesson.user_progress[0];
+      const status = progress?.status || 'not_started';
+      const progressPercentage = progress?.progress_percentage || 0;
 
-    return await response.json();
+      // First lesson is always unlocked, others require previous completion
+      const isLocked = index > 0 && lessons[index - 1].user_progress[0]?.status !== 'completed';
+
+      return {
+        id: lesson.id,
+        title: lesson.title,
+        description: lesson.description,
+        difficulty_level: lesson.difficulty_level,
+        estimated_minutes: lesson.estimated_minutes,
+        status,
+        progress_percentage: progressPercentage,
+        isLocked,
+      };
+    });
+
+    return {
+      category: {
+        id: categoryId,
+        title: 'Financial Education',
+        description: 'Complete financial literacy curriculum',
+      },
+      lessons: lessonsWithProgress,
+    };
   } catch (error) {
     console.error('Error fetching category lessons:', error);
     return null;
@@ -42,7 +88,15 @@ export default async function CategoryPage({
   params: Promise<{ locale: string; categoryId: string }>;
 }) {
   const { locale, categoryId } = await params;
-  const data = await getCategoryLessons(categoryId);
+  const t = await getTranslations({ locale, namespace: 'learning' });
+
+  // Get user from cookie
+  const cookieStore = await cookies();
+  const token = cookieStore.get('token')?.value;
+  const payload = token ? await verifyToken(token) : null;
+  const userId = payload?.user_id || 'guest';
+
+  const data = await getCategoryLessons(categoryId, userId);
 
   if (!data) {
     notFound();
@@ -76,7 +130,7 @@ export default async function CategoryPage({
                 d="M15 19l-7-7 7-7"
               />
             </svg>
-            Back to Learning Center
+            {t('learning.backToLearningCenter')}
           </Link>
         </nav>
 
@@ -88,9 +142,9 @@ export default async function CategoryPage({
           {/* Progress Overview */}
           <div className="space-y-2">
             <div className="flex justify-between items-center text-sm">
-              <span className="font-semibold text-gray-700">Overall Progress</span>
+              <span className="font-semibold text-gray-700">{t('learning.overallProgress')}</span>
               <span className="text-gray-600">
-                {completedLessons}/{totalLessons} lessons completed
+                {t('learning.lessonsCompleted', { completed: completedLessons, total: totalLessons })}
               </span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-3">
@@ -118,9 +172,9 @@ export default async function CategoryPage({
             };
 
             const difficultyLabels = {
-              1: 'Easy',
-              2: 'Medium',
-              3: 'Hard',
+              1: t('learning.easy'),
+              2: t('learning.medium'),
+              3: t('learning.hard'),
             };
 
             const statusIcons = {
@@ -137,19 +191,7 @@ export default async function CategoryPage({
 
             const canAccess = !lesson.isLocked;
 
-            return (
-              <Link
-                key={lesson.id}
-                href={canAccess ? `/${locale}/learn/lesson/${lesson.id}` : '#'}
-                className={`block bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 ${
-                  lesson.isLocked ? 'opacity-50 cursor-not-allowed' : ''
-                }`}
-                onClick={(e) => {
-                  if (lesson.isLocked) {
-                    e.preventDefault();
-                  }
-                }}
-              >
+            const lessonContent = (
                 <div className="p-6">
                   <div className="flex items-start">
                     {/* Number/Status Badge */}
@@ -207,12 +249,33 @@ export default async function CategoryPage({
                       {/* Lock Message */}
                       {lesson.isLocked && (
                         <p className="mt-2 text-xs text-gray-500">
-                          Complete the previous lesson to unlock this one
+                          {t('learning.completePreviousLesson')}
                         </p>
                       )}
                     </div>
                   </div>
                 </div>
+            );
+
+            // Render as div if locked, Link if unlocked
+            if (lesson.isLocked) {
+              return (
+                <div
+                  key={lesson.id}
+                  className="block bg-white rounded-lg shadow-sm transition-all duration-200 opacity-50 cursor-not-allowed"
+                >
+                  {lessonContent}
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={lesson.id}
+                href={`/${locale}/learn/lesson/${lesson.id}`}
+                className="block bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
+              >
+                {lessonContent}
               </Link>
             );
           })}
@@ -222,8 +285,8 @@ export default async function CategoryPage({
         {lessons.length === 0 && (
           <div className="bg-white rounded-lg shadow-md p-12 text-center">
             <div className="text-6xl mb-4">📚</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">No lessons in this category</h3>
-            <p className="text-gray-600">Check back later for new content!</p>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('learning.noLessonsInCategory')}</h3>
+            <p className="text-gray-600">{t('learning.checkBackLater')}</p>
           </div>
         )}
       </div>
