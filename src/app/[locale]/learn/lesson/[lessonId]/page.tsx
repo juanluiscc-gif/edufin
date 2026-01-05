@@ -22,7 +22,8 @@ export default function LessonPage() {
   const fetchLesson = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`/api/lessons/${lessonId}`);
+      // Pass locale to API for multilingual content
+      const response = await fetch(`/api/lessons/${lessonId}?locale=${locale}`);
 
       if (!response.ok) {
         if (response.status === 403) {
