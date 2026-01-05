@@ -2,6 +2,9 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+import { cookies } from 'next/headers';
+import { verifyToken } from '@/lib/auth';
+import { prisma } from '@/lib/prisma';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -13,27 +16,56 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-async function getCategories() {
-  // This will be called on the server, so we need to use absolute URL
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-
+async function getLessonsData(userId: string) {
   try {
-    const response = await fetch(`${baseUrl}/api/lessons/categories`, {
-      headers: {
-        // In production, we'd get the cookie from the request
-        cookie: '', // Server components need to pass cookies differently
+    // Get all lessons
+    const lessons = await prisma.lesson.findMany({
+      select: {
+        id: true,
+        title: true,
+        description: true,
+        difficulty_level: true,
+        display_order: true,
+        estimated_minutes: true,
+        age_group: true,
+        user_progress: {
+          where: {
+            user_id: userId,
+          },
+          select: {
+            status: true,
+          },
+        },
       },
-      cache: 'no-store', // Always get fresh data
+      orderBy: {
+        display_order: 'asc',
+      },
     });
 
-    if (!response.ok) {
-      console.error('Failed to fetch categories:', response.status);
-      return { categories: [] };
-    }
+    // Group into a single "All Lessons" category for now
+    const completedCount = lessons.filter((l) =>
+      l.user_progress.some((p) => p.status === 'completed')
+    ).length;
 
-    return await response.json();
+    const totalMinutes = lessons.reduce((sum, l) => sum + l.estimated_minutes, 0);
+
+    return {
+      categories: [
+        {
+          id: 'all-lessons',
+          title: 'Financial Education',
+          description: 'Complete financial literacy curriculum',
+          icon: '📚',
+          lessonCount: lessons.length,
+          completedCount,
+          totalMinutes,
+          isLocked: false,
+          order: 1,
+        },
+      ],
+    };
   } catch (error) {
-    console.error('Error fetching categories:', error);
+    console.error('Error fetching lessons:', error);
     return { categories: [] };
   }
 }
@@ -41,7 +73,14 @@ async function getCategories() {
 export default async function LearnPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'learning' });
-  const { categories } = await getCategories();
+
+  // Get user from cookie
+  const cookieStore = await cookies();
+  const token = cookieStore.get('token')?.value;
+  const payload = token ? await verifyToken(token) : null;
+  const userId = payload?.user_id || 'guest';
+
+  const { categories } = await getLessonsData(userId);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
