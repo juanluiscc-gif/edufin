@@ -20,7 +20,7 @@ export async function generateMetadata({
   };
 }
 
-async function getCategoryLessons(categoryId: string, userId: string) {
+async function getCategoryLessons(categoryId: string, userId: string, locale: string) {
   try {
     // For now, we just show all lessons since we have a single category
     const lessons = await prisma.lesson.findMany({
@@ -47,6 +47,9 @@ async function getCategoryLessons(categoryId: string, userId: string) {
       },
     });
 
+    // Get translations
+    const tLessons = await getTranslations({ locale, namespace: 'learning.lessons' });
+
     // Transform lessons with progress data
     const lessonsWithProgress = lessons.map((lesson, index) => {
       const progress = lesson.user_progress[0];
@@ -56,10 +59,27 @@ async function getCategoryLessons(categoryId: string, userId: string) {
       // First lesson is always unlocked, others require previous completion
       const isLocked = index > 0 && lessons[index - 1].user_progress[0]?.status !== 'completed';
 
+      // Create slug from original English title for mapping
+      const slug = lesson.title
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+
+      // Try to get translated title/description, fallback to original
+      let translatedTitle = lesson.title;
+      let translatedDescription = lesson.description;
+
+      try {
+        translatedTitle = tLessons(`${slug}.title`);
+        translatedDescription = tLessons(`${slug}.description`);
+      } catch (e) {
+        // If translation doesn't exist, keep original
+      }
+
       return {
         id: lesson.id,
-        title: lesson.title,
-        description: lesson.description,
+        title: translatedTitle,
+        description: translatedDescription,
         difficulty_level: lesson.difficulty_level,
         estimated_minutes: lesson.estimated_minutes,
         status,
@@ -68,11 +88,14 @@ async function getCategoryLessons(categoryId: string, userId: string) {
       };
     });
 
+    // Get translations for category
+    const t = await getTranslations({ locale, namespace: 'learning' });
+
     return {
       category: {
         id: categoryId,
-        title: 'Financial Education',
-        description: 'Complete financial literacy curriculum',
+        title: t('categoryTitles.allLessons'),
+        description: t('categoryTitles.allLessonsDescription'),
       },
       lessons: lessonsWithProgress,
     };
@@ -96,7 +119,7 @@ export default async function CategoryPage({
   const payload = token ? await verifyToken(token) : null;
   const userId = payload?.user_id || 'guest';
 
-  const data = await getCategoryLessons(categoryId, userId);
+  const data = await getCategoryLessons(categoryId, userId, locale);
 
   if (!data) {
     notFound();

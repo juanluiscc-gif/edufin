@@ -44,6 +44,10 @@
     "noLessonsInCategory": "No hay lecciones en esta categoría",
     "checkBackLater": "¡Vuelve más tarde para ver contenido nuevo!"
   },
+  "categoryTitles": {
+    "allLessons": "Educación financiera",
+    "allLessonsDescription": "Plan de estudios completo de educación financiera"
+  },
   "categories": {
     "moneyBasics": {
       "title": "Fundamentos del dinero",
@@ -82,5 +86,79 @@
     "kid": "Para niños",
     "adult": "Para adultos",
     "both": "Para todas las edades"
+  },
+  "lessons": {
+    "what-is-money": {
+      "title": "¿Qué es el dinero?",
+      "description": "Aprende el concepto básico del dinero y por qué lo usamos"
+    },
+    "different-types-of-currency": {
+      "title": "Diferentes tipos de moneda",
+      "description": "Explora monedas, billetes, dinero digital y criptomonedas"
+    },
+    "how-money-gets-its-value": {
+      "title": "Cómo el dinero obtiene su valor",
+      "description": "Comprende por qué el dinero vale algo"
+    },
+    "money-around-the-world": {
+      "title": "Dinero alrededor del mundo",
+      "description": "Aprende sobre diferentes monedas y tasas de cambio"
+    },
+    "inflation-and-purchasing-power": {
+      "title": "Inflación y poder adquisitivo",
+      "description": "Comprende cómo la inflación afecta tu dinero"
+    },
+    "ways-to-earn-money": {
+      "title": "Formas de ganar dinero",
+      "description": "Explora diferentes métodos para generar ingresos"
+    },
+    "understanding-income": {
+      "title": "Entendiendo los ingresos",
+      "description": "Aprende sobre ingresos brutos, netos y deducciones"
+    },
+    "starting-your-first-job": {
+      "title": "Comenzando tu primer trabajo",
+      "description": "Consejos para encontrar y tener éxito en tu primer empleo"
+    },
+    "building-multiple-income-streams": {
+      "title": "Construyendo múltiples fuentes de ingresos",
+      "description": "Diversifica tus fuentes de ingreso para seguridad financiera"
+    },
+    "needs-vs-wants": {
+      "title": "Necesidades vs deseos",
+      "description": "Aprende a distinguir entre gastos esenciales y discrecionales"
+    },
+    "smart-shopping-strategies": {
+      "title": "Estrategias de compra inteligente",
+      "description": "Aprende cómo obtener el mejor valor por tu dinero"
+    },
+    "understanding-value": {
+      "title": "Entendiendo el valor",
+      "description": "Aprende que lo barato no siempre es mejor - enfócate en el valor"
+    },
+    "avoiding-consumer-traps": {
+      "title": "Evitando trampas del consumidor",
+      "description": "Reconoce y evita trucos comunes de marketing"
+    },
+    "why-save-money": {
+      "title": "¿Por qué ahorrar dinero?",
+      "description": "Comprende la importancia de ahorrar para tu futuro"
+    },
+    "setting-savings-goals": {
+      "title": "Estableciendo metas de ahorro",
+      "description": "Aprende a establecer y alcanzar metas de ahorro efectivas"
+    },
+    "where-to-keep-your-savings": {
+      "title": "Dónde guardar tus ahorros",
+      "description": "Aprende sobre diferentes cuentas de ahorro y opciones"
+    },
+    "automating-your-savings": {
+      "title": "Automatizando tus ahorros",
+      "description": "Configura ahorros automáticos para un progreso sin esfuerzo"
+    },
+    "building-an-emergency-fund": {
+      "title": "Construyendo un fondo de emergencia",
+      "description": "Crea tu red de seguridad financiera paso a paso"
+    }
   }
 }
