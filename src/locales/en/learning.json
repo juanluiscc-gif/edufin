@@ -86,5 +86,79 @@
     "kid": "For Kids",
     "adult": "For Adults",
     "both": "For All Ages"
+  },
+  "lessons": {
+    "what-is-money": {
+      "title": "What is Money?",
+      "description": "Learn about the concept of money and why we use it"
+    },
+    "different-types-of-currency": {
+      "title": "Different Types of Currency",
+      "description": "Explore coins, bills, digital money, and cryptocurrency"
+    },
+    "how-money-gets-its-value": {
+      "title": "How Money Gets Its Value",
+      "description": "Understand why money is worth something"
+    },
+    "money-around-the-world": {
+      "title": "Money Around the World",
+      "description": "Learn about different currencies and exchange rates"
+    },
+    "inflation-and-purchasing-power": {
+      "title": "Inflation and Purchasing Power",
+      "description": "Understand how inflation affects your money"
+    },
+    "ways-to-earn-money": {
+      "title": "Ways to Earn Money",
+      "description": "Explore different methods of earning income"
+    },
+    "understanding-income": {
+      "title": "Understanding Income",
+      "description": "Learn about gross income, net income, and deductions"
+    },
+    "starting-your-first-job": {
+      "title": "Starting Your First Job",
+      "description": "Tips for finding and succeeding in your first job"
+    },
+    "building-multiple-income-streams": {
+      "title": "Building Multiple Income Streams",
+      "description": "Diversify your income sources for financial security"
+    },
+    "needs-vs-wants": {
+      "title": "Needs vs Wants",
+      "description": "Learn to distinguish between essential and discretionary spending"
+    },
+    "smart-shopping-strategies": {
+      "title": "Smart Shopping Strategies",
+      "description": "Learn how to get the best value for your money"
+    },
+    "understanding-value": {
+      "title": "Understanding Value",
+      "description": "Learn that cheap isn't always best - focus on value"
+    },
+    "avoiding-consumer-traps": {
+      "title": "Avoiding Consumer Traps",
+      "description": "Recognize and avoid common marketing tricks"
+    },
+    "why-save-money": {
+      "title": "Why Save Money?",
+      "description": "Understand the importance of saving for your future"
+    },
+    "setting-savings-goals": {
+      "title": "Setting Savings Goals",
+      "description": "Learn to set and achieve effective savings goals"
+    },
+    "where-to-keep-your-savings": {
+      "title": "Where to Keep Your Savings",
+      "description": "Learn about different savings accounts and options"
+    },
+    "automating-your-savings": {
+      "title": "Automating Your Savings",
+      "description": "Set up automatic savings for effortless progress"
+    },
+    "building-an-emergency-fund": {
+      "title": "Building an Emergency Fund",
+      "description": "Create your financial safety net step by step"
+    }
   }
 }

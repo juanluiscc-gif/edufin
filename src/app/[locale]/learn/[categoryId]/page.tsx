@@ -47,6 +47,9 @@ async function getCategoryLessons(categoryId: string, userId: string, locale: st
       },
     });
 
+    // Get translations
+    const tLessons = await getTranslations({ locale, namespace: 'learning.lessons' });
+
     // Transform lessons with progress data
     const lessonsWithProgress = lessons.map((lesson, index) => {
       const progress = lesson.user_progress[0];
@@ -56,10 +59,27 @@ async function getCategoryLessons(categoryId: string, userId: string, locale: st
       // First lesson is always unlocked, others require previous completion
       const isLocked = index > 0 && lessons[index - 1].user_progress[0]?.status !== 'completed';
 
+      // Create slug from original English title for mapping
+      const slug = lesson.title
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+
+      // Try to get translated title/description, fallback to original
+      let translatedTitle = lesson.title;
+      let translatedDescription = lesson.description;
+
+      try {
+        translatedTitle = tLessons(`${slug}.title`);
+        translatedDescription = tLessons(`${slug}.description`);
+      } catch (e) {
+        // If translation doesn't exist, keep original
+      }
+
       return {
         id: lesson.id,
-        title: lesson.title,
-        description: lesson.description,
+        title: translatedTitle,
+        description: translatedDescription,
         difficulty_level: lesson.difficulty_level,
         estimated_minutes: lesson.estimated_minutes,
         status,
