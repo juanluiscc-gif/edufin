@@ -110,18 +110,19 @@ export default async function LearnPage({ params }: { params: Promise<{ locale: 
               ? Math.round((category.completedCount / category.lessonCount) * 100)
               : 0;
 
+            // Render as div if locked, Link if unlocked
+            const CardWrapper = category.isLocked ? 'div' : Link;
+            const cardProps = category.isLocked
+              ? {}
+              : { href: `/${locale}/learn/${category.id}` };
+
             return (
-              <Link
+              <CardWrapper
                 key={category.id}
-                href={`/${locale}/learn/${category.id}`}
+                {...cardProps}
                 className={`block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden ${
                   category.isLocked ? 'opacity-60 cursor-not-allowed' : 'hover:-translate-y-1'
                 }`}
-                onClick={(e) => {
-                  if (category.isLocked) {
-                    e.preventDefault();
-                  }
-                }}
               >
                 {/* Category Card */}
                 <div className="p-6">
@@ -215,7 +216,7 @@ export default async function LearnPage({ params }: { params: Promise<{ locale: 
                     </div>
                   )}
                 </div>
-              </Link>
+              </CardWrapper>
             );
           })}
         </div>
