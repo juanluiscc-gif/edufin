@@ -44,6 +44,10 @@
     "noLessonsInCategory": "No hay lecciones en esta categoría",
     "checkBackLater": "¡Vuelve más tarde para ver contenido nuevo!"
   },
+  "categoryTitles": {
+    "allLessons": "Educación financiera",
+    "allLessonsDescription": "Plan de estudios completo de educación financiera"
+  },
   "categories": {
     "moneyBasics": {
       "title": "Fundamentos del dinero",

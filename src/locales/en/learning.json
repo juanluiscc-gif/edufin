@@ -44,6 +44,10 @@
     "noLessonsInCategory": "No lessons in this category",
     "checkBackLater": "Check back later for new content!"
   },
+  "categoryTitles": {
+    "allLessons": "Financial Education",
+    "allLessonsDescription": "Complete financial literacy curriculum"
+  },
   "categories": {
     "moneyBasics": {
       "title": "Money Basics",

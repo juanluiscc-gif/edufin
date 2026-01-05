@@ -20,7 +20,7 @@ export async function generateMetadata({
   };
 }
 
-async function getCategoryLessons(categoryId: string, userId: string) {
+async function getCategoryLessons(categoryId: string, userId: string, locale: string) {
   try {
     // For now, we just show all lessons since we have a single category
     const lessons = await prisma.lesson.findMany({
@@ -68,11 +68,14 @@ async function getCategoryLessons(categoryId: string, userId: string) {
       };
     });
 
+    // Get translations for category
+    const t = await getTranslations({ locale, namespace: 'learning' });
+
     return {
       category: {
         id: categoryId,
-        title: 'Financial Education',
-        description: 'Complete financial literacy curriculum',
+        title: t('categoryTitles.allLessons'),
+        description: t('categoryTitles.allLessonsDescription'),
       },
       lessons: lessonsWithProgress,
     };
@@ -96,7 +99,7 @@ export default async function CategoryPage({
   const payload = token ? await verifyToken(token) : null;
   const userId = payload?.user_id || 'guest';
 
-  const data = await getCategoryLessons(categoryId, userId);
+  const data = await getCategoryLessons(categoryId, userId, locale);
 
   if (!data) {
     notFound();
