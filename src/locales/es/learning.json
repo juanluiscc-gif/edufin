@@ -1,26 +1,39 @@
 {
+  "learningCenter": {
+    "title": "Centro de aprendizaje",
+    "description": "Domina la educación financiera a través de lecciones interactivas organizadas por tema"
+  },
   "learning": {
     "title": "Centro de aprendizaje",
+    "subtitle": "Domina la educación financiera a través de lecciones interactivas organizadas por tema",
+    "backToHome": "Volver al inicio",
     "forEveryone": "Para todos",
     "forAdults": "Solo para adultos",
     "categories": "Categorías",
-    "lessons": "Lecciones",
+    "lessons": "lecciones",
+    "lessonsCount": "{count} lecciones",
     "progress": "Progreso",
     "completed": "Completado",
     "inProgress": "En progreso",
     "notStarted": "Sin comenzar",
     "startLesson": "Iniciar lección",
+    "startLearning": "Comenzar a aprender",
+    "continue": "Continuar",
     "continueLesson": "Continuar lección",
     "reviewLesson": "Repasar lección",
     "markComplete": "Marcar como completa",
     "difficulty": "Dificultad",
     "estimatedTime": "Tiempo estimado",
-    "minutes": "{count} Minutos",
+    "minutes": "{count} min",
     "module": "Módulo",
     "modules": "Módulos",
     "of": "de",
     "backToCategory": "Volver a la categoría",
-    "backToLearning": "Volver al aprendizaje"
+    "backToLearning": "Volver al aprendizaje",
+    "locked": "Bloqueado",
+    "completePrevious": "Completa la categoría anterior para desbloquear",
+    "noLessonsYet": "Aún no hay lecciones",
+    "noLessonsDescription": "Las lecciones aparecerán aquí una vez que se agreguen a la base de datos"
   },
   "categories": {
     "moneyBasics": {

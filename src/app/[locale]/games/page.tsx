@@ -23,7 +23,7 @@ export default function GamesPage() {
   const params = useParams();
   const locale = params.locale as string;
   const t = useTranslations('games');
-  const tTypes = useTranslations('gameTypes');
+  const tTypes = useTranslations('games.gameTypes');
 
   const [games, setGames] = useState<Game[]>([]);
   const [filteredGames, setFilteredGames] = useState<Game[]>([]);
