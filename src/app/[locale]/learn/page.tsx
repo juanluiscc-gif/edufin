@@ -110,22 +110,8 @@ export default async function LearnPage({ params }: { params: Promise<{ locale: 
               ? Math.round((category.completedCount / category.lessonCount) * 100)
               : 0;
 
-            // Render as div if locked, Link if unlocked
-            const CardWrapper = category.isLocked ? 'div' : Link;
-            const cardProps = category.isLocked
-              ? {}
-              : { href: `/${locale}/learn/${category.id}` };
-
-            return (
-              <CardWrapper
-                key={category.id}
-                {...cardProps}
-                className={`block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden ${
-                  category.isLocked ? 'opacity-60 cursor-not-allowed' : 'hover:-translate-y-1'
-                }`}
-              >
-                {/* Category Card */}
-                <div className="p-6">
+            const cardContent = (
+              <div className="p-6">
                   {/* Icon and Title */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center space-x-3">
@@ -216,7 +202,28 @@ export default async function LearnPage({ params }: { params: Promise<{ locale: 
                     </div>
                   )}
                 </div>
-              </CardWrapper>
+            );
+
+            // Render as div if locked, Link if unlocked
+            if (category.isLocked) {
+              return (
+                <div
+                  key={category.id}
+                  className="block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden opacity-60 cursor-not-allowed"
+                >
+                  {cardContent}
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={category.id}
+                href={`/${locale}/learn/${category.id}`}
+                className="block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden hover:-translate-y-1"
+              >
+                {cardContent}
+              </Link>
             );
           })}
         </div>
