@@ -40,18 +40,27 @@ async function getCategories() {
 
 export default async function LearnPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'learning' });
   const { categories } = await getCategories();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Learning Center
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Master financial literacy through interactive lessons organized by topic
+        <div className="mb-12">
+          <div className="flex justify-between items-center mb-4">
+            <h1 className="text-4xl font-bold text-gray-900">
+              📚 {t('learning.title')}
+            </h1>
+            <Link
+              href={`/${locale}/dashboard`}
+              className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition-colors flex items-center gap-2"
+            >
+              ← {t('learning.backToHome')}
+            </Link>
+          </div>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto text-center">
+            {t('learning.subtitle')}
           </p>
         </div>
 
@@ -87,7 +96,7 @@ export default async function LearnPage({ params }: { params: Promise<{ locale: 
                         </h3>
                         {category.isLocked && (
                           <span className="inline-block mt-1 px-2 py-1 text-xs font-semibold text-red-800 bg-red-100 rounded">
-                            🔒 Locked
+                            🔒 {t('learning.locked')}
                           </span>
                         )}
                       </div>
@@ -107,9 +116,9 @@ export default async function LearnPage({ params }: { params: Promise<{ locale: 
                     {/* Progress Bar */}
                     <div>
                       <div className="flex justify-between text-sm mb-1">
-                        <span className="text-gray-700 font-medium">Progress</span>
+                        <span className="text-gray-700 font-medium">{t('learning.progress')}</span>
                         <span className="text-gray-500">
-                          {category.completedCount}/{category.lessonCount} lessons
+                          {category.completedCount}/{category.lessonCount} {t('learning.lessons')}
                         </span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
@@ -129,10 +138,10 @@ export default async function LearnPage({ params }: { params: Promise<{ locale: 
                     {/* Metadata */}
                     <div className="flex items-center justify-between text-sm text-gray-500">
                       <span className="flex items-center">
-                        📚 {category.lessonCount} lessons
+                        📚 {t('learning.lessonsCount', { count: category.lessonCount })}
                       </span>
                       <span className="flex items-center">
-                        ⏱️ {category.totalMinutes} min
+                        ⏱️ {t('learning.minutes', { count: category.totalMinutes })}
                       </span>
                     </div>
                   </div>
@@ -141,7 +150,7 @@ export default async function LearnPage({ params }: { params: Promise<{ locale: 
                   {!category.isLocked && (
                     <div className="mt-4 pt-4 border-t border-gray-100">
                       <span className="text-blue-600 font-semibold text-sm flex items-center">
-                        {category.completedCount === 0 ? 'Start Learning' : 'Continue'}
+                        {category.completedCount === 0 ? t('learning.startLearning') : t('learning.continue')}
                         <svg
                           className="w-4 h-4 ml-1"
                           fill="none"
@@ -162,7 +171,7 @@ export default async function LearnPage({ params }: { params: Promise<{ locale: 
                   {category.isLocked && (
                     <div className="mt-4 pt-4 border-t border-gray-100">
                       <p className="text-sm text-gray-500">
-                        Complete the previous category to unlock
+                        {t('learning.completePrevious')}
                       </p>
                     </div>
                   )}
@@ -176,9 +185,9 @@ export default async function LearnPage({ params }: { params: Promise<{ locale: 
         {categories.length === 0 && (
           <div className="text-center py-12">
             <div className="text-6xl mb-4">📚</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">No lessons yet</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('learning.noLessonsYet')}</h3>
             <p className="text-gray-600">
-              Lessons will appear here once they are added to the database.
+              {t('learning.noLessonsDescription')}
             </p>
           </div>
         )}
