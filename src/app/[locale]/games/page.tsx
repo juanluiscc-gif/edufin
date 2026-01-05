@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import GameCard from '@/components/games/GameCard';
 import { GameType } from '@prisma/client';
@@ -21,6 +22,8 @@ type FilterType = 'all' | GameType;
 export default function GamesPage() {
   const params = useParams();
   const locale = params.locale as string;
+  const t = useTranslations('games');
+  const tTypes = useTranslations('gameTypes');
 
   const [games, setGames] = useState<Game[]>([]);
   const [filteredGames, setFilteredGames] = useState<Game[]>([]);
@@ -57,19 +60,19 @@ export default function GamesPage() {
     }
   };
 
-  const filterButtons: { type: FilterType; label: string; emoji: string }[] = [
-    { type: 'all', label: 'All Types', emoji: '🎮' },
-    { type: 'quiz', label: 'Quiz', emoji: '📝' },
-    { type: 'simulation', label: 'Simulation', emoji: '🏪' },
-    { type: 'puzzle', label: 'Puzzle', emoji: '🧩' },
-    { type: 'scenario', label: 'Scenario', emoji: '🎭' }
+  const filterButtons: { type: FilterType; emoji: string }[] = [
+    { type: 'all', emoji: '🎮' },
+    { type: 'quiz', emoji: '📝' },
+    { type: 'simulation', emoji: '🏪' },
+    { type: 'puzzle', emoji: '🧩' },
+    { type: 'scenario', emoji: '🎭' }
   ];
 
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 p-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="text-xl text-gray-600 dark:text-gray-400">Loading games...</div>
+          <div className="text-xl text-gray-600 dark:text-gray-400">{t('games.loadingGames')}</div>
         </div>
       </div>
     );
@@ -79,13 +82,21 @@ export default function GamesPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 p-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-            🎮 Educational Games
-          </h1>
-          <p className="text-gray-600 dark:text-gray-400">
-            Learn about money while having fun!
-          </p>
+        <div className="mb-8 flex justify-between items-center">
+          <div>
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+              🎮 {t('games.title')}
+            </h1>
+            <p className="text-gray-600 dark:text-gray-400">
+              {t('games.subtitle')}
+            </p>
+          </div>
+          <Link
+            href={`/${locale}/dashboard`}
+            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition-colors flex items-center gap-2"
+          >
+            ← {t('games.backToHome')}
+          </Link>
         </div>
 
         {/* Top Bar with Profile and Leaderboard Links */}
@@ -94,19 +105,19 @@ export default function GamesPage() {
             href={`/${locale}/profile`}
             className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
           >
-            👤 Profile
+            👤 {t('games.profile')}
           </Link>
           <Link
             href={`/${locale}/leaderboard`}
             className="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors"
           >
-            🏆 Leaderboard
+            🏆 {t('games.leaderboard')}
           </Link>
         </div>
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap gap-3 mb-8">
-          {filterButtons.map(({ type, label, emoji }) => (
+          {filterButtons.map(({ type, emoji }) => (
             <button
               key={type}
               onClick={() => setActiveFilter(type)}
@@ -116,7 +127,7 @@ export default function GamesPage() {
                   : 'bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700'
               }`}
             >
-              {emoji} {label}
+              {emoji} {type === 'all' ? t('games.allTypes') : tTypes(type)}
             </button>
           ))}
         </div>
@@ -142,7 +153,7 @@ export default function GamesPage() {
           <div className="text-center py-12">
             <div className="text-4xl mb-4">🎮</div>
             <div className="text-xl text-gray-600 dark:text-gray-400">
-              No games found for this filter
+              {t('games.noGamesFound')}
             </div>
           </div>
         )}
@@ -151,19 +162,19 @@ export default function GamesPage() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg text-center">
             <div className="text-3xl font-bold text-blue-600">{games.length}</div>
-            <div className="text-gray-600 dark:text-gray-400">Total Games</div>
+            <div className="text-gray-600 dark:text-gray-400">{t('games.totalGames')}</div>
           </div>
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg text-center">
             <div className="text-3xl font-bold text-green-600">
               {games.filter(g => g.hasPlayed).length}
             </div>
-            <div className="text-gray-600 dark:text-gray-400">Games Played</div>
+            <div className="text-gray-600 dark:text-gray-400">{t('games.gamesPlayed')}</div>
           </div>
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg text-center">
             <div className="text-3xl font-bold text-purple-600">
               {games.reduce((sum, g) => sum + (g.userHighScore || 0), 0).toLocaleString()}
             </div>
-            <div className="text-gray-600 dark:text-gray-400">Total Score</div>
+            <div className="text-gray-600 dark:text-gray-400">{t('games.totalScore')}</div>
           </div>
         </div>
       </div>

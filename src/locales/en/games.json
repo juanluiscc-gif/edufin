@@ -1,13 +1,16 @@
 {
   "games": {
     "title": "Educational Games",
+    "subtitle": "Learn about money while having fun!",
     "playGame": "Play Game",
+    "playNow": "Play Now",
     "score": "Score",
     "highScore": "High Score",
     "leaderboard": "Leaderboard",
     "viewLeaderboard": "View Leaderboard",
     "playAgain": "Play Again",
     "backToGames": "Back to Games",
+    "backToHome": "Back to Home",
     "difficulty": "Difficulty",
     "instructions": "Instructions",
     "hideInstructions": "Hide Instructions",
@@ -18,7 +21,22 @@
     "congratulations": "Congratulations!",
     "gameComplete": "Game Complete!",
     "tryAgain": "Try Again",
-    "exit": "Exit Game"
+    "exit": "Exit Game",
+    "loadingGames": "Loading games...",
+    "loadingGame": "Loading game...",
+    "gameNotFound": "Game not found",
+    "noGamesFound": "No games found for this filter",
+    "totalGames": "Total Games",
+    "gamesPlayed": "Games Played",
+    "totalScore": "Total Score",
+    "profile": "Profile",
+    "allTypes": "All Types",
+    "notPlayedYet": "Not Played Yet",
+    "comingSoon": {
+      "simulation": "Simulation games coming soon!",
+      "puzzle": "Puzzle games coming soon!",
+      "scenario": "Scenario games coming soon!"
+    }
   },
   "gameTypes": {
     "quiz": "Quiz",
