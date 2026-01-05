@@ -12,12 +12,18 @@
     "db:push": "prisma db push",
     "db:seed": "tsx prisma/seed.ts",
     "db:seed-lessons": "tsx prisma/seed_lessons.ts",
-    "db:studio": "prisma studio"
+    "db:studio": "prisma studio",
+    "translate:es": "tsx scripts/translate-multilang.ts -- --lang=es",
+    "translate:fr": "tsx scripts/translate-multilang.ts -- --lang=fr",
+    "translate:de": "tsx scripts/translate-multilang.ts -- --lang=de",
+    "translate:ja": "tsx scripts/translate-multilang.ts -- --lang=ja",
+    "translate:zh": "tsx scripts/translate-multilang.ts -- --lang=zh"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
     "@neondatabase/serverless": "^1.0.2",
     "@prisma/adapter-neon": "^7.2.0",
     "@prisma/adapter-pg": "^7.2.0",
