@@ -1,6 +1,25 @@
 import { PrismaClient, GameType, AgeGroup } from '@prisma/client';
+import { Pool } from 'pg';
+import { PrismaPg } from '@prisma/adapter-pg';
 
-const prisma = new PrismaClient();
+// Initialize PrismaClient with adapter
+const connectionString = process.env.POSTGRES_URL_NON_POOLING || process.env.DATABASE_URL || process.env.POSTGRES_URL;
+
+if (!connectionString) {
+  throw new Error('DATABASE_URL, POSTGRES_URL, or POSTGRES_URL_NON_POOLING must be defined');
+}
+
+const pool = new Pool({
+  connectionString,
+  ssl: connectionString.includes('sslmode=require') ? { rejectUnauthorized: false } : undefined,
+});
+
+const adapter = new PrismaPg(pool);
+
+const prisma = new PrismaClient({
+  adapter,
+  log: ['error'],
+});
 
 async function main() {
   console.log('🎭 Seeding database with Scenario games...\n');
@@ -2804,4 +2823,5 @@ main()
   })
   .finally(async () => {
     await prisma.$disconnect();
+    await pool.end();
   });
