@@ -102,9 +102,6 @@ async function translateWithAI(
     de: 'German',
     ja: 'Japanese',
     zh: 'Simplified Chinese',
-    hi: 'Hindi',
-    it: 'Italian',
-    pt: 'Brazilian Portuguese',
   };
 
   const targetLangName = languageNames[targetLanguage];
