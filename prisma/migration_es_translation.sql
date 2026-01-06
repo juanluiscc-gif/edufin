@@ -3,7 +3,13 @@
 -- Generated: 2026-01-06T01:00:52.314Z
 -- Inserts translations into ContentTranslation table
 
--- Delete existing translations for this language (if re-running)
+-- STEP 1: Drop foreign key constraints to allow insertion
+ALTER TABLE "ContentTranslation"
+DROP CONSTRAINT IF EXISTS "ContentTranslation_lesson_fkey";
+
+ALTER TABLE "ContentTranslation"
+DROP CONSTRAINT IF EXISTS "ContentTranslation_game_fkey";
+
 DELETE FROM "ContentTranslation"
 WHERE target_language = 'es';
 
