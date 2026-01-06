@@ -1,38 +1,19 @@
 import { NextResponse } from 'next/server';
-import { exec } from 'child_process';
-import { promisify } from 'util';
-import path from 'path';
-
-const execAsync = promisify(exec);
+import { prisma } from '@/lib/prisma';
+import { seedScenarioGames } from '@/lib/seed-scenarios-data';
 
 export async function POST() {
   try {
     console.log('🎭 Starting scenario games seeding via API...');
 
-    const scriptPath = path.join(process.cwd(), 'prisma', 'seed_scenarios.ts');
-
-    // Execute the seed script with tsx
-    const { stdout, stderr } = await execAsync(`npx tsx "${scriptPath}"`, {
-      env: {
-        ...process.env,
-        // Ensure environment variables are passed
-        NODE_ENV: process.env.NODE_ENV || 'development',
-      },
-      cwd: process.cwd(),
-      maxBuffer: 10 * 1024 * 1024, // 10MB buffer for large outputs
-    });
-
-    console.log('Seed script output:', stdout);
-    if (stderr) {
-      console.warn('Seed script warnings:', stderr);
-    }
+    const createdGames = await seedScenarioGames(prisma);
 
     return NextResponse.json({
       success: true,
       message: '✨ Scenario games seeded successfully!',
-      output: stdout,
       details: {
-        gamesCreated: 10,
+        gamesCreated: createdGames.length,
+        games: createdGames.map(g => ({ id: g.id, title: g.title })),
         topics: [
           'Negotiation',
           'Fraud Detection',
@@ -55,10 +36,12 @@ export async function POST() {
       {
         success: false,
         error: error.message,
-        stderr: error.stderr,
-        stdout: error.stdout,
+        stack: process.env.NODE_ENV === 'development' ? error.stack : undefined,
       },
       { status: 500 }
     );
+  } finally {
+    // Prisma will be disconnected by the connection pool
+    // No need to manually disconnect in serverless
   }
 }
