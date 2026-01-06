@@ -1,6 +1,4 @@
 -- Multilingual Translation Migration
--- Target Language: Spanish (Latin American) (es)
--- Generated: 2026-01-06T01:00:52.314Z
 -- Inserts translations into ContentTranslation table
 
 -- STEP 1: Drop foreign key constraints to allow insertion
@@ -11,7 +9,7 @@ ALTER TABLE "ContentTranslation"
 DROP CONSTRAINT IF EXISTS "ContentTranslation_game_fkey";
 
 DELETE FROM "ContentTranslation"
-WHERE target_language = 'es';
+WHERE target_language = 'de';
 
 -- ========================================
 -- LESSON TRANSLATIONS
@@ -28,11 +26,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'Introduction',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Einleitung',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -46,7 +44,7 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# What is Money?
 
 Money is what we use to buy things we need and want. It''s a tool that makes trading easier!
@@ -54,9 +52,15 @@ Money is what we use to buy things we need and want. It''s a tool that makes tra
 **For Kids:** Money is like tickets at an arcade - you exchange them for prizes!
 
 **For Adults:** Money serves as a medium of exchange, eliminating the inefficiencies of barter systems.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# Was ist Geld?
+
+Geld ist das, was wir benutzen, um Dinge zu kaufen, die wir brauchen und wollen. Es ist ein Werkzeug, das den Handel einfacher macht!
+
+**Für Kinder:** Geld ist wie Spielmarken in einer Spielhalle - du tauschst sie gegen Preise ein!
+
+**Für Erwachsene:** Geld dient als Tauschmittel und beseitigt die Ineffizienzen von Tauschhandelssystemen.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -70,11 +74,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'History of Money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geschichte des Geldes',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -88,7 +92,7 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# How Money Started
 
 Long ago, people traded items directly - like trading 5 apples for 1 chicken. This was called **bartering**.
@@ -98,9 +102,17 @@ But bartering had problems:
 - How many apples equal one chicken?
 
 So humans invented money to solve these problems!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# Wie Geld entstand
+
+Vor langer Zeit tauschten Menschen Gegenstände direkt - wie zum Beispiel 5 Äpfel gegen 1 Huhn. Dies nannte man **Tauschhandel**.
+
+Aber der Tauschhandel hatte Probleme:
+- Was ist, wenn du Äpfel hattest, aber die andere Person sie nicht wollte?
+- Wie viele Äpfel entsprechen einem Huhn?
+
+Also erfanden die Menschen Geld, um diese Probleme zu lösen!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -114,11 +126,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'Why We Use Money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Warum wir Geld verwenden',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -132,7 +144,7 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# Why Money is Useful
 
 Money makes life easier because:
@@ -142,9 +154,17 @@ Money makes life easier because:
 3. **Medium of Exchange** - Everyone accepts it
 
 Instead of carrying around chickens and apples, you carry money!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# Warum Geld nützlich ist
+
+Geld macht das Leben einfacher, weil:
+
+1. **Wertaufbewahrungsmittel** - Du kannst es für später sparen
+2. **Recheneinheit** - Alles hat einen klaren Preis
+3. **Tauschmittel** - Jeder akzeptiert es
+
+Anstatt Hühner und Äpfel mit dir herumzutragen, trägst du Geld bei dir!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -158,11 +178,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[3].title',
   'en',
-  'es',
+  'de',
   'Modern Money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Modernes Geld',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -176,7 +196,7 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[3].content',
   'en',
-  'es',
+  'de',
   '# Money Today
 
 Today, money comes in many forms:
@@ -185,9 +205,16 @@ Today, money comes in many forms:
 - **Cryptocurrency:** New digital money on the internet
 
 Most people use a mix of all three types!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# Geld heute
+
+Heute gibt es Geld in vielen Formen:
+- **Physisch:** Münzen und Scheine, die du anfassen kannst
+- **Digital:** Geld auf Bankkonten und in Apps
+- **Kryptowährung:** Neues digitales Geld im Internet
+
+Die meisten Menschen nutzen eine Mischung aus allen drei Arten!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -201,11 +228,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'What is the main purpose of money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist der Hauptzweck von Geld?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -219,11 +246,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'To make trading easier',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Um den Handel zu erleichtern',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -237,11 +264,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'To be pretty',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Um hübsch auszusehen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -255,11 +282,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'To collect',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Zum Sammeln',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -273,11 +300,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'To burn',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Zum Verbrennen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -291,11 +318,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'Money was invented to make trading goods and services easier than bartering.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld wurde erfunden, um den Handel mit Waren und Dienstleistungen einfacher zu machen als Tauschhandel.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -309,11 +336,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'What was the old way of trading before money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was war die alte Art des Handelns vor dem Geld?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -327,11 +354,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   'Selling',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Verkaufen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -345,11 +372,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   'Bartering',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Tauschhandel',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -363,11 +390,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   'Giving away',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Verschenken',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -381,11 +408,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   'Stealing',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Stehlen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -399,11 +426,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'Bartering means trading items directly, like 5 apples for 1 chicken.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Tauschhandel bedeutet, Gegenstände direkt zu tauschen, zum Beispiel 5 Äpfel gegen 1 Huhn.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -417,11 +444,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'Which is NOT a form of modern money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Welches ist KEINE Form von modernem Geld?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -435,11 +462,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   'Digital money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Digitales Geld',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -453,11 +480,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   'Coins',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Münzen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -471,11 +498,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   'Rocks',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Steine',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -489,11 +516,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   'Cryptocurrency',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Kryptowährung',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -507,11 +534,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   'While some ancient cultures used special rocks as money, regular rocks are not modern currency.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Obwohl einige alte Kulturen besondere Steine als Geld verwendeten, sind normale Steine keine moderne Währung.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -525,11 +552,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'Money helps us "store value" means:',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld hilft uns, „Wert zu speichern" bedeutet:',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -543,11 +570,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   'We can save it for later',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wir können es für später sparen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -561,11 +588,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   'We must spend it now',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wir müssen es jetzt ausgeben',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -579,11 +606,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   'It loses value quickly',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es verliert schnell an Wert',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -597,11 +624,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   'It takes up space',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es nimmt Platz weg',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -615,11 +642,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   'Storing value means money keeps its worth over time so you can save it.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wertaufbewahrung bedeutet, dass Geld seinen Wert über die Zeit behält, sodass du es sparen kannst.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -633,11 +660,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'Coins and Bills',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Münzen und Geldscheine',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -651,7 +678,7 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# Physical Money
 
 **Coins** are made of metal and usually worth less. They''re good for small purchases like candy or parking meters.
@@ -659,9 +686,15 @@ INSERT INTO "ContentTranslation" (
 **Bills (Banknotes)** are made of paper or plastic and worth more. They''re lighter and easier to carry than lots of coins.
 
 💡 Fun fact: The ink and paper for bills cost less than 10 cents, but the bill might be worth $100!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# Physisches Geld
+
+**Münzen** bestehen aus Metall und haben normalerweise einen geringeren Wert. Sie eignen sich gut für kleine Einkäufe wie Süßigkeiten oder Parkuhren.
+
+**Geldscheine (Banknoten)** bestehen aus Papier oder Plastik und haben einen höheren Wert. Sie sind leichter und einfacher zu transportieren als viele Münzen.
+
+💡 Wissenswertes: Die Tinte und das Papier für Geldscheine kosten weniger als 10 Cent, aber der Schein kann 100 $ wert sein!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -675,11 +708,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'Digital Money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Digitales Geld',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -693,7 +726,7 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# Money You Can''t Touch
 
 Most money today is **digital** - it exists as numbers in a computer!
@@ -705,9 +738,19 @@ Examples:
 - Mobile wallets like Apple Pay
 
 You never touch this money, but you can still spend it!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# Geld, das du nicht anfassen kannst
+
+Das meiste Geld ist heute **digital** - es existiert als Zahlen in einem Computer!
+
+Beispiele:
+- Geld auf deinem Bankkonto
+- Bezahl-Apps wie PayPal, Venmo
+- Kreditkartenzahlungen
+- Mobile Geldbörsen wie Apple Pay
+
+Du kannst dieses Geld nie anfassen, aber du kannst es trotzdem ausgeben!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -721,11 +764,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'Cryptocurrency Basics',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# Grundlagen der Kryptowährung',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -739,7 +782,7 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# A New Kind of Money
 
 **Cryptocurrency** is digital money that uses computer code to secure transactions.
@@ -755,9 +798,23 @@ Most famous examples:
 - Prices change a lot!
 
 ⚠️ For beginners, stick to regular money until you learn more!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# Eine neue Art von Geld
+
+**Kryptowährung** ist digitales Geld, das Computercode verwendet, um Transaktionen zu sichern.
+
+Bekannteste Beispiele:
+- Bitcoin (BTC)
+- Ethereum (ETH)
+
+**Hauptunterschiede:**
+- Keine Regierung kontrolliert es
+- Funktioniert in allen Ländern
+- Sehr sicher, aber kann riskant sein
+- Preise ändern sich stark!
+
+⚠️ Für Anfänger gilt: Bleiben Sie bei normalem Geld, bis Sie mehr gelernt haben!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -771,11 +828,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'What are coins usually made of?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Woraus werden Münzen üblicherweise hergestellt?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -789,11 +846,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'Paper',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Papier',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -807,11 +864,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'Metal',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Metall',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -825,11 +882,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'Plastic',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Plastik',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -843,11 +900,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'Wood',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Holz',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -861,11 +918,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'Coins are made of metal, which makes them durable and hard to counterfeit.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Münzen bestehen aus Metall, was sie langlebig und schwer zu fälschen macht.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -879,11 +936,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'Which is an example of digital money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Welches ist ein Beispiel für digitales Geld?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -897,11 +954,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   'A $10 bill',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ein 10-Dollar-Schein',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -915,11 +972,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   'A quarter',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ein Vierteldollar',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -933,11 +990,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   'Your bank account balance',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Dein Kontostand',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -951,11 +1008,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   'Gold bars',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Goldbarren',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -969,11 +1026,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'Bank account balances are digital money - they exist as electronic records.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Kontoguthaben sind digitales Geld - sie existieren als elektronische Aufzeichnungen.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -987,11 +1044,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'What is true about cryptocurrency?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was stimmt über Kryptowährung?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1005,11 +1062,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   'It is controlled by governments',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es wird von Regierungen kontrolliert',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1023,11 +1080,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   'It never changes in value',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es verändert sich nie im Wert',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1041,11 +1098,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   'It uses computer code for security',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es verwendet Computercode für die Sicherheit',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1059,11 +1116,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   'You can hold it in your hand',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Du kannst es in der Hand halten',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1077,11 +1134,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   'Cryptocurrency uses advanced computer code (cryptography) to secure transactions.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Kryptowährung verwendet fortgeschrittenen Computercode (Kryptographie), um Transaktionen zu sichern.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1095,11 +1152,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'Why is digital money convenient?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Warum ist digitales Geld bequem?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1113,11 +1170,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   'You can carry large amounts easily',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sie können große Mengen leicht mit sich führen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1131,11 +1188,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   'It weighs a lot',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es wiegt viel',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1149,11 +1206,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   'It can get wet',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es kann nass werden',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1167,11 +1224,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   'You must count it manually',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sie müssen es manuell zählen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1185,11 +1242,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   'Digital money is convenient because you can have millions in your account without physical storage.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Digitales Geld ist praktisch, weil du Millionen auf deinem Konto haben kannst, ohne es physisch aufbewahren zu müssen.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1203,11 +1260,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'Supply and Demand',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Angebot und Nachfrage',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1221,7 +1278,7 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# What Makes Money Valuable?
 
 Money has value because of **supply and demand**:
@@ -1233,9 +1290,19 @@ If everyone wants dollars and there aren''t many, dollars are valuable.
 If there are too many dollars, each one is worth less.
 
 Think of it like rare trading cards - rare cards are more valuable!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# Was macht Geld wertvoll?
+
+Geld hat Wert aufgrund von **Angebot und Nachfrage**:
+
+**Angebot** = Wie viel Geld existiert
+**Nachfrage** = Wie viele Menschen es haben wollen
+
+Wenn alle Dollars haben wollen und es nicht viele gibt, sind Dollars wertvoll.
+Wenn es zu viele Dollars gibt, ist jeder einzelne weniger wert.
+
+Denk daran wie bei seltenen Sammelkarten - seltene Karten sind wertvoller!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1249,11 +1316,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'Government Role',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Rolle der Regierung',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1267,7 +1334,7 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# Who Controls Money?
 
 Governments and central banks control how much money exists:
@@ -1278,9 +1345,18 @@ Governments and central banks control how much money exists:
 They try to keep the amount "just right" so the economy stays healthy.
 
 This is why you can''t just print money at home - it would make money worthless!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# Wer kontrolliert Geld?
+
+Regierungen und Zentralbanken kontrollieren, wie viel Geld existiert:
+
+- **Zu viel drucken** = Geld wird weniger wertvoll (Inflation)
+- **Zu wenig drucken** = Geschäfte zu machen wird schwierig (Deflation)
+
+Sie versuchen, die Menge genau richtig zu halten, damit die Wirtschaft gesund bleibt.
+
+Deshalb kannst du nicht einfach zu Hause Geld drucken - es würde Geld wertlos machen!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1294,11 +1370,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'Trust in Money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Vertrauen in Geld',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1312,7 +1388,7 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# Why We Trust Money
 
 Money only works if people trust it!
@@ -1324,9 +1400,19 @@ We trust money because:
 4. It has security features (hard to fake)
 
 If people stopped trusting it, money would become just paper or numbers.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# Warum wir Geld vertrauen
+
+Geld funktioniert nur, wenn die Menschen ihm vertrauen!
+
+Wir vertrauen Geld, weil:
+1. Die Regierung es für rechtsgültig erklärt
+2. Geschäfte es akzeptieren
+3. Wir damit Steuern bezahlen können
+4. Es Sicherheitsmerkmale hat (schwer zu fälschen)
+
+Wenn die Menschen aufhören würden, ihm zu vertrauen, würde Geld zu bloßem Papier oder Zahlen werden.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1340,11 +1426,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'What happens if a government prints too much money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was passiert, wenn eine Regierung zu viel Geld druckt?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1358,11 +1444,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'Everyone becomes rich',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Jeder wird reich',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1376,11 +1462,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'Money becomes less valuable',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld wird weniger wertvoll',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1394,11 +1480,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'Money becomes more valuable',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld wird wertvoller',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1412,11 +1498,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'Nothing changes',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Nichts ändert sich',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1430,11 +1516,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'Printing too much money causes inflation - each dollar is worth less.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Das Drucken von zu viel Geld verursacht Inflation - jeder Dollar ist weniger wert.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1448,11 +1534,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'Supply and demand means:',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Angebot und Nachfrage bedeutet:',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1466,11 +1552,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   'How much exists and how many want it',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wie viel vorhanden ist und wie viele es haben wollen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1484,11 +1570,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   'Where to buy things',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wo man Dinge kaufen kann',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1502,11 +1588,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   'How to save money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wie man Geld spart',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1520,11 +1606,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   'Types of currency',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Arten von Währung',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1538,11 +1624,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'Supply is how much exists, demand is how many people want it.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Angebot ist, wie viel vorhanden ist, Nachfrage ist, wie viele Menschen es wollen.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1556,11 +1642,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'Why can''t you just print your own money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Warum kannst du nicht einfach dein eigenes Geld drucken?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1574,11 +1660,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   'It would make all money worthless',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es würde alles Geld wertlos machen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1592,11 +1678,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   'Printers are expensive',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Drucker sind teuer',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1610,11 +1696,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   'Paper is hard to find',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Papier ist schwer zu finden',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1628,11 +1714,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   'You can, it''s allowed',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Du kannst es, es ist erlaubt',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1646,11 +1732,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   'If everyone could print money, there would be too much supply and it would lose value.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wenn jeder Geld drucken könnte, gäbe es zu viel davon und es würde seinen Wert verlieren.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1664,11 +1750,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'Money has value primarily because:',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld hat hauptsächlich Wert, weil:',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1682,11 +1768,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   'It''s pretty',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es ist hübsch',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1700,11 +1786,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   'People trust and accept it',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Menschen ihm vertrauen und es akzeptieren',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1718,11 +1804,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   'It''s made of precious materials',
-  'Es elaborado con materiales preciosos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es aus wertvollen Materialien hergestellt ist',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1736,11 +1822,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   'It''s rare',
-  'Es escaso',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es ist selten',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1754,11 +1840,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   'Money''s value comes from collective trust and acceptance in society.',
-  'El valor del dinero proviene de la confianza colectiva y la aceptación en la sociedad.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Der Wert von Geld entsteht durch kollektives Vertrauen und gesellschaftliche Akzeptanz.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1772,11 +1858,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'de',
   'What role do governments play with money?',
-  '¿Qué papel desempeñan los gobiernos con el dinero?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Welche Rolle spielen Regierungen beim Geld?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1790,11 +1876,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'de',
   'They determine fashion trends',
-  'Determinan las tendencias de moda',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sie bestimmen Modetrends',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1808,11 +1894,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'de',
   'They control the supply',
-  'Controlan la oferta',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sie kontrollieren die Geldmenge',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1826,11 +1912,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'de',
   'They force you to spend',
-  'Te obligan a gastar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sie zwingen dich zum Ausgeben',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1844,11 +1930,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'de',
   'Nothing at all',
-  'Nada en absoluto',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Gar keine Rolle',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1862,11 +1948,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'de',
   'Governments and central banks control how much money is in circulation.',
-  'Los gobiernos y los bancos centrales controlan cuánto dinero está en circulación.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Regierungen und Zentralbanken kontrollieren, wie viel Geld im Umlauf ist.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1880,11 +1966,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'Major Currencies',
-  'Monedas Principales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wichtige Währungen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1898,7 +1984,7 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# World Money
 
 Different countries use different money!
@@ -1911,20 +1997,20 @@ Different countries use different money!
 - 🇨🇳 Chinese Yuan (CNY) - Used in China
 
 Each has its own symbol and value!',
-  '# Dinero del Mundo
+  '# Weltgeld
 
-¡Diferentes países usan diferentes monedas!
+Verschiedene Länder verwenden unterschiedliches Geld!
 
-**Principales Monedas Mundiales:**
-- 🇺🇸 Dólar Estadounidense (USD) - La más utilizada
-- 🇪🇺 Euro (EUR) - Usada en muchos países europeos
-- 🇬🇧 Libra Esterlina (GBP) - Usada en el Reino Unido
-- 🇯🇵 Yen Japonés (JPY) - Usada en Japón
-- 🇨🇳 Yuan Chino (CNY) - Usada en China
+**Wichtige Weltwährungen:**
+- 🇺🇸 US-Dollar (USD) - Am weitesten verbreitet
+- 🇪🇺 Euro (EUR) - Wird in vielen europäischen Ländern verwendet
+- 🇬🇧 Britisches Pfund (GBP) - Wird im Vereinigten Königreich verwendet
+- 🇯🇵 Japanischer Yen (JPY) - Wird in Japan verwendet
+- 🇨🇳 Chinesischer Yuan (CNY) - Wird in China verwendet
 
-¡Cada una tiene su propio símbolo y valor!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Jede hat ihr eigenes Symbol und ihren eigenen Wert!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1938,11 +2024,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'Exchange Rates',
-  'Tasas de Cambio',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wechselkurse',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1956,7 +2042,7 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# Trading Money Between Countries
 
 **Exchange rates** tell you how much one currency is worth in another.
@@ -1971,22 +2057,22 @@ This means one US dollar can be traded for 0.85 euros.
 - Interest rates
 - Political stability
 - Supply and demand',
-  '# Intercambiando Dinero Entre Países
+  '# Geldwechsel zwischen Ländern
 
-**Los tipos de cambio** te indican cuánto vale una moneda en otra.
+**Wechselkurse** sagen dir, wie viel eine Währung in einer anderen wert ist.
 
-Ejemplo:
-1 USD = 0.85 EUR
+Beispiel:
+1 USD = 0,85 EUR
 
-Esto significa que un dólar estadounidense puede intercambiarse por 0.85 euros.
+Das bedeutet, ein US-Dollar kann gegen 0,85 Euro getauscht werden.
 
-**Los tipos de cambio cambian diariamente** según:
-- Qué tan fuerte es cada economía
-- Las tasas de interés
-- La estabilidad política
-- La oferta y la demanda',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Wechselkurse ändern sich täglich** basierend auf:
+- Wie stark jede Wirtschaft ist
+- Zinssätze
+- Politische Stabilität
+- Angebot und Nachfrage',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2000,11 +2086,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'International Trade',
-  'Comercio Internacional',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Internationaler Handel',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2018,7 +2104,7 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# Why Exchange Rates Matter
 
 When countries trade with each other, they need to exchange currencies:
@@ -2031,20 +2117,20 @@ When countries trade with each other, they need to exchange currencies:
 **Weak currency** = Your money buys less abroad
 
 This affects travel, shopping, and business!',
-  '# Por qué importan los tipos de cambio
+  '# Warum Wechselkurse wichtig sind
 
-Cuando los países comercian entre sí, necesitan intercambiar monedas:
+Wenn Länder miteinander handeln, müssen sie Währungen tauschen:
 
-- Una empresa estadounidense que compra productos de Japón necesita yenes
-- Un turista europeo en América necesita dólares
-- Las compras en línea de otros países requieren conversión
+- Ein US-Unternehmen, das Produkte aus Japan kauft, braucht Yen
+- Ein europäischer Tourist in Amerika braucht Dollar
+- Online-Shopping aus anderen Ländern erfordert eine Umrechnung
 
-**Moneda fuerte** = Tu dinero compra más en otros países
-**Moneda débil** = Tu dinero compra menos en el extranjero
+**Starke Währung** = Dein Geld kann mehr in anderen Ländern kaufen
+**Schwache Währung** = Dein Geld kann im Ausland weniger kaufen
 
-¡Esto afecta los viajes, las compras y los negocios!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Das beeinflusst Reisen, Einkaufen und Geschäfte!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2058,11 +2144,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'What is the currency used in most European countries?',
-  '¿Cuál es la moneda utilizada en la mayoría de los países europeos?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist die Währung, die in den meisten europäischen Ländern verwendet wird?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2076,11 +2162,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'Dollar',
-  'Dólar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Dollar',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2094,11 +2180,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'Euro',
   'Euro',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2112,11 +2198,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'Pound',
-  'Libra',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Pfund',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2130,11 +2216,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'Peso',
   'Peso',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2148,11 +2234,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'The Euro (EUR) is used by 20 European Union countries.',
-  'El euro (EUR) es utilizado por 20 países de la Unión Europea.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Der Euro (EUR) wird von 20 Ländern der Europäischen Union verwendet.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2166,11 +2252,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'What does an exchange rate tell you?',
-  '¿Qué te indica una tasa de cambio?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was sagt dir ein Wechselkurs?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2184,11 +2270,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   'How fast money grows',
-  'Qué tan rápido crece el dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wie schnell Geld wächst',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2202,11 +2288,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   'Where to shop',
-  'Dónde comprar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wo man einkaufen kann',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2220,11 +2306,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   'How much one currency is worth in another',
-  'Cuánto vale una moneda en términos de otra',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wie viel eine Währung in einer anderen wert ist',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2238,11 +2324,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   'How to save money',
-  'Cómo ahorrar dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wie man Geld spart',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2256,11 +2342,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'Exchange rates show the value of one currency compared to another.',
-  'Los tipos de cambio muestran el valor de una moneda en comparación con otra.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wechselkurse zeigen den Wert einer Währung im Vergleich zu einer anderen.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2274,11 +2360,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'If 1 USD = 100 JPY, how many yen is $5?',
-  'Si 1 USD = 100 JPY, ¿cuántos yenes son $5?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wenn 1 USD = 100 JPY ist, wie viele Yen sind 5 $?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2292,11 +2378,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   '50 yen',
-  '50 yenes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '50 Yen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2310,11 +2396,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   '100 yen',
-  '100 yenes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '100 Yen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2328,11 +2414,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   '500 yen',
-  '500 yenes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '500 Yen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2346,11 +2432,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   '5 yen',
-  '5 yenes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '5 Yen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2364,11 +2450,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   '5 dollars × 100 yen per dollar = 500 yen.',
-  '5 dólares × 100 yenes por dólar = 500 yenes.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '5 Dollar × 100 Yen pro Dollar = 500 Yen.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2382,11 +2468,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'When would you need to exchange currency?',
-  '¿Cuándo necesitarías cambiar moneda?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wann müsstest du Geld umtauschen?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2400,11 +2486,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   'Traveling to another country',
-  'Viajar a otro país',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Reisen in ein anderes Land',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2418,11 +2504,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   'Shopping at local stores',
-  'Comprar en tiendas locales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Beim Einkaufen in lokalen Geschäften',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2436,11 +2522,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   'Paying bills at home',
-  'Pagar facturas en casa',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Rechnungen zu Hause bezahlen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2454,11 +2540,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   'Saving money',
-  'Ahorrar dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld sparen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2472,11 +2558,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   'You need to exchange currency when traveling abroad or buying from international sellers.',
-  'Necesitas cambiar moneda cuando viajas al extranjero o compras a vendedores internacionales.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Du musst Währungen umtauschen, wenn du ins Ausland reist oder bei internationalen Händlern einkaufst.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2490,11 +2576,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'de',
   'What makes a currency "strong"?',
-  '¿Qué hace que una moneda sea "fuerte"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was macht eine Währung „stark"?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2508,11 +2594,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'de',
   'It''s made of strong materials',
-  'Está hecha de materiales resistentes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es besteht aus robusten Materialien',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2526,11 +2612,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'de',
   'It buys more in other countries',
-  'Compra más en otros países',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es kauft mehr in anderen Ländern',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2544,11 +2630,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'de',
   'It''s heavy',
-  'Es pesada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es ist schwer',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2562,11 +2648,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'de',
   'It''s colorful',
-  'Es colorida',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es ist farbenfroh',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2580,11 +2666,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'de',
   'A strong currency has high purchasing power in international markets.',
-  'Una moneda fuerte tiene un alto poder adquisitivo en los mercados internacionales.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Eine starke Währung hat eine hohe Kaufkraft auf internationalen Märkten.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2598,11 +2684,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'What is Inflation',
-  '¿Qué es la Inflación?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist Inflation',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2616,7 +2702,7 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# When Things Get More Expensive
 
 **Inflation** means prices go up over time.
@@ -2633,24 +2719,24 @@ Your money buys less than it used to!
 - Increased production costs
 
 Some inflation (2-3% per year) is normal and healthy.',
-  '# Cuando las cosas se vuelven más caras
+  '# Wenn Dinge teurer werden
 
-**La inflación** significa que los precios suben con el tiempo.
+**Inflation** bedeutet, dass die Preise im Laufe der Zeit steigen.
 
-Ejemplo:
-- 1990: Una barra de chocolate costaba $0.50
-- 2025: El mismo chocolate cuesta $1.50
+Beispiel:
+- 1990: Ein Schokoriegel kostete 0,50 €
+- 2025: Derselbe Schokoriegel kostet 1,50 €
 
-¡Tu dinero compra menos de lo que solía comprar!
+Dein Geld kann weniger kaufen als früher!
 
-**Por qué ocurre:**
-- Más dinero en circulación
-- Mayor demanda de productos
-- Aumento en los costos de producción
+**Warum das passiert:**
+- Mehr Geld im Umlauf
+- Höhere Nachfrage nach Produkten
+- Gestiegene Produktionskosten
 
-Algo de inflación (2-3% por año) es normal y saludable.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Eine gewisse Inflation (2-3% pro Jahr) ist normal und gesund.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2664,11 +2750,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'How Inflation Affects You',
-  'Cómo te afecta la inflación',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# Wie Inflation dich betrifft',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2682,7 +2768,7 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# Your Money Loses Value
 
 **Purchasing power** = What you can buy with your money
@@ -2698,23 +2784,23 @@ If inflation is 3% per year:
 - $100 today = $94 of purchasing power in 2 years
 
 That''s why grandparents say "things were cheaper in my day" - they were!',
-  '# Tu Dinero Pierde Valor
+  '# Dein Geld verliert an Wert
 
-**Poder adquisitivo** = Lo que puedes comprar con tu dinero
+**Kaufkraft** = Was du mit deinem Geld kaufen kannst
 
-Con la inflación:
-- $100 hoy compran más que $100 el próximo año
-- Los ahorros pierden valor si solo están guardados en un frasco
-- Los salarios necesitan aumentar para mantenerse al día
+Bei Inflation:
+- 100 € heute kaufen mehr als 100 € nächstes Jahr
+- Ersparnisse verlieren an Wert, wenn sie nur im Glas liegen
+- Gehälter müssen steigen, um mitzuhalten
 
-**Ejemplo:**
-Si la inflación es del 3% al año:
-- $100 hoy = $97 de poder adquisitivo el próximo año
-- $100 hoy = $94 de poder adquisitivo en 2 años
+**Beispiel:**
+Wenn die Inflation 3% pro Jahr beträgt:
+- 100 € heute = 97 € Kaufkraft nächstes Jahr
+- 100 € heute = 94 € Kaufkraft in 2 Jahren
 
-¡Por eso los abuelos dicen "las cosas eran más baratas en mis tiempos" - lo eran!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Deshalb sagen Großeltern „zu meiner Zeit war alles billiger" - das stimmte auch!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2728,11 +2814,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'Protecting Against Inflation',
-  'Protección Contra la Inflación',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# Schutz vor Inflation',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2746,7 +2832,7 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# How to Fight Inflation
 
 Don''t let inflation eat your money! Here''s how:
@@ -2770,31 +2856,31 @@ Don''t let inflation eat your money! Here''s how:
 - Reduce unnecessary spending
 
 Remember: Cash under your mattress loses value every year!',
-  '# Cómo Combatir la Inflación
+  '# Wie man Inflation bekämpft
 
-¡No dejes que la inflación se coma tu dinero! Así es cómo:
+Lass nicht zu, dass die Inflation dein Geld auffrisst! So geht''s:
 
-**1. Pon dinero en cuentas de ahorro con interés**
-- El interés ayuda a que el dinero crezca
-- Compensa parte de la inflación
+**1. Geld auf Sparkonten mit Zinsen anlegen**
+- Zinsen helfen dem Geld zu wachsen
+- Gleicht einen Teil der Inflation aus
 
-**2. Invierte en acciones, bonos o bienes raíces**
-- Estos a menudo crecen más rápido que la inflación
-- Es más arriesgado pero protege el poder adquisitivo
+**2. In Aktien, Anleihen oder Immobilien investieren**
+- Diese wachsen oft schneller als die Inflation
+- Riskanter, aber schützt die Kaufkraft
 
-**3. Aumenta tus ingresos**
-- Pide aumentos de sueldo
-- Aprende nuevas habilidades
-- Inicia un negocio secundario
+**3. Dein Einkommen erhöhen**
+- Um Gehaltserhöhungen bitten
+- Neue Fähigkeiten erlernen
+- Ein Nebengewerbe starten
 
-**4. Haz un presupuesto inteligente**
-- Lleva un registro de a dónde va el dinero
-- Busca mejores ofertas
-- Reduce los gastos innecesarios
+**4. Klug haushalten**
+- Verfolgen, wohin das Geld fließt
+- Bessere Angebote finden
+- Unnötige Ausgaben reduzieren
 
-Recuerda: ¡El efectivo debajo de tu colchón pierde valor cada año!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Denk daran: Bargeld unter deiner Matratze verliert jedes Jahr an Wert!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2808,11 +2894,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'What is inflation?',
-  '¿Qué es la inflación?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist Inflation?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2826,11 +2912,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'When prices go down',
-  'Cuando los precios bajan',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wenn die Preise sinken',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2844,11 +2930,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'When prices go up over time',
-  'Cuando los precios suben con el tiempo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wenn die Preise im Laufe der Zeit steigen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2862,11 +2948,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'When money is printed',
-  'Cuando se imprime dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wenn Geld gedruckt wird',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2880,11 +2966,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'When people save money',
-  'Cuando las personas ahorran dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wenn Menschen Geld sparen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2898,11 +2984,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'Inflation is the general increase in prices over time.',
-  'La inflación es el aumento general de los precios a lo largo del tiempo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Inflation ist der allgemeine Anstieg der Preise im Laufe der Zeit.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2916,11 +3002,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'If inflation is 5% and you have $100 in cash for a year, what happens?',
-  'Si la inflación es del 5% y tienes $100 en efectivo durante un año, ¿qué sucede?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wenn die Inflation 5% beträgt und du ein Jahr lang 100 $ in bar hast, was passiert?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2934,11 +3020,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   'You can buy 5% more',
-  'Puedes comprar 5% más',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Du kannst 5% mehr kaufen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2952,11 +3038,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   'You can buy the same amount',
-  'Puedes comprar la misma cantidad',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Du kannst die gleiche Menge kaufen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2970,11 +3056,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   'You can buy 5% less',
-  'Puedes comprar 5% menos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Du kannst 5% weniger kaufen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2988,11 +3074,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   'Your money disappears',
-  'Tu dinero desaparece',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Dein Geld verschwindet',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3006,11 +3092,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'With 5% inflation, your $100 loses 5% of purchasing power.',
-  'Con una inflación del 5%, tus $100 pierden el 5% de su poder adquisitivo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Bei 5 % Inflation verlieren Ihre 100 $ 5 % an Kaufkraft.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3024,11 +3110,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'Why do prices tend to increase over time?',
-  '¿Por qué los precios tienden a aumentar con el tiempo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Warum steigen die Preise im Laufe der Zeit tendenziell an?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3042,11 +3128,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   'Stores want more profit only',
-  'Las tiendas solo quieren más ganancias',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geschäfte wollen nur mehr Gewinn',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3060,11 +3146,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   'Due to inflation and increased costs',
-  'Debido a la inflación y el aumento de costos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Aufgrund von Inflation und gestiegenen Kosten',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3078,11 +3164,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   'Because money becomes stronger',
-  'Porque el dinero se vuelve más fuerte',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Weil Geld stärker wird',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3096,11 +3182,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   'It''s random',
-  'Es aleatorio',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es ist zufällig',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3114,11 +3200,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   'Prices increase due to inflation, which comes from various economic factors.',
-  'Los precios aumentan debido a la inflación, que proviene de varios factores económicos.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Preise steigen aufgrund von Inflation, die aus verschiedenen wirtschaftlichen Faktoren entsteht.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3132,11 +3218,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'What is a good way to protect against inflation?',
-  '¿Cuál es una buena manera de protegerse contra la inflación?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist ein guter Weg, um sich gegen Inflation zu schützen?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3150,11 +3236,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   'Hide cash under your mattress',
-  'Esconder efectivo debajo del colchón',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Bargeld unter der Matratze verstecken',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3168,11 +3254,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   'Spend all your money immediately',
-  'Gastar todo tu dinero inmediatamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Gib dein ganzes Geld sofort aus',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3186,11 +3272,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   'Invest in assets that grow',
-  'Invertir en activos que crecen',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Investiere in Vermögenswerte, die wachsen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3204,11 +3290,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   'Do nothing',
-  'No hacer nada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Nichts tun',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3222,11 +3308,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   'Investing in growing assets helps maintain or increase purchasing power.',
-  'Invertir en activos de crecimiento ayuda a mantener o aumentar el poder adquisitivo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Investitionen in wachsende Vermögenswerte helfen, die Kaufkraft zu erhalten oder zu steigern.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3240,11 +3326,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'de',
   'What is "purchasing power"?',
-  '¿Qué es el "poder adquisitivo"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist „Kaufkraft"?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3258,11 +3344,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'de',
   'How strong you are',
-  'Qué tan fuerte eres',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wie stark du bist',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3276,11 +3362,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'de',
   'What you can buy with your money',
-  'El poder de compra que tienes con tu dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was du mit deinem Geld kaufen kannst',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3294,11 +3380,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'de',
   'Your job title',
-  'Tu título de trabajo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Deine Berufsbezeichnung',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3312,11 +3398,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'de',
   'How much money you earn',
-  'Cuánto dinero ganas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wie viel Geld du verdienst',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3330,11 +3416,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'de',
   'Purchasing power is what your money can actually buy.',
-  'El poder adquisitivo es lo que tu dinero realmente puede comprar.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Kaufkraft ist das, was man mit seinem Geld tatsächlich kaufen kann.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3348,11 +3434,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].question',
   'en',
-  'es',
+  'de',
   'Is some inflation considered normal?',
-  '¿Se considera normal algo de inflación?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Gilt etwas Inflation als normal?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3366,11 +3452,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].options[0]',
   'en',
-  'es',
+  'de',
   'No, inflation is always bad',
-  'No, la inflación siempre es mala',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Nein, Inflation ist immer schlecht',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3384,11 +3470,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].options[1]',
   'en',
-  'es',
+  'de',
   'Yes, 2-3% annual inflation is normal',
-  'Sí, una inflación anual del 2-3% es normal',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ja, 2-3% jährliche Inflation ist normal',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3402,11 +3488,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].options[2]',
   'en',
-  'es',
+  'de',
   'Only in poor countries',
-  'Solo en países pobres',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Nur in armen Ländern',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3420,11 +3506,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].options[3]',
   'en',
-  'es',
+  'de',
   'Inflation never happens',
-  'La inflación nunca ocurre',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Inflation passiert niemals',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3438,11 +3524,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].explanation',
   'en',
-  'es',
+  'de',
   'Moderate inflation of 2-3% per year is normal and indicates economic growth.',
-  'La inflación moderada del 2-3% anual es normal e indica crecimiento económico.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Moderate Inflation von 2-3% pro Jahr ist normal und zeigt wirtschaftliches Wachstum an.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3456,11 +3542,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'Jobs and Careers',
-  'Trabajos y Carreras',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Berufe und Karrieren',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3474,7 +3560,7 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# Working for Money
 
 **Active income** = Money you earn by working
@@ -3486,19 +3572,19 @@ Types of jobs:
 
 **For kids:** Chores, lawn mowing, pet sitting
 **For adults:** Full-time jobs, part-time work, consulting',
-  '# Trabajar por Dinero
+  '# Für Geld arbeiten
 
-**Ingreso activo** = Dinero que ganas al trabajar
+**Aktives Einkommen** = Geld, das du durch Arbeit verdienst
 
-Tipos de trabajos:
-- **Empleado:** Trabajas para una empresa (sueldo fijo)
-- **Trabajador independiente:** Trabajas por tu cuenta (múltiples clientes)
-- **Contratista:** Trabajas en proyectos específicos
+Arten von Jobs:
+- **Angestellter:** Arbeit für ein Unternehmen (regelmäßiges Gehalt)
+- **Freiberufler:** Arbeit für dich selbst (mehrere Auftraggeber)
+- **Auftragnehmer:** Arbeit an bestimmten Projekten
 
-**Para niños:** Tareas domésticas, cortar el césped, cuidar mascotas
-**Para adultos:** Trabajos de tiempo completo, trabajos de medio tiempo, consultoría',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Für Kinder:** Hausarbeiten, Rasenmähen, Haustierbetreuung
+**Für Erwachsene:** Vollzeitjobs, Teilzeitarbeit, Beratung',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3512,11 +3598,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'Self-Employment',
-  'Autoempleo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Selbstständigkeit',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3530,7 +3616,7 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# Being Your Own Boss
 
 **Self-employment** means working for yourself!
@@ -3543,20 +3629,20 @@ Examples:
 
 **Pros:** Flexibility, unlimited earning potential
 **Cons:** No steady paycheck, more responsibility',
-  '# Ser Tu Propio Jefe
+  '# Dein eigener Chef sein
 
-**El trabajo por cuenta propia** significa trabajar para ti mismo.
+**Selbstständigkeit** bedeutet, für sich selbst zu arbeiten!
 
-Ejemplos:
-- Iniciar un pequeño negocio
-- Ofrecer servicios (tutorías, limpieza, diseño)
-- Vender productos en línea
-- Crear contenido (YouTube, blog)
+Beispiele:
+- Ein kleines Unternehmen gründen
+- Dienstleistungen anbieten (Nachhilfe, Reinigung, Design)
+- Produkte online verkaufen
+- Inhalte erstellen (YouTube, Blog)
 
-**Ventajas:** Flexibilidad, potencial de ingresos ilimitado
-**Desventajas:** No hay sueldo fijo, más responsabilidad',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Vorteile:** Flexibilität, unbegrenztes Verdienstpotenzial
+**Nachteile:** Kein festes Gehalt, mehr Verantwortung',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3570,11 +3656,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'Passive Income',
-  'Ingresos Pasivos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Passives Einkommen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3588,7 +3674,7 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# Money While You Sleep
 
 **Passive income** = Earning money without active work
@@ -3600,19 +3686,19 @@ Examples:
 - Online courses (sell once, earn forever)
 
 Note: Usually requires upfront work or money to start!',
-  '# Dinero Mientras Duermes
+  '# Geld im Schlaf verdienen
 
-**Ingreso pasivo** = Ganar dinero sin trabajo activo
+**Passives Einkommen** = Geld verdienen ohne aktive Arbeit
 
-Ejemplos:
-- Propiedades en alquiler (renta de inquilinos)
-- Inversiones (dividendos de acciones)
-- Regalías (de libros, música, patentes)
-- Cursos en línea (vender una vez, ganar para siempre)
+Beispiele:
+- Mietobjekte (Miete von Mietern)
+- Investitionen (Dividenden aus Aktien)
+- Lizenzgebühren (aus Büchern, Musik, Patenten)
+- Online-Kurse (einmal verkaufen, für immer verdienen)
 
-Nota: ¡Usualmente requiere trabajo o dinero inicial para comenzar!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Hinweis: Erfordert normalerweise anfängliche Arbeit oder Geld zum Start!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3626,11 +3712,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'What is active income?',
-  '¿Qué es el ingreso activo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist aktives Einkommen?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3644,11 +3730,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'Money earned by working',
-  'Dinero ganado al trabajar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld, das durch Arbeit verdient wird',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3662,11 +3748,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'Money earned while sleeping',
-  'Dinero ganado mientras duermes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld, das im Schlaf verdient wird',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3680,11 +3766,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'Money from investments',
-  'Dinero proveniente de inversiones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld aus Investitionen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3698,11 +3784,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'Money found on the street',
-  'Dinero encontrado en la calle',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld, das auf der Straße gefunden wird',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3716,11 +3802,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'Active income is money earned through active work and effort.',
-  'El ingreso activo es el dinero que se gana a través del trabajo y el esfuerzo activo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Aktives Einkommen ist Geld, das durch aktive Arbeit und Anstrengung verdient wird.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3734,11 +3820,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'Which is an example of passive income?',
-  '¿Cuál es un ejemplo de ingreso pasivo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Welches ist ein Beispiel für passives Einkommen?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3752,11 +3838,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   'Your salary from a job',
-  'Tu salario de un trabajo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Dein Gehalt aus einem Job',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3770,11 +3856,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   'Payment for mowing a lawn',
-  'Pago por cortar el césped',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Bezahlung für das Rasenmähen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3788,11 +3874,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   'Rent from a property you own',
-  'Alquiler de una propiedad que posees',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Mieteinnahmen aus einer Immobilie, die dir gehört',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3806,11 +3892,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   'Allowance from parents',
-  'Mesada de los padres',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Taschengeld von den Eltern',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3824,11 +3910,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'Rental income is passive - you earn it without active daily work.',
-  'Ingreso por alquiler es pasivo - lo ganas sin trabajo activo diario.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Mieteinnahmen sind passiv – du verdienst sie ohne aktive tägliche Arbeit.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3842,11 +3928,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'What does self-employment mean?',
-  '¿Qué significa el autoempleo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was bedeutet Selbstständigkeit?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3860,11 +3946,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   'Working for a big company',
-  'Trabajar para una empresa grande',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Für ein großes Unternehmen arbeiten',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3878,11 +3964,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   'Working for yourself',
-  'Trabajar por cuenta propia',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Für sich selbst arbeiten',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3896,11 +3982,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   'Being unemployed',
-  'Estar desempleado',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Arbeitslos sein',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3914,11 +4000,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   'Working part-time',
-  'Trabajar medio tiempo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Teilzeitarbeit',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3932,11 +4018,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   'Self-employment means you are your own boss and work for yourself.',
-  'El autoempleo significa que eres tu propio jefe y trabajas para ti mismo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Selbstständigkeit bedeutet, dass du dein eigener Chef bist und für dich selbst arbeitest.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3950,11 +4036,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'Which is true about passive income?',
-  '¿Cuál es verdadero sobre el ingreso pasivo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Welche Aussage über passives Einkommen ist richtig?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3968,11 +4054,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   'It requires no effort ever',
-  'No requiere ningún esfuerzo nunca',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es erfordert niemals Aufwand',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3986,11 +4072,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   'Anyone can start immediately with no money',
-  'Cualquier persona puede comenzar inmediatamente sin dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Jeder kann sofort ohne Geld beginnen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4004,11 +4090,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   'It often requires upfront work or investment',
-  'Frecuentemente requiere trabajo o inversión inicial',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es erfordert oft anfängliche Arbeit oder Investitionen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4022,11 +4108,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   'It always earns more than active income',
-  'Siempre genera más ingresos que el ingreso activo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es verdient immer mehr als aktives Einkommen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4040,11 +4126,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   'Passive income streams usually require initial work or capital to establish.',
-  'Los ingresos pasivos generalmente requieren trabajo inicial o capital para establecerse.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Passive Einkommensströme erfordern in der Regel anfängliche Arbeit oder Kapital, um sie aufzubauen.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4058,11 +4144,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'Gross vs Net Income',
-  'Ingreso Bruto vs Ingreso Neto',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# Bruttoeinkommen vs. Nettoeinkommen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4076,7 +4162,7 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# How Much Do You Really Earn?
 
 **Gross Income** = Total money before anything is taken out
@@ -4090,21 +4176,21 @@ Example:
 - **Net (take-home): $700**
 
 Always focus on net income when budgeting!',
-  '# ¿Cuánto Ganas Realmente?
+  '# Wie viel verdienst du wirklich?
 
-**Ingreso Bruto** = Dinero total antes de que se descuente algo
-**Ingreso Neto** = Dinero que realmente recibes (después de impuestos y deducciones)
+**Bruttogehalt** = Gesamtbetrag vor allen Abzügen
+**Nettogehalt** = Geld, das du tatsächlich ausgezahlt bekommst (nach Steuern und Abzügen)
 
-Ejemplo:
-- Bruto: $1,000
-- Impuestos: -$200
-- Seguro médico: -$50
-- Retiro: -$50
-- **Neto (para llevar a casa): $700**
+Beispiel:
+- Brutto: 1.000 €
+- Steuern: -200 €
+- Krankenversicherung: -50 €
+- Altersvorsorge: -50 €
+- **Netto (Auszahlungsbetrag): 700 €**
 
-¡Siempre enfócate en el ingreso neto al hacer tu presupuesto!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Konzentriere dich beim Budgetieren immer auf das Nettogehalt!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4118,11 +4204,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'Salary vs Hourly',
-  'Salario vs Por Hora',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Gehalt vs Stundenlohn',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4136,7 +4222,7 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# Two Ways to Get Paid
 
 **Salary:**
@@ -4152,23 +4238,23 @@ INSERT INTO "ContentTranslation" (
 - May get overtime pay (1.5x or 2x rate)
 
 Neither is "better" - it depends on the job!',
-  '# Dos formas de recibir pago
+  '# Zwei Arten der Bezahlung
 
-**Salario:**
-- Cantidad fija por año
-- Ejemplo: $50,000/año
-- Mismo cheque de pago cada mes
-- A menudo incluye beneficios
+**Gehalt:**
+- Fester Betrag pro Jahr
+- Beispiel: 50.000 €/Jahr
+- Jeden Monat derselbe Gehaltscheck
+- Beinhaltet oft zusätzliche Leistungen
 
-**Por hora:**
-- Pago por hora trabajada
-- Ejemplo: $15/hora
-- El cheque de pago varía según las horas
-- Puede recibir pago de horas extras (1.5x o 2x la tarifa)
+**Stundenlohn:**
+- Bezahlung pro gearbeiteter Stunde
+- Beispiel: 15 €/Stunde
+- Gehaltscheck variiert je nach Arbeitsstunden
+- Eventuell Überstundenzuschlag (1,5-facher oder 2-facher Satz)
 
-Ninguna es "mejor" - ¡depende del trabajo!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Keine Variante ist „besser" - es hängt vom Job ab!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4182,11 +4268,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'Benefits and Bonuses',
-  'Beneficios y Bonificaciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Zusatzleistungen und Prämien',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4200,7 +4286,7 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# More Than Just Money
 
 **Benefits** = Extra compensation beyond salary
@@ -4219,26 +4305,26 @@ Common benefits:
 - Profit sharing
 
 Benefits can be worth 20-30% of your salary!',
-  '# Más que solo dinero
+  '# Mehr als nur Geld
 
-**Beneficios** = Compensación adicional más allá del salario
+**Zusatzleistungen** = Zusätzliche Vergütung über das Gehalt hinaus
 
-Beneficios comunes:
-- Seguro médico
-- Contribuciones para el retiro (aportación patronal)
-- Días de vacaciones pagadas
-- Permiso por enfermedad
-- Desarrollo profesional
+Übliche Zusatzleistungen:
+- Krankenversicherung
+- Rentenbeiträge (Arbeitgeberzuschuss zur Altersvorsorge)
+- Bezahlte Urlaubstage
+- Krankheitstage
+- Berufliche Weiterbildung
 
-**Bonos:**
-- Pagos adicionales por buen desempeño
-- Bonos de fin de año
-- Comisiones (ganancias basadas en ventas)
-- Participación de utilidades
+**Prämien:**
+- Zusätzliche Zahlungen für gute Leistungen
+- Weihnachtsgeld
+- Provision (umsatzbasierte Vergütung)
+- Gewinnbeteiligung
 
-¡Los beneficios pueden valer entre el 20-30% de tu salario!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Zusatzleistungen können 20-30% deines Gehalts ausmachen!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4252,11 +4338,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'What is net income?',
-  '¿Qué es el ingreso neto?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist das Nettoeinkommen?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4270,11 +4356,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'Total income before deductions',
-  'Ingreso total antes de deducciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Gesamteinkommen vor Abzügen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4288,11 +4374,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'Money you take home after deductions',
-  'Dinero que te llevas a casa después de las deducciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld, das du nach Abzügen mit nach Hause nimmst',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4306,11 +4392,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'Money from the internet',
-  'Dinero de internet',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld aus dem Internet',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4324,11 +4410,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'Bonus payments',
-  'Pagos de bonificación',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Bonuszahlungen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4342,11 +4428,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'Net income is what you actually receive after taxes and deductions.',
-  'El ingreso neto es lo que realmente recibes después de impuestos y deducciones.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Nettoeinkommen ist das, was du tatsächlich nach Abzug von Steuern und Abgaben erhältst.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4360,11 +4446,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'If your gross income is $2,000 and $400 is deducted, what is your net income?',
-  'Si tu ingreso bruto es $2,000 y se deducen $400, ¿cuál es tu ingreso neto?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wenn dein Bruttoeinkommen 2.000 $ beträgt und 400 $ abgezogen werden, wie hoch ist dein Nettoeinkommen?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4378,11 +4464,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   '$2,400',
-  '$2,400',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '$2.400',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4396,11 +4482,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   '$2,000',
-  '$2,000',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '$2.000',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4414,11 +4500,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   '$1,600',
-  '$1,600',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '$1.600',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4432,11 +4518,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   '$400',
   '$400',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4450,11 +4536,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'Net income = Gross - Deductions = $2,000 - $400 = $1,600.',
-  'Ingreso neto = Bruto - Deducciones = $2,000 - $400 = $1,600.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Nettoeinkommen = Brutto - Abzüge = 2.000 $ - 400 $ = 1.600 $.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4468,11 +4554,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'What is a benefit of hourly pay?',
-  '¿Cuál es un beneficio del pago por hora?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist ein Vorteil von Stundenlohn?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4486,11 +4572,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   'Same paycheck every month',
-  'Mismo cheque de pago cada mes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Gleiches Gehalt jeden Monat',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4504,11 +4590,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   'Can earn overtime pay',
-  'Puedes ganar pago por horas extras',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Kann Überstundenvergütung verdienen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4522,11 +4608,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   'Always includes health insurance',
-  'Siempre incluye seguro médico',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Beinhaltet immer eine Krankenversicherung',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4540,11 +4626,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   'Never changes',
-  'Nunca cambia',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ändert sich nie',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4558,11 +4644,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   'Hourly workers often earn overtime (extra pay) for working extra hours.',
-  'Los trabajadores por hora a menudo ganan tiempo extra (pago adicional) por trabajar horas adicionales.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Stundenlohnempfänger erhalten oft Überstundenvergütung (zusätzliche Bezahlung) für zusätzlich geleistete Arbeitsstunden.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4576,11 +4662,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'Which is NOT typically a job benefit?',
-  '¿Cuál NO es típicamente un beneficio laboral?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Welches ist NICHT typischerweise eine Leistung des Arbeitgebers?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4594,11 +4680,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   'Health insurance',
-  'Seguro médico',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Krankenversicherung',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4612,11 +4698,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   'Paid vacation',
-  'Vacaciones pagadas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Bezahlter Urlaub',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4630,11 +4716,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   'Free groceries',
-  'Comestibles gratis',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Kostenlose Lebensmittel',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4648,11 +4734,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   '401k matching',
-  'Igualación de 401k',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '401k-Matching',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4666,11 +4752,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   'Free groceries are not a standard job benefit, unlike insurance or retirement contributions.',
-  'Los víveres gratuitos no son un beneficio laboral estándar, a diferencia del seguro o las contribuciones para el retiro.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Kostenlose Lebensmittel sind keine übliche Arbeitgeberleistung, im Gegensatz zu Versicherungen oder Rentenbeiträgen.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4684,11 +4770,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'Finding Opportunities',
-  'Encontrando Oportunidades',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Chancen finden',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4702,7 +4788,7 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# Where to Look for Jobs
 
 **For Young People:**
@@ -4719,24 +4805,24 @@ INSERT INTO "ContentTranslation" (
 - Professional connections
 
 Tip: Many jobs are found through people you know!',
-  '# Dónde Buscar Trabajo
+  '# Wo man nach Jobs suchen kann
 
-**Para Jóvenes:**
-- Pregunta a familiares y vecinos
-- Revisa tiendas locales en busca de carteles de "Se Busca Personal"
-- Bolsas de trabajo escolares
-- Centros comunitarios
+**Für junge Menschen:**
+- Familie und Nachbarn fragen
+- Lokale Geschäfte nach „Wir stellen ein"-Schildern durchsuchen
+- Jobbörsen in der Schule
+- Gemeindezentren
 
-**Para Adultos:**
-- Portales de empleo en línea (LinkedIn, Indeed)
-- Sitios web de empresas
-- Eventos de networking
-- Agencias de reclutamiento
-- Contactos profesionales
+**Für Erwachsene:**
+- Online-Jobbörsen (LinkedIn, Indeed)
+- Unternehmenswebseiten
+- Networking-Veranstaltungen
+- Personalvermittlungen
+- Berufliche Kontakte
 
-Tip: ¡Muchos trabajos se encuentran a través de personas que conoces!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Tipp: Viele Jobs findet man über Menschen, die man kennt!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4750,11 +4836,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'Interview Skills',
-  'Habilidades para Entrevistas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Vorstellungsgesprächs-Fähigkeiten',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4768,7 +4854,7 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# Making a Good Impression
 
 **Before the interview:**
@@ -4787,26 +4873,26 @@ INSERT INTO "ContentTranslation" (
 **After the interview:**
 - Send a thank-you email within 24 hours
 - Follow up if you haven''t heard back in a week',
-  '# Causando una Buena Impresión
+  '# Einen guten Eindruck hinterlassen
 
-**Antes de la entrevista:**
-- Investiga sobre la empresa
-- Prepara respuestas a preguntas comunes
-- Elige ropa apropiada
-- Llega 10 minutos antes
+**Vor dem Vorstellungsgespräch:**
+- Informiere dich über das Unternehmen
+- Bereite Antworten auf häufige Fragen vor
+- Wähle angemessene Kleidung
+- Komme 10 Minuten früher an
 
-**Durante la entrevista:**
-- Estrecha la mano con firmeza
-- Mantén contacto visual
-- Habla con claridad y confianza
-- Haz preguntas reflexivas
-- Muestra entusiasmo
+**Während des Vorstellungsgesprächs:**
+- Gib einen festen Händedruck
+- Halte Blickkontakt
+- Sprich klar und selbstbewusst
+- Stelle durchdachte Fragen
+- Zeige Begeisterung
 
-**Después de la entrevista:**
-- Envía un correo electrónico de agradecimiento dentro de las 24 horas
-- Haz seguimiento si no has recibido respuesta en una semana',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Nach dem Vorstellungsgespräch:**
+- Sende innerhalb von 24 Stunden eine Dankes-E-Mail
+- Frage nach, wenn du nach einer Woche nichts gehört hast',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4820,11 +4906,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'First Day Tips',
-  'Consejos para el Primer Día',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Tipps für den ersten Tag',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4838,7 +4924,7 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# Starting Strong
 
 **Your first day:**
@@ -4857,26 +4943,26 @@ INSERT INTO "ContentTranslation" (
 - Build relationships with colleagues
 
 Remember: Everyone was new once. People want you to succeed!',
-  '# Comenzando con Fuerza
+  '# Stark starten
 
-**Tu primer día:**
-- Llega temprano
-- Lleva un cuaderno y un bolígrafo
-- Haz preguntas (¡demuestra que te importa!)
-- Aprende los nombres de tus compañeros de trabajo
-- Observa la cultura del lugar de trabajo
-- Toma notas sobre los procesos
+**Dein erster Tag:**
+- Komm früh an
+- Bring ein Notizbuch und einen Stift mit
+- Stell Fragen (das zeigt, dass es dir wichtig ist!)
+- Lern die Namen deiner Kollegen
+- Beobachte die Arbeitsplatzkultur
+- Mach dir Notizen über Abläufe
 
-**Primera semana/mes:**
-- Sé confiable (llega a tiempo)
-- Toma la iniciativa
-- Acepta la retroalimentación con gracia
-- No tengas miedo de admitir errores
-- Construye relaciones con tus colegas
+**Erste Woche/erster Monat:**
+- Sei zuverlässig (komm pünktlich)
+- Zeig Initiative
+- Nimm Feedback mit Dankbarkeit an
+- Hab keine Angst, Fehler zuzugeben
+- Bau Beziehungen zu Kollegen auf
 
-Recuerda: Todos fuimos nuevos alguna vez. ¡La gente quiere que tengas éxito!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Denk daran: Jeder war mal neu. Die Leute möchten, dass du erfolgreich bist!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4890,11 +4976,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'What should you do before a job interview?',
-  '¿Qué debes hacer antes de una entrevista de trabajo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was solltest du vor einem Vorstellungsgespräch tun?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4908,11 +4994,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'Nothing, just show up',
-  'Nada, solo preséntate',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Nichts, einfach erscheinen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4926,11 +5012,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'Research the company',
-  'Investigar la empresa',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Informiere dich über das Unternehmen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4944,11 +5030,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'Memorize your resume',
-  'Memorizar tu currículum',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Lebenslauf auswendig lernen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4962,11 +5048,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'Bring your parents',
-  'Llevar a tus padres',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Bringe deine Eltern mit',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4980,11 +5066,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'Researching the company shows you''re serious and helps you answer questions better.',
-  'Investigar sobre la empresa demuestra que eres serio y te ayuda a responder las preguntas de mejor manera.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Die Recherche über das Unternehmen zeigt, dass du es ernst meinst, und hilft dir, Fragen besser zu beantworten.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4998,11 +5084,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'How early should you arrive for an interview?',
-  '¿Con cuánta anticipación deberías llegar a una entrevista?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wie früh solltest du zu einem Vorstellungsgespräch erscheinen?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5016,11 +5102,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   '1 hour early',
-  '1 hora antes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '1 Stunde früher',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5034,11 +5120,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   'Exactly on time',
-  'Exactamente a tiempo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Genau pünktlich',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5052,11 +5138,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   '10 minutes early',
-  '10 minutos antes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '10 Minuten früher',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5070,11 +5156,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   '10 minutes late',
-  '10 minutos tarde',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '10 Minuten zu spät',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5088,11 +5174,15 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'Arriving 10 minutes early shows punctuality without being too early.',
-  'Llegar 10 minutos antes demuestra puntualidad sin ser demasiado temprano.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Arriving 10 minutes early shows punctuality without being too early.
+
+---
+
+10 Minuten früher anzukommen zeigt Pünktlichkeit, ohne zu früh zu sein.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5106,11 +5196,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'What does "networking" mean when job hunting?',
-  '¿Qué significa "hacer networking" al buscar trabajo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was bedeutet "Networking" bei der Jobsuche?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5124,11 +5214,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   'Using the internet',
-  'Usar internet',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Das Internet nutzen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5142,11 +5232,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   'Building professional connections',
-  'Construir conexiones profesionales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Aufbau beruflicher Kontakte',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5160,11 +5250,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   'Working with computers',
-  'Trabajar con computadoras',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Arbeit mit Computern',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5178,11 +5268,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   'Social media posting',
-  'Publicar en redes sociales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Social-Media-Beiträge',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5196,11 +5286,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   'Networking is building relationships with people who can help your career.',
-  'Hacer networking es construir relaciones con personas que pueden ayudar a tu carrera.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Networking bedeutet, Beziehungen zu Menschen aufzubauen, die deiner Karriere helfen können.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5214,11 +5304,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'On your first day, you should:',
-  'En tu primer día, deberías:',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'An deinem ersten Tag solltest du:',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5232,11 +5322,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   'Pretend to know everything',
-  'Fingir que sabes todo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Vorgeben, alles zu wissen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5250,11 +5340,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   'Stay quiet and don''t ask questions',
-  'Mantenerte callado y no hacer preguntas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ruhig bleiben und keine Fragen stellen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5268,11 +5358,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   'Ask questions and take notes',
-  'Hacer preguntas y tomar notas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Fragen stellen und Notizen machen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5286,11 +5376,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   'Leave early to avoid mistakes',
-  'Irte temprano para evitar errores',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Früh gehen, um Fehler zu vermeiden',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5304,11 +5394,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   'Asking questions and taking notes shows you want to learn and do well.',
-  'Hacer preguntas y tomar notas demuestra que quieres aprender y hacerlo bien.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Fragen zu stellen und sich Notizen zu machen zeigt, dass du lernen und gute Arbeit leisten möchtest.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5322,11 +5412,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'Why Diversify',
-  'Por qué diversificar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Warum Diversifizieren',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5340,7 +5430,7 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# Don''t Put All Eggs in One Basket
 
 **Why multiple income streams matter:**
@@ -5356,23 +5446,23 @@ Sarah has:
 - Weekend tutoring: $5,000/year
 - Rental property: $10,000/year
 - Total: $65,000/year with backup plans!',
-  '# No Pongas Todos los Huevos en Una Sola Canasta
+  '# Lege nicht alle Eier in einen Korb
 
-**Por qué importan múltiples fuentes de ingreso:**
+**Warum mehrere Einkommensquellen wichtig sind:**
 
-1. **Seguridad:** Si pierdes una fuente, tienes otras
-2. **Crecimiento:** Múltiples fuentes = más ingreso total
-3. **Libertad:** Menos dependencia de un solo empleador
-4. **Oportunidades:** Aprender nuevas habilidades
+1. **Sicherheit:** Wenn du eine Quelle verlierst, hast du noch andere
+2. **Wachstum:** Mehrere Quellen = mehr Gesamteinkommen
+3. **Freiheit:** Weniger abhängig von einem einzelnen Arbeitgeber
+4. **Chancen:** Neue Fähigkeiten erlernen
 
-**Ejemplo real:**
-Sarah tiene:
-- Trabajo de tiempo completo: $50,000/año
-- Tutorías los fines de semana: $5,000/año
-- Propiedad en alquiler: $10,000/año
-- Total: $65,000/año ¡con planes de respaldo!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Praktisches Beispiel:**
+Sarah hat:
+- Vollzeitjob: 50.000 $/Jahr
+- Nachhilfe am Wochenende: 5.000 $/Jahr
+- Mietimmobilie: 10.000 $/Jahr
+- Gesamt: 65.000 $/Jahr mit Absicherung!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5386,11 +5476,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'Side Hustles',
-  'Trabajos Secundarios',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Nebenverdienste',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5404,7 +5494,7 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# Extra Income Ideas
 
 **Popular side hustles:**
@@ -5428,31 +5518,31 @@ INSERT INTO "ContentTranslation" (
 - Choose something you enjoy
 - Don''t burn yourself out
 - Track income and expenses',
-  '# Ideas para Generar Ingresos Extra
+  '# Ideen für Zusatzeinkommen
 
-**Trabajos secundarios populares:**
+**Beliebte Nebentätigkeiten:**
 
-**En línea:**
-- Escritura freelance, diseño, programación
-- Tutorías en línea
-- Vender artesanías en Etsy
-- Creación de contenido en YouTube
-- Marketing de afiliados
+**Online:**
+- Freiberufliches Schreiben, Design, Programmieren
+- Online-Nachhilfe
+- Handgemachtes auf Etsy verkaufen
+- YouTube-Content-Erstellung
+- Affiliate-Marketing
 
-**Fuera de línea:**
-- Conducir para aplicaciones de transporte (Uber, Lyft)
-- Entrega de comida a domicilio
-- Cuidado de mascotas/paseo de perros
-- Reparaciones del hogar/servicios de mantenimiento
-- Fotografía para eventos
+**Offline:**
+- Fahrdienste (Uber, Lyft)
+- Essenslieferung
+- Tierbetreuung/Gassi gehen
+- Hausreparaturen/Handwerkerdienstleistungen
+- Fotografie für Veranstaltungen
 
-**Consejos:**
-- Empieza pequeño, crece gradualmente
-- Elige algo que disfrutes
-- No te agotes
-- Lleva registro de ingresos y gastos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Tipps:**
+- Klein anfangen, schrittweise wachsen
+- Etwas wählen, das Ihnen Spaß macht
+- Sich nicht überarbeiten
+- Einnahmen und Ausgaben nachverfolgen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5466,11 +5556,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'Investment Income',
-  'Ingresos por Inversiones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Investitionseinkommen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5484,7 +5574,7 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# Money Making Money
 
 **Investment income types:**
@@ -5510,33 +5600,33 @@ INSERT INTO "ContentTranslation" (
 - Ongoing maintenance needed
 
 **Key:** Start investing early, even small amounts grow over time!',
-  '# El Dinero Generando Dinero
+  '# Geld verdient Geld
 
-**Tipos de ingresos por inversión:**
+**Arten von Kapitalerträgen:**
 
-**1. Dividendos:**
-- Las empresas pagan a los accionistas
-- Usualmente trimestralmente
-- Puedes reinvertir o recibir en efectivo
+**1. Dividenden:**
+- Unternehmen zahlen an Aktionäre
+- Normalerweise vierteljährlich
+- Können reinvestiert oder als Bargeld genommen werden
 
-**2. Intereses:**
-- De cuentas de ahorro
-- Los bonos pagan intereses
-- Generalmente de menor riesgo
+**2. Zinsen:**
+- Aus Sparkonten
+- Anleihen zahlen Zinsen
+- Generell geringeres Risiko
 
-**3. Ganancias de Capital:**
-- Vender inversiones con ganancia
-- Comprar acciones a $50, vender a $100 = $50 de ganancia
-- Puede ser arriesgado
+**3. Kapitalgewinne:**
+- Verkauf von Anlagen mit Gewinn
+- Aktie für 50 $ kaufen, für 100 $ verkaufen = 50 $ Gewinn
+- Kann riskant sein
 
-**4. Ingresos por Alquiler:**
-- Poseer propiedades, alquilar a inquilinos
-- Requiere capital inicial significativo
-- Se necesita mantenimiento continuo
+**4. Mieteinnahmen:**
+- Eigene Immobilie, Vermietung an Mieter
+- Erfordert erhebliches Startkapital
+- Laufende Instandhaltung erforderlich
 
-**Clave:** ¡Comienza a invertir temprano, incluso las pequeñas cantidades crecen con el tiempo!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Wichtig:** Früh mit dem Investieren beginnen, auch kleine Beträge wachsen mit der Zeit!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5550,11 +5640,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'Why is having multiple income streams beneficial?',
-  '¿Por qué es beneficioso tener múltiples fuentes de ingresos?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Warum ist es vorteilhaft, mehrere Einkommensströme zu haben?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5568,11 +5658,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'It''s more complicated',
-  'Es más complicado',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es ist komplizierter',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5586,11 +5676,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'Provides financial security if one source fails',
-  'Proporciona seguridad financiera si una fuente falla',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Bietet finanzielle Sicherheit, wenn eine Quelle wegfällt',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5604,11 +5694,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'You work less',
-  'Trabajas menos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sie arbeiten weniger',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5622,11 +5712,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'It''s required by law',
-  'Es requerido por ley',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es ist gesetzlich vorgeschrieben',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5640,11 +5730,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'Multiple income streams provide security - if one stops, you still have others.',
-  'Múltiples fuentes de ingresos proporcionan seguridad: si una se detiene, aún tienes otras.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Mehrere Einkommensquellen bieten Sicherheit – wenn eine versiegt, hast du noch andere.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5658,11 +5748,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'What is a "side hustle"?',
-  '¿Qué es un "side hustle" o trabajo adicional?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist ein "Side Hustle"?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5676,11 +5766,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   'Your main job',
-  'Tu trabajo principal',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Dein Hauptberuf',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5694,11 +5784,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   'A dance move',
-  'Un movimiento de baile',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ein Tanzschritt',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5712,11 +5802,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   'Extra work for additional income',
-  'Trabajo extra para ingresos adicionales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Zusätzliche Arbeit für zusätzliches Einkommen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5730,11 +5820,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   'A type of investment',
-  'Un tipo de inversión',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Eine Art von Investition',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5748,11 +5838,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'A side hustle is extra work outside your main job to earn more money.',
-  'Un side hustle es trabajo extra fuera de tu empleo principal para ganar más dinero.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ein Side Hustle ist zusätzliche Arbeit neben deinem Hauptjob, um mehr Geld zu verdienen.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5766,11 +5856,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'What are dividends?',
-  '¿Qué son los dividendos?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was sind Dividenden?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5784,11 +5874,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   'Money companies pay shareholders',
-  'Dinero que las empresas pagan a los accionistas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld, das Unternehmen an Aktionäre zahlen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5802,11 +5892,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   'Bank fees',
-  'Tarifas bancarias',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Bankgebühren',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5820,11 +5910,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   'Types of savings accounts',
-  'Tipos de cuentas de ahorro',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Arten von Sparkonten',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5838,11 +5928,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   'Job bonuses',
-  'Bonificaciones laborales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Arbeitsprämien',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5856,11 +5946,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   'Dividends are payments companies make to shareholders from profits.',
-  'Los dividendos son pagos que las empresas hacen a los accionistas a partir de sus ganancias.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Dividenden sind Zahlungen, die Unternehmen aus ihren Gewinnen an ihre Aktionäre leisten.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5874,11 +5964,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'Which is considered passive investment income?',
-  '¿Cuál se considera ingreso pasivo de inversión?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Welches gilt als passives Anlageeinkommen?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5892,11 +5982,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   'Salary from your job',
-  'Salario de tu trabajo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Gehalt aus deinem Job',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5910,11 +6000,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   'Dividends from stocks',
-  'Dividendos de acciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Dividenden aus Aktien',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5928,11 +6018,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   'Payment for freelance work',
-  'Pago por trabajo independiente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Bezahlung für freiberufliche Arbeit',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5946,11 +6036,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   'Tips from waiting tables',
-  'Propinas de mesero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Trinkgelder vom Kellnern',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5964,11 +6054,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   'Dividends are passive income - you earn them without active daily work.',
-  'Los dividendos son ingresos pasivos: los ganas sin trabajo activo diario.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Dividenden sind passives Einkommen - man verdient sie ohne aktive tägliche Arbeit.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5982,11 +6072,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'de',
   'When starting a side hustle, you should:',
-  'Al comenzar un negocio secundario, deberías:',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wenn du einen Nebenverdienst startest, solltest du:',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6000,11 +6090,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'de',
   'Quit your main job immediately',
-  'Renunciar a tu trabajo principal inmediatamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Deinen Hauptjob sofort kündigen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6018,11 +6108,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'de',
   'Start small and grow gradually',
-  'Comenzar en pequeño y crecer gradualmente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Klein anfangen und schrittweise wachsen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6036,11 +6126,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'de',
   'Ignore tracking income',
-  'Ignorar el seguimiento de ingresos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Einnahmen nicht nachverfolgen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6054,11 +6144,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'de',
   'Never tell anyone',
-  'Nunca contarle a nadie',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Niemals jemandem davon erzählen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6072,11 +6162,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'de',
   'It''s smart to start small, test the market, and grow sustainably.',
-  'Es inteligente empezar en pequeño, probar el mercado y crecer de manera sostenible.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es ist klug, klein anzufangen, den Markt zu testen und nachhaltig zu wachsen.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6090,11 +6180,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'Essential Expenses',
-  'Gastos Esenciales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wesentliche Ausgaben',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6108,7 +6198,7 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# What You Need to Survive
 
 **Needs** = Things required for survival and basic well-being
@@ -6123,22 +6213,22 @@ True needs:
 
 **For kids:** School supplies, healthy food
 **For adults:** Mortgage/rent, insurance, basic groceries',
-  '# Lo Que Necesitas Para Sobrevivir
+  '# Was du zum Überleben brauchst
 
-**Necesidades** = Cosas requeridas para la supervivencia y el bienestar básico
+**Bedürfnisse** = Dinge, die für das Überleben und grundlegendes Wohlbefinden erforderlich sind
 
-Necesidades verdaderas:
-- Comida y agua
-- Vivienda (hogar)
-- Ropa (apropiada para el clima)
-- Atención médica
-- Transporte básico (al trabajo/escuela)
-- Servicios públicos (electricidad, agua, calefacción)
+Echte Bedürfnisse:
+- Essen und Wasser
+- Unterkunft (Wohnung)
+- Kleidung (angemessen für das Wetter)
+- Gesundheitsversorgung
+- Grundlegende Transportmittel (zur Arbeit/Schule)
+- Versorgungsleistungen (Strom, Wasser, Heizung)
 
-**Para niños:** Útiles escolares, comida saludable
-**Para adultos:** Hipoteca/alquiler, seguro, alimentos básicos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Für Kinder:** Schulmaterial, gesunde Ernährung
+**Für Erwachsene:** Hypothek/Miete, Versicherung, grundlegende Lebensmittel',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6152,11 +6242,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'Discretionary Spending',
-  'Gasto Discrecional',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ermessensspielraum bei Ausgaben',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6170,7 +6260,7 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# Things That Make Life Better
 
 **Wants** = Things that improve life but aren''t necessary for survival
@@ -6184,21 +6274,21 @@ Examples:
 - Toys and games
 
 Wants aren''t bad! But needs come first.',
-  '# Cosas que mejoran la vida
+  '# Dinge, die das Leben schöner machen
 
-**Deseos** = Cosas que mejoran la vida pero no son necesarias para sobrevivir
+**Wünsche** = Dinge, die das Leben verbessern, aber nicht zum Überleben notwendig sind
 
-Ejemplos:
-- Comidas en restaurantes (puedes cocinar en casa)
-- Teléfono último modelo (un modelo anterior funciona)
-- Ropa de marca (ropa regular te cubre)
-- Servicios de streaming
-- Vacaciones
-- Juguetes y juegos
+Beispiele:
+- Restaurantbesuche (du kannst zu Hause kochen)
+- Neuestes Handy (älteres Modell funktioniert auch)
+- Designerkleidung (normale Kleidung bedeckt dich auch)
+- Streaming-Dienste
+- Urlaube
+- Spielzeug und Spiele
 
-¡Los deseos no son malos! Pero las necesidades van primero.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Wünsche sind nicht schlecht! Aber Bedürfnisse kommen zuerst.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6212,11 +6302,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'Making Choices',
-  'Tomando Decisiones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Entscheidungen treffen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6230,7 +6320,7 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# The Tricky Middle Ground
 
 Some purchases are both:
@@ -6248,25 +6338,25 @@ Some purchases are both:
 - Want: Designer brand coat
 
 **Smart spending = Meet needs first, enjoy wants within budget**',
-  '# La Zona Intermedia Complicada
+  '# Der knifflige Mittelweg
 
-Algunas compras son ambas cosas:
+Manche Ausgaben sind beides:
 
-**Teléfono:**
-- Necesidad: Teléfono básico para seguridad/trabajo
-- Deseo: Modelo insignia de $1,200
+**Telefon:**
+- Bedürfnis: Einfaches Telefon für Sicherheit/Arbeit
+- Wunsch: 1.200 € Spitzenmodell
 
-**Comida:**
-- Necesidad: Comidas nutritivas
-- Deseo: Restaurante costoso todos los días
+**Essen:**
+- Bedürfnis: Nahrhafte Mahlzeiten
+- Wunsch: Jeden Tag teures Restaurant
 
-**Ropa:**
-- Necesidad: Abrigo abrigado en invierno
-- Deseo: Abrigo de marca de diseñador
+**Kleidung:**
+- Bedürfnis: Warmer Mantel im Winter
+- Wunsch: Designermantel
 
-**Gasto inteligente = Cubrir necesidades primero, disfrutar deseos dentro del presupuesto**',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Kluges Ausgeben = Erst Bedürfnisse erfüllen, dann Wünsche im Rahmen des Budgets genießen**',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6280,11 +6370,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'Which of these is a true NEED?',
-  '¿Cuál de estos es una NECESIDAD verdadera?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Welches davon ist ein echtes BEDÜRFNIS?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6298,11 +6388,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'Designer sneakers',
-  'Zapatillas de marca',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Designer-Sneakers',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6316,11 +6406,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'Basic shelter',
-  'Refugio básico',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Grundlegende Unterkunft',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6334,11 +6424,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'Video games',
-  'Videojuegos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Videospiele',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6352,11 +6442,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'Vacation',
-  'Vacaciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Urlaub',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6370,11 +6460,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'Shelter is essential for survival, making it a need.',
-  'El refugio es esencial para la supervivencia, lo que lo convierte en una necesidad.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Unterkunft ist lebensnotwendig und daher ein Bedürfnis.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6388,11 +6478,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'Which is a WANT?',
-  '¿Cuál es un DESEO?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Welches ist ein WUNSCH?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6406,11 +6496,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   'Medicine when sick',
-  'Medicina cuando estás enfermo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Medikamente bei Krankheit',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6424,11 +6514,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   'Water to drink',
-  'Agua para beber',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wasser zum Trinken',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6442,11 +6532,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   'Streaming service subscription',
-  'Suscripción a servicio de streaming',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Streaming-Dienst-Abonnement',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6460,11 +6550,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   'Winter coat in cold climate',
-  'Abrigo de invierno en clima frío',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wintermantel in kaltem Klima',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6478,11 +6568,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'Streaming services are entertainment wants, not survival needs.',
-  'Los servicios de streaming son deseos de entretenimiento, no necesidades de supervivencia.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Streaming-Dienste sind Unterhaltungswünsche, keine Überlebensbedürfnisse.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6496,11 +6586,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'Why is it important to identify needs vs wants?',
-  '¿Por qué es importante identificar necesidades vs deseos?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Warum ist es wichtig, Bedürfnisse von Wünschen zu unterscheiden?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6514,11 +6604,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   'To never enjoy anything',
-  'Para nunca disfrutar nada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Um niemals etwas zu genießen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6532,11 +6622,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   'To prioritize spending wisely',
-  'Para priorizar los gastos de manera inteligente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Um Ausgaben klug zu priorisieren',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6550,13 +6640,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   'Wants are illegal',
-  'Wants are illegal
-
-**Los deseos son ilegales**',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wünsche sind illegal',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6570,11 +6658,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   'Needs are free',
-  'Las necesidades son gratuitas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Bedürfnisse sind kostenlos',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6588,11 +6676,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   'Identifying needs vs wants helps you spend money on essentials first.',
-  'Identificar necesidades vs deseos te ayuda a gastar dinero en lo esencial primero.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Die Unterscheidung zwischen Bedürfnissen und Wünschen hilft dir, dein Geld zuerst für das Wesentliche auszugeben.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6606,11 +6694,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'A $1,200 phone when a $300 phone works is an example of:',
-  'Un teléfono de $1,200 cuando un teléfono de $300 funciona es un ejemplo de:',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ein 1.200-$-Telefon, wenn ein 300-$-Telefon ausreicht, ist ein Beispiel für:',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6624,11 +6712,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   'A need',
-  'Una necesidad',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ein Bedürfnis',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6642,11 +6730,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   'Smart spending',
-  'Gasto inteligente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Kluges Ausgeben',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6660,11 +6748,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   'Upgrading a need to a want',
-  'Convertir una necesidad en un deseo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Aufwertung eines Bedürfnisses zu einem Wunsch',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6678,11 +6766,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   'Required spending',
-  'Gasto necesario',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Notwendige Ausgaben',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6696,11 +6784,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   'The basic phone is the need; the expensive one adds want features.',
-  'El teléfono básico es la necesidad; el costoso agrega características de deseos.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Das einfache Handy ist das Bedürfnis; das teure fügt Wunsch-Funktionen hinzu.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6714,11 +6802,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'Comparing Prices',
-  'Comparar Precios',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Preise vergleichen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6732,7 +6820,7 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# Finding the Best Deal
 
 **Price comparison tips:**
@@ -6747,22 +6835,22 @@ Cereal A: $4 for 12 oz = $0.33/oz
 Cereal B: $5 for 18 oz = $0.28/oz
 
 Cereal B is the better deal!',
-  '# Encontrando la Mejor Oferta
+  '# Den besten Deal finden
 
-**Consejos para comparar precios:**
+**Tipps zum Preisvergleich:**
 
-1. **Revisa múltiples tiendas** - Mismo artículo, precios diferentes
-2. **Usa sitios web de comparación de precios** - Google Shopping, CamelCamelCamel
-3. **Considera el precio unitario** - Precio por onza, por artículo
-4. **Observa los ciclos de ofertas** - Los productos electrónicos bajan de precio antes de los nuevos modelos
+1. **Mehrere Geschäfte prüfen** - Gleicher Artikel, unterschiedliche Preise
+2. **Preisvergleichswebseiten nutzen** - Google Shopping, CamelCamelCamel
+3. **Grundpreis beachten** - Preis pro Unze, pro Stück
+4. **Verkaufszyklen beobachten** - Elektronik wird günstiger vor neuen Modellen
 
-**Ejemplo:**
-Cereal A: $4 por 12 oz = $0.33/oz
-Cereal B: $5 por 18 oz = $0.28/oz
+**Beispiel:**
+Müsli A: 4 $ für 12 oz = 0,33 $/oz
+Müsli B: 5 $ für 18 oz = 0,28 $/oz
 
-¡El Cereal B es la mejor oferta!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Müsli B ist das bessere Angebot!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6776,11 +6864,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'Coupons and Discounts',
-  'Cupones y Descuentos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# Gutscheine und Rabatte',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6794,7 +6882,7 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# Free Money Savers
 
 **Where to find deals:**
@@ -6812,25 +6900,25 @@ INSERT INTO "ContentTranslation" (
 ❌ Don''t let coupons expire unused
 
 Saving $1 on something you don''t need = wasting money!',
-  '# Formas Gratuitas de Ahorrar Dinero
+  '# Kostenlose Geldsparer
 
-**Dónde encontrar ofertas:**
-- Aplicaciones de tiendas y programas de lealtad
-- Boletines informativos por correo electrónico
-- Sitios web de cupones (RetailMeNot, Honey)
-- Descuentos para estudiantes/adultos mayores
-- Tarjetas de crédito con reembolso
-- Ofertas de lleva uno y lleva otro gratis (BOGO)
+**Wo man Angebote findet:**
+- Shop-Apps und Treueprogramme
+- E-Mail-Newsletter
+- Gutschein-Websites (RetailMeNot, Honey)
+- Studenten-/Seniorenrabatte
+- Cashback-Kreditkarten
+- Kaufe-eins-bekomme-eins (BOGO) Angebote
 
-**Reglas para usar cupones:**
-✅ Úsalos solo para cosas que realmente necesitas
-❌ No compres solo porque está en oferta
-✅ Combina cupones cuando sea posible
-❌ No dejes que los cupones se venzan sin usarlos
+**Gutschein-Regeln:**
+✅ Nur für Dinge verwenden, die du wirklich brauchst
+❌ Nicht kaufen, nur weil es im Angebot ist
+✅ Gutscheine kombinieren, wenn möglich
+❌ Gutscheine nicht ungenutzt verfallen lassen
 
-¡Ahorrar $1 en algo que no necesitas = desperdiciar dinero!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+1 € bei etwas sparen, das du nicht brauchst = Geldverschwendung!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6844,11 +6932,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'Avoiding Impulse Buys',
-  'Evitar las Compras Impulsivas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Impulskäufe vermeiden',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6862,7 +6950,7 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# Stop and Think First
 
 **Impulse buying** = Buying without planning, usually emotionally
@@ -6881,26 +6969,26 @@ INSERT INTO "ContentTranslation" (
 - "Limited time offer!" (false urgency)
 - Sale signs everywhere (not always deals)
 - Pleasant smells/music (makes you linger)',
-  '# Detente y piensa primero
+  '# Stopp und denk erst nach
 
-**Compra impulsiva** = Comprar sin planificar, usualmente de forma emocional
+**Impulskauf** = Kaufen ohne Planung, meist emotional
 
-**Cómo resistir:**
+**Wie du widerstehen kannst:**
 
-1. **La regla de las 24 horas** - Espera un día antes de comprar deseos
-2. **Haz una lista** - Solo compra lo que está en la lista
-3. **Evita comprar cuando estés emocional** - Triste, feliz o aburrido
-4. **Cancela la suscripción a correos de marketing**
-5. **Deja las tarjetas de crédito en casa** - Usa efectivo para compras discrecionales
-6. **Calcula el costo en horas trabajadas** - "¿$100 en zapatos = 5 horas de trabajo. ¿Vale la pena?"
+1. **Die 24-Stunden-Regel** - Warte einen Tag, bevor du Wünsche kaufst
+2. **Erstelle eine Liste** - Kaufe nur, was auf der Liste steht
+3. **Vermeide Einkaufen in emotionalen Momenten** - Traurig, glücklich oder gelangweilt
+4. **Melde dich von Werbe-E-Mails ab**
+5. **Lass Kreditkarten zu Hause** - Verwende Bargeld für nicht notwendige Einkäufe
+6. **Berechne die Kosten in Arbeitsstunden** - „100 € Schuhe = 5 Stunden Arbeit. Lohnt es sich?"
 
-**Trucos de las tiendas a los que debes prestar atención:**
-- Dulces en la caja (tentación)
-- "¡Oferta por tiempo limitado!" (urgencia falsa)
-- Carteles de oferta por todas partes (no siempre son gangas)
-- Aromas agradables/música (te hace quedarte más tiempo)',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Laden-Tricks, auf die du achten solltest:**
+- Süßigkeiten an der Kasse (Versuchung)
+- „Nur für kurze Zeit!" (falsche Dringlichkeit)
+- Überall Schilder mit Sonderangeboten (nicht immer echte Schnäppchen)
+- Angenehme Düfte/Musik (bringt dich dazu, länger zu bleiben)',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6914,11 +7002,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'What should you compare when shopping for the best deal?',
-  '¿Qué debes comparar al buscar la mejor oferta?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was solltest du vergleichen, wenn du nach dem besten Angebot suchst?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6932,11 +7020,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'Only the total price',
-  'Solo el precio total',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Nur den Gesamtpreis',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6950,11 +7038,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'Brand name only',
-  'Solamente la marca',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Nur den Markennamen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6968,11 +7056,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'Unit price and quality',
-  'Precio unitario y calidad',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Stückpreis und Qualität',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6986,11 +7074,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'The prettiest package',
-  'El paquete más bonito',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Die hübscheste Verpackung',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7004,11 +7092,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'Comparing unit price (price per unit) and quality gives you the best value.',
-  'Comparar el precio unitario (precio por unidad) y la calidad te da el mejor valor.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Der Vergleich von Grundpreis (Preis pro Einheit) und Qualität bietet dir das beste Preis-Leistungs-Verhältnis.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7022,11 +7110,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'What is the 24-hour rule?',
-  '¿Qué es la regla de las 24 horas?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist die 24-Stunden-Regel?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7040,11 +7128,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   'Stores are open 24 hours',
-  'Las tiendas están abiertas 24 horas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geschäfte haben 24 Stunden geöffnet',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7058,11 +7146,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   'Wait a day before buying wants',
-  'Espera un día antes de comprar deseos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Warte einen Tag, bevor du Wünsche kaufst',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7076,11 +7164,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   'Shop for 24 hours straight',
-  'Comprar durante 24 horas seguidas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Kaufe 24 Stunden am Stück ein',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7094,11 +7182,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   'Sales last 24 hours',
-  'Las ofertas duran 24 horas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Verkäufe dauern 24 Stunden',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7112,11 +7200,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'The 24-hour rule means waiting a day to avoid impulse purchases.',
-  'La regla de las 24 horas significa esperar un día para evitar compras impulsivas.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Die 24-Stunden-Regel bedeutet, einen Tag zu warten, um Spontankäufe zu vermeiden.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7130,11 +7218,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'When should you use coupons?',
-  '¿Cuándo deberías usar cupones?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wann solltest du Gutscheine verwenden?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7148,11 +7236,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   'For everything on sale',
-  'Para todo lo que esté en oferta',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Für alles im Angebot',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7166,11 +7254,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   'Only for items you actually need',
-  'Solo para artículos que realmente necesitas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Nur für Artikel, die du wirklich brauchst',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7184,11 +7272,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   'Never',
-  'Nunca',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Niemals',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7202,11 +7290,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   'Only on weekends',
-  'Solo los fines de semana',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Nur am Wochenende',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7220,11 +7308,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   'Coupons save money only if used for things you actually need.',
-  'Los cupones ahorran dinero solo si se usan para cosas que realmente necesitas.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Gutscheine sparen nur dann Geld, wenn sie für Dinge verwendet werden, die man tatsächlich braucht.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7238,11 +7326,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'What is an impulse buy?',
-  '¿Qué es una compra impulsiva?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist ein Impulskauf?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7256,11 +7344,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   'A planned purchase',
-  'Una compra planificada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ein geplanter Kauf',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7274,11 +7362,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   'Buying without planning, often emotionally',
-  'Comprar sin planificar, frecuentemente de manera emocional',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Kaufen ohne Planung, oft emotional',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7292,11 +7380,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   'Buying groceries',
-  'Comprar alimentos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Lebensmittel einkaufen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7310,11 +7398,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   'Using a coupon',
-  'Usar un cupón',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Einen Gutschein verwenden',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7328,11 +7416,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   'Impulse buying is unplanned purchasing driven by emotion rather than need.',
-  'La compra impulsiva es una compra no planificada impulsada por la emoción en lugar de la necesidad.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Impulskäufe sind ungeplante Einkäufe, die von Emotionen und nicht von Bedürfnissen getrieben werden.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7346,11 +7434,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'Price vs Quality',
-  'Precio vs Calidad',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Preis vs Qualität',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7364,7 +7452,7 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# Good, Fast, Cheap - Pick Two
 
 **Value = Quality ÷ Price**
@@ -7384,27 +7472,27 @@ $20 shoes (last 6 months) = $40/year
 $80 shoes (last 3 years) = $27/year
 
 Expensive shoes are actually cheaper!',
-  '# Bueno, Rápido, Barato - Elige Dos
+  '# Gut, Schnell, Günstig - Wähle Zwei
 
-**Valor = Calidad ÷ Precio**
+**Wert = Qualität ÷ Preis**
 
-**A veces lo caro vale la pena:**
-- Zapatos que duran 5 años vs 6 meses
-- Herramientas duraderas vs las que se rompen
-- Comida saludable vs comida chatarra barata
+**Manchmal lohnt sich teuer:**
+- Schuhe, die 5 Jahre halten vs. 6 Monate
+- Langlebiges Werkzeug vs. solches, das kaputt geht
+- Gesundes Essen vs. billiges Junkfood
 
-**A veces lo barato está bien:**
-- Artículos básicos (papel, lápices)
-- Artículos que usas raramente
-- Artículos de moda que pasan de moda
+**Manchmal ist günstig in Ordnung:**
+- Grundausstattung (Papier, Stifte)
+- Dinge, die man selten benutzt
+- Trendige Artikel, die aus der Mode kommen
 
-**Ejemplo:**
-Zapatos de $20 (duran 6 meses) = $40/año
-Zapatos de $80 (duran 3 años) = $27/año
+**Beispiel:**
+20€ Schuhe (halten 6 Monate) = 40€/Jahr
+80€ Schuhe (halten 3 Jahre) = 27€/Jahr
 
-¡Los zapatos caros son en realidad más baratos!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Teure Schuhe sind tatsächlich günstiger!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7418,11 +7506,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'Long-term Cost',
-  'Costo a largo plazo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Langfristige Kosten',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7436,7 +7524,7 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# Total Cost of Ownership
 
 Look beyond the price tag!
@@ -7461,32 +7549,32 @@ Look beyond the price tag!
 - 5 years = $22,000 + $10,000 = $32,000
 
 Cheaper car actually costs $5,500 MORE!',
-  '# Costo Total de Propiedad
+  '# Gesamtkosten des Besitzes
 
-¡Mira más allá del precio de etiqueta!
+Schau über den Preis hinaus!
 
-**Considera:**
-- Costos de mantenimiento
-- Costos de reparación
-- Costos de energía/combustible
-- Vida útil
-- Valor de reventa
+**Berücksichtige:**
+- Wartungskosten
+- Reparaturkosten
+- Energie-/Kraftstoffkosten
+- Lebensdauer
+- Wiederverkaufswert
 
-**Ejemplo: Dos Autos**
+**Beispiel: Zwei Autos**
 
-**Auto A: $15,000**
-- Usa mucha gasolina: $3,000/año
-- Reparaciones frecuentes: $1,500/año
-- 5 años = $15,000 + $22,500 = $37,500
+**Auto A: 15.000 €**
+- Verbraucht viel Benzin: 3.000 €/Jahr
+- Häufige Reparaturen: 1.500 €/Jahr
+- 5 Jahre = 15.000 € + 22.500 € = 37.500 €
 
-**Auto B: $22,000**
-- Uso eficiente de gasolina: $1,500/año
-- Confiable, pocas reparaciones: $500/año
-- 5 años = $22,000 + $10,000 = $32,000
+**Auto B: 22.000 €**
+- Effizienter Benzinverbrauch: 1.500 €/Jahr
+- Zuverlässig, wenige Reparaturen: 500 €/Jahr
+- 5 Jahre = 22.000 € + 10.000 € = 32.000 €
 
-¡El auto más barato en realidad cuesta $5,500 MÁS!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Das günstigere Auto kostet tatsächlich 5.500 € MEHR!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7500,11 +7588,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'Brand vs Generic',
-  'Marca vs Genérico',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Marke vs. Eigenmarke',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7518,7 +7606,7 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# When Brand Names Matter
 
 **Generic/store brand often fine for:**
@@ -7541,30 +7629,30 @@ INSERT INTO "ContentTranslation" (
 4. If generic works, stick with it!
 
 Often, generic is made in the same factory as brand names!',
-  '# Cuándo Importan las Marcas
+  '# Wann Markennamen wichtig sind
 
-**Los productos genéricos/de marca propia suelen ser buenos para:**
-- Alimentos básicos (harina, azúcar, arroz)
-- Medicamentos de venta libre (mismos ingredientes)
-- Productos de limpieza
-- Útiles escolares
-- Ropa básica
+**Generische/Handelsmarken oft ausreichend für:**
+- Grundnahrungsmittel (Mehl, Zucker, Reis)
+- Rezeptfreie Medikamente (gleiche Inhaltsstoffe)
+- Reinigungsmittel
+- Schulsachen
+- Einfache Kleidung
 
-**Las marcas pueden valer la pena para:**
-- Electrónicos (mejor soporte)
-- Herramientas especializadas
-- Artículos con aspectos de seguridad
-- Cosas que usas a diario
+**Markenprodukte können sich lohnen bei:**
+- Elektronik (besserer Support)
+- Spezialwerkzeugen
+- Artikeln mit Sicherheitsbedenken
+- Dingen, die du täglich benutzt
 
-**Cómo decidir:**
-1. Revisa ingredientes/materiales
-2. Lee reseñas
-3. Prueba lo genérico primero
-4. ¡Si lo genérico funciona, quédate con eso!
+**So entscheidest du:**
+1. Inhaltsstoffe/Materialien prüfen
+2. Bewertungen lesen
+3. Erst Generika ausprobieren
+4. Wenn Generika funktioniert, dabei bleiben!
 
-¡A menudo, los productos genéricos se fabrican en la misma fábrica que las marcas!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Oft werden Generika in derselben Fabrik wie Markenprodukte hergestellt!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7578,11 +7666,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'What does "value" mean in shopping?',
-  '¿Qué significa "valor" al hacer compras?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was bedeutet "Wert" beim Einkaufen?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7596,11 +7684,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'The cheapest price',
-  'El precio más barato',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Der günstigste Preis',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7614,11 +7702,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'Quality divided by price',
-  'Calidad dividida por precio',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Qualität geteilt durch Preis',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7632,11 +7720,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'The most expensive item',
-  'El artículo más caro',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Der teuerste Artikel',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7650,11 +7738,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'Brand name',
-  'Marca reconocida',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Markenname',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7668,11 +7756,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'Value is the balance between quality and price - best quality for the price paid.',
-  'El valor es el equilibrio entre calidad y precio - la mejor calidad por el precio pagado.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wert ist das Gleichgewicht zwischen Qualität und Preis - beste Qualität für den bezahlten Preis.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7686,11 +7774,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'Why might expensive shoes be a better value?',
-  '¿Por qué unos zapatos costosos podrían ser una mejor inversión?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Warum könnten teure Schuhe ein besserer Wert sein?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7704,11 +7792,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   'They look better',
-  'Se ven mejor',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sie sehen besser aus',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7722,11 +7810,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   'They last longer, costing less per year',
-  'Duran más tiempo, costando menos por año',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sie halten länger und kosten dadurch weniger pro Jahr',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7740,11 +7828,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   'Expensive is always better',
-  'Caro siempre es mejor',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Teuer ist immer besser',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7758,11 +7846,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   'They''re trendy',
-  'Son de moda',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sie sind trendy',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7776,11 +7864,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'If expensive shoes last much longer, the cost per year of use is often lower.',
-  'Si los zapatos costosos duran mucho más tiempo, el costo por año de uso suele ser menor.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wenn teure Schuhe viel länger halten, sind die Kosten pro Jahr der Nutzung oft niedriger.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7794,11 +7882,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'What is "total cost of ownership"?',
-  '¿Qué es el "costo total de propiedad"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist „Gesamtbetriebskosten" (Total Cost of Ownership)?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7812,11 +7900,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   'Just the purchase price',
-  'Solo el precio de compra',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Nur der Kaufpreis',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7830,11 +7918,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   'All costs including maintenance over time',
-  'Todos los costos incluyendo el mantenimiento a lo largo del tiempo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Alle Kosten einschließlich Wartung über die Zeit',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7848,11 +7936,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   'The price including tax',
-  'El precio incluyendo impuestos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Der Preis inklusive Steuern',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7866,11 +7954,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   'What you can sell it for later',
-  'Lo que puedes venderlo después',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was man später dafür bekommen kann',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7884,11 +7972,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   'Total cost includes purchase price plus all future costs like maintenance and fuel.',
-  'El costo total incluye el precio de compra más todos los costos futuros como mantenimiento y combustible.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Gesamtkosten umfassen den Kaufpreis plus alle zukünftigen Kosten wie Wartung und Kraftstoff.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7902,11 +7990,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'When is generic/store brand usually fine?',
-  '¿Cuándo suele estar bien la marca genérica/de tienda?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wann ist eine Handelsmarke/Eigenmarke normalerweise in Ordnung?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7920,11 +8008,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   'Never',
-  'Nunca',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Niemals',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7938,11 +8026,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   'Always',
-  'Siempre',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Immer',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7956,11 +8044,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   'For basic items like flour or medicine',
-  'Para artículos básicos como harina o medicamentos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Für grundlegende Artikel wie Mehl oder Medikamente',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7974,11 +8062,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   'Only for food',
-  'Solo para alimentos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Nur für Lebensmittel',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7992,11 +8080,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   'Generic brands often have the same quality as name brands for basic items.',
-  'Las marcas genéricas a menudo tienen la misma calidad que las marcas reconocidas para artículos básicos.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Generische Marken haben bei Grundprodukten oft die gleiche Qualität wie Markenprodukte.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8010,11 +8098,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'Marketing Tactics',
-  'Tácticas de Marketing',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Marketingtaktiken',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8028,7 +8116,7 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# How Stores Make You Spend More
 
 **Common tricks:**
@@ -8044,23 +8132,23 @@ INSERT INTO "ContentTranslation" (
 - Research prices beforehand
 - Don''t shop when emotional
 - Question "deals" carefully',
-  '# Cómo las tiendas te hacen gastar más
+  '# Wie Geschäfte dich dazu bringen, mehr auszugeben
 
-**Trucos comunes:**
+**Häufige Tricks:**
 
-1. **Precio de anclaje:** "¡$200 $99!" - Hace que $99 parezca barato
-2. **Precio señuelo:** Pequeño ($3), Mediano ($5), Grande ($5.50) - Todos eligen el grande
-3. **Escasez:** "¡Solo quedan 3!" - Crea urgencia falsa
-4. **Mínimo para envío gratis:** "Envío gratis en compras mayores a $50" - Gastas $50 para ahorrar $5
-5. **Paquetes:** "Compra 3 y ahorra 10%" - Solo necesitabas 1
+1. **Ankerpreise:** „200 € 99 €!" - Lässt 99 € günstig erscheinen
+2. **Köderpreise:** Klein (3 €), Mittel (5 €), Groß (5,50 €) - Alle wählen groß
+3. **Verknappung:** „Nur noch 3 verfügbar!" - Erzeugt künstliche Dringlichkeit
+4. **Mindestbetrag für kostenlosen Versand:** „Kostenloser Versand ab 50 €" - Du gibst 50 € aus, um 5 € zu sparen
+5. **Bündelangebote:** „Kaufe 3, spare 10 %" - Du brauchtest nur 1
 
-**Cómo resistir:**
-- Conoce tu presupuesto antes de comprar
-- Investiga precios con anticipación
-- No compres cuando estés emocional
-- Cuestiona las "ofertas" cuidadosamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**So widerstehst du:**
+- Kenne dein Budget vor dem Einkaufen
+- Recherchiere Preise im Voraus
+- Kaufe nicht ein, wenn du emotional bist
+- Hinterfrage „Angebote" kritisch',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8074,11 +8162,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'Subscription Traps',
-  'Trampas de Suscripción',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Abo-Fallen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8092,7 +8180,7 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# The Slow Money Leak
 
 **Subscription risks:**
@@ -8117,32 +8205,32 @@ INSERT INTO "ContentTranslation" (
 - Use virtual cards that expire
 - Ask yourself: "Used it this month? Keep it. Not used? Cancel it."
 - Cancel immediately after free trials',
-  '# La Fuga Lenta de Dinero
+  '# Das langsame Geldleck
 
-**Riesgos de las suscripciones:**
+**Abonnement-Risiken:**
 
-**Pruebas gratuitas que no son gratuitas:**
-- Requieren tarjeta de crédito
-- Se renuevan automáticamente después de la prueba
-- Difíciles de cancelar
-- Te olvidas de ellas
+**Kostenlose Testversionen, die nicht kostenlos sind:**
+- Erfordern Kreditkarte
+- Automatische Verlängerung nach Testphase
+- Schwer zu kündigen
+- Man vergisst sie
 
-**Las suscripciones mensuales se acumulan:**
-- Streaming: $15
-- Música: $10
-- Videojuegos: $15
-- Software: $20
-- Gimnasio (sin usar): $40
-- **Total: $100/mes = $1,200/año!**
+**Monatliche Abonnements summieren sich:**
+- Streaming: 15 €
+- Musik: 10 €
+- Gaming: 15 €
+- Software: 20 €
+- Fitnessstudio (ungenutzt): 40 €
+- **Gesamt: 100 €/Monat = 1.200 €/Jahr!**
 
-**Estrategias de protección:**
-- Configura recordatorios en el calendario para cuando terminen las pruebas
-- Revisa las suscripciones mensualmente
-- Usa tarjetas virtuales que expiren
-- Pregúntate: "¿Lo usé este mes? Consérvalo. ¿No lo usé? Cancélalo."
-- Cancela inmediatamente después de las pruebas gratuitas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Schutzstrategien:**
+- Kalender-Erinnerungen für Testphasen-Enden setzen
+- Abonnements monatlich überprüfen
+- Virtuelle Karten verwenden, die ablaufen
+- Frag dich selbst: „Diesen Monat genutzt? Behalten. Nicht genutzt? Kündigen."
+- Sofort nach kostenlosen Testphasen kündigen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8156,11 +8244,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'Hidden Fees',
-  'Tarifas Ocultas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Versteckte Gebühren',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8174,7 +8262,7 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# Reading the Fine Print
 
 **Watch out for:**
@@ -8202,35 +8290,35 @@ INSERT INTO "ContentTranslation" (
 2. Ask about total cost upfront
 3. Look for "fee-free" alternatives
 4. Calculate true cost before committing',
-  '# Leyendo la Letra Pequeña
+  '# Das Kleingedruckte lesen
 
-**Ten cuidado con:**
+**Achten Sie auf:**
 
-**Tarifas de resort/hotel:**
-- Habitación: $100/noche
-- "Tarifa de resort": $30/noche
-- Estacionamiento: $25/noche
-- **Costo real: $155/noche!**
+**Resort-/Hotelgebühren:**
+- Zimmer: 100 €/Nacht
+- „Resortgebühr": 30 €/Nacht
+- Parkplatz: 25 €/Nacht
+- **Tatsächliche Kosten: 155 €/Nacht!**
 
-**Tarifas de boletos:**
-- Boleto de concierto: $50
-- "Cargo por servicio": $15
-- "Tarifa de instalaciones": $8
-- **Costo real: $73**
+**Ticketgebühren:**
+- Konzertticket: 50 €
+- „Servicegebühr": 15 €
+- „Veranstaltungsgebühr": 8 €
+- **Tatsächliche Kosten: 73 €**
 
-**Tarifas bancarias:**
-- Tarifas por sobregiro
-- Tarifas de cajero automático
-- Tarifas de mantenimiento mensual
-- Tarifas por transacciones internacionales
+**Bankgebühren:**
+- Überziehungsgebühren
+- Geldautomatengebühren
+- Monatliche Kontoführungsgebühren
+- Auslandseinsatzgebühren
 
-**Cómo evitarlas:**
-1. Lee TODOS los términos antes de comprar
-2. Pregunta por el costo total por adelantado
-3. Busca alternativas "sin tarifas"
-4. Calcula el costo real antes de comprometerte',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**So vermeiden Sie diese:**
+1. Lesen Sie ALLE Bedingungen vor dem Kauf
+2. Fragen Sie vorab nach den Gesamtkosten
+3. Suchen Sie nach „gebührenfreien" Alternativen
+4. Berechnen Sie die tatsächlichen Kosten vor der Verpflichtung',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8244,11 +8332,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'What is "anchor pricing"?',
-  '¿Qué es el "precio ancla"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist "Ankerpreisbildung"?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8262,11 +8350,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'Selling boat anchors',
-  'Vender anclas de barco',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Bootsanker verkaufen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8280,11 +8368,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'Showing a high price crossed out to make sale price look better',
-  'Mostrar un precio alto tachado para que el precio de oferta se vea mejor',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Anzeige eines durchgestrichenen hohen Preises, um den Verkaufspreis besser aussehen zu lassen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8298,11 +8386,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'Giving discounts to sailors',
-  'Dar descuentos a marineros',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Rabatte für Seeleute gewähren',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8316,11 +8404,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'Setting the lowest price',
-  'Establecer el precio más bajo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Den niedrigsten Preis festlegen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8334,11 +8422,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'Anchor pricing shows a high "original" price to make the sale price seem like a great deal.',
-  'El precio ancla muestra un precio "original" alto para hacer que el precio de oferta parezca una gran oportunidad.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ankerpreisgestaltung zeigt einen hohen „ursprünglichen" Preis, um den Verkaufspreis wie ein tolles Schnäppchen erscheinen zu lassen.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8352,11 +8440,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'Why are "free trials" sometimes a trap?',
-  '¿Por qué las "pruebas gratuitas" a veces son una trampa?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Warum sind "kostenlose Testversionen" manchmal eine Falle?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8370,11 +8458,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   'They''re actually free',
-  'Son realmente gratis',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sie sind tatsächlich kostenlos',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8388,11 +8476,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   'They auto-renew and charge your card',
-  'Se renuevan automáticamente y cobran a tu tarjeta',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sie verlängern sich automatisch und belasten deine Karte',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8406,11 +8494,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   'They give you free stuff',
-  'Te dan cosas gratis',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sie geben dir kostenlose Sachen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8424,11 +8512,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   'They''re illegal',
-  'Son ilegales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sie sind illegal',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8442,11 +8530,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'Free trials often auto-renew into paid subscriptions that charge your card.',
-  'Las pruebas gratuitas a menudo se renuevan automáticamente en suscripciones pagadas que cargan tu tarjeta.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Kostenlose Testversionen verlängern sich oft automatisch in kostenpflichtige Abonnements, die von deiner Karte abgebucht werden.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8460,11 +8548,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'If you have 5 subscriptions at $15 each, how much per year?',
-  'Si tienes 5 suscripciones a $15 cada una, ¿cuánto pagas al año?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wenn du 5 Abonnements zu je 15 $ hast, wie viel pro Jahr?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8478,11 +8566,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   '$75',
   '$75',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8496,11 +8584,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   '$180',
   '$180',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8514,11 +8602,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   '$900',
   '$900',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8532,11 +8620,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   '$750',
   '$750',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8550,11 +8638,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   '5 × $15 = $75/month × 12 months = $900/year.',
-  '5 × $15 = $75/mes × 12 meses = $900/año.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '5 × 15 $ = 75 $/Monat × 12 Monate = 900 $/Jahr.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8568,11 +8656,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'What are "hidden fees"?',
-  '¿Qué son los "cargos ocultos"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was sind „versteckte Gebühren"?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8586,11 +8674,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   'Illegal charges',
-  'Cargos ilegales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Illegale Gebühren',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8604,11 +8692,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   'Additional costs not shown in advertised price',
-  'Costos adicionales no mostrados en el precio anunciado',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Zusätzliche Kosten, die nicht im beworbenen Preis angegeben sind',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8622,11 +8710,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   'Fees for hiding things',
-  'Tarifas por esconder cosas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Gebühren für das Verstecken von Dingen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8640,11 +8728,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   'Discounts',
-  'Descuentos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Rabatte',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8658,11 +8746,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   'Hidden fees are extra costs added on top of the advertised price.',
-  'Las tarifas ocultas son costos adicionales que se agregan al precio anunciado.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Versteckte Gebühren sind zusätzliche Kosten, die zum beworbenen Preis hinzukommen.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8676,11 +8764,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'de',
   'Best way to avoid subscription traps:',
-  'Mejor manera de evitar trampas de suscripción:',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Bester Weg, um Abo-Fallen zu vermeiden:',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8694,11 +8782,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'de',
   'Never subscribe to anything',
-  'Nunca suscribirse a nada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Niemals etwas abonnieren',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8712,11 +8800,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'de',
   'Review and cancel unused subscriptions regularly',
-  'Revisar y cancelar suscripciones no utilizadas regularmente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Überprüfen und kündigen Sie regelmäßig ungenutzte Abonnements',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8730,11 +8818,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'de',
   'Subscribe to everything',
-  'Suscribirse a todo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Alles abonnieren',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8748,11 +8836,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'de',
   'Ignore your bank statements',
-  'Ignorar tus estados de cuenta bancarios',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ignoriere deine Kontoauszüge',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8766,11 +8854,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'de',
   'Regularly reviewing subscriptions helps you cancel ones you don''t use.',
-  'Revisar regularmente las suscripciones te ayuda a cancelar aquellas que no usas.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Regelmäßiges Überprüfen von Abonnements hilft dir, solche zu kündigen, die du nicht nutzt.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8784,11 +8872,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'Emergency Fund',
-  'Fondo de Emergencia',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Notfallfonds',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8802,7 +8890,7 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# Preparing for the Unexpected
 
 **Emergency fund** = Money saved for unexpected problems
@@ -8824,29 +8912,29 @@ INSERT INTO "ContentTranslation" (
 - Peace of mind
 
 **Goal:** 3-6 months of living expenses',
-  '# Preparándose para lo Inesperado
+  '# Auf Unerwartetes vorbereitet sein
 
-**Fondo de emergencia** = Dinero ahorrado para problemas inesperados
+**Notfallfonds** = Geld, das für unerwartete Probleme gespart wird
 
-**Por qué lo necesitas:**
-- El auto se descompone: reparación de $500
-- Emergencia médica: cuenta de $1,000
-- Pérdida de empleo: Necesitas gastos de 3-6 meses
-- Reparación del hogar: Calentador de agua descompuesto
+**Warum du ihn brauchst:**
+- Auto geht kaputt: 500 $ Reparatur
+- Medizinischer Notfall: 1.000 $ Rechnung
+- Jobverlust: 3-6 Monate Ausgaben nötig
+- Hausreparatur: Kaputte Warmwasserheizung
 
-**Sin fondo de emergencia:**
-- Te endeudas (tarjetas de crédito, préstamos)
-- No puedes pagar las cuentas
-- Estrés y preocupación
+**Ohne Notfallfonds:**
+- Schulden machen (Kreditkarten, Kredite)
+- Rechnungen können nicht bezahlt werden
+- Stress und Sorgen
 
-**Con fondo de emergencia:**
-- Manejas los problemas con calma
-- No necesitas endeudarte
-- Tranquilidad mental
+**Mit Notfallfonds:**
+- Probleme ruhig bewältigen
+- Keine Schulden nötig
+- Seelenfrieden
 
-**Meta:** 3-6 meses de gastos de vida',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Ziel:** 3-6 Monate Lebenshaltungskosten',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8860,11 +8948,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'Future Goals',
-  'Metas Futuras',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Zukünftige Ziele',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8878,7 +8966,7 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# Saving for What You Want
 
 **Short-term goals (< 1 year):**
@@ -8900,29 +8988,29 @@ INSERT INTO "ContentTranslation" (
 - Starting a business
 
 Saving lets you afford your dreams without debt!',
-  '# Ahorrar para lo que Quieres
+  '# Sparen für das, was du willst
 
-**Metas a corto plazo (< 1 año):**
-- Teléfono nuevo
-- Fiesta de cumpleaños
-- Viaje escolar
-- Regalos de festividades
+**Kurzfristige Ziele (< 1 Jahr):**
+- Neues Handy
+- Geburtstagsfeier
+- Klassenfahrt
+- Weihnachtsgeschenke
 
-**Metas a mediano plazo (1-5 años):**
-- Automóvil
-- Universidad
-- Boda
-- Cuota inicial de una vivienda
+**Mittelfristige Ziele (1-5 Jahre):**
+- Auto
+- Studium
+- Hochzeit
+- Anzahlung für ein Eigenheim
 
-**Metas a largo plazo (5+ años):**
-- Jubilación
-- Educación de los hijos
-- Vacaciones soñadas
-- Iniciar un negocio
+**Langfristige Ziele (5+ Jahre):**
+- Ruhestand
+- Ausbildung der Kinder
+- Traumurlaub
+- Ein Unternehmen gründen
 
-¡Ahorrar te permite alcanzar tus sueños sin deudas!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Sparen ermöglicht es dir, deine Träume ohne Schulden zu verwirklichen!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8936,11 +9024,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'Financial Security',
-  'Seguridad Financiera',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Finanzielle Sicherheit',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8954,7 +9042,7 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# Peace of Mind
 
 **Financial security means:**
@@ -8972,25 +9060,25 @@ INSERT INTO "ContentTranslation" (
 5. **Future you** - Will thank present you!
 
 "Don''t save what''s left after spending; spend what''s left after saving." - Warren Buffett',
-  '# Tranquilidad Mental
+  '# Seelenfrieden
 
-**La seguridad financiera significa:**
-- No vivir de quincena en quincena
-- Poder manejar emergencias
-- No estar estresado por el dinero
-- Libertad para tomar decisiones
-- Poder ayudar a otros
+**Finanzielle Sicherheit bedeutet:**
+- Nicht von Gehaltsscheck zu Gehaltsscheck leben
+- Notfälle bewältigen können
+- Kein Stress wegen Geld
+- Freiheit, Entscheidungen zu treffen
+- Anderen helfen können
 
-**Beneficios de ahorrar:**
-1. **Libertad** - Decir no a malos empleos
-2. **Oportunidades** - Aprovechar oportunidades para cumplir sueños
-3. **Menos estrés** - Dormir mejor por la noche
-4. **Independencia** - No depender de otros
-5. **Tu yo futuro** - ¡Te lo agradecerá!
+**Vorteile des Sparens:**
+1. **Freiheit** - Nein zu schlechten Jobs sagen
+2. **Möglichkeiten** - Träume wagen
+3. **Weniger Stress** - Nachts besser schlafen
+4. **Unabhängigkeit** - Nicht auf andere angewiesen sein
+5. **Zukünftiges Ich** - Wird dem heutigen Ich danken!
 
-"No ahorres lo que queda después de gastar; gasta lo que queda después de ahorrar." - Warren Buffett',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+„Spare nicht, was nach dem Ausgeben übrig bleibt; gib aus, was nach dem Sparen übrig bleibt." - Warren Buffett',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9004,11 +9092,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'What is an emergency fund?',
-  '¿Qué es un fondo de emergencia?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist ein Notfallfonds?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9022,11 +9110,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'Money for vacations',
-  'Dinero para vacaciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld für Urlaube',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9040,11 +9128,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'Money saved for unexpected problems',
-  'Dinero ahorrado para problemas inesperados',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld, das für unerwartete Probleme gespart wird',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9058,11 +9146,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'Money for shopping',
-  'Dinero para compras',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld zum Einkaufen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9076,11 +9164,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'Money you never touch',
-  'Dinero que nunca tocas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld, das du niemals anrührst',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9094,11 +9182,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'An emergency fund is savings set aside for unexpected expenses or emergencies.',
-  'Un fondo de emergencia es dinero ahorrado que se reserva para gastos inesperados o emergencias.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ein Notfallfonds ist Erspartes, das für unerwartete Ausgaben oder Notfälle zurückgelegt wird.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9112,11 +9200,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'How many months of expenses should an emergency fund cover?',
-  '¿Cuántos meses de gastos debe cubrir un fondo de emergencia?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wie viele Monate an Ausgaben sollte ein Notfallfonds abdecken?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9130,11 +9218,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   '1 week',
-  '1 semana',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '1 Woche',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9148,11 +9236,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   '1 month',
-  '1 mes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '1 Monat',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9166,11 +9254,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   '3-6 months',
-  '3-6 meses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '3-6 Monate',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9184,11 +9272,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   '10 years',
-  '10 años',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '10 Jahre',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9202,11 +9290,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'Financial experts recommend 3-6 months of living expenses for emergencies.',
-  'Los expertos financieros recomiendan tener ahorros equivalentes a 3-6 meses de gastos de vida para emergencias.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Finanzexperten empfehlen 3-6 Monate an Lebenshaltungskosten für Notfälle.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9220,11 +9308,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'Which is a short-term savings goal?',
-  '¿Cuál es una meta de ahorro a corto plazo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Welches ist ein kurzfristiges Sparziel?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9238,11 +9326,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   'Retirement',
-  'Jubilación',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ruhestand',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9256,11 +9344,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   'College in 10 years',
-  'Universidad en 10 años',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Studium in 10 Jahren',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9274,11 +9362,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   'New video game in 3 months',
-  'Videojuego nuevo en 3 meses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Neues Videospiel in 3 Monaten',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9292,11 +9380,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   'Buying a house',
-  'Comprar una casa',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ein Haus kaufen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9310,11 +9398,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   'Short-term goals are things you want to buy within a year.',
-  'Los objetivos a corto plazo son cosas que quieres comprar en un plazo de un año.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Kurzfristige Ziele sind Dinge, die du innerhalb eines Jahres kaufen möchtest.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9328,11 +9416,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'What does Warren Buffett say about saving?',
-  '¿Qué dice Warren Buffett sobre el ahorro?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was sagt Warren Buffett über das Sparen?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9346,11 +9434,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   'Spend first, save what''s left',
-  'Gasta primero, ahorra lo que sobre',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Zuerst ausgeben, den Rest sparen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9364,11 +9452,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   'Save first, spend what''s left',
-  'Ahorra primero, gasta lo que sobra',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Spare zuerst, gib aus, was übrig bleibt',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9382,11 +9470,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   'Never save anything',
-  'Nunca ahorres nada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Spare niemals etwas',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9400,11 +9488,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   'Save everything',
-  'Ahorra todo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Spare alles',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9418,11 +9506,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   'Buffett advises to save first (pay yourself first), then spend what remains.',
-  'Buffett aconseja ahorrar primero (págate a ti mismo primero), luego gastar lo que queda.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Buffett rät dazu, zuerst zu sparen (sich selbst zuerst zu bezahlen) und dann auszugeben, was übrig bleibt.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9436,11 +9524,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'SMART Goals',
-  'Metas SMART',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'SMART-Ziele',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9454,7 +9542,7 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# Setting Goals That Work
 
 **SMART = Specific, Measurable, Achievable, Relevant, Time-bound**
@@ -9475,28 +9563,28 @@ INSERT INTO "ContentTranslation" (
 3. Set a deadline
 4. Calculate monthly savings needed
 5. Make sure it''s realistic for your income',
-  '# Estableciendo Metas que Funcionan
+  '# Ziele setzen, die funktionieren
 
-**SMART = Específica, Medible, Alcanzable, Relevante, con Plazo definido**
+**SMART = Spezifisch, Messbar, Erreichbar, Relevant, Terminiert**
 
-❌ Meta mala: "Ahorrar más dinero"
-✅ Meta SMART: "Ahorrar $1,200 para una computadora portátil nueva para el 31 de diciembre"
+❌ Schlechtes Ziel: „Mehr Geld sparen"
+✅ SMART-Ziel: „1.200 € für einen neuen Laptop bis zum 31. Dezember sparen"
 
-**Desglosándola:**
-- **Específica:** Computadora portátil nueva
-- **Medible:** $1,200
-- **Alcanzable:** $100/mes durante 12 meses
-- **Relevante:** Necesaria para la escuela/trabajo
-- **con Plazo definido:** Para el 31 de diciembre
+**Die Aufschlüsselung:**
+- **Spezifisch:** Neuer Laptop
+- **Messbar:** 1.200 €
+- **Erreichbar:** 100 €/Monat für 12 Monate
+- **Relevant:** Benötigt für Schule/Arbeit
+- **Terminiert:** Bis zum 31. Dezember
 
-**Cómo crear metas SMART:**
-1. Decide exactamente qué quieres
-2. Investiga el costo
-3. Establece una fecha límite
-4. Calcula el ahorro mensual necesario
-5. Asegúrate de que sea realista para tus ingresos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**So setzt du SMART-Ziele:**
+1. Entscheide genau, was du möchtest
+2. Recherchiere die Kosten
+3. Setze eine Frist
+4. Berechne die benötigten monatlichen Ersparnisse
+5. Stelle sicher, dass es realistisch für dein Einkommen ist',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9510,11 +9598,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'Short-term vs Long-term',
-  'Corto plazo vs Largo plazo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Kurzfristige vs Langfristige',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9528,7 +9616,7 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# Different Goals, Different Strategies
 
 **Short-term (< 1 year):**
@@ -9550,29 +9638,29 @@ INSERT INTO "ContentTranslation" (
 - Examples: Retirement, house
 
 Match your savings strategy to your timeline!',
-  '# Diferentes Metas, Diferentes Estrategias
+  '# Unterschiedliche Ziele, unterschiedliche Strategien
 
-**Corto plazo (< 1 año):**
-- Mantener en cuenta de ahorros
-- Fácil acceso
-- Menor riesgo
-- Ejemplos: Bicicleta nueva, boletos para concierto
+**Kurzfristig (< 1 Jahr):**
+- Auf Sparkonto aufbewahren
+- Einfacher Zugriff
+- Geringeres Risiko
+- Beispiele: Neues Fahrrad, Konzerttickets
 
-**Mediano plazo (1-5 años):**
-- Ahorros de alto rendimiento o certificados de depósito
-- Algo de crecimiento, aún accesible
-- Riesgo bajo-medio
-- Ejemplos: Auto, universidad, boda
+**Mittelfristig (1-5 Jahre):**
+- Hochverzinstes Sparkonto oder Festgeld
+- Etwas Wachstum, weiterhin zugänglich
+- Geringes bis mittleres Risiko
+- Beispiele: Auto, Studium, Hochzeit
 
-**Largo plazo (5+ años):**
-- Se puede invertir en acciones/bonos
-- Mayor potencial de crecimiento
-- Riesgo medio-alto (tiempo para recuperar pérdidas)
-- Ejemplos: Jubilación, casa
+**Langfristig (5+ Jahre):**
+- Kann in Aktien/Anleihen investiert werden
+- Höheres Wachstumspotenzial
+- Mittleres bis hohes Risiko (Zeit zum Ausgleichen von Verlusten)
+- Beispiele: Altersvorsorge, Haus
 
-¡Adapta tu estrategia de ahorro a tu plazo de tiempo!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Passe deine Sparstrategie an deinen Zeitplan an!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9586,11 +9674,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'Tracking Progress',
-  'Seguimiento del Progreso',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Fortschritte verfolgen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9604,7 +9692,7 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# Stay Motivated
 
 **Ways to track:**
@@ -9629,32 +9717,32 @@ INSERT INTO "ContentTranslation" (
 - 50% saved: Tell a friend
 - 75% saved: Plan how you''ll use it
 - 100%: Achievement unlocked! 🎉',
-  '# Mantén la Motivación
+  '# Bleib motiviert
 
-**Formas de hacer seguimiento:**
+**Möglichkeiten zur Verfolgung:**
 
-1. **Rastreadores visuales:**
-   - Termómetro de ahorros
-   - Tabla para colorear (colorea incrementos de $10)
-   - Foto del artículo objetivo como fondo de pantalla del teléfono
+1. **Visuelle Tracker:**
+   - Spar-Thermometer
+   - Ausmal-Diagramm (in 10-€-Schritten ausmalen)
+   - Foto des Zielgegenstands als Handy-Hintergrundbild
 
-2. **Aplicaciones y hojas de cálculo:**
+2. **Apps und Tabellen:**
    - Mint, YNAB, Personal Capital
-   - Excel/Google Sheets simple
-   - Metas de ahorro en la aplicación del banco
+   - Einfache Excel/Google Sheets
+   - Sparziel-Funktion der Banking-App
 
-3. **Métodos físicos:**
-   - Frasco/sobre separado para cada meta
-   - Transferir dinero a una cuenta separada
-   - Revisiones semanales con un compañero de rendición de cuentas
+3. **Physische Methoden:**
+   - Separates Glas/Umschlag für jedes Ziel
+   - Geld auf separates Konto überweisen
+   - Wöchentliche Kontrolle mit Verantwortungspartner
 
-**Celebra los hitos:**
-- 25% ahorrado: Pequeño premio
-- 50% ahorrado: Cuéntale a un amigo
-- 75% ahorrado: Planifica cómo lo usarás
-- 100%: ¡Logro desbloqueado! 🎉',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Meilensteine feiern:**
+- 25% gespart: Kleine Belohnung
+- 50% gespart: Einem Freund erzählen
+- 75% gespart: Planen, wie du es verwenden wirst
+- 100%: Erfolg freigeschaltet! 🎉',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9668,11 +9756,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'What does SMART goals stand for?',
-  '¿Qué significa la sigla SMART para las metas?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was bedeutet SMART-Ziele?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9686,11 +9774,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'Simple, Money, Achievable, Real, Timely',
-  'Simple, Dinero, Alcanzable, Real, Oportuno',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Simple, Money, Achievable, Real, Timely',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9704,11 +9792,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'Specific, Measurable, Achievable, Relevant, Time-bound',
-  'Específico, Medible, Alcanzable, Relevante, con Tiempo definido',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Spezifisch, Messbar, Erreichbar, Relevant, Terminiert',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9722,11 +9810,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'Save, Make, Acquire, Reach, Total',
-  'Ahorrar, Hacer, Adquirir, Alcanzar, Total',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sparen, Machen, Erwerben, Erreichen, Gesamt',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9740,11 +9828,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'Spend, Manage, Allocate, Record, Track',
-  'Gastar, Manejar, Asignar, Registrar, Rastrear',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ausgeben, Verwalten, Zuteilen, Aufzeichnen, Verfolgen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9758,11 +9846,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'SMART is an acronym for Specific, Measurable, Achievable, Relevant, Time-bound.',
-  'SMART es un acrónimo de Específico, Medible, Alcanzable, Relevante, con Tiempo límite.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'SMART ist ein Akronym für Specific (Spezifisch), Measurable (Messbar), Achievable (Erreichbar), Relevant (Relevant), Time-bound (Zeitgebunden).',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9776,11 +9864,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'For a goal 8 years away, where should you keep the money?',
-  'Para una meta a 8 años de distancia, ¿dónde deberías guardar el dinero?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wo solltest du das Geld für ein Ziel in 8 Jahren aufbewahren?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9794,11 +9882,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   'Under your mattress',
-  'Debajo de tu colchón',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Unter deiner Matratze',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9812,11 +9900,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   'In your wallet',
-  'En tu billetera',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'In deiner Brieftasche',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9830,11 +9918,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   'Can invest in stocks for growth',
-  'Puede invertir en acciones para crecimiento',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'In Aktien investieren, um Wachstum zu erzielen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9848,11 +9936,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   'In a piggy bank',
-  'En una alcancía',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'In einem Sparschwein',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9866,11 +9954,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'Long-term goals (5+ years) can be invested for higher growth potential.',
-  'Las metas a largo plazo (5+ años) pueden invertirse para obtener un mayor potencial de crecimiento.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Langfristige Ziele (5+ Jahre) können für höheres Wachstumspotenzial investiert werden.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9884,11 +9972,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'If you want to save $600 in 6 months, how much per month?',
-  'Si quieres ahorrar $600 en 6 meses, ¿cuánto por mes?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wenn du 600 $ in 6 Monaten sparen möchtest, wie viel pro Monat?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9902,11 +9990,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   '$50',
   '$50',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9920,11 +10008,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   '$100',
   '$100',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9938,11 +10026,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   '$150',
   '$150',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9956,11 +10044,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   '$200',
   '$200',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9974,11 +10062,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   '$600 ÷ 6 months = $100 per month.',
-  '$600 ÷ 6 meses = $100 por mes.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '$600 ÷ 6 Monate = $100 pro Monat.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9992,11 +10080,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'Why is tracking progress important?',
-  '¿Por qué es importante dar seguimiento al progreso?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Warum ist es wichtig, den Fortschritt zu verfolgen?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10010,11 +10098,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   'It''s not important',
-  'No es importante',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es ist nicht wichtig',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10028,11 +10116,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   'Helps you stay motivated and on track',
-  'Te ayuda a mantenerte motivado y en el camino correcto',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Hilft dir, motiviert zu bleiben und auf Kurs zu bleiben',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10046,11 +10134,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   'Required by law',
-  'Requerido por ley',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Gesetzlich vorgeschrieben',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10064,11 +10152,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   'Banks force you to',
-  'Los bancos te obligan a',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Banken zwingen dich dazu',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10082,11 +10170,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   'Tracking progress keeps you motivated and helps ensure you reach your goal.',
-  'Hacer seguimiento del progreso te mantiene motivado y ayuda a asegurar que alcances tu meta.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Das Verfolgen deines Fortschritts hält dich motiviert und hilft sicherzustellen, dass du dein Ziel erreichst.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10100,11 +10188,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'Savings Accounts',
-  'Cuentas de Ahorro',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sparkonten',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10118,7 +10206,7 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# Basic Savings at Banks
 
 **Savings account features:**
@@ -10134,23 +10222,23 @@ INSERT INTO "ContentTranslation" (
 - Money you might need soon
 
 **Tip:** Some accounts have fees if balance is too low. Choose fee-free accounts!',
-  '# Ahorros Básicos en Bancos
+  '# Grundlegendes Sparen bei Banken
 
-**Características de la cuenta de ahorros:**
-- Gana intereses (usualmente 0.01% a 0.50%)
-- Asegurada por la FDIC (hasta $250,000)
-- Fácil acceso al dinero
-- Saldo mínimo bajo o nulo
-- Puede tener límites de retiro
+**Merkmale eines Sparkontos:**
+- Zinsen verdienen (üblicherweise 0,01% bis 0,50%)
+- Einlagensicherung (bis zu 250.000 €)
+- Einfacher Zugriff auf Geld
+- Niedriges/kein Mindestguthaben
+- Kann Abhebungslimits haben
 
-**Cuándo usar:**
-- Fondo de emergencia
-- Metas a corto plazo
-- Dinero que podrías necesitar pronto
+**Wann verwenden:**
+- Notfallfonds
+- Kurzfristige Ziele
+- Geld, das man bald brauchen könnte
 
-**Consejo:** Algunas cuentas cobran comisiones si el saldo es muy bajo. ¡Elige cuentas sin comisiones!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Tipp:** Einige Konten haben Gebühren, wenn das Guthaben zu niedrig ist. Wähle gebührenfreie Konten!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10164,11 +10252,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'Interest Rates',
-  'Tasas de Interés',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Zinssätze',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10182,7 +10270,7 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# How Your Money Grows
 
 **Interest** = Money the bank pays you for keeping money there
@@ -10205,30 +10293,30 @@ INSERT INTO "ContentTranslation" (
 
 At 1%: $1,000 → $1,104 in 10 years
 At 5%: $1,000 → $1,629 in 10 years',
-  '# Cómo Crece Tu Dinero
+  '# Wie dein Geld wächst
 
-**Interés** = Dinero que el banco te paga por mantener tu dinero allí
+**Zinsen** = Geld, das die Bank dir dafür zahlt, dass du dein Geld dort aufbewahrst
 
-**Ejemplo:**
-- Ahorras $1,000
-- Tasa de interés: 5% por año
-- Después de 1 año: $1,050
-- Después de 2 años: $1,102.50 (¡interés compuesto!)
+**Beispiel:**
+- Spare 1.000 €
+- Zinssatz: 5% pro Jahr
+- Nach 1 Jahr: 1.050 €
+- Nach 2 Jahren: 1.102,50 € (Zinseszins!)
 
-**Interés compuesto** = Ganar interés sobre tu interés
+**Zinseszins** = Zinsen auf deine Zinsen verdienen
 
-**Dónde encontrar interés más alto:**
-- Bancos en línea (1% a 5%+)
-- Cuentas de ahorro de alto rendimiento
-- Certificados de Depósito (CDs)
-- Cuentas del mercado monetario
+**Wo du höhere Zinsen findest:**
+- Onlinebanken (1% bis 5%+)
+- Hochverzinsliche Sparkonten
+- Festgeldkonten
+- Geldmarktkonten
 
-**Compara las tasas** - ¡Pequeñas diferencias = gran diferencia con el tiempo!
+**Vergleiche die Zinssätze** - Kleine Unterschiede = großer Unterschied über die Zeit!
 
-Al 1%: $1,000 → $1,104 en 10 años
-Al 5%: $1,000 → $1,629 en 10 años',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Bei 1%: 1.000 € → 1.104 € in 10 Jahren
+Bei 5%: 1.000 € → 1.629 € in 10 Jahren',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10242,11 +10330,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'Bank vs Credit Union',
-  'Banco vs Cooperativa de Crédito',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Bank vs Kreditgenossenschaft',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10260,7 +10348,7 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# Where to Open an Account
 
 **Banks:**
@@ -10284,31 +10372,31 @@ INSERT INTO "ContentTranslation" (
 - Need branches/ATMs? → Bank
 - Want better rates? → Credit Union
 - Can use online banking? → Online bank (best rates)',
-  '# Dónde Abrir una Cuenta
+  '# Wo man ein Konto eröffnet
 
-**Bancos:**
-- Empresas con fines de lucro
-- Más ubicaciones y cajeros automáticos
-- Mejor tecnología/aplicaciones
-- Tasas de interés más bajas generalmente
-- Ejemplos: Chase, Bank of America
+**Banken:**
+- Gewinnorientierte Unternehmen
+- Mehr Filialen und Geldautomaten
+- Bessere Technologie/Apps
+- Normalerweise niedrigere Zinssätze
+- Beispiele: Chase, Bank of America
 
-**Cooperativas de Crédito:**
-- Sin fines de lucro, propiedad de los miembros
-- Tasas de interés más altas
-- Tarifas más bajas
-- Menos ubicaciones
-- Pueden requerir membresía
-- Ejemplos: Navy Federal, cooperativas de crédito locales
+**Kreditgenossenschaften:**
+- Gemeinnützig, im Besitz der Mitglieder
+- Höhere Zinssätze
+- Niedrigere Gebühren
+- Weniger Filialen
+- Mitgliedschaft kann erforderlich sein
+- Beispiele: Navy Federal, Lokale Kreditgenossenschaften
 
-**Ambos son seguros** - asegurados por FDIC (bancos) o NCUA (cooperativas de crédito)
+**Beide sind sicher** - FDIC (Banken) oder NCUA (Kreditgenossenschaften) versichert
 
-**Para Elegir:**
-- ¿Necesitas sucursales/cajeros automáticos? → Banco
-- ¿Quieres mejores tasas? → Cooperativa de Crédito
-- ¿Puedes usar banca en línea? → Banco en línea (mejores tasas)',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Auswahl:**
+- Brauchen Sie Filialen/Geldautomaten? → Bank
+- Möchten Sie bessere Zinssätze? → Kreditgenossenschaft
+- Können Sie Online-Banking nutzen? → Online-Bank (beste Zinssätze)',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10322,11 +10410,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'What is FDIC insurance?',
-  '¿Qué es el seguro de la FDIC?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist die FDIC-Versicherung?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10340,11 +10428,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'Car insurance',
-  'Seguro de automóvil',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Autoversicherung',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10358,11 +10446,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'Protection for bank deposits up to $250,000',
-  'Protección para depósitos bancarios hasta $250,000',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Schutz für Bankeinlagen bis zu 250.000 $',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10376,11 +10464,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'Health insurance',
-  'Seguro de salud',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Krankenversicherung',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10394,11 +10482,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'A type of savings account',
-  'Una clase de cuenta de ahorros',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Eine Art von Sparkonto',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10412,11 +10500,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'FDIC insurance protects your bank deposits up to $250,000 if the bank fails.',
-  'El seguro de la FDIC protege tus depósitos bancarios hasta $250,000 si el banco quiebra.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Die FDIC-Versicherung schützt Ihre Bankeinlagen bis zu 250.000 $, falls die Bank zahlungsunfähig wird.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10430,11 +10518,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'What is compound interest?',
-  '¿Qué es el interés compuesto?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist Zinseszins?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10448,11 +10536,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   'Flat interest rate',
-  'Tasa de interés fija',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Fester Zinssatz',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10466,11 +10554,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   'Interest earned on both principal and previous interest',
-  'Interés ganado sobre el capital inicial y los intereses previos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Zinsen, die sowohl auf das Kapital als auch auf bereits verdiente Zinsen berechnet werden',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10484,11 +10572,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   'Interest you pay on loans',
-  'Interés que pagas por préstamos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Zinsen, die du auf Kredite zahlst',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10502,11 +10590,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   'No interest',
-  'Sin interés',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Keine Zinsen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10520,11 +10608,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'Compound interest means you earn interest on your interest, accelerating growth.',
-  'El interés compuesto significa que ganas intereses sobre tus intereses, acelerando el crecimiento.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Zinseszins bedeutet, dass du Zinsen auf deine Zinsen erhältst, was das Wachstum beschleunigt.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10538,11 +10626,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'Where typically find the highest interest rates?',
-  '¿Dónde se suelen encontrar las tasas de interés más altas?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wo findet man typischerweise die höchsten Zinssätze?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10556,11 +10644,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   'Traditional bank branches',
-  'Sucursales bancarias tradicionales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Traditionelle Bankfilialen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10574,11 +10662,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   'Under your mattress',
-  'Debajo de tu colchón',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Unter deiner Matratze',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10592,11 +10680,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   'Online banks and credit unions',
-  'Bancos en línea y cooperativas de crédito',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Online-Banken und Kreditgenossenschaften',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10610,11 +10698,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   'Piggy banks',
-  'Alcancías',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sparschweine',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10628,11 +10716,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   'Online banks and credit unions often offer higher interest rates than traditional banks.',
-  'Los bancos en línea y las cooperativas de crédito a menudo ofrecen tasas de interés más altas que los bancos tradicionales.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Online-Banken und Kreditgenossenschaften bieten oft höhere Zinssätze als traditionelle Banken.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10646,11 +10734,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'If you save $100 at 4% interest for 1 year, how much will you have?',
-  'Si ahorras $100 al 4% de interés durante 1 año, ¿cuánto tendrás?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wenn du 100 $ mit 4 % Zinsen für 1 Jahr sparst, wie viel wirst du haben?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10664,11 +10752,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   '$100',
   '$100',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10682,11 +10770,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   '$104',
   '$104',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10700,11 +10788,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   '$400',
   '$400',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10718,11 +10806,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   '$140',
   '$140',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10736,11 +10824,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   '$100 + ($100 × 0.04) = $104.',
   '$100 + ($100 × 0,04) = $104.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10754,11 +10842,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'Pay Yourself First',
-  'Págate a Ti Mismo Primero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Bezahle dich selbst zuerst',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10772,7 +10860,7 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# The Golden Rule of Saving
 
 **"Pay yourself first"** = Save before spending on anything else
@@ -10797,32 +10885,32 @@ INSERT INTO "ContentTranslation" (
 - Savings actually happen
 
 "Don''t save what is left after spending; spend what is left after saving."',
-  '# La Regla de Oro del Ahorro
+  '# Die goldene Regel des Sparens
 
-**"Págate a ti mismo primero"** = Ahorra antes de gastar en cualquier otra cosa
+**„Bezahle dich zuerst selbst"** = Spare, bevor du für irgendetwas anderes Geld ausgibst
 
-**Cómo funciona:**
+**So funktioniert es:**
 
-❌ Forma antigua:
-1. Recibir el salario
-2. Pagar las cuentas
-3. Comprar cosas
-4. Ahorrar lo que queda (usualmente $0)
+❌ Alte Methode:
+1. Gehalt erhalten
+2. Rechnungen bezahlen
+3. Sachen kaufen
+4. Sparen, was übrig bleibt (normalerweise 0 €)
 
-✅ Forma nueva:
-1. Recibir el salario
-2. **Ahorrar inmediatamente el 10-20%**
-3. Pagar las cuentas
-4. Comprar cosas con lo que queda
+✅ Neue Methode:
+1. Gehalt erhalten
+2. **Sofort 10-20% sparen**
+3. Rechnungen bezahlen
+4. Sachen kaufen mit dem, was übrig bleibt
 
-**Por qué funciona:**
-- Trata el ahorro como una cuenta (no negociable)
-- Ajustas tus gastos a lo que queda
-- El ahorro realmente sucede
+**Warum es funktioniert:**
+- Behandelt Sparen wie eine Rechnung (nicht verhandelbar)
+- Du passt deine Ausgaben an das an, was übrig bleibt
+- Das Sparen findet tatsächlich statt
 
-"No ahorres lo que queda después de gastar; gasta lo que queda después de ahorrar."',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+„Spare nicht, was nach dem Ausgeben übrig bleibt; gib aus, was nach dem Sparen übrig bleibt."',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10836,11 +10924,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'Automatic Transfers',
-  'Transferencias Automáticas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Automatische Überweisungen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10854,7 +10942,7 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# Set It and Forget It
 
 **Automatic savings** = Money moves to savings without you doing anything
@@ -10881,34 +10969,34 @@ INSERT INTO "ContentTranslation" (
 - No forgetting
 - Consistent progress
 - "Out of sight, out of mind"',
-  '# Configúralo y Olvídate
+  '# Einrichten und Vergessen
 
-**Ahorro automático** = El dinero se transfiere a ahorros sin que hagas nada
+**Automatisches Sparen** = Geld wandert ohne dein Zutun auf dein Sparkonto
 
-**Cómo configurarlo:**
+**So richtest du es ein:**
 
-1. **División de nómina:**
-   - Solicita a tu empleador que deposite un % en ahorros
-   - El resto va a cuenta corriente
-   - Ocurre con cada pago de nómina
+1. **Gehaltsaufteilung:**
+   - Bitte deinen Arbeitgeber, einen % direkt auf dein Sparkonto zu überweisen
+   - Der Rest geht auf dein Girokonto
+   - Passiert bei jedem Gehaltseingang
 
-2. **Transferencia automática bancaria:**
-   - Configura una transferencia recurrente
-   - Cada día de pago, $X se transfiere a ahorros
-   - Puedes ajustar o pausar en cualquier momento
+2. **Automatischer Banktransfer:**
+   - Richte einen wiederkehrenden Dauerauftrag ein
+   - Jeden Zahltag wird Betrag X auf dein Sparkonto übertragen
+   - Kann jederzeit angepasst oder pausiert werden
 
-3. **Ahorra según un calendario:**
-   - Semanal: Más fácil psicológicamente
-   - Quincenal: Coincide con el calendario de pago
-   - Mensual: Simple, montos mayores
+3. **Nach Plan sparen:**
+   - Wöchentlich: Psychologisch einfacher
+   - Alle zwei Wochen: Passend zum Gehaltszyklus
+   - Monatlich: Unkompliziert, höhere Beträge
 
-**Beneficios:**
-- No se necesita fuerza de voluntad
-- No se te olvida
-- Progreso consistente
-- "Ojos que no ven, corazón que no siente"',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Vorteile:**
+- Keine Willenskraft nötig
+- Kein Vergessen
+- Kontinuierlicher Fortschritt
+- „Aus den Augen, aus dem Sinn"',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10922,11 +11010,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'Round-up Apps',
-  'Aplicaciones de Redondeo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Aufrundungs-Apps',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10940,7 +11028,7 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# Painless Micro-Savings
 
 **Round-up apps** = Round purchases to nearest dollar, save the difference
@@ -10968,35 +11056,35 @@ Saves difference: $0.50
 - Save raises (increase auto-transfer when salary increases)
 
 **Key:** Start small! $1/day = $365/year',
-  '# Micro-ahorros sin dolor
+  '# Schmerzloses Mikro-Sparen
 
-**Apps de redondeo** = Redondean compras al dólar más cercano, ahorran la diferencia
+**Aufrundungs-Apps** = Runden Einkäufe auf den nächsten Euro auf, sparen die Differenz
 
-**Cómo funcionan:**
+**So funktionieren sie:**
 
-Compras café: $4.50
-App redondea a: $5.00
-Ahorra la diferencia: $0.50
+Du kaufst Kaffee: 4,50 €
+App rundet auf: 5,00 €
+Spart die Differenz: 0,50 €
 
-10 compras × $0.50 promedio = $5/día = $150/mes!
+10 Einkäufe × 0,50 € Durchschnitt = 5 €/Tag = 150 €/Monat!
 
-**Apps populares:**
+**Beliebte Apps:**
 - Acorns
 - Digit
 - Qapital
-- Chime (tiene esta función)
-- Muchos bancos ofrecen esto
+- Chime (hat diese Funktion)
+- Viele Banken bieten dies an
 
-**Otros trucos de micro-ahorro:**
-- Ahorra todos los billetes de $5 que recibas
-- Ahorra todas las monedas al final del día
-- Ahorra el reembolso de impuestos inmediatamente
-- Ahorra bonos/regalos antes de gastar
-- Ahorra los aumentos (incrementa la transferencia automática cuando aumente el salario)
+**Andere Mikro-Spar-Tricks:**
+- Spare alle 5-€-Scheine, die du erhältst
+- Spare alle Münzen am Ende des Tages
+- Spare Steuerrückerstattung sofort
+- Spare Boni/Geschenke vor dem Ausgeben
+- Spare Gehaltserhöhungen (erhöhe Dauerauftrag, wenn das Gehalt steigt)
 
-**Clave:** ¡Empieza pequeño! $1/día = $365/año',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Das Wichtigste:** Klein anfangen! 1 €/Tag = 365 €/Jahr',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11010,11 +11098,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'What does "pay yourself first" mean?',
-  '¿Qué significa "págate a ti primero"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was bedeutet "Zuerst sich selbst bezahlen"?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11028,11 +11116,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   'Buy things for yourself',
-  'Comprar cosas para ti mismo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Kaufe Dinge für dich selbst',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11046,11 +11134,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   'Save money before paying bills',
-  'Ahorrar dinero antes de pagar las cuentas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld sparen, bevor man Rechnungen bezahlt',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11064,11 +11152,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   'Give yourself a paycheck',
-  'Darte un sueldo a ti mismo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sich selbst ein Gehalt auszahlen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11082,11 +11170,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   'Save money before spending on other things',
-  'Ahorrar dinero antes de gastarlo en otras cosas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld sparen, bevor man es für andere Dinge ausgibt',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11100,11 +11188,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'Pay yourself first means saving a portion of income before spending on anything else.',
-  'Pagarte a ti mismo primero significa ahorrar una parte de tus ingresos antes de gastar en cualquier otra cosa.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sich selbst zuerst bezahlen bedeutet, einen Teil des Einkommens zu sparen, bevor man es für andere Dinge ausgibt.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11118,11 +11206,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'What is automatic savings?',
-  '¿Qué es el ahorro automático?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Was ist automatisches Sparen?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11136,11 +11224,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   'Money that appears magically',
-  'Dinero que aparece mágicamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geld, das auf magische Weise erscheint',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11154,11 +11242,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   'Automatic transfers from checking to savings',
-  'Transferencias automáticas de cuenta corriente a ahorros',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Automatische Überweisungen vom Girokonto zum Sparkonto',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11172,11 +11260,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   'Savings that grow automatically',
-  'Ahorros que crecen automáticamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ersparnisse, die automatisch wachsen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11190,11 +11278,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   'A type of bank account',
-  'Una cuenta bancaria',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ein Typ von Bankkonto',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11208,11 +11296,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'Automatic savings is when money automatically transfers from checking to savings.',
-  'El ahorro automático es cuando el dinero se transfiere automáticamente de la cuenta corriente a la cuenta de ahorros.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Automatisches Sparen bedeutet, dass Geld automatisch vom Girokonto auf das Sparkonto überwiesen wird.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11226,11 +11314,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'How do round-up apps work?',
-  '¿Cómo funcionan las aplicaciones de redondeo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wie funktionieren Aufrundungs-Apps?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11244,11 +11332,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   'Round down your balance',
-  'Redondean hacia abajo tu saldo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Runden Sie Ihr Guthaben ab',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11262,11 +11350,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   'Round purchases up and save the difference',
-  'Redondean las compras hacia arriba y ahorran la diferencia',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Kaufbeträge aufrunden und die Differenz sparen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11280,11 +11368,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   'Give you money',
-  'Te dan dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Geben dir Geld',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11298,11 +11386,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   'Round your interest',
-  'Redondean tus intereses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Runde deine Zinsen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11316,11 +11404,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   'Round-up apps round each purchase up to the nearest dollar and save the difference.',
-  'Las aplicaciones de redondeo redondean cada compra al dólar más cercano y ahorran la diferencia.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Round-up-Apps runden jeden Einkauf auf den nächsten Dollar auf und sparen die Differenz.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11334,11 +11422,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'If a round-up app saves $0.50 per transaction and you make 200 transactions/month, how much saved?',
-  'Si una aplicación de redondeo ahorra $0.50 por transacción y realizas 200 transacciones/mes, ¿cuánto ahorras?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wenn eine Aufrundungs-App 0,50 $ pro Transaktion spart und du 200 Transaktionen/Monat machst, wie viel wurde gespart?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11352,11 +11440,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   '$50',
   '$50',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11370,11 +11458,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   '$100',
   '$100',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11388,11 +11476,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   '$150',
   '$150',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11406,11 +11494,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   '$200',
   '$200',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11424,11 +11512,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   '200 transactions × $0.50 = $100 saved per month.',
-  '200 transacciones × $0.50 = $100 ahorrados por mes.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '200 Transaktionen × 0,50 $ = 100 $ Ersparnis pro Monat.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11442,11 +11530,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[0].title',
   'en',
-  'es',
+  'de',
   'How Much to Save',
-  '¿Cuánto ahorrar?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wie viel sparen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11460,7 +11548,7 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[0].content',
   'en',
-  'es',
+  'de',
   '# Your Emergency Fund Target
 
 **Standard recommendation: 3-6 months of expenses**
@@ -11485,32 +11573,32 @@ INSERT INTO "ContentTranslation" (
 - Income sources (single income = more needed)
 - Health (medical issues = more needed)
 - Dependents (kids = more needed)',
-  '# Tu Meta de Fondo de Emergencia
+  '# Dein Notgroschen-Ziel
 
-**Recomendación estándar: 3-6 meses de gastos**
+**Standardempfehlung: 3-6 Monate an Ausgaben**
 
-**Calcula tu número:**
+**Berechne deine Zahl:**
 
-1. Lista de gastos mensuales:
-   - Alquiler/hipoteca: $1,000
-   - Servicios públicos: $150
-   - Comida: $400
-   - Transporte: $200
-   - Seguro: $150
-   - Otros gastos esenciales: $100
-   - **Total: $2,000/mes**
+1. Liste monatliche Ausgaben auf:
+   - Miete/Hypothek: 1.000 €
+   - Nebenkosten: 150 €
+   - Lebensmittel: 400 €
+   - Transport: 200 €
+   - Versicherung: 150 €
+   - Andere Grundbedürfnisse: 100 €
+   - **Gesamt: 2.000 €/Monat**
 
-2. Multiplica por 3-6:
-   - Mínimo: $6,000
-   - Ideal: $12,000
+2. Multipliziere mit 3-6:
+   - Minimum: 6.000 €
+   - Ideal: 12.000 €
 
-**Factores a considerar:**
-- Estabilidad laboral (inestable = 6+ meses)
-- Fuentes de ingreso (ingreso único = se necesita más)
-- Salud (problemas médicos = se necesita más)
-- Dependientes (hijos = se necesita más)',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Zu berücksichtigende Faktoren:**
+- Arbeitsplatzsicherheit (unsicher = 6+ Monate)
+- Einkommensquellen (einzelnes Einkommen = mehr benötigt)
+- Gesundheit (medizinische Probleme = mehr benötigt)
+- Angehörige (Kinder = mehr benötigt)',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11524,11 +11612,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[1].title',
   'en',
-  'es',
+  'de',
   'When to Use It',
-  'Cuándo usarlo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wann man es verwendet',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11542,7 +11630,7 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[1].content',
   'en',
-  'es',
+  'de',
   '# True Emergencies Only
 
 **Use emergency fund for:**
@@ -11568,33 +11656,33 @@ Ask: "If I don''t spend this money, will something bad happen?"
 - No = Not an emergency
 
 Having separate "fun money" helps avoid dipping into emergency fund!',
-  '# Solo Emergencias Verdaderas
+  '# Nur für echte Notfälle
 
-**Usa el fondo de emergencia para:**
+**Notfallfonds verwenden für:**
 
-✅ **Emergencias verdaderas:**
-- Pérdida de empleo
-- Emergencia médica
-- Reparación esencial del hogar (calentador de agua, caldera)
-- Reparación esencial del auto (no puedes llegar al trabajo)
-- Emergencia familiar
+✅ **Echte Notfälle:**
+- Jobverlust
+- Medizinischer Notfall
+- Notwendige Hausreparatur (Warmwasserbereiter, Heizung)
+- Notwendige Autoreparatur (kann nicht zur Arbeit kommen)
+- Familiennotfall
 
-❌ **NO son emergencias:**
-- Oferta en un televisor
-- Vacaciones
-- Ropa nueva
-- Salir a comer
-- Mejoras no esenciales
-- "Realmente lo quiero"
+❌ **KEINE Notfälle:**
+- Sonderangebot für Fernseher
+- Urlaub
+- Neue Kleidung
+- Auswärts essen
+- Nicht notwendige Anschaffungen
+- "Ich will es unbedingt haben"
 
-**Regla general:**
-Pregunta: "Si no gasto este dinero, ¿pasará algo malo?"
-- Sí = Emergencia
-- No = No es una emergencia
+**Faustregel:**
+Frage dich: "Wenn ich dieses Geld nicht ausgebe, wird etwas Schlimmes passieren?"
+- Ja = Notfall
+- Nein = Kein Notfall
 
-¡Tener "dinero para diversión" por separado ayuda a evitar usar el fondo de emergencia!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+Separates "Spaßgeld" zu haben hilft dabei, nicht auf den Notfallfonds zurückzugreifen!',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11608,11 +11696,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[2].title',
   'en',
-  'es',
+  'de',
   'Rebuilding After Use',
-  'Reconstruyendo Después de Usar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wiederaufbau nach Verwendung',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11626,7 +11714,7 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[2].content',
   'en',
-  'es',
+  'de',
   '# Getting Back on Track
 
 **If you use your emergency fund:**
@@ -11658,39 +11746,39 @@ INSERT INTO "ContentTranslation" (
 - Income: $3,000/month
 - Can save: $500/month
 - Rebuilt in: 4 months',
-  '# Retomando el Camino
+  '# Wieder auf Kurs kommen
 
-**Si usas tu fondo de emergencia:**
+**Wenn Sie Ihren Notfallfonds nutzen:**
 
-**1. ¡No te sientas culpable!**
-- Para eso está
-- Planificaste correctamente con anticipación
-- Siéntete orgulloso de haberlo tenido
+**1. Fühlen Sie sich nicht schuldig!**
+- Dafür ist er da
+- Sie haben richtig vorausschauend geplant
+- Seien Sie stolz, dass Sie ihn hatten
 
-**2. Pausa otros ahorros temporalmente:**
-- Enfócate primero en reconstruir el fondo de emergencia
-- Otras metas pueden esperar
-- Fondo de emergencia = prioridad #1
+**2. Setzen Sie andere Sparziele vorübergehend aus:**
+- Konzentrieren Sie sich zuerst auf den Wiederaufbau des Notfallfonds
+- Andere Ziele können warten
+- Notfallfonds = Priorität Nr. 1
 
-**3. Reconstruye tan rápido como sea razonablemente posible:**
-- Comienza inmediatamente (incluso $20 ayuda)
-- Usa cualquier ingreso extra (devolución de impuestos, bonificación)
-- Reduce temporalmente gastos discrecionales
-- Considera ingresos adicionales
+**3. Bauen Sie so schnell wie vernünftigerweise möglich wieder auf:**
+- Beginnen Sie sofort (auch 20 € helfen)
+- Nutzen Sie unerwartete Geldeingänge (Steuerrückerstattung, Bonus)
+- Reduzieren Sie vorübergehend diskretionäre Ausgaben
+- Erwägen Sie zusätzliches Einkommen
 
-**4. Revisa qué sucedió:**
-- ¿Era prevenible?
-- ¿Necesitas más seguro?
-- ¿Necesitas un fondo de emergencia más grande?
-- Ajusta tu plan según corresponda
+**4. Überprüfen Sie, was passiert ist:**
+- War es vermeidbar?
+- Brauchen Sie mehr Versicherungsschutz?
+- Brauchen Sie einen größeren Notfallfonds?
+- Passen Sie Ihren Plan entsprechend an
 
-**Ejemplo de plan de reconstrucción:**
-- Usado: $2,000
-- Ingreso: $3,000/mes
-- Puedes ahorrar: $500/mes
-- Reconstruido en: 4 meses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**Beispiel für einen Wiederaufbauplan:**
+- Genutzt: 2.000 €
+- Einkommen: 3.000 €/Monat
+- Sparbetrag: 500 €/Monat
+- Wiederaufgebaut in: 4 Monaten',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11704,11 +11792,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'de',
   'How many months of expenses should an emergency fund cover?',
-  '¿Cuántos meses de gastos debería cubrir un fondo de emergencia?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wie viele Monate an Ausgaben sollte ein Notfallfonds abdecken?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11722,11 +11810,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'de',
   '1 week',
-  '1 semana',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '1 Woche',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11740,11 +11828,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'de',
   '1 month',
-  '1 mes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '1 Monat',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11758,11 +11846,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'de',
   '3-6 months',
-  '3-6 meses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '3-6 Monate',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11776,11 +11864,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'de',
   '10 years',
-  '10 años',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '10 Jahre',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11794,11 +11882,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'de',
   'Financial experts recommend 3-6 months of living expenses.',
-  'Los expertos financieros recomiendan tener ahorros para cubrir entre 3 y 6 meses de gastos de vida.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Finanzexperten empfehlen 3-6 Monate an Lebenshaltungskosten.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11812,11 +11900,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'de',
   'Which is a TRUE emergency for using your emergency fund?',
-  '¿Cuál es una emergencia VERDADERA para usar tu fondo de emergencia?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Welcher ist ein ECHTER Notfall für die Nutzung deines Notfallfonds?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11830,11 +11918,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'de',
   'TV is on sale',
-  'TV en oferta',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'TV ist im Angebot',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11848,11 +11936,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'de',
   'Want to go on vacation',
-  'Querer ir de vacaciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Möchte in den Urlaub fahren',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11866,11 +11954,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'de',
   'Car breaks down and you can''t get to work',
-  'El auto se descompone y no puedes llegar al trabajo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Auto geht kaputt und du kannst nicht zur Arbeit kommen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11884,11 +11972,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'de',
   'New video game release',
-  'Lanzamiento de un nuevo videojuego',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Neue Videospiel-Veröffentlichung',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11902,11 +11990,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'de',
   'A car needed for work is a true emergency. Other examples are wants.',
-  'Un automóvil necesario para el trabajo es una verdadera emergencia. Los otros ejemplos son deseos.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Ein Auto, das für die Arbeit benötigt wird, ist ein echter Notfall. Die anderen Beispiele sind Wünsche.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11920,11 +12008,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'de',
   'If your monthly expenses are $2,500, what''s a minimum emergency fund?',
-  'Si tus gastos mensuales son $2,500, ¿cuál es el fondo de emergencia mínimo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Wenn deine monatlichen Ausgaben 2.500 $ betragen, wie hoch ist ein minimaler Notfallfonds?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11938,11 +12026,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'de',
   '$2,500',
-  '$2,500',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '$2.500',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11956,11 +12044,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'de',
   '$5,000',
-  '$5,000',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '$5.000',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11974,11 +12062,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'de',
   '$7,500',
   '$7,500',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11992,11 +12080,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'de',
   '$25,000',
-  '$25,000',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '$25.000',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12010,11 +12098,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'de',
   '3 months × $2,500 = $7,500 minimum.',
-  '3 meses × $2,500 = $7,500 mínimo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '3 Monate × 2.500 $ = 7.500 $ Minimum.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12028,11 +12116,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'de',
   'After using emergency fund, what should you do?',
-  'Después de usar el fondo de emergencia, ¿qué deberías hacer?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Nachdem du deinen Notfallfonds verwendet hast, was solltest du tun?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12046,11 +12134,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'de',
   'Forget about it',
-  'Olvidarte de ello',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Vergiss es einfach',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12064,11 +12152,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'de',
   'Immediately rebuild it',
-  'Reconstruirlo inmediatamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sofort wieder aufbauen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12082,11 +12170,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'de',
   'Wait a year to rebuild',
-  'Esperar un año para reconstruirlo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Warte ein Jahr mit dem Wiederaufbau',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12100,11 +12188,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'de',
   'Use it for other things',
-  'Usarlo para otras cosas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Es für andere Dinge verwenden',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12118,11 +12206,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'de',
   'Rebuild your emergency fund as soon as possible after using it.',
-  'Reconstruye tu fondo de emergencia lo antes posible después de usarlo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Baue deinen Notgroschen so schnell wie möglich wieder auf, nachdem du ihn verwendet hast.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12136,11 +12224,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'de',
   'Why might someone need 6+ months of expenses saved?',
-  '¿Por qué alguien podría necesitar ahorrar gastos de 6+ meses?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Warum könnte jemand 6+ Monate an Ausgaben gespart haben müssen?',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12154,11 +12242,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'de',
   'They like big numbers',
-  'Les gustan los números grandes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Sie mögen große Zahlen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12172,11 +12260,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'de',
   'Unstable job or single income household',
-  'Trabajo inestable o hogar con un solo ingreso',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Unsicherer Arbeitsplatz oder Haushalt mit nur einem Einkommen',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12190,11 +12278,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'de',
   'Banks require it',
-  'Los bancos lo requieren',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Banken verlangen es',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12208,11 +12296,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'de',
   'Everyone needs exactly 6 months',
-  'Todos necesitan exactamente 6 meses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Jeder braucht genau 6 Monate',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12226,17 +12314,17 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'de',
   'Less stable situations warrant larger emergency funds for more protection.',
-  'Las situaciones menos estables requieren fondos de emergencia más grandes para mayor protección.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'Weniger stabile Situationen erfordern größere Notfallfonds für mehr Schutz.',
+  '2026-01-06T01:58:28.884Z',
+  '2027-01-06T01:58:28.885Z'
 );
 
 -- ========================================
 -- VERIFICATION
 -- ========================================
-SELECT 'Translation completed for es!' as message;
+SELECT 'Translation completed for de!' as message;
 SELECT COUNT(*) as total_translations
 FROM "ContentTranslation"
-WHERE target_language = 'es';
+WHERE target_language = 'de';

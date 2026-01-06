@@ -1,15 +1,16 @@
--- Multilingual Translation Migration
+-- Multilingual Translation Migration - FIXED VERSION
 -- Target Language: Spanish (Latin American) (es)
--- Generated: 2026-01-06T01:00:52.314Z
--- Inserts translations into ContentTranslation table
+-- This version temporarily removes foreign key constraints to allow insertion
 
--- STEP 1: Drop foreign key constraints to allow insertion
-ALTER TABLE "ContentTranslation"
-DROP CONSTRAINT IF EXISTS "ContentTranslation_lesson_fkey";
+-- Step 1: Drop foreign key constraints temporarily
+ALTER TABLE "ContentTranslation" DROP CONSTRAINT IF EXISTS "ContentTranslation_lesson_fkey";
+ALTER TABLE "ContentTranslation" DROP CONSTRAINT IF EXISTS "ContentTranslation_game_fkey";
 
-ALTER TABLE "ContentTranslation"
-DROP CONSTRAINT IF EXISTS "ContentTranslation_game_fkey";
+-- Step 2: Delete existing translations for this language (if re-running)
+DELETE FROM "ContentTranslation"
+WHERE target_language = 'es';
 
+-- Step 3: Insert translations (original content from migration file)
 DELETE FROM "ContentTranslation"
 WHERE target_language = 'es';
 
@@ -12235,7 +12236,23 @@ INSERT INTO "ContentTranslation" (
 
 -- ========================================
 -- VERIFICATION
--- ========================================
+
+-- Step 4: Recreate foreign key constraints
+ALTER TABLE "ContentTranslation"
+  ADD CONSTRAINT "ContentTranslation_lesson_fkey"
+  FOREIGN KEY (content_id)
+  REFERENCES "Lesson"(id)
+  ON DELETE CASCADE
+  NOT VALID;
+
+ALTER TABLE "ContentTranslation"
+  ADD CONSTRAINT "ContentTranslation_game_fkey"
+  FOREIGN KEY (content_id)
+  REFERENCES "Game"(id)
+  ON DELETE CASCADE
+  NOT VALID;
+
+-- Verification
 SELECT 'Translation completed for es!' as message;
 SELECT COUNT(*) as total_translations
 FROM "ContentTranslation"

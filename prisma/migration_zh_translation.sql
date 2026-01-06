@@ -1,6 +1,4 @@
 -- Multilingual Translation Migration
--- Target Language: Spanish (Latin American) (es)
--- Generated: 2026-01-06T01:00:52.314Z
 -- Inserts translations into ContentTranslation table
 
 -- STEP 1: Drop foreign key constraints to allow insertion
@@ -11,7 +9,7 @@ ALTER TABLE "ContentTranslation"
 DROP CONSTRAINT IF EXISTS "ContentTranslation_game_fkey";
 
 DELETE FROM "ContentTranslation"
-WHERE target_language = 'es';
+WHERE target_language = 'zh';
 
 -- ========================================
 -- LESSON TRANSLATIONS
@@ -28,11 +26,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'Introduction',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '引言',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -46,7 +44,7 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# What is Money?
 
 Money is what we use to buy things we need and want. It''s a tool that makes trading easier!
@@ -54,9 +52,15 @@ Money is what we use to buy things we need and want. It''s a tool that makes tra
 **For Kids:** Money is like tickets at an arcade - you exchange them for prizes!
 
 **For Adults:** Money serves as a medium of exchange, eliminating the inefficiencies of barter systems.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 什么是金钱?
+
+金钱是我们用来购买所需物品和想要物品的东西。它是一种让交易变得更容易的工具!
+
+**儿童版:** 金钱就像游戏厅里的代币——你用它们来换取奖品!
+
+**成人版:** 金钱作为交换媒介,消除了以物易物系统的低效性。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -70,11 +74,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'History of Money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 货币的历史',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -88,7 +92,7 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# How Money Started
 
 Long ago, people traded items directly - like trading 5 apples for 1 chicken. This was called **bartering**.
@@ -98,9 +102,17 @@ But bartering had problems:
 - How many apples equal one chicken?
 
 So humans invented money to solve these problems!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 货币的起源
+
+很久以前，人们直接交换物品——比如用5个苹果换1只鸡。这被称为**以物易物**。
+
+但以物易物存在问题：
+- 如果你有苹果，但对方不想要怎么办？
+- 多少个苹果等于一只鸡？
+
+所以人类发明了货币来解决这些问题！',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -114,11 +126,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'Why We Use Money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 为什么我们使用货币',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -132,7 +144,7 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# Why Money is Useful
 
 Money makes life easier because:
@@ -142,9 +154,17 @@ Money makes life easier because:
 3. **Medium of Exchange** - Everyone accepts it
 
 Instead of carrying around chickens and apples, you carry money!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 为什么钱很有用
+
+钱让生活变得更容易,因为:
+
+1. **价值储藏** - 你可以把它存起来以后用
+2. **记账单位** - 所有东西都有明确的价格
+3. **交换媒介** - 每个人都接受它
+
+你不用到处带着鸡和苹果,只需要带钱!',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -158,11 +178,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[3].title',
   'en',
-  'es',
+  'zh',
   'Modern Money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '现代货币',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -176,7 +196,7 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[3].content',
   'en',
-  'es',
+  'zh',
   '# Money Today
 
 Today, money comes in many forms:
@@ -185,9 +205,16 @@ Today, money comes in many forms:
 - **Cryptocurrency:** New digital money on the internet
 
 Most people use a mix of all three types!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 今天的货币
+
+今天，货币有多种形式：
+- **实物货币：** 你可以触摸的硬币和纸币
+- **数字货币：** 银行账户和应用程序中的钱
+- **加密货币：** 互联网上的新型数字货币
+
+大多数人会混合使用这三种类型！',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -201,11 +228,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'What is the main purpose of money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '金钱的主要用途是什么?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -219,11 +246,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'To make trading easier',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '使交易更容易',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -237,11 +264,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'To be pretty',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为了好看',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -255,11 +282,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'To collect',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '收藏',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -273,11 +300,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'To burn',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '烧掉',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -291,11 +318,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'Money was invented to make trading goods and services easier than bartering.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '货币的发明是为了让商品和服务的交易比以物易物更加便利。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -309,11 +336,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'What was the old way of trading before money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在有货币之前，旧的交易方式是什么？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -327,11 +354,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   'Selling',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '售卖',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -345,11 +372,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   'Bartering',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '以物易物',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -363,11 +390,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   'Giving away',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '赠送',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -381,11 +408,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   'Stealing',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '偷窃',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -399,11 +426,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'Bartering means trading items directly, like 5 apples for 1 chicken.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '以物易物是指直接交换物品,比如用5个苹果换1只鸡。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -417,11 +444,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'Which is NOT a form of modern money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '以下哪项不是现代货币的形式?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -435,11 +462,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   'Digital money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '数字货币',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -453,11 +480,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   'Coins',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '硬币',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -471,11 +498,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   'Rocks',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '岩石',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -489,11 +516,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   'Cryptocurrency',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '加密货币',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -507,11 +534,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   'While some ancient cultures used special rocks as money, regular rocks are not modern currency.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '虽然一些古代文化曾使用特殊的石头作为货币,但普通石头并不是现代货币。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -525,11 +552,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'Money helps us "store value" means:',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '金钱帮助我们"储存价值"的意思是：',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -543,11 +570,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   'We can save it for later',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '我们可以把它存起来以后用',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -561,11 +588,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   'We must spend it now',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '我们必须现在就花掉它',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -579,11 +606,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   'It loses value quickly',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它会迅速贬值',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -597,11 +624,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   'It takes up space',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它占用空间',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -615,11 +642,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   'Storing value means money keeps its worth over time so you can save it.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '储存价值意味着货币能够随着时间保持其价值,这样你就可以储蓄它。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -633,11 +660,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'Coins and Bills',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '硬币和纸币',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -651,7 +678,7 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# Physical Money
 
 **Coins** are made of metal and usually worth less. They''re good for small purchases like candy or parking meters.
@@ -659,9 +686,15 @@ INSERT INTO "ContentTranslation" (
 **Bills (Banknotes)** are made of paper or plastic and worth more. They''re lighter and easier to carry than lots of coins.
 
 💡 Fun fact: The ink and paper for bills cost less than 10 cents, but the bill might be worth $100!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 实物货币
+
+**硬币**由金属制成，通常价值较小。它们适合用于小额购物，比如买糖果或投停车计时器。
+
+**纸币（钞票）**由纸或塑料制成，价值更高。它们比大量硬币更轻便，更容易携带。
+
+💡 趣味小知识：纸币的油墨和纸张成本不到10美分，但这张纸币的面值可能是100美元！',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -675,11 +708,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'Digital Money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '数字货币',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -693,7 +726,7 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# Money You Can''t Touch
 
 Most money today is **digital** - it exists as numbers in a computer!
@@ -705,9 +738,19 @@ Examples:
 - Mobile wallets like Apple Pay
 
 You never touch this money, but you can still spend it!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 你无法触摸的钱
+
+如今大多数钱都是**数字化的** - 它以数字的形式存在于电脑里!
+
+例子:
+- 你银行账户里的钱
+- 支付应用程序,如PayPal、Venmo
+- 信用卡支付
+- 移动钱包,如Apple Pay
+
+你永远无法触摸到这些钱,但你仍然可以花掉它!',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -721,11 +764,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'Cryptocurrency Basics',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '加密货币基础知识',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -739,7 +782,7 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# A New Kind of Money
 
 **Cryptocurrency** is digital money that uses computer code to secure transactions.
@@ -755,9 +798,23 @@ Most famous examples:
 - Prices change a lot!
 
 ⚠️ For beginners, stick to regular money until you learn more!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 一种新型货币
+
+**加密货币**是使用计算机代码来保护交易安全的数字货币。
+
+最著名的例子：
+- 比特币 (BTC)
+- 以太坊 (ETH)
+
+**主要区别：**
+- 没有政府控制它
+- 在所有国家通用
+- 非常安全但也可能有风险
+- 价格波动很大！
+
+⚠️ 对于初学者来说，在了解更多之前，请坚持使用常规货币！',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -771,11 +828,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'What are coins usually made of?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '硬币通常是由什么制成的?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -789,11 +846,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'Paper',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '纸',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -807,11 +864,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'Metal',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '金属',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -825,11 +882,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'Plastic',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '塑料',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -843,11 +900,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'Wood',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '木头',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -861,11 +918,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'Coins are made of metal, which makes them durable and hard to counterfeit.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '硬币是由金属制成的,这使得它们耐用且难以伪造。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -879,11 +936,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'Which is an example of digital money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '哪个是数字货币的例子?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -897,11 +954,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   'A $10 bill',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '一张10美元纸币',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -915,11 +972,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   'A quarter',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '一枚25美分硬币',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -933,11 +990,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   'Your bank account balance',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '您的银行账户余额',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -951,11 +1008,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   'Gold bars',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '金条',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -969,11 +1026,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'Bank account balances are digital money - they exist as electronic records.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '银行账户余额是数字货币——它们以电子记录的形式存在。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -987,11 +1044,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'What is true about cryptocurrency?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '关于加密货币，哪项陈述是正确的？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1005,11 +1062,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   'It is controlled by governments',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它由政府控制',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1023,11 +1080,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   'It never changes in value',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它的价值永远不会变化',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1041,11 +1098,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   'It uses computer code for security',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它使用计算机代码来保障安全',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1059,11 +1116,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   'You can hold it in your hand',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '你可以用手握住它',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1077,11 +1134,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   'Cryptocurrency uses advanced computer code (cryptography) to secure transactions.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '加密货币使用先进的计算机代码(加密技术)来保护交易安全。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1095,11 +1152,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'Why is digital money convenient?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为什么数字货币很方便?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1113,11 +1170,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   'You can carry large amounts easily',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '可以轻松携带大量金额',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1131,11 +1188,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   'It weighs a lot',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它很重',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1149,11 +1206,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   'It can get wet',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它可能会被打湿',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1167,11 +1224,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   'You must count it manually',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '你必须手动计数',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1185,11 +1242,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   'Digital money is convenient because you can have millions in your account without physical storage.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '数字货币很方便,因为你的账户里可以有数百万而不需要实物存储空间。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1203,11 +1260,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'Supply and Demand',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '供需关系',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1221,7 +1278,7 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# What Makes Money Valuable?
 
 Money has value because of **supply and demand**:
@@ -1233,9 +1290,19 @@ If everyone wants dollars and there aren''t many, dollars are valuable.
 If there are too many dollars, each one is worth less.
 
 Think of it like rare trading cards - rare cards are more valuable!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 什么让货币有价值?
+
+货币有价值是因为**供给和需求**:
+
+**供给** = 存在多少货币
+**需求** = 有多少人想要它
+
+如果每个人都想要美元而美元不多,美元就很有价值。
+如果美元太多,每一美元的价值就会降低。
+
+想想稀有交易卡——稀有卡片更有价值!',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1249,11 +1316,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'Government Role',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '政府的作用',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1267,7 +1334,7 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# Who Controls Money?
 
 Governments and central banks control how much money exists:
@@ -1278,9 +1345,18 @@ Governments and central banks control how much money exists:
 They try to keep the amount "just right" so the economy stays healthy.
 
 This is why you can''t just print money at home - it would make money worthless!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 谁控制货币?
+
+政府和中央银行控制着货币的存量:
+
+- **印太多** = 货币变得不值钱(通货膨胀)
+- **印太少** = 难以开展商业活动(通货紧缩)
+
+他们努力保持货币数量"恰到好处",以维持经济健康。
+
+这就是为什么你不能在家里印钱——那会让货币变得毫无价值!',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1294,11 +1370,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'Trust in Money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '对货币的信任',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1312,7 +1388,7 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# Why We Trust Money
 
 Money only works if people trust it!
@@ -1324,9 +1400,19 @@ We trust money because:
 4. It has security features (hard to fake)
 
 If people stopped trusting it, money would become just paper or numbers.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 为什么我们信任货币
+
+货币只有在人们信任它时才有用!
+
+我们信任货币是因为:
+1. 政府说它是合法的
+2. 商店接受它
+3. 我们可以用它纳税
+4. 它有防伪特征(难以伪造)
+
+如果人们不再信任它,货币就会变成只是纸张或数字。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1340,11 +1426,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'What happens if a government prints too much money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '如果政府印制过多货币会发生什么？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1358,11 +1444,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'Everyone becomes rich',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '每个人都会变得富有',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1376,11 +1462,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'Money becomes less valuable',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '货币变得不那么值钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1394,11 +1480,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'Money becomes more valuable',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '货币变得更有价值',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1412,11 +1498,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'Nothing changes',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么都不会改变',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1430,11 +1516,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'Printing too much money causes inflation - each dollar is worth less.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '印刷过多的货币会导致通货膨胀——每一美元的价值就会降低。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1448,11 +1534,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'Supply and demand means:',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '供需关系是指:',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1466,11 +1552,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   'How much exists and how many want it',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '存在多少以及有多少人想要它',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1484,11 +1570,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   'Where to buy things',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在哪里购买东西',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1502,11 +1588,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   'How to save money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '如何省钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1520,11 +1606,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   'Types of currency',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '货币的种类',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1538,11 +1624,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'Supply is how much exists, demand is how many people want it.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '供应量是指存在多少，需求量是指有多少人想要它。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1556,11 +1642,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'Why can''t you just print your own money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为什么你不能自己印钞票?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1574,11 +1660,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   'It would make all money worthless',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '这会让所有的钱都变得一文不值',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1592,11 +1678,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   'Printers are expensive',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '打印机很贵',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1610,11 +1696,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   'Paper is hard to find',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '纸张很难找到',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1628,11 +1714,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   'You can, it''s allowed',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '你可以,这是允许的',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1646,11 +1732,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   'If everyone could print money, there would be too much supply and it would lose value.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '如果每个人都能印钞票,那么货币供应量就会过多,货币就会失去价值。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1664,11 +1750,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'Money has value primarily because:',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '货币之所以有价值，主要是因为：',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1682,11 +1768,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   'It''s pretty',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它很漂亮',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1700,11 +1786,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   'People trust and accept it',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '人们信任并接受它',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1718,11 +1804,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   'It''s made of precious materials',
-  'Es elaborado con materiales preciosos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它是由贵重材料制成的',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1736,11 +1822,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   'It''s rare',
-  'Es escaso',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它很稀缺',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1754,11 +1840,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   'Money''s value comes from collective trust and acceptance in society.',
-  'El valor del dinero proviene de la confianza colectiva y la aceptación en la sociedad.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '货币的价值来自于社会的集体信任和接受。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1772,11 +1858,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'zh',
   'What role do governments play with money?',
-  '¿Qué papel desempeñan los gobiernos con el dinero?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '政府在货币中扮演什么角色?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1790,11 +1876,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'zh',
   'They determine fashion trends',
-  'Determinan las tendencias de moda',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '他们决定时尚潮流',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1808,11 +1894,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'zh',
   'They control the supply',
-  'Controlan la oferta',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '他们控制货币供应量',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1826,11 +1912,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'zh',
   'They force you to spend',
-  'Te obligan a gastar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '他们强迫你消费',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1844,11 +1930,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'zh',
   'Nothing at all',
-  'Nada en absoluto',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '完全不参与',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1862,11 +1948,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'zh',
   'Governments and central banks control how much money is in circulation.',
-  'Los gobiernos y los bancos centrales controlan cuánto dinero está en circulación.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '政府和中央银行控制流通中的货币数量。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1880,11 +1966,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'Major Currencies',
-  'Monedas Principales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '主要货币',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1898,7 +1984,7 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# World Money
 
 Different countries use different money!
@@ -1911,20 +1997,20 @@ Different countries use different money!
 - 🇨🇳 Chinese Yuan (CNY) - Used in China
 
 Each has its own symbol and value!',
-  '# Dinero del Mundo
+  '# 世界货币
 
-¡Diferentes países usan diferentes monedas!
+不同的国家使用不同的货币!
 
-**Principales Monedas Mundiales:**
-- 🇺🇸 Dólar Estadounidense (USD) - La más utilizada
-- 🇪🇺 Euro (EUR) - Usada en muchos países europeos
-- 🇬🇧 Libra Esterlina (GBP) - Usada en el Reino Unido
-- 🇯🇵 Yen Japonés (JPY) - Usada en Japón
-- 🇨🇳 Yuan Chino (CNY) - Usada en China
+**主要世界货币:**
+- 🇺🇸 美元 (USD) - 使用最广泛
+- 🇪🇺 欧元 (EUR) - 在许多欧洲国家使用
+- 🇬🇧 英镑 (GBP) - 在英国使用
+- 🇯🇵 日元 (JPY) - 在日本使用
+- 🇨🇳 人民币 (CNY) - 在中国使用
 
-¡Cada una tiene su propio símbolo y valor!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+每种货币都有自己的符号和价值!',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1938,11 +2024,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'Exchange Rates',
-  'Tasas de Cambio',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '汇率',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1956,7 +2042,7 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# Trading Money Between Countries
 
 **Exchange rates** tell you how much one currency is worth in another.
@@ -1971,22 +2057,22 @@ This means one US dollar can be traded for 0.85 euros.
 - Interest rates
 - Political stability
 - Supply and demand',
-  '# Intercambiando Dinero Entre Países
+  '# 国家之间的货币兑换
 
-**Los tipos de cambio** te indican cuánto vale una moneda en otra.
+**汇率**告诉你一种货币在另一种货币中值多少钱。
 
-Ejemplo:
+例如:
 1 USD = 0.85 EUR
 
-Esto significa que un dólar estadounidense puede intercambiarse por 0.85 euros.
+这意味着一美元可以兑换0.85欧元。
 
-**Los tipos de cambio cambian diariamente** según:
-- Qué tan fuerte es cada economía
-- Las tasas de interés
-- La estabilidad política
-- La oferta y la demanda',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**汇率每天都在变化**，取决于:
+- 各个经济体的强弱程度
+- 利率
+- 政治稳定性
+- 供求关系',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2000,11 +2086,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'International Trade',
-  'Comercio Internacional',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '国际贸易',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2018,7 +2104,7 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# Why Exchange Rates Matter
 
 When countries trade with each other, they need to exchange currencies:
@@ -2031,20 +2117,20 @@ When countries trade with each other, they need to exchange currencies:
 **Weak currency** = Your money buys less abroad
 
 This affects travel, shopping, and business!',
-  '# Por qué importan los tipos de cambio
+  '# 为什么汇率很重要
 
-Cuando los países comercian entre sí, necesitan intercambiar monedas:
+当国家之间进行贸易时,它们需要兑换货币:
 
-- Una empresa estadounidense que compra productos de Japón necesita yenes
-- Un turista europeo en América necesita dólares
-- Las compras en línea de otros países requieren conversión
+- 美国公司从日本购买产品需要日元
+- 欧洲游客在美国需要美元
+- 从其他国家网上购物需要货币兑换
 
-**Moneda fuerte** = Tu dinero compra más en otros países
-**Moneda débil** = Tu dinero compra menos en el extranjero
+**强势货币** = 你的钱在其他国家能买到更多东西
+**弱势货币** = 你的钱在国外买到的东西更少
 
-¡Esto afecta los viajes, las compras y los negocios!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+这会影响旅行、购物和商业活动!',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2058,11 +2144,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'What is the currency used in most European countries?',
-  '¿Cuál es la moneda utilizada en la mayoría de los países europeos?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '大多数欧洲国家使用的货币是什么?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2076,11 +2162,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'Dollar',
-  'Dólar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '美元',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2094,11 +2180,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'Euro',
-  'Euro',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '欧元',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2112,11 +2198,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'Pound',
-  'Libra',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '英镑',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2130,11 +2216,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'Peso',
-  'Peso',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '比索',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2148,11 +2234,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'The Euro (EUR) is used by 20 European Union countries.',
-  'El euro (EUR) es utilizado por 20 países de la Unión Europea.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '欧元(EUR)被20个欧盟国家使用。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2166,11 +2252,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'What does an exchange rate tell you?',
-  '¿Qué te indica una tasa de cambio?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '汇率告诉你什么?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2184,11 +2270,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   'How fast money grows',
-  'Qué tan rápido crece el dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '钱增长的速度',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2202,11 +2288,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   'Where to shop',
-  'Dónde comprar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '去哪里购物',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2220,11 +2306,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   'How much one currency is worth in another',
-  'Cuánto vale una moneda en términos de otra',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '一种货币在另一种货币中的价值',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2238,11 +2324,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   'How to save money',
-  'Cómo ahorrar dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '如何省钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2256,11 +2342,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'Exchange rates show the value of one currency compared to another.',
-  'Los tipos de cambio muestran el valor de una moneda en comparación con otra.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '汇率显示一种货币相对于另一种货币的价值。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2274,11 +2360,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'If 1 USD = 100 JPY, how many yen is $5?',
-  'Si 1 USD = 100 JPY, ¿cuántos yenes son $5?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '如果 1 美元 = 100 日元，那么 5 美元是多少日元？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2292,11 +2378,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   '50 yen',
-  '50 yenes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '50日元',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2310,11 +2396,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   '100 yen',
-  '100 yenes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '100日元',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2328,11 +2414,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   '500 yen',
-  '500 yenes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '500日元',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2346,11 +2432,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   '5 yen',
-  '5 yenes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '5日元',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2364,11 +2450,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   '5 dollars × 100 yen per dollar = 500 yen.',
-  '5 dólares × 100 yenes por dólar = 500 yenes.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '5美元 × 每美元100日元 = 500日元。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2382,11 +2468,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'When would you need to exchange currency?',
-  '¿Cuándo necesitarías cambiar moneda?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么时候你需要兑换货币?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2400,11 +2486,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   'Traveling to another country',
-  'Viajar a otro país',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '去另一个国家旅行',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2418,11 +2504,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   'Shopping at local stores',
-  'Comprar en tiendas locales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在当地商店购物',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2436,11 +2522,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   'Paying bills at home',
-  'Pagar facturas en casa',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在家支付账单',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2454,11 +2540,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   'Saving money',
-  'Ahorrar dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '存钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2472,11 +2558,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   'You need to exchange currency when traveling abroad or buying from international sellers.',
-  'Necesitas cambiar moneda cuando viajas al extranjero o compras a vendedores internacionales.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '当您出国旅行或从国际卖家购买商品时,需要兑换货币。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2490,11 +2576,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'zh',
   'What makes a currency "strong"?',
-  '¿Qué hace que una moneda sea "fuerte"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么使一种货币"强势"?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2508,11 +2594,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'zh',
   'It''s made of strong materials',
-  'Está hecha de materiales resistentes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它由坚固的材料制成',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2526,11 +2612,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'zh',
   'It buys more in other countries',
-  'Compra más en otros países',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它在其他国家能买到更多东西',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2544,11 +2630,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'zh',
   'It''s heavy',
-  'Es pesada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它很重',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2562,11 +2648,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'zh',
   'It''s colorful',
-  'Es colorida',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它色彩鲜艳',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2580,11 +2666,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'zh',
   'A strong currency has high purchasing power in international markets.',
-  'Una moneda fuerte tiene un alto poder adquisitivo en los mercados internacionales.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '强势货币在国际市场上具有较高的购买力。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2598,11 +2684,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'What is Inflation',
-  '¿Qué es la Inflación?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么是通货膨胀',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2616,7 +2702,7 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# When Things Get More Expensive
 
 **Inflation** means prices go up over time.
@@ -2633,24 +2719,24 @@ Your money buys less than it used to!
 - Increased production costs
 
 Some inflation (2-3% per year) is normal and healthy.',
-  '# Cuando las cosas se vuelven más caras
+  '# 当物品变得更贵时
 
-**La inflación** significa que los precios suben con el tiempo.
+**通货膨胀**是指价格随时间上涨。
 
-Ejemplo:
-- 1990: Una barra de chocolate costaba $0.50
-- 2025: El mismo chocolate cuesta $1.50
+例子：
+- 1990年：一块糖果售价0.50美元
+- 2025年：同样的糖果售价1.50美元
 
-¡Tu dinero compra menos de lo que solía comprar!
+你的钱买到的东西比以前少了！
 
-**Por qué ocurre:**
-- Más dinero en circulación
-- Mayor demanda de productos
-- Aumento en los costos de producción
+**发生的原因：**
+- 流通中的货币增多
+- 产品需求增加
+- 生产成本上升
 
-Algo de inflación (2-3% por año) es normal y saludable.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+一些通货膨胀（每年2-3%）是正常且健康的。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2664,11 +2750,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'How Inflation Affects You',
-  'Cómo te afecta la inflación',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 通货膨胀如何影响你',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2682,7 +2768,7 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# Your Money Loses Value
 
 **Purchasing power** = What you can buy with your money
@@ -2698,23 +2784,23 @@ If inflation is 3% per year:
 - $100 today = $94 of purchasing power in 2 years
 
 That''s why grandparents say "things were cheaper in my day" - they were!',
-  '# Tu Dinero Pierde Valor
+  '# 你的钱会贬值
 
-**Poder adquisitivo** = Lo que puedes comprar con tu dinero
+**购买力** = 你的钱能买到什么
 
-Con la inflación:
-- $100 hoy compran más que $100 el próximo año
-- Los ahorros pierden valor si solo están guardados en un frasco
-- Los salarios necesitan aumentar para mantenerse al día
+通货膨胀时：
+- 今天的100美元比明年的100美元能买更多东西
+- 如果只是把储蓄放在罐子里，它们会贬值
+- 工资需要增长才能跟上
 
-**Ejemplo:**
-Si la inflación es del 3% al año:
-- $100 hoy = $97 de poder adquisitivo el próximo año
-- $100 hoy = $94 de poder adquisitivo en 2 años
+**例子：**
+如果通货膨胀率是每年3%：
+- 今天的100美元 = 明年97美元的购买力
+- 今天的100美元 = 2年后94美元的购买力
 
-¡Por eso los abuelos dicen "las cosas eran más baratas en mis tiempos" - lo eran!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+这就是为什么爷爷奶奶会说"我们那时候东西更便宜"——确实如此！',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2728,11 +2814,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'Protecting Against Inflation',
-  'Protección Contra la Inflación',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 抵御通货膨胀',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2746,7 +2832,7 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# How to Fight Inflation
 
 Don''t let inflation eat your money! Here''s how:
@@ -2770,31 +2856,31 @@ Don''t let inflation eat your money! Here''s how:
 - Reduce unnecessary spending
 
 Remember: Cash under your mattress loses value every year!',
-  '# Cómo Combatir la Inflación
+  '# 如何对抗通货膨胀
 
-¡No dejes que la inflación se coma tu dinero! Así es cómo:
+别让通货膨胀吃掉你的钱!方法如下:
 
-**1. Pon dinero en cuentas de ahorro con interés**
-- El interés ayuda a que el dinero crezca
-- Compensa parte de la inflación
+**1. 把钱存入有利息的储蓄账户**
+- 利息帮助钱增长
+- 抵消部分通货膨胀
 
-**2. Invierte en acciones, bonos o bienes raíces**
-- Estos a menudo crecen más rápido que la inflación
-- Es más arriesgado pero protege el poder adquisitivo
+**2. 投资股票、债券或房地产**
+- 这些通常比通货膨胀增长更快
+- 风险更高但能保护购买力
 
-**3. Aumenta tus ingresos**
-- Pide aumentos de sueldo
-- Aprende nuevas habilidades
-- Inicia un negocio secundario
+**3. 增加你的收入**
+- 要求加薪
+- 学习新技能
+- 开展副业
 
-**4. Haz un presupuesto inteligente**
-- Lleva un registro de a dónde va el dinero
-- Busca mejores ofertas
-- Reduce los gastos innecesarios
+**4. 明智地做预算**
+- 追踪钱的去向
+- 寻找更优惠的交易
+- 减少不必要的开支
 
-Recuerda: ¡El efectivo debajo de tu colchón pierde valor cada año!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+记住:藏在床垫下的现金每年都在贬值!',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2808,11 +2894,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'What is inflation?',
-  '¿Qué es la inflación?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么是通货膨胀?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2826,11 +2912,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'When prices go down',
-  'Cuando los precios bajan',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '当价格下降时',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2844,11 +2930,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'When prices go up over time',
-  'Cuando los precios suben con el tiempo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '当价格随着时间推移而上涨',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2862,11 +2948,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'When money is printed',
-  'Cuando se imprime dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '当货币被印刷时',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2880,11 +2966,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'When people save money',
-  'Cuando las personas ahorran dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '当人们储蓄金钱时',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2898,11 +2984,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'Inflation is the general increase in prices over time.',
-  'La inflación es el aumento general de los precios a lo largo del tiempo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '通货膨胀是指价格随时间推移普遍上涨的现象。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2916,11 +3002,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'If inflation is 5% and you have $100 in cash for a year, what happens?',
-  'Si la inflación es del 5% y tienes $100 en efectivo durante un año, ¿qué sucede?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '如果通货膨胀率为5%，而你有100美元现金放了一年，会发生什么？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2934,11 +3020,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   'You can buy 5% more',
-  'Puedes comprar 5% más',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '你可以多买 5% 的东西',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2952,11 +3038,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   'You can buy the same amount',
-  'Puedes comprar la misma cantidad',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '你可以购买相同数量的商品',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2970,11 +3056,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   'You can buy 5% less',
-  'Puedes comprar 5% menos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '你能买到的东西减少5%',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2988,11 +3074,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   'Your money disappears',
-  'Tu dinero desaparece',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '你的钱消失了',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3006,11 +3092,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'With 5% inflation, your $100 loses 5% of purchasing power.',
-  'Con una inflación del 5%, tus $100 pierden el 5% de su poder adquisitivo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在5%的通货膨胀率下，你的100美元会损失5%的购买力。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3024,11 +3110,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'Why do prices tend to increase over time?',
-  '¿Por qué los precios tienden a aumentar con el tiempo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为什么价格会随着时间推移而上涨?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3042,11 +3128,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   'Stores want more profit only',
-  'Las tiendas solo quieren más ganancias',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '商店只想要更多利润',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3060,11 +3146,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   'Due to inflation and increased costs',
-  'Debido a la inflación y el aumento de costos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '由于通货膨胀和成本上升',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3078,11 +3164,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   'Because money becomes stronger',
-  'Porque el dinero se vuelve más fuerte',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '因为货币变得更强劲',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3096,11 +3182,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   'It''s random',
-  'Es aleatorio',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '这是随机的',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3114,11 +3200,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   'Prices increase due to inflation, which comes from various economic factors.',
-  'Los precios aumentan debido a la inflación, que proviene de varios factores económicos.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '价格上涨是由通货膨胀引起的,而通货膨胀来自各种经济因素。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3132,11 +3218,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'What is a good way to protect against inflation?',
-  '¿Cuál es una buena manera de protegerse contra la inflación?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么是抵御通货膨胀的好方法?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3150,11 +3236,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   'Hide cash under your mattress',
-  'Esconder efectivo debajo del colchón',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '把现金藏在床垫下',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3168,11 +3254,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   'Spend all your money immediately',
-  'Gastar todo tu dinero inmediatamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '立即花光所有钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3186,11 +3272,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   'Invest in assets that grow',
-  'Invertir en activos que crecen',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '投资于能增值的资产',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3204,11 +3290,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   'Do nothing',
-  'No hacer nada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么都不做',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3222,11 +3308,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   'Investing in growing assets helps maintain or increase purchasing power.',
-  'Invertir en activos de crecimiento ayuda a mantener o aumentar el poder adquisitivo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '投资增长型资产有助于维持或增加购买力。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3240,11 +3326,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'zh',
   'What is "purchasing power"?',
-  '¿Qué es el "poder adquisitivo"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么是"购买力"?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3258,11 +3344,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'zh',
   'How strong you are',
-  'Qué tan fuerte eres',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '你有多强壮',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3276,11 +3362,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'zh',
   'What you can buy with your money',
-  'El poder de compra que tienes con tu dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '你的钱能买到什么',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3294,11 +3380,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'zh',
   'Your job title',
-  'Tu título de trabajo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '你的职位名称',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3312,11 +3398,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'zh',
   'How much money you earn',
-  'Cuánto dinero ganas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '你赚了多少钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3330,11 +3416,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'zh',
   'Purchasing power is what your money can actually buy.',
-  'El poder adquisitivo es lo que tu dinero realmente puede comprar.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '购买力是指你的钱实际上能买到什么。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3348,11 +3434,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].question',
   'en',
-  'es',
+  'zh',
   'Is some inflation considered normal?',
-  '¿Se considera normal algo de inflación?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '一定程度的通货膨胀被认为是正常的吗?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3366,11 +3452,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].options[0]',
   'en',
-  'es',
+  'zh',
   'No, inflation is always bad',
-  'No, la inflación siempre es mala',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '不，通货膨胀总是有害的',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3384,11 +3470,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].options[1]',
   'en',
-  'es',
+  'zh',
   'Yes, 2-3% annual inflation is normal',
-  'Sí, una inflación anual del 2-3% es normal',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '是的,每年2-3%的通货膨胀是正常的',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3402,11 +3488,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].options[2]',
   'en',
-  'es',
+  'zh',
   'Only in poor countries',
-  'Solo en países pobres',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '仅在贫穷国家',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3420,11 +3506,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].options[3]',
   'en',
-  'es',
+  'zh',
   'Inflation never happens',
-  'La inflación nunca ocurre',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '通货膨胀从不发生',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3438,11 +3524,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].explanation',
   'en',
-  'es',
+  'zh',
   'Moderate inflation of 2-3% per year is normal and indicates economic growth.',
-  'La inflación moderada del 2-3% anual es normal e indica crecimiento económico.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '每年2-3%的温和通货膨胀是正常的，表明经济在增长。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3456,11 +3542,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'Jobs and Careers',
-  'Trabajos y Carreras',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '工作与职业',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3474,7 +3560,7 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# Working for Money
 
 **Active income** = Money you earn by working
@@ -3486,19 +3572,19 @@ Types of jobs:
 
 **For kids:** Chores, lawn mowing, pet sitting
 **For adults:** Full-time jobs, part-time work, consulting',
-  '# Trabajar por Dinero
+  '# 工作赚钱
 
-**Ingreso activo** = Dinero que ganas al trabajar
+**主动收入** = 通过工作赚取的钱
 
-Tipos de trabajos:
-- **Empleado:** Trabajas para una empresa (sueldo fijo)
-- **Trabajador independiente:** Trabajas por tu cuenta (múltiples clientes)
-- **Contratista:** Trabajas en proyectos específicos
+工作类型：
+- **雇员：** 为公司工作（稳定的薪水）
+- **自由职业者：** 为自己工作（多个客户）
+- **承包商：** 从事特定项目工作
 
-**Para niños:** Tareas domésticas, cortar el césped, cuidar mascotas
-**Para adultos:** Trabajos de tiempo completo, trabajos de medio tiempo, consultoría',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**对于孩子：** 做家务、修剪草坪、照看宠物
+**对于成人：** 全职工作、兼职工作、咨询',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3512,11 +3598,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'Self-Employment',
-  'Autoempleo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自雇就业',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3530,7 +3616,7 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# Being Your Own Boss
 
 **Self-employment** means working for yourself!
@@ -3543,20 +3629,20 @@ Examples:
 
 **Pros:** Flexibility, unlimited earning potential
 **Cons:** No steady paycheck, more responsibility',
-  '# Ser Tu Propio Jefe
+  '# 成为自己的老板
 
-**El trabajo por cuenta propia** significa trabajar para ti mismo.
+**自雇**意味着为自己工作！
 
-Ejemplos:
-- Iniciar un pequeño negocio
-- Ofrecer servicios (tutorías, limpieza, diseño)
-- Vender productos en línea
-- Crear contenido (YouTube, blog)
+例子：
+- 创办小企业
+- 提供服务（辅导、清洁、设计）
+- 在线销售产品
+- 创作内容（YouTube、博客）
 
-**Ventajas:** Flexibilidad, potencial de ingresos ilimitado
-**Desventajas:** No hay sueldo fijo, más responsabilidad',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**优点：**灵活性、无限的收入潜力
+**缺点：**没有稳定的薪水、更多的责任',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3570,11 +3656,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'Passive Income',
-  'Ingresos Pasivos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '被动收入',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3588,7 +3674,7 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# Money While You Sleep
 
 **Passive income** = Earning money without active work
@@ -3600,19 +3686,19 @@ Examples:
 - Online courses (sell once, earn forever)
 
 Note: Usually requires upfront work or money to start!',
-  '# Dinero Mientras Duermes
+  '# 睡觉时也能赚钱
 
-**Ingreso pasivo** = Ganar dinero sin trabajo activo
+**被动收入** = 无需主动工作也能赚钱
 
-Ejemplos:
-- Propiedades en alquiler (renta de inquilinos)
-- Inversiones (dividendos de acciones)
-- Regalías (de libros, música, patentes)
-- Cursos en línea (vender una vez, ganar para siempre)
+例子：
+- 出租房产（从租客那里收取租金）
+- 投资（从股票获得分红）
+- 版税（来自书籍、音乐、专利）
+- 在线课程（销售一次，永久获益）
 
-Nota: ¡Usualmente requiere trabajo o dinero inicial para comenzar!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+注意：通常需要前期的工作或资金投入才能开始！',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3626,11 +3712,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'What is active income?',
-  '¿Qué es el ingreso activo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么是主动收入?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3644,11 +3730,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'Money earned by working',
-  'Dinero ganado al trabajar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '通过工作赚取的钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3662,11 +3748,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'Money earned while sleeping',
-  'Dinero ganado mientras duermes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '睡觉时赚取的钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3680,11 +3766,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'Money from investments',
-  'Dinero proveniente de inversiones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '来自投资的钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3698,11 +3784,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'Money found on the street',
-  'Dinero encontrado en la calle',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在街上捡到的钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3716,11 +3802,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'Active income is money earned through active work and effort.',
-  'El ingreso activo es el dinero que se gana a través del trabajo y el esfuerzo activo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '主动收入是通过积极的工作和努力赚取的钱。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3734,11 +3820,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'Which is an example of passive income?',
-  '¿Cuál es un ejemplo de ingreso pasivo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '以下哪项是被动收入的例子?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3752,11 +3838,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   'Your salary from a job',
-  'Tu salario de un trabajo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '你从工作中获得的工资',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3770,11 +3856,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   'Payment for mowing a lawn',
-  'Pago por cortar el césped',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '修剪草坪的报酬',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3788,11 +3874,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   'Rent from a property you own',
-  'Alquiler de una propiedad que posees',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '您拥有的房产的租金收入',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3806,11 +3892,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   'Allowance from parents',
-  'Mesada de los padres',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '父母给的零花钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3824,11 +3910,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'Rental income is passive - you earn it without active daily work.',
-  'Ingreso por alquiler es pasivo - lo ganas sin trabajo activo diario.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '租金收入是被动收入——无需每天主动工作就能获得。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3842,11 +3928,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'What does self-employment mean?',
-  '¿Qué significa el autoempleo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自雇是什么意思?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3860,11 +3946,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   'Working for a big company',
-  'Trabajar para una empresa grande',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为大公司工作',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3878,11 +3964,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   'Working for yourself',
-  'Trabajar por cuenta propia',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为自己工作',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3896,11 +3982,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   'Being unemployed',
-  'Estar desempleado',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '失业',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3914,11 +4000,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   'Working part-time',
-  'Trabajar medio tiempo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '兼职工作',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3932,11 +4018,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   'Self-employment means you are your own boss and work for yourself.',
-  'El autoempleo significa que eres tu propio jefe y trabajas para ti mismo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自雇意味着你是自己的老板,为自己工作。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3950,11 +4036,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'Which is true about passive income?',
-  '¿Cuál es verdadero sobre el ingreso pasivo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '关于被动收入，哪个说法是正确的？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3968,11 +4054,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   'It requires no effort ever',
-  'No requiere ningún esfuerzo nunca',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '永远不需要任何努力',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3986,11 +4072,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   'Anyone can start immediately with no money',
-  'Cualquier persona puede comenzar inmediatamente sin dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '任何人都可以在没有资金的情况下立即开始',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4004,11 +4090,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   'It often requires upfront work or investment',
-  'Frecuentemente requiere trabajo o inversión inicial',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它通常需要前期工作或投资',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4022,11 +4108,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   'It always earns more than active income',
-  'Siempre genera más ingresos que el ingreso activo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它总是比主动收入赚得更多',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4040,11 +4126,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   'Passive income streams usually require initial work or capital to establish.',
-  'Los ingresos pasivos generalmente requieren trabajo inicial o capital para establecerse.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '被动收入来源通常需要前期的工作或资金投入才能建立。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4058,11 +4144,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'Gross vs Net Income',
-  'Ingreso Bruto vs Ingreso Neto',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 总收入与净收入',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4076,7 +4162,7 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# How Much Do You Really Earn?
 
 **Gross Income** = Total money before anything is taken out
@@ -4090,21 +4176,21 @@ Example:
 - **Net (take-home): $700**
 
 Always focus on net income when budgeting!',
-  '# ¿Cuánto Ganas Realmente?
+  '# 你真正赚了多少钱?
 
-**Ingreso Bruto** = Dinero total antes de que se descuente algo
-**Ingreso Neto** = Dinero que realmente recibes (después de impuestos y deducciones)
+**总收入** = 扣除任何费用之前的总金额
+**净收入** = 你实际到手的钱(扣除税款和其他扣款后)
 
-Ejemplo:
-- Bruto: $1,000
-- Impuestos: -$200
-- Seguro médico: -$50
-- Retiro: -$50
-- **Neto (para llevar a casa): $700**
+例子:
+- 总收入:$1,000
+- 税款:-$200
+- 医疗保险:-$50
+- 退休金:-$50
+- **净收入(实际到手):$700**
 
-¡Siempre enfócate en el ingreso neto al hacer tu presupuesto!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+做预算时要始终关注净收入!',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4118,11 +4204,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'Salary vs Hourly',
-  'Salario vs Por Hora',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '工资制 vs 计时制',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4136,7 +4222,7 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# Two Ways to Get Paid
 
 **Salary:**
@@ -4152,23 +4238,23 @@ INSERT INTO "ContentTranslation" (
 - May get overtime pay (1.5x or 2x rate)
 
 Neither is "better" - it depends on the job!',
-  '# Dos formas de recibir pago
+  '# 两种获得报酬的方式
 
-**Salario:**
-- Cantidad fija por año
-- Ejemplo: $50,000/año
-- Mismo cheque de pago cada mes
-- A menudo incluye beneficios
+**薪资制:**
+- 每年固定金额
+- 例如:每年$50,000
+- 每月工资相同
+- 通常包含福利
 
-**Por hora:**
-- Pago por hora trabajada
-- Ejemplo: $15/hora
-- El cheque de pago varía según las horas
-- Puede recibir pago de horas extras (1.5x o 2x la tarifa)
+**时薪制:**
+- 按工作小时数计酬
+- 例如:每小时$15
+- 工资根据工作小时数变化
+- 可能获得加班费(1.5倍或2倍费率)
 
-Ninguna es "mejor" - ¡depende del trabajo!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+两种方式没有"更好"之分——取决于具体工作!',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4182,11 +4268,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'Benefits and Bonuses',
-  'Beneficios y Bonificaciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '福利和奖金',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4200,7 +4286,7 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# More Than Just Money
 
 **Benefits** = Extra compensation beyond salary
@@ -4219,26 +4305,26 @@ Common benefits:
 - Profit sharing
 
 Benefits can be worth 20-30% of your salary!',
-  '# Más que solo dinero
+  '# 不仅仅是金钱
 
-**Beneficios** = Compensación adicional más allá del salario
+**福利** = 工资以外的额外补偿
 
-Beneficios comunes:
-- Seguro médico
-- Contribuciones para el retiro (aportación patronal)
-- Días de vacaciones pagadas
-- Permiso por enfermedad
-- Desarrollo profesional
+常见福利：
+- 健康保险
+- 退休金缴纳（401k配套）
+- 带薪休假日
+- 病假
+- 专业发展
 
-**Bonos:**
-- Pagos adicionales por buen desempeño
-- Bonos de fin de año
-- Comisiones (ganancias basadas en ventas)
-- Participación de utilidades
+**奖金：**
+- 因良好表现获得的额外报酬
+- 节日奖金
+- 佣金（基于销售的收入）
+- 利润分成
 
-¡Los beneficios pueden valer entre el 20-30% de tu salario!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+福利的价值可能相当于你工资的20-30%！',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4252,11 +4338,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'What is net income?',
-  '¿Qué es el ingreso neto?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么是净收入?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4270,11 +4356,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'Total income before deductions',
-  'Ingreso total antes de deducciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '扣除前的总收入',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4288,11 +4374,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'Money you take home after deductions',
-  'Dinero que te llevas a casa después de las deducciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '扣除后你实际拿到手的钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4306,11 +4392,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'Money from the internet',
-  'Dinero de internet',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '来自互联网的钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4324,11 +4410,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'Bonus payments',
-  'Pagos de bonificación',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '奖金支付',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4342,11 +4428,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'Net income is what you actually receive after taxes and deductions.',
-  'El ingreso neto es lo que realmente recibes después de impuestos y deducciones.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '净收入是扣除税款和其他扣除项后你实际收到的金额。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4360,11 +4446,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'If your gross income is $2,000 and $400 is deducted, what is your net income?',
-  'Si tu ingreso bruto es $2,000 y se deducen $400, ¿cuál es tu ingreso neto?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '如果你的总收入是 $2,000，扣除 $400 后，你的净收入是多少？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4378,11 +4464,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   '$2,400',
   '$2,400',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4396,11 +4482,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   '$2,000',
   '$2,000',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4414,11 +4500,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   '$1,600',
   '$1,600',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4432,11 +4518,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   '$400',
   '$400',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4450,11 +4536,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'Net income = Gross - Deductions = $2,000 - $400 = $1,600.',
-  'Ingreso neto = Bruto - Deducciones = $2,000 - $400 = $1,600.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '净收入 = 总收入 - 扣除额 = $2,000 - $400 = $1,600。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4468,11 +4554,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'What is a benefit of hourly pay?',
-  '¿Cuál es un beneficio del pago por hora?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '计时工资的好处是什么?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4486,11 +4572,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   'Same paycheck every month',
-  'Mismo cheque de pago cada mes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '每月获得相同的薪水',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4504,11 +4590,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   'Can earn overtime pay',
-  'Puedes ganar pago por horas extras',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '可以赚取加班费',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4522,11 +4608,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   'Always includes health insurance',
-  'Siempre incluye seguro médico',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '总是包括健康保险',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4540,11 +4626,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   'Never changes',
-  'Nunca cambia',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '从不改变',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4558,11 +4644,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   'Hourly workers often earn overtime (extra pay) for working extra hours.',
-  'Los trabajadores por hora a menudo ganan tiempo extra (pago adicional) por trabajar horas adicionales.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '按小时计酬的工人通常可以通过加班(额外工作时间)获得加班费(额外报酬)。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4576,11 +4662,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'Which is NOT typically a job benefit?',
-  '¿Cuál NO es típicamente un beneficio laboral?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '以下哪项通常不是工作福利？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4594,11 +4680,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   'Health insurance',
-  'Seguro médico',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '健康保险',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4612,11 +4698,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   'Paid vacation',
-  'Vacaciones pagadas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '带薪假期',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4630,11 +4716,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   'Free groceries',
-  'Comestibles gratis',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '免费食品杂货',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4648,11 +4734,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   '401k matching',
-  'Igualación de 401k',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '401k配套',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4666,11 +4752,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   'Free groceries are not a standard job benefit, unlike insurance or retirement contributions.',
-  'Los víveres gratuitos no son un beneficio laboral estándar, a diferencia del seguro o las contribuciones para el retiro.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '免费杂货不是标准的工作福利,不同于保险或退休金缴纳。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4684,11 +4770,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'Finding Opportunities',
-  'Encontrando Oportunidades',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '寻找机会',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4702,7 +4788,7 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# Where to Look for Jobs
 
 **For Young People:**
@@ -4719,24 +4805,24 @@ INSERT INTO "ContentTranslation" (
 - Professional connections
 
 Tip: Many jobs are found through people you know!',
-  '# Dónde Buscar Trabajo
+  '# 在哪里寻找工作
 
-**Para Jóvenes:**
-- Pregunta a familiares y vecinos
-- Revisa tiendas locales en busca de carteles de "Se Busca Personal"
-- Bolsas de trabajo escolares
-- Centros comunitarios
+**对于年轻人：**
+- 询问家人和邻居
+- 查看当地商店的"招聘中"标志
+- 学校就业公告栏
+- 社区中心
 
-**Para Adultos:**
-- Portales de empleo en línea (LinkedIn, Indeed)
-- Sitios web de empresas
-- Eventos de networking
-- Agencias de reclutamiento
-- Contactos profesionales
+**对于成年人：**
+- 在线招聘网站（领英、Indeed）
+- 公司官网
+- 社交招聘活动
+- 招聘机构
+- 职业人脉
 
-Tip: ¡Muchos trabajos se encuentran a través de personas que conoces!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+小贴士：许多工作都是通过你认识的人找到的！',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4750,11 +4836,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'Interview Skills',
-  'Habilidades para Entrevistas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '面试技巧',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4768,7 +4854,7 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# Making a Good Impression
 
 **Before the interview:**
@@ -4787,26 +4873,26 @@ INSERT INTO "ContentTranslation" (
 **After the interview:**
 - Send a thank-you email within 24 hours
 - Follow up if you haven''t heard back in a week',
-  '# Causando una Buena Impresión
+  '# 给人留下好印象
 
-**Antes de la entrevista:**
-- Investiga sobre la empresa
-- Prepara respuestas a preguntas comunes
-- Elige ropa apropiada
-- Llega 10 minutos antes
+**面试前：**
+- 了解公司情况
+- 准备常见问题的答案
+- 选择合适的服装
+- 提前10分钟到达
 
-**Durante la entrevista:**
-- Estrecha la mano con firmeza
-- Mantén contacto visual
-- Habla con claridad y confianza
-- Haz preguntas reflexivas
-- Muestra entusiasmo
+**面试中：**
+- 握手要有力
+- 保持眼神交流
+- 说话清晰、自信
+- 提出有见地的问题
+- 表现出热情
 
-**Después de la entrevista:**
-- Envía un correo electrónico de agradecimiento dentro de las 24 horas
-- Haz seguimiento si no has recibido respuesta en una semana',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**面试后：**
+- 在24小时内发送感谢邮件
+- 如果一周内没有收到回复，进行跟进',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4820,11 +4906,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'First Day Tips',
-  'Consejos para el Primer Día',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '第一天工作小贴士',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4838,7 +4924,7 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# Starting Strong
 
 **Your first day:**
@@ -4857,26 +4943,26 @@ INSERT INTO "ContentTranslation" (
 - Build relationships with colleagues
 
 Remember: Everyone was new once. People want you to succeed!',
-  '# Comenzando con Fuerza
+  '# 强势开局
 
-**Tu primer día:**
-- Llega temprano
-- Lleva un cuaderno y un bolígrafo
-- Haz preguntas (¡demuestra que te importa!)
-- Aprende los nombres de tus compañeros de trabajo
-- Observa la cultura del lugar de trabajo
-- Toma notas sobre los procesos
+**第一天：**
+- 提早到达
+- 带上笔记本和笔
+- 提出问题（这表明你很在意！）
+- 记住同事的名字
+- 观察职场文化
+- 记录工作流程
 
-**Primera semana/mes:**
-- Sé confiable (llega a tiempo)
-- Toma la iniciativa
-- Acepta la retroalimentación con gracia
-- No tengas miedo de admitir errores
-- Construye relaciones con tus colegas
+**第一周/第一个月：**
+- 保持可靠（准时到岗）
+- 主动积极
+- 从容接受反馈
+- 不要害怕承认错误
+- 与同事建立良好关系
 
-Recuerda: Todos fuimos nuevos alguna vez. ¡La gente quiere que tengas éxito!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+记住：每个人都曾是新人。大家都希望你成功！',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4890,11 +4976,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'What should you do before a job interview?',
-  '¿Qué debes hacer antes de una entrevista de trabajo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在参加工作面试之前，你应该做什么？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4908,11 +4994,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'Nothing, just show up',
-  'Nada, solo preséntate',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么都不做,直接去就行',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4926,11 +5012,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'Research the company',
-  'Investigar la empresa',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '了解公司情况',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4944,11 +5030,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'Memorize your resume',
-  'Memorizar tu currículum',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '背诵你的简历',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4962,11 +5048,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'Bring your parents',
-  'Llevar a tus padres',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '带上你的父母',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4980,11 +5066,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'Researching the company shows you''re serious and helps you answer questions better.',
-  'Investigar sobre la empresa demuestra que eres serio y te ayuda a responder las preguntas de mejor manera.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '研究公司表明你很认真,并帮助你更好地回答问题。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4998,11 +5084,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'How early should you arrive for an interview?',
-  '¿Con cuánta anticipación deberías llegar a una entrevista?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '面试应该提前多久到达?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5016,11 +5102,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   '1 hour early',
-  '1 hora antes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '提前1小时',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5034,11 +5120,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   'Exactly on time',
-  'Exactamente a tiempo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '准时到达',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5052,11 +5138,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   '10 minutes early',
-  '10 minutos antes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '提前10分钟',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5070,11 +5156,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   '10 minutes late',
-  '10 minutos tarde',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '迟到10分钟',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5088,11 +5174,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'Arriving 10 minutes early shows punctuality without being too early.',
-  'Llegar 10 minutos antes demuestra puntualidad sin ser demasiado temprano.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '提前10分钟到达既能展现守时,又不会过早到达。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5106,11 +5192,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'What does "networking" mean when job hunting?',
-  '¿Qué significa "hacer networking" al buscar trabajo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在求职时，"人际网络"是什么意思？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5124,11 +5210,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   'Using the internet',
-  'Usar internet',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '使用互联网',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5142,11 +5228,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   'Building professional connections',
-  'Construir conexiones profesionales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '建立职业人脉',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5160,11 +5246,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   'Working with computers',
-  'Trabajar con computadoras',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '使用电脑工作',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5178,11 +5264,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   'Social media posting',
-  'Publicar en redes sociales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在社交媒体上发帖',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5196,11 +5282,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   'Networking is building relationships with people who can help your career.',
-  'Hacer networking es construir relaciones con personas que pueden ayudar a tu carrera.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '人脉关系是指与能够帮助你职业发展的人建立联系。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5214,11 +5300,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'On your first day, you should:',
-  'En tu primer día, deberías:',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在第一天上班时，你应该：',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5232,11 +5318,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   'Pretend to know everything',
-  'Fingir que sabes todo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '假装什么都懂',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5250,11 +5336,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   'Stay quiet and don''t ask questions',
-  'Mantenerte callado y no hacer preguntas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '保持安静，不要提问',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5268,11 +5354,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   'Ask questions and take notes',
-  'Hacer preguntas y tomar notas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '提问并做笔记',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5286,11 +5372,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   'Leave early to avoid mistakes',
-  'Irte temprano para evitar errores',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '早点离开以避免犯错',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5304,11 +5390,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   'Asking questions and taking notes shows you want to learn and do well.',
-  'Hacer preguntas y tomar notas demuestra que quieres aprender y hacerlo bien.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '提问和做笔记表明你想要学习并做好工作。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5322,11 +5408,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'Why Diversify',
-  'Por qué diversificar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 为什么要多元化',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5340,7 +5426,7 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# Don''t Put All Eggs in One Basket
 
 **Why multiple income streams matter:**
@@ -5356,23 +5442,23 @@ Sarah has:
 - Weekend tutoring: $5,000/year
 - Rental property: $10,000/year
 - Total: $65,000/year with backup plans!',
-  '# No Pongas Todos los Huevos en Una Sola Canasta
+  '# 不要把所有鸡蛋放在一个篮子里
 
-**Por qué importan múltiples fuentes de ingreso:**
+**为什么多元化收入来源很重要:**
 
-1. **Seguridad:** Si pierdes una fuente, tienes otras
-2. **Crecimiento:** Múltiples fuentes = más ingreso total
-3. **Libertad:** Menos dependencia de un solo empleador
-4. **Oportunidades:** Aprender nuevas habilidades
+1. **安全性:** 如果失去一个收入来源,你还有其他的
+2. **增长:** 多个来源 = 更多总收入
+3. **自由:** 减少对单一雇主的依赖
+4. **机会:** 学习新技能
 
-**Ejemplo real:**
-Sarah tiene:
-- Trabajo de tiempo completo: $50,000/año
-- Tutorías los fines de semana: $5,000/año
-- Propiedad en alquiler: $10,000/año
-- Total: $65,000/año ¡con planes de respaldo!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**真实案例:**
+莎拉有:
+- 全职工作: 每年$50,000
+- 周末辅导: 每年$5,000
+- 出租房产: 每年$10,000
+- 总计: 每年$65,000,还有备用计划!',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5386,11 +5472,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'Side Hustles',
-  'Trabajos Secundarios',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '副业',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5404,7 +5490,7 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# Extra Income Ideas
 
 **Popular side hustles:**
@@ -5428,31 +5514,31 @@ INSERT INTO "ContentTranslation" (
 - Choose something you enjoy
 - Don''t burn yourself out
 - Track income and expenses',
-  '# Ideas para Generar Ingresos Extra
+  '# 额外收入点子
 
-**Trabajos secundarios populares:**
+**热门副业：**
 
-**En línea:**
-- Escritura freelance, diseño, programación
-- Tutorías en línea
-- Vender artesanías en Etsy
-- Creación de contenido en YouTube
-- Marketing de afiliados
+**线上：**
+- 自由职业写作、设计、编程
+- 在线辅导
+- 在Etsy上销售手工艺品
+- YouTube内容创作
+- 联盟营销
 
-**Fuera de línea:**
-- Conducir para aplicaciones de transporte (Uber, Lyft)
-- Entrega de comida a domicilio
-- Cuidado de mascotas/paseo de perros
-- Reparaciones del hogar/servicios de mantenimiento
-- Fotografía para eventos
+**线下：**
+- 网约车司机（Uber、Lyft）
+- 外卖配送
+- 宠物看护/遛狗
+- 家庭维修/杂工服务
+- 活动摄影
 
-**Consejos:**
-- Empieza pequeño, crece gradualmente
-- Elige algo que disfrutes
-- No te agotes
-- Lleva registro de ingresos y gastos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**提示：**
+- 从小做起，逐步发展
+- 选择你喜欢的事情
+- 不要让自己精疲力竭
+- 记录收入和支出',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5466,11 +5552,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'Investment Income',
-  'Ingresos por Inversiones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '投资收入',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5484,7 +5570,7 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# Money Making Money
 
 **Investment income types:**
@@ -5510,33 +5596,33 @@ INSERT INTO "ContentTranslation" (
 - Ongoing maintenance needed
 
 **Key:** Start investing early, even small amounts grow over time!',
-  '# El Dinero Generando Dinero
+  '# 钱生钱
 
-**Tipos de ingresos por inversión:**
+**投资收入类型：**
 
-**1. Dividendos:**
-- Las empresas pagan a los accionistas
-- Usualmente trimestralmente
-- Puedes reinvertir o recibir en efectivo
+**1. 股息：**
+- 公司向股东支付
+- 通常按季度支付
+- 可以再投资或提取现金
 
-**2. Intereses:**
-- De cuentas de ahorro
-- Los bonos pagan intereses
-- Generalmente de menor riesgo
+**2. 利息：**
+- 来自储蓄账户
+- 债券支付利息
+- 通常风险较低
 
-**3. Ganancias de Capital:**
-- Vender inversiones con ganancia
-- Comprar acciones a $50, vender a $100 = $50 de ganancia
-- Puede ser arriesgado
+**3. 资本利得：**
+- 出售投资获利
+- 以50美元买入股票，以100美元卖出 = 50美元收益
+- 可能有风险
 
-**4. Ingresos por Alquiler:**
-- Poseer propiedades, alquilar a inquilinos
-- Requiere capital inicial significativo
-- Se necesita mantenimiento continuo
+**4. 租金收入：**
+- 拥有房产，出租给租户
+- 需要大量前期资金
+- 需要持续维护
 
-**Clave:** ¡Comienza a invertir temprano, incluso las pequeñas cantidades crecen con el tiempo!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**关键：** 尽早开始投资，即使是小额投资也会随着时间增长！',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5550,11 +5636,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'Why is having multiple income streams beneficial?',
-  '¿Por qué es beneficioso tener múltiples fuentes de ingresos?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为什么拥有多种收入来源是有益的?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5568,11 +5654,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'It''s more complicated',
-  'Es más complicado',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它更复杂',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5586,11 +5672,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'Provides financial security if one source fails',
-  'Proporciona seguridad financiera si una fuente falla',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在一个收入来源失败时提供财务保障',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5604,11 +5690,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'You work less',
-  'Trabajas menos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '你工作更少',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5622,11 +5708,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'It''s required by law',
-  'Es requerido por ley',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '这是法律要求的',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5640,11 +5726,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'Multiple income streams provide security - if one stops, you still have others.',
-  'Múltiples fuentes de ingresos proporcionan seguridad: si una se detiene, aún tienes otras.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '多元收入来源提供安全保障——如果一个收入来源中断，你仍然拥有其他收入来源。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5658,11 +5744,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'What is a "side hustle"?',
-  '¿Qué es un "side hustle" o trabajo adicional?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么是"副业"?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5676,11 +5762,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   'Your main job',
-  'Tu trabajo principal',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '你的主要工作',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5694,11 +5780,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   'A dance move',
-  'Un movimiento de baile',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '一个舞蹈动作',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5712,11 +5798,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   'Extra work for additional income',
-  'Trabajo extra para ingresos adicionales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为赚取额外收入而做的工作',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5730,11 +5816,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   'A type of investment',
-  'Un tipo de inversión',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '一种投资类型',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5748,11 +5834,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'A side hustle is extra work outside your main job to earn more money.',
-  'Un side hustle es trabajo extra fuera de tu empleo principal para ganar más dinero.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '副业是在你主要工作之外的额外工作,用来赚取更多收入。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5766,11 +5852,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'What are dividends?',
-  '¿Qué son los dividendos?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么是股息?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5784,11 +5870,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   'Money companies pay shareholders',
-  'Dinero que las empresas pagan a los accionistas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '公司支付给股东的钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5802,11 +5888,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   'Bank fees',
-  'Tarifas bancarias',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '银行费用',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5820,11 +5906,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   'Types of savings accounts',
-  'Tipos de cuentas de ahorro',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '储蓄账户的类型',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5838,11 +5924,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   'Job bonuses',
-  'Bonificaciones laborales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '工作奖金',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5856,11 +5942,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   'Dividends are payments companies make to shareholders from profits.',
-  'Los dividendos son pagos que las empresas hacen a los accionistas a partir de sus ganancias.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '股息是公司从利润中向股东支付的款项。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5874,11 +5960,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'Which is considered passive investment income?',
-  '¿Cuál se considera ingreso pasivo de inversión?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '哪一项被认为是被动投资收入?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5892,11 +5978,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   'Salary from your job',
-  'Salario de tu trabajo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '工作薪水',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5910,11 +5996,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   'Dividends from stocks',
-  'Dividendos de acciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '股票分红',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5928,11 +6014,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   'Payment for freelance work',
-  'Pago por trabajo independiente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自由职业工作的报酬',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5946,11 +6032,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   'Tips from waiting tables',
-  'Propinas de mesero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '餐桌服务的小费',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5964,11 +6050,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   'Dividends are passive income - you earn them without active daily work.',
-  'Los dividendos son ingresos pasivos: los ganas sin trabajo activo diario.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '股息是被动收入——你无需每天主动工作就能获得这笔收入。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5982,11 +6068,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'zh',
   'When starting a side hustle, you should:',
-  'Al comenzar un negocio secundario, deberías:',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '当开始副业时，你应该：',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6000,11 +6086,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'zh',
   'Quit your main job immediately',
-  'Renunciar a tu trabajo principal inmediatamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '立即辞掉你的主要工作',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6018,11 +6104,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'zh',
   'Start small and grow gradually',
-  'Comenzar en pequeño y crecer gradualmente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '从小做起，逐步发展',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6036,11 +6122,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'zh',
   'Ignore tracking income',
-  'Ignorar el seguimiento de ingresos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '忽略收入追踪',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6054,11 +6140,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'zh',
   'Never tell anyone',
-  'Nunca contarle a nadie',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '绝不告诉任何人',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6072,11 +6158,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'zh',
   'It''s smart to start small, test the market, and grow sustainably.',
-  'Es inteligente empezar en pequeño, probar el mercado y crecer de manera sostenible.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '从小规模开始、测试市场并可持续增长是明智的做法。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6090,11 +6176,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'Essential Expenses',
-  'Gastos Esenciales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '必需开支',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6108,7 +6194,7 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# What You Need to Survive
 
 **Needs** = Things required for survival and basic well-being
@@ -6123,22 +6209,22 @@ True needs:
 
 **For kids:** School supplies, healthy food
 **For adults:** Mortgage/rent, insurance, basic groceries',
-  '# Lo Que Necesitas Para Sobrevivir
+  '# 生存所需
 
-**Necesidades** = Cosas requeridas para la supervivencia y el bienestar básico
+**需求** = 生存和基本福祉所必需的东西
 
-Necesidades verdaderas:
-- Comida y agua
-- Vivienda (hogar)
-- Ropa (apropiada para el clima)
-- Atención médica
-- Transporte básico (al trabajo/escuela)
-- Servicios públicos (electricidad, agua, calefacción)
+真正的需求：
+- 食物和水
+- 住所（住房）
+- 衣物（适合天气的）
+- 医疗保健
+- 基本交通（上班/上学）
+- 水电煤气（电力、水、暖气）
 
-**Para niños:** Útiles escolares, comida saludable
-**Para adultos:** Hipoteca/alquiler, seguro, alimentos básicos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**对于孩子：** 学习用品、健康食品
+**对于成年人：** 房贷/租金、保险、基本日用品',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6152,11 +6238,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'Discretionary Spending',
-  'Gasto Discrecional',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '可自由支配的支出',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6170,7 +6256,7 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# Things That Make Life Better
 
 **Wants** = Things that improve life but aren''t necessary for survival
@@ -6184,21 +6270,21 @@ Examples:
 - Toys and games
 
 Wants aren''t bad! But needs come first.',
-  '# Cosas que mejoran la vida
+  '# 让生活更美好的东西
 
-**Deseos** = Cosas que mejoran la vida pero no son necesarias para sobrevivir
+**想要的东西** = 能改善生活但对生存并非必需的东西
 
-Ejemplos:
-- Comidas en restaurantes (puedes cocinar en casa)
-- Teléfono último modelo (un modelo anterior funciona)
-- Ropa de marca (ropa regular te cubre)
-- Servicios de streaming
-- Vacaciones
-- Juguetes y juegos
+例子：
+- 餐厅用餐（你可以在家做饭）
+- 最新款手机（旧款也能用）
+- 名牌服装（普通衣服也能穿）
+- 流媒体服务
+- 度假旅行
+- 玩具和游戏
 
-¡Los deseos no son malos! Pero las necesidades van primero.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+想要的东西并不坏！但需要的东西要优先考虑。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6212,11 +6298,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'Making Choices',
-  'Tomando Decisiones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '做出选择',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6230,7 +6316,7 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# The Tricky Middle Ground
 
 Some purchases are both:
@@ -6248,25 +6334,25 @@ Some purchases are both:
 - Want: Designer brand coat
 
 **Smart spending = Meet needs first, enjoy wants within budget**',
-  '# La Zona Intermedia Complicada
+  '# 棘手的中间地带
 
-Algunas compras son ambas cosas:
+有些消费既是需要也是想要：
 
-**Teléfono:**
-- Necesidad: Teléfono básico para seguridad/trabajo
-- Deseo: Modelo insignia de $1,200
+**手机：**
+- 需要：用于安全/工作的基本手机
+- 想要：1,200美元的旗舰机型
 
-**Comida:**
-- Necesidad: Comidas nutritivas
-- Deseo: Restaurante costoso todos los días
+**食物：**
+- 需要：营养餐
+- 想要：每天去昂贵的餐厅
 
-**Ropa:**
-- Necesidad: Abrigo abrigado en invierno
-- Deseo: Abrigo de marca de diseñador
+**服装：**
+- 需要：冬天的保暖外套
+- 想要：名牌外套
 
-**Gasto inteligente = Cubrir necesidades primero, disfrutar deseos dentro del presupuesto**',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**明智消费 = 首先满足需要，在预算内享受想要**',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6280,11 +6366,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'Which of these is a true NEED?',
-  '¿Cuál de estos es una NECESIDAD verdadera?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '以下哪项是真正的**需求**?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6298,11 +6384,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'Designer sneakers',
-  'Zapatillas de marca',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '名牌运动鞋',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6316,11 +6402,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'Basic shelter',
-  'Refugio básico',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '基本住所',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6334,11 +6420,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'Video games',
-  'Videojuegos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '电子游戏',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6352,11 +6438,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'Vacation',
-  'Vacaciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '度假',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6370,11 +6456,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'Shelter is essential for survival, making it a need.',
-  'El refugio es esencial para la supervivencia, lo que lo convierte en una necesidad.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '住所对生存至关重要,因此它是一种需要。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6388,11 +6474,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'Which is a WANT?',
-  '¿Cuál es un DESEO?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '以下哪项是**想要**的东西?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6406,11 +6492,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   'Medicine when sick',
-  'Medicina cuando estás enfermo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '生病时的药品',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6424,11 +6510,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   'Water to drink',
-  'Agua para beber',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '喝水',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6442,11 +6528,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   'Streaming service subscription',
-  'Suscripción a servicio de streaming',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '流媒体服务订阅',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6460,11 +6546,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   'Winter coat in cold climate',
-  'Abrigo de invierno en clima frío',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '寒冷气候下的冬季外套',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6478,11 +6564,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'Streaming services are entertainment wants, not survival needs.',
-  'Los servicios de streaming son deseos de entretenimiento, no necesidades de supervivencia.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '流媒体服务是娱乐性的想要,而不是生存必需品。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6496,11 +6582,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'Why is it important to identify needs vs wants?',
-  '¿Por qué es importante identificar necesidades vs deseos?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为什么识别需求和欲望很重要?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6514,11 +6600,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   'To never enjoy anything',
-  'Para nunca disfrutar nada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '从不享受任何东西',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6532,11 +6618,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   'To prioritize spending wisely',
-  'Para priorizar los gastos de manera inteligente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为了明智地安排支出优先顺序',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6550,13 +6636,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   'Wants are illegal',
-  'Wants are illegal
-
-**Los deseos son ilegales**',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '欲望是非法的',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6570,11 +6654,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   'Needs are free',
-  'Las necesidades son gratuitas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '需求是免费的',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6588,11 +6672,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   'Identifying needs vs wants helps you spend money on essentials first.',
-  'Identificar necesidades vs deseos te ayuda a gastar dinero en lo esencial primero.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '区分需要和想要可以帮助你优先把钱花在必需品上。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6606,11 +6690,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'A $1,200 phone when a $300 phone works is an example of:',
-  'Un teléfono de $1,200 cuando un teléfono de $300 funciona es un ejemplo de:',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '当一个300美元的手机就能用时，却买一个1200美元的手机，这是一个什么例子：',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6624,11 +6708,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   'A need',
-  'Una necesidad',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '需求',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6642,11 +6726,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   'Smart spending',
-  'Gasto inteligente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '明智消费',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6660,11 +6744,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   'Upgrading a need to a want',
-  'Convertir una necesidad en un deseo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '将需求升级为欲望',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6678,11 +6762,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   'Required spending',
-  'Gasto necesario',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '必需支出',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6696,11 +6780,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   'The basic phone is the need; the expensive one adds want features.',
-  'El teléfono básico es la necesidad; el costoso agrega características de deseos.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '基础手机是需求;昂贵的手机增加了想要的功能。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6714,11 +6798,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'Comparing Prices',
-  'Comparar Precios',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '比较价格',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6732,7 +6816,7 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# Finding the Best Deal
 
 **Price comparison tips:**
@@ -6747,22 +6831,22 @@ Cereal A: $4 for 12 oz = $0.33/oz
 Cereal B: $5 for 18 oz = $0.28/oz
 
 Cereal B is the better deal!',
-  '# Encontrando la Mejor Oferta
+  '# 找到最优惠的价格
 
-**Consejos para comparar precios:**
+**比价技巧：**
 
-1. **Revisa múltiples tiendas** - Mismo artículo, precios diferentes
-2. **Usa sitios web de comparación de precios** - Google Shopping, CamelCamelCamel
-3. **Considera el precio unitario** - Precio por onza, por artículo
-4. **Observa los ciclos de ofertas** - Los productos electrónicos bajan de precio antes de los nuevos modelos
+1. **查看多家商店** - 同样的商品，不同的价格
+2. **使用比价网站** - Google Shopping、CamelCamelCamel
+3. **考虑单位价格** - 每盎司价格、每件价格
+4. **留意促销周期** - 电子产品在新型号推出前会降价
 
-**Ejemplo:**
-Cereal A: $4 por 12 oz = $0.33/oz
-Cereal B: $5 por 18 oz = $0.28/oz
+**示例：**
+麦片A：12盎司售价$4 = $0.33/盎司
+麦片B：18盎司售价$5 = $0.28/盎司
 
-¡El Cereal B es la mejor oferta!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+麦片B更划算！',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6776,11 +6860,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'Coupons and Discounts',
-  'Cupones y Descuentos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '优惠券和折扣',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6794,7 +6878,7 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# Free Money Savers
 
 **Where to find deals:**
@@ -6812,25 +6896,25 @@ INSERT INTO "ContentTranslation" (
 ❌ Don''t let coupons expire unused
 
 Saving $1 on something you don''t need = wasting money!',
-  '# Formas Gratuitas de Ahorrar Dinero
+  '# 免费省钱方法
 
-**Dónde encontrar ofertas:**
-- Aplicaciones de tiendas y programas de lealtad
-- Boletines informativos por correo electrónico
-- Sitios web de cupones (RetailMeNot, Honey)
-- Descuentos para estudiantes/adultos mayores
-- Tarjetas de crédito con reembolso
-- Ofertas de lleva uno y lleva otro gratis (BOGO)
+**在哪里找到优惠:**
+- 商店应用程序和会员计划
+- 电子邮件通讯
+- 优惠券网站(RetailMeNot, Honey)
+- 学生/老年人折扣
+- 返现信用卡
+- 买一送一优惠
 
-**Reglas para usar cupones:**
-✅ Úsalos solo para cosas que realmente necesitas
-❌ No compres solo porque está en oferta
-✅ Combina cupones cuando sea posible
-❌ No dejes que los cupones se venzan sin usarlos
+**优惠券规则:**
+✅ 只用于你真正需要的东西
+❌ 不要仅仅因为打折就购买
+✅ 尽可能叠加使用优惠券
+❌ 不要让优惠券过期未使用
 
-¡Ahorrar $1 en algo que no necesitas = desperdiciar dinero!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+在你不需要的东西上省1美元 = 浪费金钱!',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6844,11 +6928,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'Avoiding Impulse Buys',
-  'Evitar las Compras Impulsivas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '避免冲动购物',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6862,7 +6946,7 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# Stop and Think First
 
 **Impulse buying** = Buying without planning, usually emotionally
@@ -6881,26 +6965,26 @@ INSERT INTO "ContentTranslation" (
 - "Limited time offer!" (false urgency)
 - Sale signs everywhere (not always deals)
 - Pleasant smells/music (makes you linger)',
-  '# Detente y piensa primero
+  '# 停下来,先思考
 
-**Compra impulsiva** = Comprar sin planificar, usualmente de forma emocional
+**冲动购物** = 没有计划的购买,通常是情绪化的
 
-**Cómo resistir:**
+**如何抵制:**
 
-1. **La regla de las 24 horas** - Espera un día antes de comprar deseos
-2. **Haz una lista** - Solo compra lo que está en la lista
-3. **Evita comprar cuando estés emocional** - Triste, feliz o aburrido
-4. **Cancela la suscripción a correos de marketing**
-5. **Deja las tarjetas de crédito en casa** - Usa efectivo para compras discrecionales
-6. **Calcula el costo en horas trabajadas** - "¿$100 en zapatos = 5 horas de trabajo. ¿Vale la pena?"
+1. **24小时原则** - 在购买想要的东西之前等待一天
+2. **列清单** - 只买清单上的东西
+3. **避免在情绪化时购物** - 悲伤、开心或无聊时
+4. **取消订阅营销邮件**
+5. **把信用卡留在家里** - 用现金进行非必需品购物
+6. **用工作时间计算成本** - "100美元的鞋子 = 5小时工作。值得吗?"
 
-**Trucos de las tiendas a los que debes prestar atención:**
-- Dulces en la caja (tentación)
-- "¡Oferta por tiempo limitado!" (urgencia falsa)
-- Carteles de oferta por todas partes (no siempre son gangas)
-- Aromas agradables/música (te hace quedarte más tiempo)',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**需要警惕的商店技巧:**
+- 收银台的糖果(诱惑)
+- "限时优惠!"(虚假紧迫感)
+- 到处都是促销标志(不一定是真正的优惠)
+- 宜人的气味/音乐(让你流连忘返)',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6914,11 +6998,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'What should you compare when shopping for the best deal?',
-  '¿Qué debes comparar al buscar la mejor oferta?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '购物时寻找最优惠商品时，你应该比较什么？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6932,11 +7016,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'Only the total price',
-  'Solo el precio total',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '只看总价',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6950,11 +7034,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'Brand name only',
-  'Solamente la marca',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '仅品牌名称',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6968,11 +7052,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'Unit price and quality',
-  'Precio unitario y calidad',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '单价和质量',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6986,11 +7070,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'The prettiest package',
-  'El paquete más bonito',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '最漂亮的包装',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7004,11 +7088,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'Comparing unit price (price per unit) and quality gives you the best value.',
-  'Comparar el precio unitario (precio por unidad) y la calidad te da el mejor valor.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '比较单价(每单位价格)和质量能让你获得最佳性价比。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7022,11 +7106,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'What is the 24-hour rule?',
-  '¿Qué es la regla de las 24 horas?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '购物前等待24小时的规则是什么?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7040,11 +7124,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   'Stores are open 24 hours',
-  'Las tiendas están abiertas 24 horas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '商店24小时营业',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7058,11 +7142,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   'Wait a day before buying wants',
-  'Espera un día antes de comprar deseos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在购买想要的东西之前等待一天',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7076,11 +7160,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   'Shop for 24 hours straight',
-  'Comprar durante 24 horas seguidas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '连续购物24小时',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7094,11 +7178,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   'Sales last 24 hours',
-  'Las ofertas duran 24 horas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '促销活动持续24小时',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7112,11 +7196,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'The 24-hour rule means waiting a day to avoid impulse purchases.',
-  'La regla de las 24 horas significa esperar un día para evitar compras impulsivas.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '24小时规则是指等待一天以避免冲动购物。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7130,11 +7214,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'When should you use coupons?',
-  '¿Cuándo deberías usar cupones?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么时候应该使用优惠券?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7148,11 +7232,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   'For everything on sale',
-  'Para todo lo que esté en oferta',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '对所有打折商品使用',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7166,11 +7250,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   'Only for items you actually need',
-  'Solo para artículos que realmente necesitas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '只用于你实际需要的物品',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7184,11 +7268,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   'Never',
-  'Nunca',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '从不',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7202,11 +7286,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   'Only on weekends',
-  'Solo los fines de semana',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '仅在周末',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7220,11 +7304,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   'Coupons save money only if used for things you actually need.',
-  'Los cupones ahorran dinero solo si se usan para cosas que realmente necesitas.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '优惠券只有在用于购买你真正需要的东西时才能省钱。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7238,11 +7322,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'What is an impulse buy?',
-  '¿Qué es una compra impulsiva?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么是冲动购买?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7256,11 +7340,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   'A planned purchase',
-  'Una compra planificada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '有计划的购买',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7274,11 +7358,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   'Buying without planning, often emotionally',
-  'Comprar sin planificar, frecuentemente de manera emocional',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '没有计划的购买,通常是冲动的',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7292,11 +7376,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   'Buying groceries',
-  'Comprar alimentos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '购买日用品',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7310,11 +7394,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   'Using a coupon',
-  'Usar un cupón',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '使用优惠券',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7328,11 +7412,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   'Impulse buying is unplanned purchasing driven by emotion rather than need.',
-  'La compra impulsiva es una compra no planificada impulsada por la emoción en lugar de la necesidad.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '冲动购买是由情绪而非需求驱动的无计划购买行为。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7346,11 +7430,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'Price vs Quality',
-  'Precio vs Calidad',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 价格与质量',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7364,7 +7448,7 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# Good, Fast, Cheap - Pick Two
 
 **Value = Quality ÷ Price**
@@ -7384,27 +7468,27 @@ $20 shoes (last 6 months) = $40/year
 $80 shoes (last 3 years) = $27/year
 
 Expensive shoes are actually cheaper!',
-  '# Bueno, Rápido, Barato - Elige Dos
+  '# 好、快、便宜 - 只能选两个
 
-**Valor = Calidad ÷ Precio**
+**价值 = 质量 ÷ 价格**
 
-**A veces lo caro vale la pena:**
-- Zapatos que duran 5 años vs 6 meses
-- Herramientas duraderas vs las que se rompen
-- Comida saludable vs comida chatarra barata
+**有时候贵是值得的:**
+- 穿5年的鞋 vs 穿6个月的鞋
+- 耐用的工具 vs 容易坏的工具
+- 健康食品 vs 便宜的垃圾食品
 
-**A veces lo barato está bien:**
-- Artículos básicos (papel, lápices)
-- Artículos que usas raramente
-- Artículos de moda que pasan de moda
+**有时候便宜就够了:**
+- 基本用品(纸张、铅笔)
+- 很少使用的物品
+- 会过时的流行物品
 
-**Ejemplo:**
-Zapatos de $20 (duran 6 meses) = $40/año
-Zapatos de $80 (duran 3 años) = $27/año
+**例子:**
+20美元的鞋(穿6个月)= 40美元/年
+80美元的鞋(穿3年)= 27美元/年
 
-¡Los zapatos caros son en realidad más baratos!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+贵的鞋实际上更便宜!',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7418,11 +7502,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'Long-term Cost',
-  'Costo a largo plazo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '长期成本',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7436,7 +7520,7 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# Total Cost of Ownership
 
 Look beyond the price tag!
@@ -7461,32 +7545,32 @@ Look beyond the price tag!
 - 5 years = $22,000 + $10,000 = $32,000
 
 Cheaper car actually costs $5,500 MORE!',
-  '# Costo Total de Propiedad
+  '# 总拥有成本
 
-¡Mira más allá del precio de etiqueta!
+不要只看价格标签！
 
-**Considera:**
-- Costos de mantenimiento
-- Costos de reparación
-- Costos de energía/combustible
-- Vida útil
-- Valor de reventa
+**考虑因素：**
+- 维护成本
+- 维修成本
+- 能源/燃料成本
+- 使用寿命
+- 转售价值
 
-**Ejemplo: Dos Autos**
+**例子：两辆汽车**
 
-**Auto A: $15,000**
-- Usa mucha gasolina: $3,000/año
-- Reparaciones frecuentes: $1,500/año
-- 5 años = $15,000 + $22,500 = $37,500
+**汽车A：$15,000**
+- 耗油量大：$3,000/年
+- 频繁维修：$1,500/年
+- 5年 = $15,000 + $22,500 = $37,500
 
-**Auto B: $22,000**
-- Uso eficiente de gasolina: $1,500/año
-- Confiable, pocas reparaciones: $500/año
-- 5 años = $22,000 + $10,000 = $32,000
+**汽车B：$22,000**
+- 燃油效率高：$1,500/年
+- 可靠，很少维修：$500/年
+- 5年 = $22,000 + $10,000 = $32,000
 
-¡El auto más barato en realidad cuesta $5,500 MÁS!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+更便宜的汽车实际上多花了$5,500！',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7500,11 +7584,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'Brand vs Generic',
-  'Marca vs Genérico',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '品牌产品与普通产品',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7518,7 +7602,7 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# When Brand Names Matter
 
 **Generic/store brand often fine for:**
@@ -7541,30 +7625,30 @@ INSERT INTO "ContentTranslation" (
 4. If generic works, stick with it!
 
 Often, generic is made in the same factory as brand names!',
-  '# Cuándo Importan las Marcas
+  '# 品牌名称何时重要
 
-**Los productos genéricos/de marca propia suelen ser buenos para:**
-- Alimentos básicos (harina, azúcar, arroz)
-- Medicamentos de venta libre (mismos ingredientes)
-- Productos de limpieza
-- Útiles escolares
-- Ropa básica
+**普通品牌/商店品牌通常适用于：**
+- 基础食品（面粉、糖、大米）
+- 非处方药（成分相同）
+- 清洁用品
+- 学习用品
+- 基础服装
 
-**Las marcas pueden valer la pena para:**
-- Electrónicos (mejor soporte)
-- Herramientas especializadas
-- Artículos con aspectos de seguridad
-- Cosas que usas a diario
+**品牌可能值得购买：**
+- 电子产品（更好的售后支持）
+- 专业工具
+- 有安全顾虑的物品
+- 日常使用的物品
 
-**Cómo decidir:**
-1. Revisa ingredientes/materiales
-2. Lee reseñas
-3. Prueba lo genérico primero
-4. ¡Si lo genérico funciona, quédate con eso!
+**如何决定：**
+1. 检查成分/材料
+2. 阅读评价
+3. 先尝试普通品牌
+4. 如果普通品牌好用，就继续用！
 
-¡A menudo, los productos genéricos se fabrican en la misma fábrica que las marcas!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+通常，普通品牌和名牌是在同一家工厂生产的！',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7578,11 +7662,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'What does "value" mean in shopping?',
-  '¿Qué significa "valor" al hacer compras?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '购物中的"价值"是什么意思?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7596,11 +7680,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'The cheapest price',
-  'El precio más barato',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '最便宜的价格',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7614,11 +7698,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'Quality divided by price',
-  'Calidad dividida por precio',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '质量除以价格',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7632,11 +7716,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'The most expensive item',
-  'El artículo más caro',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '最贵的商品',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7650,11 +7734,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'Brand name',
-  'Marca reconocida',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '品牌名称',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7668,11 +7752,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'Value is the balance between quality and price - best quality for the price paid.',
-  'El valor es el equilibrio entre calidad y precio - la mejor calidad por el precio pagado.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '价值是质量与价格之间的平衡——以所支付的价格获得最好的质量。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7686,11 +7770,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'Why might expensive shoes be a better value?',
-  '¿Por qué unos zapatos costosos podrían ser una mejor inversión?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为什么昂贵的鞋子可能更有价值？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7704,11 +7788,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   'They look better',
-  'Se ven mejor',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它们看起来更好看',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7722,11 +7806,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   'They last longer, costing less per year',
-  'Duran más tiempo, costando menos por año',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它们更耐用,平均每年的花费更少',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7740,11 +7824,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   'Expensive is always better',
-  'Caro siempre es mejor',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '贵的总是更好',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7758,11 +7842,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   'They''re trendy',
-  'Son de moda',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它们很时尚',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7776,11 +7860,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'If expensive shoes last much longer, the cost per year of use is often lower.',
-  'Si los zapatos costosos duran mucho más tiempo, el costo por año de uso suele ser menor.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '如果昂贵的鞋子使用寿命更长,每年的使用成本通常会更低。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7794,11 +7878,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'What is "total cost of ownership"?',
-  '¿Qué es el "costo total de propiedad"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '"总拥有成本"是什么？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7812,11 +7896,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   'Just the purchase price',
-  'Solo el precio de compra',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '仅仅是购买价格',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7830,11 +7914,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   'All costs including maintenance over time',
-  'Todos los costos incluyendo el mantenimiento a lo largo del tiempo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '包括维护在内的所有长期成本',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7848,11 +7932,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   'The price including tax',
-  'El precio incluyendo impuestos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '含税价格',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7866,11 +7950,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   'What you can sell it for later',
-  'Lo que puedes venderlo después',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '之后你能以多少价格卖掉它',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7884,11 +7968,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   'Total cost includes purchase price plus all future costs like maintenance and fuel.',
-  'El costo total incluye el precio de compra más todos los costos futuros como mantenimiento y combustible.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '总成本包括购买价格加上所有未来成本，如维护和燃料费用。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7902,11 +7986,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'When is generic/store brand usually fine?',
-  '¿Cuándo suele estar bien la marca genérica/de tienda?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么时候自有品牌/商店品牌通常是不错的选择?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7920,11 +8004,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   'Never',
-  'Nunca',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '从不',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7938,11 +8022,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   'Always',
-  'Siempre',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '总是',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7956,11 +8040,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   'For basic items like flour or medicine',
-  'Para artículos básicos como harina o medicamentos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '对于面粉或药品等基本物品',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7974,11 +8058,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   'Only for food',
-  'Solo para alimentos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '仅限食品',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7992,11 +8076,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   'Generic brands often have the same quality as name brands for basic items.',
-  'Las marcas genéricas a menudo tienen la misma calidad que las marcas reconocidas para artículos básicos.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '对于基本商品，无品牌产品的质量往往与名牌产品相同。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8010,11 +8094,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'Marketing Tactics',
-  'Tácticas de Marketing',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '营销策略',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8028,7 +8112,7 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# How Stores Make You Spend More
 
 **Common tricks:**
@@ -8044,23 +8128,23 @@ INSERT INTO "ContentTranslation" (
 - Research prices beforehand
 - Don''t shop when emotional
 - Question "deals" carefully',
-  '# Cómo las tiendas te hacen gastar más
+  '# 商店如何让你花更多钱
 
-**Trucos comunes:**
+**常见伎俩:**
 
-1. **Precio de anclaje:** "¡$200 $99!" - Hace que $99 parezca barato
-2. **Precio señuelo:** Pequeño ($3), Mediano ($5), Grande ($5.50) - Todos eligen el grande
-3. **Escasez:** "¡Solo quedan 3!" - Crea urgencia falsa
-4. **Mínimo para envío gratis:** "Envío gratis en compras mayores a $50" - Gastas $50 para ahorrar $5
-5. **Paquetes:** "Compra 3 y ahorra 10%" - Solo necesitabas 1
+1. **锚定价格:** "~~$200~~ $99!" - 让$99看起来很便宜
+2. **诱饵定价:** 小杯($3)、中杯($5)、大杯($5.50) - 每个人都选大杯
+3. **稀缺性:** "仅剩3件!" - 制造虚假紧迫感
+4. **免费配送门槛:** "满$50免运费" - 你为了省$5而花$50
+5. **捆绑销售:** "买3件,省10%" - 你只需要1件
 
-**Cómo resistir:**
-- Conoce tu presupuesto antes de comprar
-- Investiga precios con anticipación
-- No compres cuando estés emocional
-- Cuestiona las "ofertas" cuidadosamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**如何抵制:**
+- 购物前了解自己的预算
+- 事先调查价格
+- 情绪化时不要购物
+- 仔细质疑"优惠"',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8074,11 +8158,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'Subscription Traps',
-  'Trampas de Suscripción',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '订阅陷阱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8092,7 +8176,7 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# The Slow Money Leak
 
 **Subscription risks:**
@@ -8117,32 +8201,32 @@ INSERT INTO "ContentTranslation" (
 - Use virtual cards that expire
 - Ask yourself: "Used it this month? Keep it. Not used? Cancel it."
 - Cancel immediately after free trials',
-  '# La Fuga Lenta de Dinero
+  '# 缓慢的金钱流失
 
-**Riesgos de las suscripciones:**
+**订阅风险：**
 
-**Pruebas gratuitas que no son gratuitas:**
-- Requieren tarjeta de crédito
-- Se renuevan automáticamente después de la prueba
-- Difíciles de cancelar
-- Te olvidas de ellas
+**并非真正免费的试用：**
+- 需要信用卡
+- 试用期后自动续订
+- 难以取消
+- 你会忘记它们
 
-**Las suscripciones mensuales se acumulan:**
-- Streaming: $15
-- Música: $10
-- Videojuegos: $15
-- Software: $20
-- Gimnasio (sin usar): $40
-- **Total: $100/mes = $1,200/año!**
+**每月订阅累积起来：**
+- 流媒体：$15
+- 音乐：$10
+- 游戏：$15
+- 软件：$20
+- 健身房（未使用）：$40
+- **总计：$100/月 = $1,200/年！**
 
-**Estrategias de protección:**
-- Configura recordatorios en el calendario para cuando terminen las pruebas
-- Revisa las suscripciones mensualmente
-- Usa tarjetas virtuales que expiren
-- Pregúntate: "¿Lo usé este mes? Consérvalo. ¿No lo usé? Cancélalo."
-- Cancela inmediatamente después de las pruebas gratuitas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**保护策略：**
+- 为试用期结束设置日历提醒
+- 每月审查订阅
+- 使用会过期的虚拟卡
+- 问问自己："这个月用过吗？用过就保留。没用过？取消它。"
+- 免费试用后立即取消',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8156,11 +8240,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'Hidden Fees',
-  'Tarifas Ocultas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '隐藏费用',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8174,7 +8258,7 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# Reading the Fine Print
 
 **Watch out for:**
@@ -8202,35 +8286,35 @@ INSERT INTO "ContentTranslation" (
 2. Ask about total cost upfront
 3. Look for "fee-free" alternatives
 4. Calculate true cost before committing',
-  '# Leyendo la Letra Pequeña
+  '# 阅读细则条款
 
-**Ten cuidado con:**
+**注意以下事项：**
 
-**Tarifas de resort/hotel:**
-- Habitación: $100/noche
-- "Tarifa de resort": $30/noche
-- Estacionamiento: $25/noche
-- **Costo real: $155/noche!**
+**度假村/酒店费用：**
+- 客房：$100/晚
+- "度假村费用"：$30/晚
+- 停车费：$25/晚
+- **实际费用：$155/晚！**
 
-**Tarifas de boletos:**
-- Boleto de concierto: $50
-- "Cargo por servicio": $15
-- "Tarifa de instalaciones": $8
-- **Costo real: $73**
+**门票费用：**
+- 音乐会门票：$50
+- "服务费"：$15
+- "场地费"：$8
+- **实际费用：$73**
 
-**Tarifas bancarias:**
-- Tarifas por sobregiro
-- Tarifas de cajero automático
-- Tarifas de mantenimiento mensual
-- Tarifas por transacciones internacionales
+**银行费用：**
+- 透支费用
+- ATM手续费
+- 月度账户维护费
+- 外币交易费
 
-**Cómo evitarlas:**
-1. Lee TODOS los términos antes de comprar
-2. Pregunta por el costo total por adelantado
-3. Busca alternativas "sin tarifas"
-4. Calcula el costo real antes de comprometerte',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**如何避免：**
+1. 购买前阅读所有条款
+2. 提前询问总费用
+3. 寻找"免费用"的替代选择
+4. 承诺之前计算真实费用',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8244,11 +8328,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'What is "anchor pricing"?',
-  '¿Qué es el "precio ancla"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '"锚定价格"是什么?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8262,11 +8346,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'Selling boat anchors',
-  'Vender anclas de barco',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '销售船锚',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8280,11 +8364,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'Showing a high price crossed out to make sale price look better',
-  'Mostrar un precio alto tachado para que el precio de oferta se vea mejor',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '显示一个被划掉的高价格,使促销价格看起来更优惠',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8298,11 +8382,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'Giving discounts to sailors',
-  'Dar descuentos a marineros',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '给水手打折',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8316,11 +8400,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'Setting the lowest price',
-  'Establecer el precio más bajo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '设定最低价格',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8334,11 +8418,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'Anchor pricing shows a high "original" price to make the sale price seem like a great deal.',
-  'El precio ancla muestra un precio "original" alto para hacer que el precio de oferta parezca una gran oportunidad.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '锚定定价通过展示一个较高的"原价"，让促销价格看起来非常划算。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8352,11 +8436,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'Why are "free trials" sometimes a trap?',
-  '¿Por qué las "pruebas gratuitas" a veces son una trampa?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为什么"免费试用"有时是个陷阱?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8370,11 +8454,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   'They''re actually free',
-  'Son realmente gratis',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它们实际上是免费的',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8388,11 +8472,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   'They auto-renew and charge your card',
-  'Se renuevan automáticamente y cobran a tu tarjeta',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它们会自动续费并扣除你的卡费',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8406,11 +8490,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   'They give you free stuff',
-  'Te dan cosas gratis',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它们给你免费的东西',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8424,11 +8508,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   'They''re illegal',
-  'Son ilegales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '它们是非法的',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8442,11 +8526,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'Free trials often auto-renew into paid subscriptions that charge your card.',
-  'Las pruebas gratuitas a menudo se renuevan automáticamente en suscripciones pagadas que cargan tu tarjeta.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '免费试用通常会自动续订为付费订阅，并从您的卡中扣款。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8460,11 +8544,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'If you have 5 subscriptions at $15 each, how much per year?',
-  'Si tienes 5 suscripciones a $15 cada una, ¿cuánto pagas al año?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '如果你有5个订阅服务，每个15美元，一年总共多少钱？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8478,11 +8562,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   '$75',
   '$75',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8496,11 +8580,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   '$180',
   '$180',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8514,11 +8598,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   '$900',
   '$900',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8532,11 +8616,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   '$750',
   '$750',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8550,11 +8634,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   '5 × $15 = $75/month × 12 months = $900/year.',
-  '5 × $15 = $75/mes × 12 meses = $900/año.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '5 × $15 = $75/月 × 12个月 = $900/年。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8568,11 +8652,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'What are "hidden fees"?',
-  '¿Qué son los "cargos ocultos"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么是"隐藏费用"?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8586,11 +8670,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   'Illegal charges',
-  'Cargos ilegales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '非法收费',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8604,11 +8688,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   'Additional costs not shown in advertised price',
-  'Costos adicionales no mostrados en el precio anunciado',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '广告价格中未显示的额外费用',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8622,11 +8706,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   'Fees for hiding things',
-  'Tarifas por esconder cosas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '藏东西的费用',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8640,11 +8724,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   'Discounts',
-  'Descuentos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '折扣',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8658,11 +8742,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   'Hidden fees are extra costs added on top of the advertised price.',
-  'Las tarifas ocultas son costos adicionales que se agregan al precio anunciado.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '隐藏费用是在广告价格之外额外增加的成本。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8676,11 +8760,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'zh',
   'Best way to avoid subscription traps:',
-  'Mejor manera de evitar trampas de suscripción:',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '避免订阅陷阱的最佳方法:',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8694,11 +8778,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'zh',
   'Never subscribe to anything',
-  'Nunca suscribirse a nada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '永远不要订阅任何东西',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8712,11 +8796,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'zh',
   'Review and cancel unused subscriptions regularly',
-  'Revisar y cancelar suscripciones no utilizadas regularmente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '定期检查并取消未使用的订阅服务',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8730,11 +8814,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'zh',
   'Subscribe to everything',
-  'Suscribirse a todo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '订阅所有服务',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8748,11 +8832,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'zh',
   'Ignore your bank statements',
-  'Ignorar tus estados de cuenta bancarios',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '忽略您的银行对账单',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8766,11 +8850,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'zh',
   'Regularly reviewing subscriptions helps you cancel ones you don''t use.',
-  'Revisar regularmente las suscripciones te ayuda a cancelar aquellas que no usas.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '定期检查订阅服务可以帮助你取消不使用的订阅。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8784,11 +8868,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'Emergency Fund',
-  'Fondo de Emergencia',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '应急基金',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8802,7 +8886,7 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# Preparing for the Unexpected
 
 **Emergency fund** = Money saved for unexpected problems
@@ -8824,29 +8908,29 @@ INSERT INTO "ContentTranslation" (
 - Peace of mind
 
 **Goal:** 3-6 months of living expenses',
-  '# Preparándose para lo Inesperado
+  '# 为意外情况做准备
 
-**Fondo de emergencia** = Dinero ahorrado para problemas inesperados
+**应急基金** = 为意外问题储蓄的钱
 
-**Por qué lo necesitas:**
-- El auto se descompone: reparación de $500
-- Emergencia médica: cuenta de $1,000
-- Pérdida de empleo: Necesitas gastos de 3-6 meses
-- Reparación del hogar: Calentador de agua descompuesto
+**为什么需要它：**
+- 汽车抛锚：500美元维修费
+- 医疗急诊：1,000美元账单
+- 失业：需要3-6个月的开支
+- 房屋维修：热水器坏了
 
-**Sin fondo de emergencia:**
-- Te endeudas (tarjetas de crédito, préstamos)
-- No puedes pagar las cuentas
-- Estrés y preocupación
+**没有应急基金：**
+- 陷入债务（信用卡、贷款）
+- 无法支付账单
+- 压力和担忧
 
-**Con fondo de emergencia:**
-- Manejas los problemas con calma
-- No necesitas endeudarte
-- Tranquilidad mental
+**有应急基金：**
+- 冷静处理问题
+- 不需要负债
+- 内心平静
 
-**Meta:** 3-6 meses de gastos de vida',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**目标：** 3-6个月的生活开支',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8860,11 +8944,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'Future Goals',
-  'Metas Futuras',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '未来目标',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8878,7 +8962,7 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# Saving for What You Want
 
 **Short-term goals (< 1 year):**
@@ -8900,29 +8984,29 @@ INSERT INTO "ContentTranslation" (
 - Starting a business
 
 Saving lets you afford your dreams without debt!',
-  '# Ahorrar para lo que Quieres
+  '# 为你想要的东西储蓄
 
-**Metas a corto plazo (< 1 año):**
-- Teléfono nuevo
-- Fiesta de cumpleaños
-- Viaje escolar
-- Regalos de festividades
+**短期目标（< 1年）：**
+- 新手机
+- 生日派对
+- 学校旅行
+- 节日礼物
 
-**Metas a mediano plazo (1-5 años):**
-- Automóvil
-- Universidad
-- Boda
-- Cuota inicial de una vivienda
+**中期目标（1-5年）：**
+- 汽车
+- 大学
+- 婚礼
+- 房屋首付
 
-**Metas a largo plazo (5+ años):**
-- Jubilación
-- Educación de los hijos
-- Vacaciones soñadas
-- Iniciar un negocio
+**长期目标（5年以上）：**
+- 退休
+- 子女教育
+- 梦想假期
+- 创业
 
-¡Ahorrar te permite alcanzar tus sueños sin deudas!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+储蓄让你无需负债就能实现梦想！',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8936,11 +9020,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'Financial Security',
-  'Seguridad Financiera',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '财务安全',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8954,7 +9038,7 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# Peace of Mind
 
 **Financial security means:**
@@ -8972,25 +9056,25 @@ INSERT INTO "ContentTranslation" (
 5. **Future you** - Will thank present you!
 
 "Don''t save what''s left after spending; spend what''s left after saving." - Warren Buffett',
-  '# Tranquilidad Mental
+  '# 内心的平静
 
-**La seguridad financiera significa:**
-- No vivir de quincena en quincena
-- Poder manejar emergencias
-- No estar estresado por el dinero
-- Libertad para tomar decisiones
-- Poder ayudar a otros
+**财务安全意味着：**
+- 不再月光族
+- 能够应对紧急情况
+- 不为金钱感到压力
+- 有自由做出选择
+- 能够帮助他人
 
-**Beneficios de ahorrar:**
-1. **Libertad** - Decir no a malos empleos
-2. **Oportunidades** - Aprovechar oportunidades para cumplir sueños
-3. **Menos estrés** - Dormir mejor por la noche
-4. **Independencia** - No depender de otros
-5. **Tu yo futuro** - ¡Te lo agradecerá!
+**储蓄的好处：**
+1. **自由** - 可以拒绝不好的工作
+2. **机会** - 能够为梦想冒险
+3. **减少压力** - 晚上睡得更安稳
+4. **独立** - 不依赖他人
+5. **未来的你** - 会感谢现在的你！
 
-"No ahorres lo que queda después de gastar; gasta lo que queda después de ahorrar." - Warren Buffett',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+"不要把花剩下的钱拿来储蓄；要把储蓄后剩下的钱拿来花。" —— 沃伦·巴菲特',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9004,11 +9088,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'What is an emergency fund?',
-  '¿Qué es un fondo de emergencia?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么是应急基金?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9022,11 +9106,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'Money for vacations',
-  'Dinero para vacaciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '度假的钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9040,11 +9124,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'Money saved for unexpected problems',
-  'Dinero ahorrado para problemas inesperados',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为意外情况储备的资金',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9058,11 +9142,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'Money for shopping',
-  'Dinero para compras',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '用于购物的钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9076,11 +9160,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'Money you never touch',
-  'Dinero que nunca tocas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '永远不动用的钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9094,11 +9178,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'An emergency fund is savings set aside for unexpected expenses or emergencies.',
-  'Un fondo de emergencia es dinero ahorrado que se reserva para gastos inesperados o emergencias.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '应急基金是为意外支出或紧急情况而预留的储蓄。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9112,11 +9196,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'How many months of expenses should an emergency fund cover?',
-  '¿Cuántos meses de gastos debe cubrir un fondo de emergencia?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '应急基金应该覆盖多少个月的开支？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9130,11 +9214,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   '1 week',
-  '1 semana',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '1周',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9148,11 +9232,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   '1 month',
-  '1 mes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '1个月',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9166,11 +9250,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   '3-6 months',
-  '3-6 meses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '3-6个月',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9184,11 +9268,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   '10 years',
-  '10 años',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '10年',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9202,11 +9286,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'Financial experts recommend 3-6 months of living expenses for emergencies.',
-  'Los expertos financieros recomiendan tener ahorros equivalentes a 3-6 meses de gastos de vida para emergencias.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '理财专家建议为紧急情况储备3-6个月的生活费用。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9220,11 +9304,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'Which is a short-term savings goal?',
-  '¿Cuál es una meta de ahorro a corto plazo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '以下哪项是短期储蓄目标?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9238,11 +9322,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   'Retirement',
-  'Jubilación',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '退休',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9256,11 +9340,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   'College in 10 years',
-  'Universidad en 10 años',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '10年后的大学学费',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9274,11 +9358,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   'New video game in 3 months',
-  'Videojuego nuevo en 3 meses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '3个月内购买新电子游戏',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9292,11 +9376,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   'Buying a house',
-  'Comprar una casa',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '买房',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9310,11 +9394,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   'Short-term goals are things you want to buy within a year.',
-  'Los objetivos a corto plazo son cosas que quieres comprar en un plazo de un año.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '短期目标是指你想在一年内购买的东西。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9328,11 +9412,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'What does Warren Buffett say about saving?',
-  '¿Qué dice Warren Buffett sobre el ahorro?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '沃伦·巴菲特对储蓄有什么看法?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9346,11 +9430,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   'Spend first, save what''s left',
-  'Gasta primero, ahorra lo que sobre',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '先花钱,剩下的再存',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9364,11 +9448,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   'Save first, spend what''s left',
-  'Ahorra primero, gasta lo que sobra',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '先储蓄,再花剩下的钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9382,11 +9466,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   'Never save anything',
-  'Nunca ahorres nada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么都不要存',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9400,11 +9484,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   'Save everything',
-  'Ahorra todo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '把所有钱都存起来',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9418,11 +9502,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   'Buffett advises to save first (pay yourself first), then spend what remains.',
-  'Buffett aconseja ahorrar primero (págate a ti mismo primero), luego gastar lo que queda.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '巴菲特建议先储蓄(先支付自己),然后再花剩下的钱。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9436,11 +9520,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'SMART Goals',
-  'Metas SMART',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'SMART目标',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9454,7 +9538,7 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# Setting Goals That Work
 
 **SMART = Specific, Measurable, Achievable, Relevant, Time-bound**
@@ -9475,28 +9559,28 @@ INSERT INTO "ContentTranslation" (
 3. Set a deadline
 4. Calculate monthly savings needed
 5. Make sure it''s realistic for your income',
-  '# Estableciendo Metas que Funcionan
+  '# 设定有效的目标
 
-**SMART = Específica, Medible, Alcanzable, Relevante, con Plazo definido**
+**SMART = 具体、可衡量、可实现、相关、有时限**
 
-❌ Meta mala: "Ahorrar más dinero"
-✅ Meta SMART: "Ahorrar $1,200 para una computadora portátil nueva para el 31 de diciembre"
+❌ 不好的目标："存更多钱"
+✅ SMART目标："在12月31日前存1,200美元买一台新笔记本电脑"
 
-**Desglosándola:**
-- **Específica:** Computadora portátil nueva
-- **Medible:** $1,200
-- **Alcanzable:** $100/mes durante 12 meses
-- **Relevante:** Necesaria para la escuela/trabajo
-- **con Plazo definido:** Para el 31 de diciembre
+**详细分解：**
+- **具体：**新笔记本电脑
+- **可衡量：**1,200美元
+- **可实现：**每月100美元，持续12个月
+- **相关：**学习/工作需要
+- **有时限：**12月31日前
 
-**Cómo crear metas SMART:**
-1. Decide exactamente qué quieres
-2. Investiga el costo
-3. Establece una fecha límite
-4. Calcula el ahorro mensual necesario
-5. Asegúrate de que sea realista para tus ingresos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**如何制定SMART目标：**
+1. 明确决定你想要什么
+2. 调查所需费用
+3. 设定截止日期
+4. 计算每月需要存的金额
+5. 确保目标符合你的收入实际情况',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9510,11 +9594,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'Short-term vs Long-term',
-  'Corto plazo vs Largo plazo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '短期目标与长期目标',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9528,7 +9612,7 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# Different Goals, Different Strategies
 
 **Short-term (< 1 year):**
@@ -9550,29 +9634,29 @@ INSERT INTO "ContentTranslation" (
 - Examples: Retirement, house
 
 Match your savings strategy to your timeline!',
-  '# Diferentes Metas, Diferentes Estrategias
+  '# 不同目标,不同策略
 
-**Corto plazo (< 1 año):**
-- Mantener en cuenta de ahorros
-- Fácil acceso
-- Menor riesgo
-- Ejemplos: Bicicleta nueva, boletos para concierto
+**短期目标(< 1年):**
+- 存入储蓄账户
+- 易于存取
+- 低风险
+- 例如:新自行车、音乐会门票
 
-**Mediano plazo (1-5 años):**
-- Ahorros de alto rendimiento o certificados de depósito
-- Algo de crecimiento, aún accesible
-- Riesgo bajo-medio
-- Ejemplos: Auto, universidad, boda
+**中期目标(1-5年):**
+- 高收益储蓄或定期存款
+- 有一定增长,仍可存取
+- 低至中等风险
+- 例如:汽车、大学学费、婚礼
 
-**Largo plazo (5+ años):**
-- Se puede invertir en acciones/bonos
-- Mayor potencial de crecimiento
-- Riesgo medio-alto (tiempo para recuperar pérdidas)
-- Ejemplos: Jubilación, casa
+**长期目标(5年以上):**
+- 可投资股票/债券
+- 更高增长潜力
+- 中高风险(有时间弥补损失)
+- 例如:退休、房子
 
-¡Adapta tu estrategia de ahorro a tu plazo de tiempo!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+根据你的时间规划来匹配储蓄策略!',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9586,11 +9670,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'Tracking Progress',
-  'Seguimiento del Progreso',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '追踪进度',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9604,7 +9688,7 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# Stay Motivated
 
 **Ways to track:**
@@ -9629,32 +9713,32 @@ INSERT INTO "ContentTranslation" (
 - 50% saved: Tell a friend
 - 75% saved: Plan how you''ll use it
 - 100%: Achievement unlocked! 🎉',
-  '# Mantén la Motivación
+  '# 保持动力
 
-**Formas de hacer seguimiento:**
+**追踪方法：**
 
-1. **Rastreadores visuales:**
-   - Termómetro de ahorros
-   - Tabla para colorear (colorea incrementos de $10)
-   - Foto del artículo objetivo como fondo de pantalla del teléfono
+1. **视觉追踪器：**
+   - 储蓄温度计
+   - 涂色图表（每10美元涂一格）
+   - 将目标物品照片设为手机壁纸
 
-2. **Aplicaciones y hojas de cálculo:**
-   - Mint, YNAB, Personal Capital
-   - Excel/Google Sheets simple
-   - Metas de ahorro en la aplicación del banco
+2. **应用程序和电子表格：**
+   - Mint、YNAB、Personal Capital
+   - 简单的Excel/Google表格
+   - 银行应用程序的储蓄目标功能
 
-3. **Métodos físicos:**
-   - Frasco/sobre separado para cada meta
-   - Transferir dinero a una cuenta separada
-   - Revisiones semanales con un compañero de rendición de cuentas
+3. **实物方法：**
+   - 为每个目标准备单独的罐子/信封
+   - 将钱转到单独的账户
+   - 每周与监督伙伴进行检查
 
-**Celebra los hitos:**
-- 25% ahorrado: Pequeño premio
-- 50% ahorrado: Cuéntale a un amigo
-- 75% ahorrado: Planifica cómo lo usarás
-- 100%: ¡Logro desbloqueado! 🎉',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**庆祝里程碑：**
+- 存够25%：小小的奖励
+- 存够50%：告诉朋友
+- 存够75%：计划如何使用
+- 存够100%：成就解锁！🎉',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9668,11 +9752,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'What does SMART goals stand for?',
-  '¿Qué significa la sigla SMART para las metas?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'SMART目标代表什么？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9686,11 +9770,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'Simple, Money, Achievable, Real, Timely',
-  'Simple, Dinero, Alcanzable, Real, Oportuno',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '简单、金钱、可实现、真实、及时',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9704,11 +9788,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'Specific, Measurable, Achievable, Relevant, Time-bound',
-  'Específico, Medible, Alcanzable, Relevante, con Tiempo definido',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '具体的、可衡量的、可实现的、相关的、有时限的',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9722,11 +9806,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'Save, Make, Acquire, Reach, Total',
-  'Ahorrar, Hacer, Adquirir, Alcanzar, Total',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '储蓄、赚取、获得、达成、总计',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9740,11 +9824,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'Spend, Manage, Allocate, Record, Track',
-  'Gastar, Manejar, Asignar, Registrar, Rastrear',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '花费、管理、分配、记录、追踪',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9758,11 +9842,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'SMART is an acronym for Specific, Measurable, Achievable, Relevant, Time-bound.',
-  'SMART es un acrónimo de Específico, Medible, Alcanzable, Relevante, con Tiempo límite.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'SMART是一个首字母缩略词,代表具体的(Specific)、可衡量的(Measurable)、可实现的(Achievable)、相关的(Relevant)、有时限的(Time-bound)。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9776,11 +9860,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'For a goal 8 years away, where should you keep the money?',
-  'Para una meta a 8 años de distancia, ¿dónde deberías guardar el dinero?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '对于8年后的目标,你应该把钱存放在哪里?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9794,11 +9878,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   'Under your mattress',
-  'Debajo de tu colchón',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '藏在床垫下',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9812,11 +9896,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   'In your wallet',
-  'En tu billetera',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在你的钱包里',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9830,11 +9914,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   'Can invest in stocks for growth',
-  'Puede invertir en acciones para crecimiento',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '可以投资股票以获得增长',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9848,11 +9932,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   'In a piggy bank',
-  'En una alcancía',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在储蓄罐里',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9866,11 +9950,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'Long-term goals (5+ years) can be invested for higher growth potential.',
-  'Las metas a largo plazo (5+ años) pueden invertirse para obtener un mayor potencial de crecimiento.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '长期目标（5年以上）可以进行投资以获得更高的增长潜力。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9884,11 +9968,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'If you want to save $600 in 6 months, how much per month?',
-  'Si quieres ahorrar $600 en 6 meses, ¿cuánto por mes?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '如果你想在6个月内存600美元,每月需要存多少?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9902,11 +9986,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   '$50',
   '$50',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9920,11 +10004,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   '$100',
   '$100',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9938,11 +10022,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   '$150',
   '$150',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9956,11 +10040,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   '$200',
   '$200',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9974,11 +10058,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   '$600 ÷ 6 months = $100 per month.',
-  '$600 ÷ 6 meses = $100 por mes.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '$600 ÷ 6个月 = 每月$100。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9992,11 +10076,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'Why is tracking progress important?',
-  '¿Por qué es importante dar seguimiento al progreso?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为什么跟踪进度很重要?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10010,11 +10094,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   'It''s not important',
-  'No es importante',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '这不重要',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10028,11 +10112,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   'Helps you stay motivated and on track',
-  'Te ayuda a mantenerte motivado y en el camino correcto',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '帮助你保持动力并坚持目标',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10046,11 +10130,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   'Required by law',
-  'Requerido por ley',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '法律要求',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10064,11 +10148,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   'Banks force you to',
-  'Los bancos te obligan a',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '银行强迫你',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10082,11 +10166,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   'Tracking progress keeps you motivated and helps ensure you reach your goal.',
-  'Hacer seguimiento del progreso te mantiene motivado y ayuda a asegurar que alcances tu meta.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '跟踪进度可以保持动力，并有助于确保你实现目标。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10100,11 +10184,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'Savings Accounts',
-  'Cuentas de Ahorro',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '储蓄账户',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10118,7 +10202,7 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# Basic Savings at Banks
 
 **Savings account features:**
@@ -10134,23 +10218,23 @@ INSERT INTO "ContentTranslation" (
 - Money you might need soon
 
 **Tip:** Some accounts have fees if balance is too low. Choose fee-free accounts!',
-  '# Ahorros Básicos en Bancos
+  '# 银行基本储蓄账户
 
-**Características de la cuenta de ahorros:**
-- Gana intereses (usualmente 0.01% a 0.50%)
-- Asegurada por la FDIC (hasta $250,000)
-- Fácil acceso al dinero
-- Saldo mínimo bajo o nulo
-- Puede tener límites de retiro
+**储蓄账户特点:**
+- 赚取利息(通常为0.01%至0.50%)
+- 联邦存款保险公司(FDIC)承保(最高25万美元)
+- 资金容易取用
+- 最低余额要求低或无要求
+- 可能有取款限制
 
-**Cuándo usar:**
-- Fondo de emergencia
-- Metas a corto plazo
-- Dinero que podrías necesitar pronto
+**何时使用:**
+- 应急基金
+- 短期目标
+- 您可能很快需要的资金
 
-**Consejo:** Algunas cuentas cobran comisiones si el saldo es muy bajo. ¡Elige cuentas sin comisiones!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**提示:** 某些账户在余额过低时会收取费用。选择免费账户!',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10164,11 +10248,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'Interest Rates',
-  'Tasas de Interés',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '利率',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10182,7 +10266,7 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# How Your Money Grows
 
 **Interest** = Money the bank pays you for keeping money there
@@ -10205,30 +10289,30 @@ INSERT INTO "ContentTranslation" (
 
 At 1%: $1,000 → $1,104 in 10 years
 At 5%: $1,000 → $1,629 in 10 years',
-  '# Cómo Crece Tu Dinero
+  '# 你的钱如何增长
 
-**Interés** = Dinero que el banco te paga por mantener tu dinero allí
+**利息** = 银行因为你把钱存在那里而付给你的钱
 
-**Ejemplo:**
-- Ahorras $1,000
-- Tasa de interés: 5% por año
-- Después de 1 año: $1,050
-- Después de 2 años: $1,102.50 (¡interés compuesto!)
+**例子:**
+- 存入$1,000
+- 利率:每年5%
+- 1年后:$1,050
+- 2年后:$1,102.50(复利!)
 
-**Interés compuesto** = Ganar interés sobre tu interés
+**复利** = 用你的利息赚取利息
 
-**Dónde encontrar interés más alto:**
-- Bancos en línea (1% a 5%+)
-- Cuentas de ahorro de alto rendimiento
-- Certificados de Depósito (CDs)
-- Cuentas del mercado monetario
+**哪里可以找到更高的利息:**
+- 网上银行(1%到5%+)
+- 高收益储蓄账户
+- 定期存单(CDs)
+- 货币市场账户
 
-**Compara las tasas** - ¡Pequeñas diferencias = gran diferencia con el tiempo!
+**比较利率** - 小差异 = 长期来看有大不同!
 
-Al 1%: $1,000 → $1,104 en 10 años
-Al 5%: $1,000 → $1,629 en 10 años',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+按1%计算:$1,000 → 10年后$1,104
+按5%计算:$1,000 → 10年后$1,629',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10242,11 +10326,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'Bank vs Credit Union',
-  'Banco vs Cooperativa de Crédito',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '银行 vs 信用合作社',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10260,7 +10344,7 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# Where to Open an Account
 
 **Banks:**
@@ -10284,31 +10368,31 @@ INSERT INTO "ContentTranslation" (
 - Need branches/ATMs? → Bank
 - Want better rates? → Credit Union
 - Can use online banking? → Online bank (best rates)',
-  '# Dónde Abrir una Cuenta
+  '# 在哪里开户
 
-**Bancos:**
-- Empresas con fines de lucro
-- Más ubicaciones y cajeros automáticos
-- Mejor tecnología/aplicaciones
-- Tasas de interés más bajas generalmente
-- Ejemplos: Chase, Bank of America
+**银行：**
+- 营利性公司
+- 更多网点和ATM机
+- 更好的技术/应用程序
+- 利率通常较低
+- 例如：Chase、美国银行
 
-**Cooperativas de Crédito:**
-- Sin fines de lucro, propiedad de los miembros
-- Tasas de interés más altas
-- Tarifas más bajas
-- Menos ubicaciones
-- Pueden requerir membresía
-- Ejemplos: Navy Federal, cooperativas de crédito locales
+**信用合作社：**
+- 非营利性、会员所有
+- 利率较高
+- 费用较低
+- 网点较少
+- 可能需要会员资格
+- 例如：Navy Federal、本地信用合作社
 
-**Ambos son seguros** - asegurados por FDIC (bancos) o NCUA (cooperativas de crédito)
+**两者都安全** - FDIC（银行）或NCUA（信用合作社）承保
 
-**Para Elegir:**
-- ¿Necesitas sucursales/cajeros automáticos? → Banco
-- ¿Quieres mejores tasas? → Cooperativa de Crédito
-- ¿Puedes usar banca en línea? → Banco en línea (mejores tasas)',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**如何选择：**
+- 需要网点/ATM机？→ 银行
+- 想要更好的利率？→ 信用合作社
+- 可以使用网上银行？→ 在线银行（最佳利率）',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10322,11 +10406,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'What is FDIC insurance?',
-  '¿Qué es el seguro de la FDIC?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'FDIC保险是什么?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10340,11 +10424,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'Car insurance',
-  'Seguro de automóvil',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '汽车保险',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10358,11 +10442,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'Protection for bank deposits up to $250,000',
-  'Protección para depósitos bancarios hasta $250,000',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为银行存款提供高达 $250,000 的保护',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10376,11 +10460,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'Health insurance',
-  'Seguro de salud',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '健康保险',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10394,11 +10478,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'A type of savings account',
-  'Una clase de cuenta de ahorros',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '一种储蓄账户类型',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10412,11 +10496,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'FDIC insurance protects your bank deposits up to $250,000 if the bank fails.',
-  'El seguro de la FDIC protege tus depósitos bancarios hasta $250,000 si el banco quiebra.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'FDIC保险在银行倒闭时为您的银行存款提供最高25万美元的保护。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10430,11 +10514,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'What is compound interest?',
-  '¿Qué es el interés compuesto?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么是复利?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10448,11 +10532,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   'Flat interest rate',
-  'Tasa de interés fija',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '固定利率',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10466,11 +10550,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   'Interest earned on both principal and previous interest',
-  'Interés ganado sobre el capital inicial y los intereses previos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '本金和之前利息共同产生的利息',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10484,11 +10568,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   'Interest you pay on loans',
-  'Interés que pagas por préstamos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '您为贷款支付的利息',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10502,11 +10586,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   'No interest',
-  'Sin interés',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '没有利息',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10520,11 +10604,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'Compound interest means you earn interest on your interest, accelerating growth.',
-  'El interés compuesto significa que ganas intereses sobre tus intereses, acelerando el crecimiento.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '复利意味着你的利息也能产生利息,从而加速增长。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10538,11 +10622,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'Where typically find the highest interest rates?',
-  '¿Dónde se suelen encontrar las tasas de interés más altas?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在哪里通常能找到最高的利率?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10556,11 +10640,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   'Traditional bank branches',
-  'Sucursales bancarias tradicionales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '传统银行网点',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10574,11 +10658,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   'Under your mattress',
-  'Debajo de tu colchón',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在你的床垫下',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10592,11 +10676,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   'Online banks and credit unions',
-  'Bancos en línea y cooperativas de crédito',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '网上银行和信用合作社',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10610,11 +10694,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   'Piggy banks',
-  'Alcancías',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '储蓄罐',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10628,11 +10712,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   'Online banks and credit unions often offer higher interest rates than traditional banks.',
-  'Los bancos en línea y las cooperativas de crédito a menudo ofrecen tasas de interés más altas que los bancos tradicionales.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '网上银行和信用合作社通常比传统银行提供更高的利率。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10646,11 +10730,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'If you save $100 at 4% interest for 1 year, how much will you have?',
-  'Si ahorras $100 al 4% de interés durante 1 año, ¿cuánto tendrás?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '如果你以4%的利率存$100一年,你将拥有多少钱?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10664,11 +10748,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   '$100',
   '$100',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10682,11 +10766,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   '$104',
   '$104',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10700,11 +10784,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   '$400',
   '$400',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10718,11 +10802,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   '$140',
   '$140',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10736,11 +10820,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   '$100 + ($100 × 0.04) = $104.',
-  '$100 + ($100 × 0,04) = $104.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '$100 + ($100 × 0.04) = $104.',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10754,11 +10838,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'Pay Yourself First',
-  'Págate a Ti Mismo Primero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 先支付给自己',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10772,7 +10856,7 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# The Golden Rule of Saving
 
 **"Pay yourself first"** = Save before spending on anything else
@@ -10797,32 +10881,32 @@ INSERT INTO "ContentTranslation" (
 - Savings actually happen
 
 "Don''t save what is left after spending; spend what is left after saving."',
-  '# La Regla de Oro del Ahorro
+  '# 储蓄的黄金法则
 
-**"Págate a ti mismo primero"** = Ahorra antes de gastar en cualquier otra cosa
+**"先支付自己"** = 在花费其他任何东西之前先储蓄
 
-**Cómo funciona:**
+**运作方式：**
 
-❌ Forma antigua:
-1. Recibir el salario
-2. Pagar las cuentas
-3. Comprar cosas
-4. Ahorrar lo que queda (usualmente $0)
+❌ 旧方式：
+1. 收到工资
+2. 支付账单
+3. 购买物品
+4. 储蓄剩余的钱（通常是0元）
 
-✅ Forma nueva:
-1. Recibir el salario
-2. **Ahorrar inmediatamente el 10-20%**
-3. Pagar las cuentas
-4. Comprar cosas con lo que queda
+✅ 新方式：
+1. 收到工资
+2. **立即储蓄10-20%**
+3. 支付账单
+4. 用剩余的钱购买物品
 
-**Por qué funciona:**
-- Trata el ahorro como una cuenta (no negociable)
-- Ajustas tus gastos a lo que queda
-- El ahorro realmente sucede
+**为什么有效：**
+- 将储蓄视为账单（不可协商）
+- 你会根据剩余的钱调整支出
+- 储蓄真正得以实现
 
-"No ahorres lo que queda después de gastar; gasta lo que queda después de ahorrar."',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+"不要储蓄花费后剩下的钱；花费储蓄后剩下的钱。"',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10836,11 +10920,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'Automatic Transfers',
-  'Transferencias Automáticas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自动转账',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10854,7 +10938,7 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# Set It and Forget It
 
 **Automatic savings** = Money moves to savings without you doing anything
@@ -10881,34 +10965,34 @@ INSERT INTO "ContentTranslation" (
 - No forgetting
 - Consistent progress
 - "Out of sight, out of mind"',
-  '# Configúralo y Olvídate
+  '# 设置后就不用管了
 
-**Ahorro automático** = El dinero se transfiere a ahorros sin que hagas nada
+**自动储蓄** = 无需您做任何操作，钱就会自动转入储蓄账户
 
-**Cómo configurarlo:**
+**如何设置：**
 
-1. **División de nómina:**
-   - Solicita a tu empleador que deposite un % en ahorros
-   - El resto va a cuenta corriente
-   - Ocurre con cada pago de nómina
+1. **工资分配：**
+   - 要求雇主将一定百分比存入储蓄账户
+   - 其余部分存入支票账户
+   - 每次发工资时自动进行
 
-2. **Transferencia automática bancaria:**
-   - Configura una transferencia recurrente
-   - Cada día de pago, $X se transfiere a ahorros
-   - Puedes ajustar o pausar en cualquier momento
+2. **银行自动转账：**
+   - 设置定期转账
+   - 每个发薪日，$X 金额转入储蓄账户
+   - 可随时调整或暂停
 
-3. **Ahorra según un calendario:**
-   - Semanal: Más fácil psicológicamente
-   - Quincenal: Coincide con el calendario de pago
-   - Mensual: Simple, montos mayores
+3. **按计划储蓄：**
+   - 每周：心理上更容易接受
+   - 每两周：与发薪时间表匹配
+   - 每月：简单，金额较大
 
-**Beneficios:**
-- No se necesita fuerza de voluntad
-- No se te olvida
-- Progreso consistente
-- "Ojos que no ven, corazón que no siente"',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**好处：**
+- 无需意志力
+- 不会忘记
+- 持续进步
+- "眼不见，心不烦"',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10922,11 +11006,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'Round-up Apps',
-  'Aplicaciones de Redondeo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '余额自动进位应用',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10940,7 +11024,7 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# Painless Micro-Savings
 
 **Round-up apps** = Round purchases to nearest dollar, save the difference
@@ -10968,35 +11052,35 @@ Saves difference: $0.50
 - Save raises (increase auto-transfer when salary increases)
 
 **Key:** Start small! $1/day = $365/year',
-  '# Micro-ahorros sin dolor
+  '# 无痛微额储蓄
 
-**Apps de redondeo** = Redondean compras al dólar más cercano, ahorran la diferencia
+**凑整储蓄应用** = 将消费金额凑整到最接近的整数美元，储蓄差额
 
-**Cómo funcionan:**
+**运作方式：**
 
-Compras café: $4.50
-App redondea a: $5.00
-Ahorra la diferencia: $0.50
+你购买咖啡：$4.50
+应用凑整到：$5.00
+储蓄差额：$0.50
 
-10 compras × $0.50 promedio = $5/día = $150/mes!
+10次消费 × 平均$0.50 = $5/天 = $150/月！
 
-**Apps populares:**
+**热门应用：**
 - Acorns
 - Digit
 - Qapital
-- Chime (tiene esta función)
-- Muchos bancos ofrecen esto
+- Chime（具有此功能）
+- 许多银行都提供此功能
 
-**Otros trucos de micro-ahorro:**
-- Ahorra todos los billetes de $5 que recibas
-- Ahorra todas las monedas al final del día
-- Ahorra el reembolso de impuestos inmediatamente
-- Ahorra bonos/regalos antes de gastar
-- Ahorra los aumentos (incrementa la transferencia automática cuando aumente el salario)
+**其他微额储蓄技巧：**
+- 储蓄所有收到的$5纸币
+- 每天结束时储蓄所有硬币
+- 立即储蓄退税
+- 在消费前储蓄奖金/礼金
+- 储蓄加薪（工资增加时提高自动转账金额）
 
-**Clave:** ¡Empieza pequeño! $1/día = $365/año',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**关键：** 从小额开始！$1/天 = $365/年',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11010,11 +11094,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'What does "pay yourself first" mean?',
-  '¿Qué significa "págate a ti primero"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '"优先支付自己"是什么意思?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11028,11 +11112,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   'Buy things for yourself',
-  'Comprar cosas para ti mismo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为自己购买东西',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11046,11 +11130,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   'Save money before paying bills',
-  'Ahorrar dinero antes de pagar las cuentas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在支付账单之前先储蓄',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11064,11 +11148,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   'Give yourself a paycheck',
-  'Darte un sueldo a ti mismo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '给自己发工资',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11082,11 +11166,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   'Save money before spending on other things',
-  'Ahorrar dinero antes de gastarlo en otras cosas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在花钱购买其他东西之前先存钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11100,11 +11184,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'Pay yourself first means saving a portion of income before spending on anything else.',
-  'Pagarte a ti mismo primero significa ahorrar una parte de tus ingresos antes de gastar en cualquier otra cosa.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '先付自己意味着在花费任何其他东西之前，先储蓄一部分收入。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11118,11 +11202,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'What is automatic savings?',
-  '¿Qué es el ahorro automático?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '什么是自动储蓄?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11136,11 +11220,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   'Money that appears magically',
-  'Dinero que aparece mágicamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '神奇出现的钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11154,11 +11238,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   'Automatic transfers from checking to savings',
-  'Transferencias automáticas de cuenta corriente a ahorros',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '从支票账户自动转账到储蓄账户',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11172,11 +11256,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   'Savings that grow automatically',
-  'Ahorros que crecen automáticamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自动增长的储蓄',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11190,11 +11274,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   'A type of bank account',
-  'Una cuenta bancaria',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '一种银行账户类型',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11208,11 +11292,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'Automatic savings is when money automatically transfers from checking to savings.',
-  'El ahorro automático es cuando el dinero se transfiere automáticamente de la cuenta corriente a la cuenta de ahorros.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自动储蓄是指资金从支票账户自动转账到储蓄账户。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11226,11 +11310,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'How do round-up apps work?',
-  '¿Cómo funcionan las aplicaciones de redondeo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '储蓄整数应用程序如何运作?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11244,11 +11328,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   'Round down your balance',
-  'Redondean hacia abajo tu saldo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '向下舍入您的余额',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11262,11 +11346,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   'Round purchases up and save the difference',
-  'Redondean las compras hacia arriba y ahorran la diferencia',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '将消费金额向上取整并储蓄差额',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11280,11 +11364,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   'Give you money',
-  'Te dan dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '给你钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11298,11 +11382,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   'Round your interest',
-  'Redondean tus intereses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '四舍五入你的利息',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11316,11 +11400,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   'Round-up apps round each purchase up to the nearest dollar and save the difference.',
-  'Las aplicaciones de redondeo redondean cada compra al dólar más cercano y ahorran la diferencia.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '余额宝类应用会将每笔消费向上取整到最接近的整数金额,并将差额存起来。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11334,11 +11418,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'If a round-up app saves $0.50 per transaction and you make 200 transactions/month, how much saved?',
-  'Si una aplicación de redondeo ahorra $0.50 por transacción y realizas 200 transacciones/mes, ¿cuánto ahorras?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '如果一个凑整储蓄应用每笔交易储蓄 $0.50，而你每月进行 200 笔交易，能储蓄多少钱？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11352,11 +11436,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   '$50',
   '$50',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11370,11 +11454,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   '$100',
   '$100',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11388,11 +11472,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   '$150',
   '$150',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11406,11 +11490,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   '$200',
   '$200',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11424,11 +11508,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   '200 transactions × $0.50 = $100 saved per month.',
-  '200 transacciones × $0.50 = $100 ahorrados por mes.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '200笔交易 × $0.50 = 每月节省$100。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11442,11 +11526,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[0].title',
   'en',
-  'es',
+  'zh',
   'How Much to Save',
-  '¿Cuánto ahorrar?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 应该存多少钱',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11460,7 +11544,7 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[0].content',
   'en',
-  'es',
+  'zh',
   '# Your Emergency Fund Target
 
 **Standard recommendation: 3-6 months of expenses**
@@ -11485,32 +11569,32 @@ INSERT INTO "ContentTranslation" (
 - Income sources (single income = more needed)
 - Health (medical issues = more needed)
 - Dependents (kids = more needed)',
-  '# Tu Meta de Fondo de Emergencia
+  '# 你的应急基金目标
 
-**Recomendación estándar: 3-6 meses de gastos**
+**标准建议：3-6个月的开支**
 
-**Calcula tu número:**
+**计算你的数字：**
 
-1. Lista de gastos mensuales:
-   - Alquiler/hipoteca: $1,000
-   - Servicios públicos: $150
-   - Comida: $400
-   - Transporte: $200
-   - Seguro: $150
-   - Otros gastos esenciales: $100
-   - **Total: $2,000/mes**
+1. 列出每月开支：
+   - 房租/房贷：$1,000
+   - 水电费：$150
+   - 食物：$400
+   - 交通：$200
+   - 保险：$150
+   - 其他必需品：$100
+   - **总计：$2,000/月**
 
-2. Multiplica por 3-6:
-   - Mínimo: $6,000
-   - Ideal: $12,000
+2. 乘以3-6：
+   - 最低：$6,000
+   - 理想：$12,000
 
-**Factores a considerar:**
-- Estabilidad laboral (inestable = 6+ meses)
-- Fuentes de ingreso (ingreso único = se necesita más)
-- Salud (problemas médicos = se necesita más)
-- Dependientes (hijos = se necesita más)',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**需要考虑的因素：**
+- 工作稳定性（不稳定 = 6个月以上）
+- 收入来源（单一收入 = 需要更多）
+- 健康状况（有医疗问题 = 需要更多）
+- 受抚养人（有孩子 = 需要更多）',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11524,11 +11608,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[1].title',
   'en',
-  'es',
+  'zh',
   'When to Use It',
-  'Cuándo usarlo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 何时使用应急基金',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11542,7 +11626,7 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[1].content',
   'en',
-  'es',
+  'zh',
   '# True Emergencies Only
 
 **Use emergency fund for:**
@@ -11568,33 +11652,33 @@ Ask: "If I don''t spend this money, will something bad happen?"
 - No = Not an emergency
 
 Having separate "fun money" helps avoid dipping into emergency fund!',
-  '# Solo Emergencias Verdaderas
+  '# 仅限真正的紧急情况
 
-**Usa el fondo de emergencia para:**
+**应急基金用于：**
 
-✅ **Emergencias verdaderas:**
-- Pérdida de empleo
-- Emergencia médica
-- Reparación esencial del hogar (calentador de agua, caldera)
-- Reparación esencial del auto (no puedes llegar al trabajo)
-- Emergencia familiar
+✅ **真正的紧急情况：**
+- 失业
+- 医疗紧急情况
+- 必要的房屋维修（热水器、暖气炉）
+- 必要的汽车维修（无法上班）
+- 家庭紧急情况
 
-❌ **NO son emergencias:**
-- Oferta en un televisor
-- Vacaciones
-- Ropa nueva
-- Salir a comer
-- Mejoras no esenciales
-- "Realmente lo quiero"
+❌ **不是紧急情况：**
+- 电视促销
+- 度假
+- 新衣服
+- 外出就餐
+- 非必要的升级
+- "我真的很想要"
 
-**Regla general:**
-Pregunta: "Si no gasto este dinero, ¿pasará algo malo?"
-- Sí = Emergencia
-- No = No es una emergencia
+**经验法则：**
+问自己："如果我不花这笔钱，会发生不好的事情吗？"
+- 是 = 紧急情况
+- 否 = 不是紧急情况
 
-¡Tener "dinero para diversión" por separado ayuda a evitar usar el fondo de emergencia!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+单独设立"娱乐资金"有助于避免动用应急基金！',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11608,11 +11692,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[2].title',
   'en',
-  'es',
+  'zh',
   'Rebuilding After Use',
-  'Reconstruyendo Después de Usar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 使用后重建',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11626,7 +11710,7 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[2].content',
   'en',
-  'es',
+  'zh',
   '# Getting Back on Track
 
 **If you use your emergency fund:**
@@ -11658,39 +11742,39 @@ INSERT INTO "ContentTranslation" (
 - Income: $3,000/month
 - Can save: $500/month
 - Rebuilt in: 4 months',
-  '# Retomando el Camino
+  '# 重回正轨
 
-**Si usas tu fondo de emergencia:**
+**如果你动用了应急基金:**
 
-**1. ¡No te sientas culpable!**
-- Para eso está
-- Planificaste correctamente con anticipación
-- Siéntete orgulloso de haberlo tenido
+**1. 不要感到内疚!**
+- 这就是它的用途
+- 你提前规划做得很对
+- 为自己有这笔钱感到自豪
 
-**2. Pausa otros ahorros temporalmente:**
-- Enfócate primero en reconstruir el fondo de emergencia
-- Otras metas pueden esperar
-- Fondo de emergencia = prioridad #1
+**2. 暂时停止其他储蓄:**
+- 优先重建应急基金
+- 其他目标可以等待
+- 应急基金 = 第一优先级
 
-**3. Reconstruye tan rápido como sea razonablemente posible:**
-- Comienza inmediatamente (incluso $20 ayuda)
-- Usa cualquier ingreso extra (devolución de impuestos, bonificación)
-- Reduce temporalmente gastos discrecionales
-- Considera ingresos adicionales
+**3. 尽可能快速地重建:**
+- 立即开始(即使20美元也有帮助)
+- 使用任何意外收入(退税、奖金)
+- 暂时削减可自由支配的开支
+- 考虑副业收入
 
-**4. Revisa qué sucedió:**
-- ¿Era prevenible?
-- ¿Necesitas más seguro?
-- ¿Necesitas un fondo de emergencia más grande?
-- Ajusta tu plan según corresponda
+**4. 回顾发生的情况:**
+- 是否可以预防?
+- 需要更多保险吗?
+- 需要更大的应急基金吗?
+- 相应调整计划
 
-**Ejemplo de plan de reconstrucción:**
-- Usado: $2,000
-- Ingreso: $3,000/mes
-- Puedes ahorrar: $500/mes
-- Reconstruido en: 4 meses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**重建计划示例:**
+- 已使用:2,000美元
+- 收入:每月3,000美元
+- 可储蓄:每月500美元
+- 重建时间:4个月',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11704,11 +11788,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'zh',
   'How many months of expenses should an emergency fund cover?',
-  '¿Cuántos meses de gastos debería cubrir un fondo de emergencia?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '应急基金应该覆盖多少个月的开支？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11722,11 +11806,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'zh',
   '1 week',
-  '1 semana',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '1周',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11740,11 +11824,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'zh',
   '1 month',
-  '1 mes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '1个月',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11758,11 +11842,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'zh',
   '3-6 months',
-  '3-6 meses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '3-6个月',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11776,11 +11860,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'zh',
   '10 years',
-  '10 años',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '10年',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11794,11 +11878,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'zh',
   'Financial experts recommend 3-6 months of living expenses.',
-  'Los expertos financieros recomiendan tener ahorros para cubrir entre 3 y 6 meses de gastos de vida.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '理财专家建议储备3-6个月的生活开支。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11812,11 +11896,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'zh',
   'Which is a TRUE emergency for using your emergency fund?',
-  '¿Cuál es una emergencia VERDADERA para usar tu fondo de emergencia?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '以下哪项是使用应急基金的**真正**紧急情况?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11830,11 +11914,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'zh',
   'TV is on sale',
-  'TV en oferta',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '电视机正在打折',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11848,11 +11932,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'zh',
   'Want to go on vacation',
-  'Querer ir de vacaciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '想去度假',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11866,11 +11950,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'zh',
   'Car breaks down and you can''t get to work',
-  'El auto se descompone y no puedes llegar al trabajo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '汽车抛锚导致无法上班',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11884,11 +11968,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'zh',
   'New video game release',
-  'Lanzamiento de un nuevo videojuego',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '新发布的电子游戏',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11902,11 +11986,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'zh',
   'A car needed for work is a true emergency. Other examples are wants.',
-  'Un automóvil necesario para el trabajo es una verdadera emergencia. Los otros ejemplos son deseos.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '工作所需的汽车是真正的紧急情况。其他例子是想要的东西。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11920,11 +12004,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'zh',
   'If your monthly expenses are $2,500, what''s a minimum emergency fund?',
-  'Si tus gastos mensuales son $2,500, ¿cuál es el fondo de emergencia mínimo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '如果你的月支出是 $2,500，最低应急基金是多少？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11938,11 +12022,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'zh',
   '$2,500',
   '$2,500',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11956,11 +12040,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'zh',
   '$5,000',
   '$5,000',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11974,11 +12058,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'zh',
   '$7,500',
   '$7,500',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11992,11 +12076,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'zh',
   '$25,000',
   '$25,000',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12010,11 +12094,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'zh',
   '3 months × $2,500 = $7,500 minimum.',
-  '3 meses × $2,500 = $7,500 mínimo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '3个月 × $2,500 = 最少$7,500。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12028,11 +12112,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'zh',
   'After using emergency fund, what should you do?',
-  'Después de usar el fondo de emergencia, ¿qué deberías hacer?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在使用应急基金后,你应该做什么?',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12046,11 +12130,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'zh',
   'Forget about it',
-  'Olvidarte de ello',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '忘掉这件事',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12064,11 +12148,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'zh',
   'Immediately rebuild it',
-  'Reconstruirlo inmediatamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '立即重建它',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12082,11 +12166,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'zh',
   'Wait a year to rebuild',
-  'Esperar un año para reconstruirlo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '等待一年再重建',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12100,11 +12184,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'zh',
   'Use it for other things',
-  'Usarlo para otras cosas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '用于其他事情',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12118,11 +12202,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'zh',
   'Rebuild your emergency fund as soon as possible after using it.',
-  'Reconstruye tu fondo de emergencia lo antes posible después de usarlo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '在使用应急基金后,应尽快重建您的应急基金。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12136,11 +12220,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'zh',
   'Why might someone need 6+ months of expenses saved?',
-  '¿Por qué alguien podría necesitar ahorrar gastos de 6+ meses?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '为什么有人可能需要储蓄6个月以上的开支？',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12154,11 +12238,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'zh',
   'They like big numbers',
-  'Les gustan los números grandes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '他们喜欢大数字',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12172,11 +12256,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'zh',
   'Unstable job or single income household',
-  'Trabajo inestable o hogar con un solo ingreso',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '工作不稳定或单一收入家庭',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12190,11 +12274,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'zh',
   'Banks require it',
-  'Los bancos lo requieren',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '银行要求这样做',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12208,11 +12292,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'zh',
   'Everyone needs exactly 6 months',
-  'Todos necesitan exactamente 6 meses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '每个人都需要正好6个月的储蓄',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12226,17 +12310,17 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'zh',
   'Less stable situations warrant larger emergency funds for more protection.',
-  'Las situaciones menos estables requieren fondos de emergencia más grandes para mayor protección.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '不太稳定的情况需要更大的应急基金以获得更多保障。',
+  '2026-01-06T02:00:40.343Z',
+  '2027-01-06T02:00:40.343Z'
 );
 
 -- ========================================
 -- VERIFICATION
 -- ========================================
-SELECT 'Translation completed for es!' as message;
+SELECT 'Translation completed for zh!' as message;
 SELECT COUNT(*) as total_translations
 FROM "ContentTranslation"
-WHERE target_language = 'es';
+WHERE target_language = 'zh';

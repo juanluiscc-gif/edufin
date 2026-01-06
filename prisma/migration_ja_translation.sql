@@ -1,6 +1,4 @@
 -- Multilingual Translation Migration
--- Target Language: Spanish (Latin American) (es)
--- Generated: 2026-01-06T01:00:52.314Z
 -- Inserts translations into ContentTranslation table
 
 -- STEP 1: Drop foreign key constraints to allow insertion
@@ -11,7 +9,7 @@ ALTER TABLE "ContentTranslation"
 DROP CONSTRAINT IF EXISTS "ContentTranslation_game_fkey";
 
 DELETE FROM "ContentTranslation"
-WHERE target_language = 'es';
+WHERE target_language = 'ja';
 
 -- ========================================
 -- LESSON TRANSLATIONS
@@ -28,11 +26,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'Introduction',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'はじめに',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -46,7 +44,7 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# What is Money?
 
 Money is what we use to buy things we need and want. It''s a tool that makes trading easier!
@@ -54,9 +52,15 @@ Money is what we use to buy things we need and want. It''s a tool that makes tra
 **For Kids:** Money is like tickets at an arcade - you exchange them for prizes!
 
 **For Adults:** Money serves as a medium of exchange, eliminating the inefficiencies of barter systems.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# お金って何？
+
+お金とは、私たちが必要なものや欲しいものを買うために使うものです。お金は取引をより簡単にする道具です！
+
+**子ども向け：** お金はゲームセンターのチケットのようなものです - チケットを景品と交換しますよね！
+
+**大人向け：** お金は交換手段として機能し、物々交換システムの非効率性を解消します。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -70,11 +74,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'History of Money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# お金の歴史',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -88,7 +92,7 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# How Money Started
 
 Long ago, people traded items directly - like trading 5 apples for 1 chicken. This was called **bartering**.
@@ -98,9 +102,17 @@ But bartering had problems:
 - How many apples equal one chicken?
 
 So humans invented money to solve these problems!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# お金の始まり
+
+昔、人々は物を直接交換していました。例えば、リンゴ5個とニワトリ1羽を交換するような方法です。これを**物々交換**と呼びます。
+
+しかし、物々交換には問題がありました:
+- もしあなたがリンゴを持っていても、相手がそれを欲しがらなかったらどうしますか?
+- リンゴ何個でニワトリ1羽と同じ価値になりますか?
+
+そこで人類はこれらの問題を解決するためにお金を発明したのです!',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -114,11 +126,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'Why We Use Money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# なぜお金を使うのか',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -132,7 +144,7 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# Why Money is Useful
 
 Money makes life easier because:
@@ -142,9 +154,17 @@ Money makes life easier because:
 3. **Medium of Exchange** - Everyone accepts it
 
 Instead of carrying around chickens and apples, you carry money!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# お金が便利な理由
+
+お金は次の理由で生活を便利にします:
+
+1. **価値の保存** - 後で使うために貯めておくことができます
+2. **価値の尺度** - すべてのものに明確な価格があります
+3. **交換の手段** - 誰もがそれを受け取ります
+
+鶏やりんごを持ち歩く代わりに、お金を持ち歩きます!',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -158,11 +178,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[3].title',
   'en',
-  'es',
+  'ja',
   'Modern Money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 現代のお金',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -176,7 +196,7 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'sections[3].content',
   'en',
-  'es',
+  'ja',
   '# Money Today
 
 Today, money comes in many forms:
@@ -185,9 +205,16 @@ Today, money comes in many forms:
 - **Cryptocurrency:** New digital money on the internet
 
 Most people use a mix of all three types!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 現代のお金
+
+今日、お金にはさまざまな形があります：
+- **物理的なお金：** 触ることができる硬貨と紙幣
+- **デジタルマネー：** 銀行口座やアプリの中にあるお金
+- **暗号資産：** インターネット上の新しいデジタルマネー
+
+ほとんどの人は、これら3つのタイプすべてを組み合わせて使っています！',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -201,11 +228,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'What is the main purpose of money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'お金の主な目的は何ですか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -219,11 +246,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'To make trading easier',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '取引をより簡単にするため',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -237,11 +264,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'To be pretty',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'きれいに見せるため',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -255,11 +282,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'To collect',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '集めるため',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -273,11 +300,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'To burn',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '燃やすため',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -291,11 +318,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'Money was invented to make trading goods and services easier than bartering.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'お金は、物々交換よりも商品やサービスの取引を簡単にするために発明されました。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -309,11 +336,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'What was the old way of trading before money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'お金が登場する前の古い取引方法は何でしたか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -327,11 +354,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   'Selling',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '販売',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -345,11 +372,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   'Bartering',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '物々交換',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -363,11 +390,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   'Giving away',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '譲り渡すこと',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -381,11 +408,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   'Stealing',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '盗むこと',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -399,11 +426,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'Bartering means trading items directly, like 5 apples for 1 chicken.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '物々交換とは、5個のりんごを1羽の鶏と交換するように、物を直接交換することを意味します。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -417,11 +444,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'Which is NOT a form of modern money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'どれが現代のお金の形態では**ない**ですか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -435,11 +462,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   'Digital money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'デジタルマネー',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -453,11 +480,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   'Coins',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'コイン(硬貨)',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -471,11 +498,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   'Rocks',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '石',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -489,11 +516,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   'Cryptocurrency',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '暗号資産',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -507,11 +534,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   'While some ancient cultures used special rocks as money, regular rocks are not modern currency.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '一部の古代文化では特別な石を貨幣として使用していましたが、普通の石は現代の通貨ではありません。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -525,11 +552,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'Money helps us "store value" means:',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'お金が「価値を保存する」のを助けるとは：',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -543,11 +570,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   'We can save it for later',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '後で使うために貯めておくことができる',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -561,11 +588,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   'We must spend it now',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '今すぐ使わなければなりません',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -579,11 +606,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   'It loses value quickly',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '価値がすぐに下がります',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -597,11 +624,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   'It takes up space',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'スペースを取る',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -615,11 +642,11 @@ INSERT INTO "ContentTranslation" (
   '08c62923-3e17-43c5-8978-899c14386d93',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   'Storing value means money keeps its worth over time so you can save it.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '価値を貯蔵するとは、お金が時間が経っても価値を保つため、貯めておくことができるという意味です。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -633,11 +660,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'Coins and Bills',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '硬貨と紙幣',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -651,7 +678,7 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# Physical Money
 
 **Coins** are made of metal and usually worth less. They''re good for small purchases like candy or parking meters.
@@ -659,9 +686,15 @@ INSERT INTO "ContentTranslation" (
 **Bills (Banknotes)** are made of paper or plastic and worth more. They''re lighter and easier to carry than lots of coins.
 
 💡 Fun fact: The ink and paper for bills cost less than 10 cents, but the bill might be worth $100!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 物理的なお金
+
+**硬貨**は金属でできており、通常は価値が低いです。キャンディーや駐車メーターなどの小額の買い物に適しています。
+
+**紙幣**は紙またはプラスチックでできており、価値が高いです。たくさんの硬貨よりも軽く、持ち運びが簡単です。
+
+💡 面白い事実:紙幣のインクと紙のコストは10セント未満ですが、その紙幣の価値は100ドルになることもあります!',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -675,11 +708,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'Digital Money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'デジタルマネー',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -693,7 +726,7 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# Money You Can''t Touch
 
 Most money today is **digital** - it exists as numbers in a computer!
@@ -705,9 +738,19 @@ Examples:
 - Mobile wallets like Apple Pay
 
 You never touch this money, but you can still spend it!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 触れることのできないお金
+
+今日のほとんどのお金は**デジタル**です - コンピューターの中の数字として存在しています!
+
+例:
+- 銀行口座の中のお金
+- PayPal、Venmoのような決済アプリ
+- クレジットカード決済
+- Apple Payのようなモバイルウォレット
+
+このお金に触れることは決してありませんが、それでも使うことができます!',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -721,11 +764,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'Cryptocurrency Basics',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 暗号資産の基礎',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -739,7 +782,7 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# A New Kind of Money
 
 **Cryptocurrency** is digital money that uses computer code to secure transactions.
@@ -755,9 +798,23 @@ Most famous examples:
 - Prices change a lot!
 
 ⚠️ For beginners, stick to regular money until you learn more!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 新しい種類のお金
+
+**暗号資産（仮想通貨）**とは、コンピューターのコードを使って取引を安全に保護するデジタルマネーです。
+
+最も有名な例：
+- ビットコイン（BTC）
+- イーサリアム（ETH）
+
+**主な違い：**
+- 政府が管理していません
+- すべての国で使えます
+- とても安全ですが、リスクもあります
+- 価格が大きく変動します！
+
+⚠️ 初心者の方は、もっと学ぶまでは通常のお金を使いましょう！',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -771,11 +828,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'What are coins usually made of?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '硬貨は通常何で作られていますか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -789,11 +846,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'Paper',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '紙',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -807,11 +864,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'Metal',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '金属',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -825,11 +882,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'Plastic',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'プラスチック',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -843,11 +900,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'Wood',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '木材',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -861,11 +918,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'Coins are made of metal, which makes them durable and hard to counterfeit.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '硬貨は金属でできているため、耐久性があり、偽造が困難です。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -879,11 +936,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'Which is an example of digital money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'デジタルマネーの例はどれですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -897,11 +954,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   'A $10 bill',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '10ドル紙幣',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -915,11 +972,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   'A quarter',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '25セント硬貨',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -933,11 +990,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   'Your bank account balance',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '銀行口座の残高',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -951,11 +1008,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   'Gold bars',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '金の延べ棒',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -969,11 +1026,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'Bank account balances are digital money - they exist as electronic records.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '銀行口座の残高はデジタルマネーです。つまり、電子記録として存在しています。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -987,11 +1044,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'What is true about cryptocurrency?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '暗号通貨について正しいのはどれですか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1005,11 +1062,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   'It is controlled by governments',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '政府によって管理されています',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1023,11 +1080,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   'It never changes in value',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '価値が変動することはない',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1041,11 +1098,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   'It uses computer code for security',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'コンピューターコードを使ってセキュリティを確保しています',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1059,11 +1116,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   'You can hold it in your hand',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '手で持つことができる',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1077,11 +1134,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   'Cryptocurrency uses advanced computer code (cryptography) to secure transactions.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '暗号通貨は、取引を安全に保護するために高度なコンピュータコード（暗号技術）を使用します。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1095,11 +1152,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'Why is digital money convenient?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'デジタルマネーはなぜ便利ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1113,11 +1170,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   'You can carry large amounts easily',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '大きな金額を簡単に持ち運べます',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1131,11 +1188,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   'It weighs a lot',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'たくさんの重さがあるから',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1149,11 +1206,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   'It can get wet',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '濡れても大丈夫です',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1167,11 +1224,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   'You must count it manually',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '手動で数える必要があります',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1185,11 +1242,11 @@ INSERT INTO "ContentTranslation" (
   '9a116f11-efb6-4ad9-acc9-12c7117c8029',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   'Digital money is convenient because you can have millions in your account without physical storage.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'デジタルマネーは、物理的な保管場所がなくても口座に何百万円も持つことができるため、便利です。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1203,11 +1260,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'Supply and Demand',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '需要と供給',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1221,7 +1278,7 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# What Makes Money Valuable?
 
 Money has value because of **supply and demand**:
@@ -1233,9 +1290,19 @@ If everyone wants dollars and there aren''t many, dollars are valuable.
 If there are too many dollars, each one is worth less.
 
 Think of it like rare trading cards - rare cards are more valuable!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# お金に価値があるのはなぜ?
+
+お金に価値があるのは**需要と供給**のためです:
+
+**供給** = どれだけのお金が存在するか
+**需要** = どれだけの人がそれを欲しがるか
+
+もしみんながドルを欲しがって、ドルがあまりなければ、ドルは価値があります。
+もしドルがたくさんありすぎると、1つ1つの価値は下がります。
+
+これはレアなトレーディングカードのようなものです - レアなカードほど価値が高いのです!',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1249,11 +1316,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'Government Role',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '政府の役割',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1267,7 +1334,7 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# Who Controls Money?
 
 Governments and central banks control how much money exists:
@@ -1278,9 +1345,18 @@ Governments and central banks control how much money exists:
 They try to keep the amount "just right" so the economy stays healthy.
 
 This is why you can''t just print money at home - it would make money worthless!',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 誰がお金を管理しているの?
+
+政府と中央銀行が、存在するお金の量を管理しています:
+
+- **印刷しすぎる** = お金の価値が下がります(インフレーション)
+- **印刷が少なすぎる** = ビジネスが難しくなります(デフレーション)
+
+経済が健全であり続けるように、政府と中央銀行は「ちょうど良い」量を保とうとしています。
+
+これが、家でお金を印刷できない理由です - そうするとお金が価値のないものになってしまいます!',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1294,11 +1370,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'Trust in Money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '貨幣への信頼',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1312,7 +1388,7 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# Why We Trust Money
 
 Money only works if people trust it!
@@ -1324,9 +1400,19 @@ We trust money because:
 4. It has security features (hard to fake)
 
 If people stopped trusting it, money would become just paper or numbers.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# なぜ私たちはお金を信頼するのか
+
+お金は人々がそれを信頼して初めて機能します!
+
+私たちがお金を信頼する理由:
+1. 政府が法的に認めているから
+2. お店が受け取ってくれるから
+3. 税金を支払うことができるから
+4. 偽造防止機能があるから(偽造しにくい)
+
+もし人々がお金を信頼しなくなったら、お金はただの紙や数字になってしまいます。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1340,11 +1426,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'What happens if a government prints too much money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '政府がお金を刷りすぎるとどうなりますか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1358,11 +1444,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'Everyone becomes rich',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '誰もがお金持ちになる',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1376,11 +1462,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'Money becomes less valuable',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'お金の価値が下がります',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1394,11 +1480,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'Money becomes more valuable',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'お金の価値が上がる',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1412,11 +1498,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'Nothing changes',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '何も変わりません',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1430,11 +1516,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'Printing too much money causes inflation - each dollar is worth less.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'お金を印刷しすぎるとインフレーションが起こり、1ドルの価値が下がります。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1448,11 +1534,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'Supply and demand means:',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '需要と供給とは：',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1466,11 +1552,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   'How much exists and how many want it',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '供給量と需要量のこと',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1484,11 +1570,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   'Where to buy things',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '物を買う場所',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1502,11 +1588,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   'How to save money',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'お金の節約方法',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1520,11 +1606,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   'Types of currency',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '通貨の種類',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1538,11 +1624,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'Supply is how much exists, demand is how many people want it.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '供給とは存在する量のことで、需要とは欲しがる人の数のことです。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1556,11 +1642,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'Why can''t you just print your own money?',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'なぜ自分でお金を印刷してはいけないのですか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1574,11 +1660,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   'It would make all money worthless',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'すべてのお金の価値がなくなってしまうから',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1592,11 +1678,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   'Printers are expensive',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'プリンターは高価です',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1610,11 +1696,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   'Paper is hard to find',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '紙を見つけるのが難しいから',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1628,11 +1714,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   'You can, it''s allowed',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '作ることができます。許可されています',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1646,11 +1732,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   'If everyone could print money, there would be too much supply and it would lose value.',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'もし誰もが自由にお金を印刷できるとしたら、供給量が多くなりすぎて、お金の価値がなくなってしまいます。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1664,11 +1750,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'Money has value primarily because:',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'お金に価値がある主な理由は：',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1682,11 +1768,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   'It''s pretty',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'きれいだから',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1700,11 +1786,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   'People trust and accept it',
-  '',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '人々がそれを信頼し、受け入れているから',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1718,11 +1804,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   'It''s made of precious materials',
-  'Es elaborado con materiales preciosos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '貴重な材料で作られているから',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1736,11 +1822,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   'It''s rare',
-  'Es escaso',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'それは希少だから',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1754,11 +1840,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   'Money''s value comes from collective trust and acceptance in society.',
-  'El valor del dinero proviene de la confianza colectiva y la aceptación en la sociedad.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'お金の価値は、社会における集団的な信頼と受容から生まれます。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1772,11 +1858,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'ja',
   'What role do governments play with money?',
-  '¿Qué papel desempeñan los gobiernos con el dinero?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '政府はお金においてどのような役割を果たしていますか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1790,11 +1876,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'ja',
   'They determine fashion trends',
-  'Determinan las tendencias de moda',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '流行のファッショントレンドを決定します',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1808,11 +1894,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'ja',
   'They control the supply',
-  'Controlan la oferta',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '通貨の供給量を管理します',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1826,11 +1912,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'ja',
   'They force you to spend',
-  'Te obligan a gastar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '支出を強制する',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1844,11 +1930,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'ja',
   'Nothing at all',
-  'Nada en absoluto',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '何もしない',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1862,11 +1948,11 @@ INSERT INTO "ContentTranslation" (
   '3c4c8be3-fa72-4c82-87f2-a04a9e32f34c',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'ja',
   'Governments and central banks control how much money is in circulation.',
-  'Los gobiernos y los bancos centrales controlan cuánto dinero está en circulación.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '政府と中央銀行は、流通しているお金の量をコントロールしています。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1880,11 +1966,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'Major Currencies',
-  'Monedas Principales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '主要通貨',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1898,7 +1984,7 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# World Money
 
 Different countries use different money!
@@ -1911,20 +1997,20 @@ Different countries use different money!
 - 🇨🇳 Chinese Yuan (CNY) - Used in China
 
 Each has its own symbol and value!',
-  '# Dinero del Mundo
+  '# 世界のお金
 
-¡Diferentes países usan diferentes monedas!
+国によって使うお金が違います!
 
-**Principales Monedas Mundiales:**
-- 🇺🇸 Dólar Estadounidense (USD) - La más utilizada
-- 🇪🇺 Euro (EUR) - Usada en muchos países europeos
-- 🇬🇧 Libra Esterlina (GBP) - Usada en el Reino Unido
-- 🇯🇵 Yen Japonés (JPY) - Usada en Japón
-- 🇨🇳 Yuan Chino (CNY) - Usada en China
+**世界の主要通貨:**
+- 🇺🇸 米ドル (USD) - 最も広く使われています
+- 🇪🇺 ユーロ (EUR) - 多くのヨーロッパ諸国で使われています
+- 🇬🇧 英ポンド (GBP) - イギリスで使われています
+- 🇯🇵 日本円 (JPY) - 日本で使われています
+- 🇨🇳 中国元 (CNY) - 中国で使われています
 
-¡Cada una tiene su propio símbolo y valor!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+それぞれ独自の記号と価値があります!',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1938,11 +2024,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'Exchange Rates',
-  'Tasas de Cambio',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '為替レート',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -1956,7 +2042,7 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# Trading Money Between Countries
 
 **Exchange rates** tell you how much one currency is worth in another.
@@ -1971,22 +2057,22 @@ This means one US dollar can be traded for 0.85 euros.
 - Interest rates
 - Political stability
 - Supply and demand',
-  '# Intercambiando Dinero Entre Países
+  '# 国と国の間でのお金の交換
 
-**Los tipos de cambio** te indican cuánto vale una moneda en otra.
+**為替レート**は、ある通貨が別の通貨でどれくらいの価値があるかを示しています。
 
-Ejemplo:
+例:
 1 USD = 0.85 EUR
 
-Esto significa que un dólar estadounidense puede intercambiarse por 0.85 euros.
+これは、1米ドルが0.85ユーロと交換できることを意味します。
 
-**Los tipos de cambio cambian diariamente** según:
-- Qué tan fuerte es cada economía
-- Las tasas de interés
-- La estabilidad política
-- La oferta y la demanda',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**為替レートは毎日変動します**。その要因は:
+- それぞれの経済がどれくらい強いか
+- 金利
+- 政治的な安定性
+- 需要と供給',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2000,11 +2086,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'International Trade',
-  'Comercio Internacional',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '国際貿易',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2018,7 +2104,7 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# Why Exchange Rates Matter
 
 When countries trade with each other, they need to exchange currencies:
@@ -2031,20 +2117,20 @@ When countries trade with each other, they need to exchange currencies:
 **Weak currency** = Your money buys less abroad
 
 This affects travel, shopping, and business!',
-  '# Por qué importan los tipos de cambio
+  '# 為替レートが重要な理由
 
-Cuando los países comercian entre sí, necesitan intercambiar monedas:
+国同士が貿易を行うとき、通貨を交換する必要があります:
 
-- Una empresa estadounidense que compra productos de Japón necesita yenes
-- Un turista europeo en América necesita dólares
-- Las compras en línea de otros países requieren conversión
+- 日本から製品を購入するアメリカの会社は円が必要です
+- アメリカにいるヨーロッパの観光客はドルが必要です
+- 他の国からのオンラインショッピングには換算が必要です
 
-**Moneda fuerte** = Tu dinero compra más en otros países
-**Moneda débil** = Tu dinero compra menos en el extranjero
+**強い通貨** = あなたのお金で他の国でより多くのものが買えます
+**弱い通貨** = あなたのお金で海外ではより少ないものしか買えません
 
-¡Esto afecta los viajes, las compras y los negocios!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+これは旅行、ショッピング、ビジネスに影響します!',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2058,11 +2144,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'What is the currency used in most European countries?',
-  '¿Cuál es la moneda utilizada en la mayoría de los países europeos?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ヨーロッパのほとんどの国で使われている通貨は何ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2076,11 +2162,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'Dollar',
-  'Dólar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ドル',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2094,11 +2180,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'Euro',
-  'Euro',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ユーロ',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2112,11 +2198,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'Pound',
-  'Libra',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ポンド',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2130,11 +2216,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'Peso',
-  'Peso',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ペソ',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2148,11 +2234,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'The Euro (EUR) is used by 20 European Union countries.',
-  'El euro (EUR) es utilizado por 20 países de la Unión Europea.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ユーロ（EUR）は、20のヨーロッパ連合加盟国で使用されています。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2166,11 +2252,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'What does an exchange rate tell you?',
-  '¿Qué te indica una tasa de cambio?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '為替レートは何を示していますか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2184,11 +2270,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   'How fast money grows',
-  'Qué tan rápido crece el dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'お金がどれくらい速く増えるか',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2202,11 +2288,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   'Where to shop',
-  'Dónde comprar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '買い物をする場所',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2220,11 +2306,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   'How much one currency is worth in another',
-  'Cuánto vale una moneda en términos de otra',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '一つの通貨が別の通貨でどれくらいの価値があるか',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2238,11 +2324,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   'How to save money',
-  'Cómo ahorrar dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '貯金の仕方',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2256,11 +2342,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'Exchange rates show the value of one currency compared to another.',
-  'Los tipos de cambio muestran el valor de una moneda en comparación con otra.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '為替レートは、ある通貨の価値を別の通貨と比較して示すものです。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2274,11 +2360,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'If 1 USD = 100 JPY, how many yen is $5?',
-  'Si 1 USD = 100 JPY, ¿cuántos yenes son $5?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '1ドル = 100円の場合、5ドルは何円ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2292,11 +2378,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   '50 yen',
-  '50 yenes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '50円',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2310,11 +2396,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   '100 yen',
-  '100 yenes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '100円',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2328,11 +2414,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   '500 yen',
-  '500 yenes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '500円',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2346,11 +2432,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   '5 yen',
-  '5 yenes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '5円',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2364,11 +2450,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   '5 dollars × 100 yen per dollar = 500 yen.',
-  '5 dólares × 100 yenes por dólar = 500 yenes.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '5ドル × 1ドルあたり100円 = 500円。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2382,11 +2468,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'When would you need to exchange currency?',
-  '¿Cuándo necesitarías cambiar moneda?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '通貨を交換する必要があるのはどのような時ですか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2400,11 +2486,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   'Traveling to another country',
-  'Viajar a otro país',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '他の国へ旅行するとき',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2418,11 +2504,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   'Shopping at local stores',
-  'Comprar en tiendas locales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '地元のお店で買い物をするとき',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2436,11 +2522,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   'Paying bills at home',
-  'Pagar facturas en casa',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '家で請求書を支払うとき',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2454,11 +2540,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   'Saving money',
-  'Ahorrar dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '貯金をするとき',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2472,11 +2558,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   'You need to exchange currency when traveling abroad or buying from international sellers.',
-  'Necesitas cambiar moneda cuando viajas al extranjero o compras a vendedores internacionales.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '海外旅行をするときや海外の販売者から購入するときは、通貨を両替する必要があります。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2490,11 +2576,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'ja',
   'What makes a currency "strong"?',
-  '¿Qué hace que una moneda sea "fuerte"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '通貨を「強い」ものにするのは何ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2508,11 +2594,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'ja',
   'It''s made of strong materials',
-  'Está hecha de materiales resistentes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '強い素材で作られている',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2526,11 +2612,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'ja',
   'It buys more in other countries',
-  'Compra más en otros países',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '他国でより多くのものを買うことができる',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2544,11 +2630,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'ja',
   'It''s heavy',
-  'Es pesada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '重い',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2562,11 +2648,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'ja',
   'It''s colorful',
-  'Es colorida',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'カラフルである',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2580,11 +2666,11 @@ INSERT INTO "ContentTranslation" (
   '729e7613-f36f-4863-8174-e2d503dc4ae3',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'ja',
   'A strong currency has high purchasing power in international markets.',
-  'Una moneda fuerte tiene un alto poder adquisitivo en los mercados internacionales.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '強い通貨は国際市場において高い購買力を持っています。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2598,11 +2684,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'What is Inflation',
-  '¿Qué es la Inflación?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'インフレーションとは何か',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2616,7 +2702,7 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# When Things Get More Expensive
 
 **Inflation** means prices go up over time.
@@ -2633,24 +2719,24 @@ Your money buys less than it used to!
 - Increased production costs
 
 Some inflation (2-3% per year) is normal and healthy.',
-  '# Cuando las cosas se vuelven más caras
+  '# 物の値段が高くなるとき
 
-**La inflación** significa que los precios suben con el tiempo.
+**インフレーション**とは、時間とともに物価が上がることを意味します。
 
-Ejemplo:
-- 1990: Una barra de chocolate costaba $0.50
-- 2025: El mismo chocolate cuesta $1.50
+例：
+- 1990年：キャンディバー1本が0.50ドル
+- 2025年：同じキャンディが1.50ドル
 
-¡Tu dinero compra menos de lo que solía comprar!
+あなたのお金で買えるものが以前より少なくなっています！
 
-**Por qué ocurre:**
-- Más dinero en circulación
-- Mayor demanda de productos
-- Aumento en los costos de producción
+**なぜ起こるのか：**
+- 流通するお金が増える
+- 商品への需要が高まる
+- 生産コストが上昇する
 
-Algo de inflación (2-3% por año) es normal y saludable.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+多少のインフレーション（年2～3％）は正常で健全です。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2664,11 +2750,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'How Inflation Affects You',
-  'Cómo te afecta la inflación',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# インフレーションがあなたに与える影響',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2682,7 +2768,7 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# Your Money Loses Value
 
 **Purchasing power** = What you can buy with your money
@@ -2698,23 +2784,23 @@ If inflation is 3% per year:
 - $100 today = $94 of purchasing power in 2 years
 
 That''s why grandparents say "things were cheaper in my day" - they were!',
-  '# Tu Dinero Pierde Valor
+  '# お金の価値が下がります
 
-**Poder adquisitivo** = Lo que puedes comprar con tu dinero
+**購買力** = あなたのお金で買えるもの
 
-Con la inflación:
-- $100 hoy compran más que $100 el próximo año
-- Los ahorros pierden valor si solo están guardados en un frasco
-- Los salarios necesitan aumentar para mantenerse al día
+インフレがあると：
+- 今日の100ドルは来年の100ドルより多く買えます
+- 貯金を瓶に入れたままにしておくと価値が下がります
+- 給料は物価に追いつくために上がる必要があります
 
-**Ejemplo:**
-Si la inflación es del 3% al año:
-- $100 hoy = $97 de poder adquisitivo el próximo año
-- $100 hoy = $94 de poder adquisitivo en 2 años
+**例：**
+インフレ率が年3%の場合：
+- 今日の100ドル = 来年の購買力97ドル
+- 今日の100ドル = 2年後の購買力94ドル
 
-¡Por eso los abuelos dicen "las cosas eran más baratas en mis tiempos" - lo eran!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+だから祖父母が「私たちの時代は物が安かった」と言うのです - 実際に安かったのです！',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2728,11 +2814,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'Protecting Against Inflation',
-  'Protección Contra la Inflación',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'インフレから身を守る',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2746,7 +2832,7 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# How to Fight Inflation
 
 Don''t let inflation eat your money! Here''s how:
@@ -2770,31 +2856,31 @@ Don''t let inflation eat your money! Here''s how:
 - Reduce unnecessary spending
 
 Remember: Cash under your mattress loses value every year!',
-  '# Cómo Combatir la Inflación
+  '# インフレと戦う方法
 
-¡No dejes que la inflación se coma tu dinero! Así es cómo:
+インフレにお金を食べられないようにしましょう!方法は次のとおりです:
 
-**1. Pon dinero en cuentas de ahorro con interés**
-- El interés ayuda a que el dinero crezca
-- Compensa parte de la inflación
+**1. 利息付きの貯蓄口座にお金を預ける**
+- 利息はお金を増やすのに役立ちます
+- インフレの一部を相殺します
 
-**2. Invierte en acciones, bonos o bienes raíces**
-- Estos a menudo crecen más rápido que la inflación
-- Es más arriesgado pero protege el poder adquisitivo
+**2. 株式、債券、不動産に投資する**
+- これらはインフレよりも速く成長することが多いです
+- リスクは高いですが購買力を守ります
 
-**3. Aumenta tus ingresos**
-- Pide aumentos de sueldo
-- Aprende nuevas habilidades
-- Inicia un negocio secundario
+**3. 収入を増やす**
+- 昇給を求めましょう
+- 新しいスキルを学びましょう
+- 副業を始めましょう
 
-**4. Haz un presupuesto inteligente**
-- Lleva un registro de a dónde va el dinero
-- Busca mejores ofertas
-- Reduce los gastos innecesarios
+**4. 賢く予算を立てる**
+- お金の使い道を追跡しましょう
+- より良い取引を見つけましょう
+- 不必要な支出を減らしましょう
 
-Recuerda: ¡El efectivo debajo de tu colchón pierde valor cada año!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+覚えておいてください:マットレスの下に隠した現金は毎年価値を失います!',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2808,11 +2894,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'What is inflation?',
-  '¿Qué es la inflación?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'インフレーションとは何ですか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2826,11 +2912,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'When prices go down',
-  'Cuando los precios bajan',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '物価が下がること',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2844,11 +2930,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'When prices go up over time',
-  'Cuando los precios suben con el tiempo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '時間の経過とともに物価が上昇すること',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2862,11 +2948,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'When money is printed',
-  'Cuando se imprime dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'お金が印刷されるとき',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2880,11 +2966,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'When people save money',
-  'Cuando las personas ahorran dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'お金を貯蓄すること',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2898,11 +2984,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'Inflation is the general increase in prices over time.',
-  'La inflación es el aumento general de los precios a lo largo del tiempo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'インフレーションとは、時間の経過とともに物価が全体的に上昇することです。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2916,11 +3002,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'If inflation is 5% and you have $100 in cash for a year, what happens?',
-  'Si la inflación es del 5% y tienes $100 en efectivo durante un año, ¿qué sucede?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'インフレ率が5%で、100ドルの現金を1年間持っていた場合、どうなりますか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2934,11 +3020,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   'You can buy 5% more',
-  'Puedes comprar 5% más',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '5%多く買うことができる',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2952,11 +3038,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   'You can buy the same amount',
-  'Puedes comprar la misma cantidad',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '同じ量を買うことができます',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2970,11 +3056,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   'You can buy 5% less',
-  'Puedes comprar 5% menos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '5%少なく買うことができます',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -2988,11 +3074,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   'Your money disappears',
-  'Tu dinero desaparece',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'あなたのお金が消えてしまいます',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3006,11 +3092,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'With 5% inflation, your $100 loses 5% of purchasing power.',
-  'Con una inflación del 5%, tus $100 pierden el 5% de su poder adquisitivo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '5%のインフレーションでは、あなたの100ドルは購買力の5%を失います。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3024,11 +3110,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'Why do prices tend to increase over time?',
-  '¿Por qué los precios tienden a aumentar con el tiempo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'なぜ物価は時間とともに上昇する傾向があるのでしょうか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3042,11 +3128,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   'Stores want more profit only',
-  'Las tiendas solo quieren más ganancias',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '店舗がより多くの利益を得たいからだけ',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3060,11 +3146,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   'Due to inflation and increased costs',
-  'Debido a la inflación y el aumento de costos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'インフレーションとコスト増加のため',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3078,11 +3164,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   'Because money becomes stronger',
-  'Porque el dinero se vuelve más fuerte',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'お金の価値が強くなるから',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3096,11 +3182,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   'It''s random',
-  'Es aleatorio',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ランダムだから',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3114,11 +3200,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   'Prices increase due to inflation, which comes from various economic factors.',
-  'Los precios aumentan debido a la inflación, que proviene de varios factores económicos.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'インフレーションによって物価が上昇します。インフレーションは、さまざまな経済的要因から発生します。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3132,11 +3218,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'What is a good way to protect against inflation?',
-  '¿Cuál es una buena manera de protegerse contra la inflación?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'インフレから身を守る良い方法は何ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3150,11 +3236,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   'Hide cash under your mattress',
-  'Esconder efectivo debajo del colchón',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'マットレスの下に現金を隠す',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3168,11 +3254,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   'Spend all your money immediately',
-  'Gastar todo tu dinero inmediatamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'すぐにすべてのお金を使ってしまう',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3186,11 +3272,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   'Invest in assets that grow',
-  'Invertir en activos que crecen',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'インフレに対抗して成長する資産に投資する',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3204,11 +3290,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   'Do nothing',
-  'No hacer nada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '何もしない',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3222,11 +3308,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   'Investing in growing assets helps maintain or increase purchasing power.',
-  'Invertir en activos de crecimiento ayuda a mantener o aumentar el poder adquisitivo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '成長する資産に投資することで、購買力を維持または増加させることができます。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3240,11 +3326,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'ja',
   'What is "purchasing power"?',
-  '¿Qué es el "poder adquisitivo"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '「購買力」とは何ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3258,11 +3344,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'ja',
   'How strong you are',
-  'Qué tan fuerte eres',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自分の力の強さ',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3276,11 +3362,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'ja',
   'What you can buy with your money',
-  'El poder de compra que tienes con tu dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'あなたのお金で買えるもの',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3294,11 +3380,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'ja',
   'Your job title',
-  'Tu título de trabajo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'あなたの職業名',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3312,11 +3398,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'ja',
   'How much money you earn',
-  'Cuánto dinero ganas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '稼ぐ金額',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3330,11 +3416,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'ja',
   'Purchasing power is what your money can actually buy.',
-  'El poder adquisitivo es lo que tu dinero realmente puede comprar.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '購買力とは、あなたのお金が実際に買えるものを指します。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3348,11 +3434,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].question',
   'en',
-  'es',
+  'ja',
   'Is some inflation considered normal?',
-  '¿Se considera normal algo de inflación?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'インフレはある程度正常だと考えられていますか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3366,11 +3452,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].options[0]',
   'en',
-  'es',
+  'ja',
   'No, inflation is always bad',
-  'No, la inflación siempre es mala',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'いいえ、インフレは常に悪いものです',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3384,11 +3470,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].options[1]',
   'en',
-  'es',
+  'ja',
   'Yes, 2-3% annual inflation is normal',
-  'Sí, una inflación anual del 2-3% es normal',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'はい、年間2〜3%のインフレは正常です',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3402,11 +3488,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].options[2]',
   'en',
-  'es',
+  'ja',
   'Only in poor countries',
-  'Solo en países pobres',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '貧しい国だけで',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3420,11 +3506,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].options[3]',
   'en',
-  'es',
+  'ja',
   'Inflation never happens',
-  'La inflación nunca ocurre',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'インフレは決して起こりません',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3438,11 +3524,11 @@ INSERT INTO "ContentTranslation" (
   '806561b5-ca3e-4507-a711-2d06e24ae0dc',
   'quiz.questions[5].explanation',
   'en',
-  'es',
+  'ja',
   'Moderate inflation of 2-3% per year is normal and indicates economic growth.',
-  'La inflación moderada del 2-3% anual es normal e indica crecimiento económico.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '年間2〜3%の適度なインフレは正常であり、経済成長を示しています。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3456,11 +3542,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'Jobs and Careers',
-  'Trabajos y Carreras',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '仕事とキャリア',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3474,7 +3560,7 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# Working for Money
 
 **Active income** = Money you earn by working
@@ -3486,19 +3572,19 @@ Types of jobs:
 
 **For kids:** Chores, lawn mowing, pet sitting
 **For adults:** Full-time jobs, part-time work, consulting',
-  '# Trabajar por Dinero
+  '# お金を稼ぐために働く
 
-**Ingreso activo** = Dinero que ganas al trabajar
+**アクティブインカム（労働所得）** = 働くことで得るお金
 
-Tipos de trabajos:
-- **Empleado:** Trabajas para una empresa (sueldo fijo)
-- **Trabajador independiente:** Trabajas por tu cuenta (múltiples clientes)
-- **Contratista:** Trabajas en proyectos específicos
+仕事の種類:
+- **従業員:** 会社で働く（安定した給与）
+- **フリーランサー:** 自分のために働く（複数のクライアント）
+- **契約社員:** 特定のプロジェクトで働く
 
-**Para niños:** Tareas domésticas, cortar el césped, cuidar mascotas
-**Para adultos:** Trabajos de tiempo completo, trabajos de medio tiempo, consultoría',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**子供向け:** お手伝い、芝刈り、ペットの世話
+**大人向け:** フルタイムの仕事、パートタイムの仕事、コンサルティング',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3512,11 +3598,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'Self-Employment',
-  'Autoempleo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自営業',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3530,7 +3616,7 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# Being Your Own Boss
 
 **Self-employment** means working for yourself!
@@ -3543,20 +3629,20 @@ Examples:
 
 **Pros:** Flexibility, unlimited earning potential
 **Cons:** No steady paycheck, more responsibility',
-  '# Ser Tu Propio Jefe
+  '# 自分が社長になる
 
-**El trabajo por cuenta propia** significa trabajar para ti mismo.
+**自営業**とは、自分自身のために働くことです!
 
-Ejemplos:
-- Iniciar un pequeño negocio
-- Ofrecer servicios (tutorías, limpieza, diseño)
-- Vender productos en línea
-- Crear contenido (YouTube, blog)
+例:
+- 小規模なビジネスを始める
+- サービスを提供する(家庭教師、清掃、デザイン)
+- オンラインで商品を販売する
+- コンテンツを作る(YouTube、ブログ)
 
-**Ventajas:** Flexibilidad, potencial de ingresos ilimitado
-**Desventajas:** No hay sueldo fijo, más responsabilidad',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**メリット:** 柔軟性、無限の収入の可能性
+**デメリット:** 安定した給料がない、より多くの責任',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3570,11 +3656,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'Passive Income',
-  'Ingresos Pasivos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '不労所得',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3588,7 +3674,7 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# Money While You Sleep
 
 **Passive income** = Earning money without active work
@@ -3600,19 +3686,19 @@ Examples:
 - Online courses (sell once, earn forever)
 
 Note: Usually requires upfront work or money to start!',
-  '# Dinero Mientras Duermes
+  '# 寝ている間のお金
 
-**Ingreso pasivo** = Ganar dinero sin trabajo activo
+**不労所得** = 積極的に働かなくても得られるお金
 
-Ejemplos:
-- Propiedades en alquiler (renta de inquilinos)
-- Inversiones (dividendos de acciones)
-- Regalías (de libros, música, patentes)
-- Cursos en línea (vender una vez, ganar para siempre)
+例：
+- 賃貸物件（入居者からの家賃）
+- 投資（株式からの配当金）
+- ロイヤリティ（本、音楽、特許から）
+- オンラインコース（一度販売すれば、永続的に収入）
 
-Nota: ¡Usualmente requiere trabajo o dinero inicial para comenzar!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+注意：通常、始めるには事前の作業や資金が必要です！',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3626,11 +3712,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'What is active income?',
-  '¿Qué es el ingreso activo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '能動的所得とは何ですか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3644,11 +3730,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'Money earned by working',
-  'Dinero ganado al trabajar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '働いて得たお金',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3662,11 +3748,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'Money earned while sleeping',
-  'Dinero ganado mientras duermes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '寝ている間に稼いだお金',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3680,11 +3766,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'Money from investments',
-  'Dinero proveniente de inversiones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '投資からの収入',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3698,11 +3784,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'Money found on the street',
-  'Dinero encontrado en la calle',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '道で見つけたお金',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3716,11 +3802,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'Active income is money earned through active work and effort.',
-  'El ingreso activo es el dinero que se gana a través del trabajo y el esfuerzo activo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'アクティブインカム（勤労所得）とは、積極的な労働や努力を通じて得られる収入のことです。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3734,11 +3820,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'Which is an example of passive income?',
-  '¿Cuál es un ejemplo de ingreso pasivo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '不労所得の例はどれですか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3752,11 +3838,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   'Your salary from a job',
-  'Tu salario de un trabajo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '仕事から得る給料',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3770,11 +3856,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   'Payment for mowing a lawn',
-  'Pago por cortar el césped',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '芝刈りの仕事の報酬',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3788,11 +3874,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   'Rent from a property you own',
-  'Alquiler de una propiedad que posees',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'あなたが所有する不動産からの賃貸収入',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3806,11 +3892,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   'Allowance from parents',
-  'Mesada de los padres',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '親からのお小遣い',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3824,11 +3910,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'Rental income is passive - you earn it without active daily work.',
-  'Ingreso por alquiler es pasivo - lo ganas sin trabajo activo diario.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '賃貸収入は受動的収入です。毎日積極的に働かなくても収入を得ることができます。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3842,11 +3928,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'What does self-employment mean?',
-  '¿Qué significa el autoempleo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自営業とは何を意味しますか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3860,11 +3946,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   'Working for a big company',
-  'Trabajar para una empresa grande',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '大企業で働くこと',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3878,11 +3964,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   'Working for yourself',
-  'Trabajar por cuenta propia',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自分自身のために働くこと',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3896,11 +3982,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   'Being unemployed',
-  'Estar desempleado',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '失業している',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3914,11 +4000,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   'Working part-time',
-  'Trabajar medio tiempo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'パートタイムで働くこと',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3932,11 +4018,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   'Self-employment means you are your own boss and work for yourself.',
-  'El autoempleo significa que eres tu propio jefe y trabajas para ti mismo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自営業とは、自分が自分自身のボスであり、自分のために働くことを意味します。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3950,11 +4036,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'Which is true about passive income?',
-  '¿Cuál es verdadero sobre el ingreso pasivo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '受動的所得について正しいのはどれですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3968,11 +4054,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   'It requires no effort ever',
-  'No requiere ningún esfuerzo nunca',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '一切の努力が不要である',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -3986,11 +4072,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   'Anyone can start immediately with no money',
-  'Cualquier persona puede comenzar inmediatamente sin dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '誰でもお金をかけずにすぐに始められる',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4004,11 +4090,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   'It often requires upfront work or investment',
-  'Frecuentemente requiere trabajo o inversión inicial',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '事前の労力や投資が必要なことが多い',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4022,11 +4108,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   'It always earns more than active income',
-  'Siempre genera más ingresos que el ingreso activo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '常にアクティブインカムより多く稼ぐことができる',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4040,11 +4126,11 @@ INSERT INTO "ContentTranslation" (
   '616f29ef-d7df-494e-9ee9-520e542237c7',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   'Passive income streams usually require initial work or capital to establish.',
-  'Los ingresos pasivos generalmente requieren trabajo inicial o capital para establecerse.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '不労所得を得る仕組みは、通常、確立するために最初の労力や資金が必要です。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4058,11 +4144,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'Gross vs Net Income',
-  'Ingreso Bruto vs Ingreso Neto',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 総収入と手取り収入',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4076,7 +4162,7 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# How Much Do You Really Earn?
 
 **Gross Income** = Total money before anything is taken out
@@ -4090,21 +4176,21 @@ Example:
 - **Net (take-home): $700**
 
 Always focus on net income when budgeting!',
-  '# ¿Cuánto Ganas Realmente?
+  '# 実際にいくら稼いでいますか?
 
-**Ingreso Bruto** = Dinero total antes de que se descuente algo
-**Ingreso Neto** = Dinero que realmente recibes (después de impuestos y deducciones)
+**総収入(グロス・インカム)** = 何も差し引かれる前の総額
+**純収入(ネット・インカム)** = 実際に手元に残るお金(税金や控除の後)
 
-Ejemplo:
-- Bruto: $1,000
-- Impuestos: -$200
-- Seguro médico: -$50
-- Retiro: -$50
-- **Neto (para llevar a casa): $700**
+例:
+- 総収入: $1,000
+- 税金: -$200
+- 健康保険: -$50
+- 退職金積立: -$50
+- **純収入(手取り): $700**
 
-¡Siempre enfócate en el ingreso neto al hacer tu presupuesto!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+予算を立てる時は、常に純収入に注目しましょう!',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4118,11 +4204,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'Salary vs Hourly',
-  'Salario vs Por Hora',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '給与制と時給制',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4136,7 +4222,7 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# Two Ways to Get Paid
 
 **Salary:**
@@ -4152,23 +4238,23 @@ INSERT INTO "ContentTranslation" (
 - May get overtime pay (1.5x or 2x rate)
 
 Neither is "better" - it depends on the job!',
-  '# Dos formas de recibir pago
+  '# 給与の2つの受け取り方
 
-**Salario:**
-- Cantidad fija por año
-- Ejemplo: $50,000/año
-- Mismo cheque de pago cada mes
-- A menudo incluye beneficios
+**給与制（サラリー）：**
+- 年間の固定額
+- 例：年間50,000ドル
+- 毎月同じ給料
+- 福利厚生が含まれることが多い
 
-**Por hora:**
-- Pago por hora trabajada
-- Ejemplo: $15/hora
-- El cheque de pago varía según las horas
-- Puede recibir pago de horas extras (1.5x o 2x la tarifa)
+**時給制：**
+- 働いた時間ごとに支払われる
+- 例：時給15ドル
+- 給料は労働時間によって変わる
+- 残業手当がつく場合がある（1.5倍または2倍の rate）
 
-Ninguna es "mejor" - ¡depende del trabajo!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+どちらが「より良い」ということはありません - 仕事によって異なります！',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4182,11 +4268,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'Benefits and Bonuses',
-  'Beneficios y Bonificaciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '福利厚生とボーナス',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4200,7 +4286,7 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# More Than Just Money
 
 **Benefits** = Extra compensation beyond salary
@@ -4219,26 +4305,26 @@ Common benefits:
 - Profit sharing
 
 Benefits can be worth 20-30% of your salary!',
-  '# Más que solo dinero
+  '# お金だけではありません
 
-**Beneficios** = Compensación adicional más allá del salario
+**福利厚生** = 給与以外の追加報酬
 
-Beneficios comunes:
-- Seguro médico
-- Contribuciones para el retiro (aportación patronal)
-- Días de vacaciones pagadas
-- Permiso por enfermedad
-- Desarrollo profesional
+一般的な福利厚生：
+- 健康保険
+- 退職金制度への拠出（401k マッチング）
+- 有給休暇
+- 病気休暇
+- 専門能力開発
 
-**Bonos:**
-- Pagos adicionales por buen desempeño
-- Bonos de fin de año
-- Comisiones (ganancias basadas en ventas)
-- Participación de utilidades
+**ボーナス：**
+- 良い業績に対する追加支給
+- 年末ボーナス
+- 歩合給（販売実績に基づく収入）
+- 利益配分
 
-¡Los beneficios pueden valer entre el 20-30% de tu salario!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+福利厚生は給与の20〜30%の価値がある場合があります！',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4252,11 +4338,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'What is net income?',
-  '¿Qué es el ingreso neto?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '純収入とは何ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4270,11 +4356,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'Total income before deductions',
-  'Ingreso total antes de deducciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '控除前の総収入',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4288,11 +4374,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'Money you take home after deductions',
-  'Dinero que te llevas a casa después de las deducciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '控除後に手元に残るお金',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4306,11 +4392,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'Money from the internet',
-  'Dinero de internet',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'インターネットからのお金',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4324,11 +4410,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'Bonus payments',
-  'Pagos de bonificación',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ボーナス支払い',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4342,11 +4428,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'Net income is what you actually receive after taxes and deductions.',
-  'El ingreso neto es lo que realmente recibes después de impuestos y deducciones.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '手取り収入とは、税金や控除が差し引かれた後に実際に受け取る金額のことです。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4360,11 +4446,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'If your gross income is $2,000 and $400 is deducted, what is your net income?',
-  'Si tu ingreso bruto es $2,000 y se deducen $400, ¿cuál es tu ingreso neto?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '総収入が2,000ドルで400ドルが差し引かれた場合、手取り収入はいくらですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4378,11 +4464,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   '$2,400',
   '$2,400',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4396,11 +4482,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   '$2,000',
   '$2,000',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4414,11 +4500,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   '$1,600',
   '$1,600',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4432,11 +4518,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   '$400',
   '$400',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4450,11 +4536,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'Net income = Gross - Deductions = $2,000 - $400 = $1,600.',
-  'Ingreso neto = Bruto - Deducciones = $2,000 - $400 = $1,600.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '手取り収入 = 総収入 - 控除額 = $2,000 - $400 = $1,600です。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4468,11 +4554,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'What is a benefit of hourly pay?',
-  '¿Cuál es un beneficio del pago por hora?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '時給制の利点は何ですか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4486,11 +4572,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   'Same paycheck every month',
-  'Mismo cheque de pago cada mes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '毎月同じ給料',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4504,11 +4590,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   'Can earn overtime pay',
-  'Puedes ganar pago por horas extras',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '残業代を稼ぐことができる',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4522,11 +4608,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   'Always includes health insurance',
-  'Siempre incluye seguro médico',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '常に健康保険が含まれています',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4540,11 +4626,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   'Never changes',
-  'Nunca cambia',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '変わらない',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4558,11 +4644,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   'Hourly workers often earn overtime (extra pay) for working extra hours.',
-  'Los trabajadores por hora a menudo ganan tiempo extra (pago adicional) por trabajar horas adicionales.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '時給制で働く人は、追加の時間働くことで残業代（追加の給与）を得ることがよくあります。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4576,11 +4662,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'Which is NOT typically a job benefit?',
-  '¿Cuál NO es típicamente un beneficio laboral?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'どれが通常、仕事の福利厚生では**ありません**か?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4594,11 +4680,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   'Health insurance',
-  'Seguro médico',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '健康保険',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4612,11 +4698,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   'Paid vacation',
-  'Vacaciones pagadas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '有給休暇',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4630,11 +4716,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   'Free groceries',
-  'Comestibles gratis',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '無料の食料品',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4648,11 +4734,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   '401k matching',
-  'Igualación de 401k',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '401k拠出金マッチング',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4666,11 +4752,11 @@ INSERT INTO "ContentTranslation" (
   '9c87f5fd-5d86-4958-947c-b1d215788d45',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   'Free groceries are not a standard job benefit, unlike insurance or retirement contributions.',
-  'Los víveres gratuitos no son un beneficio laboral estándar, a diferencia del seguro o las contribuciones para el retiro.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '無料の食料品は、保険や退職金拠出とは異なり、標準的な仕事の福利厚生ではありません。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4684,11 +4770,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'Finding Opportunities',
-  'Encontrando Oportunidades',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '機会を見つける',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4702,7 +4788,7 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# Where to Look for Jobs
 
 **For Young People:**
@@ -4719,24 +4805,24 @@ INSERT INTO "ContentTranslation" (
 - Professional connections
 
 Tip: Many jobs are found through people you know!',
-  '# Dónde Buscar Trabajo
+  '# 仕事を探す場所
 
-**Para Jóvenes:**
-- Pregunta a familiares y vecinos
-- Revisa tiendas locales en busca de carteles de "Se Busca Personal"
-- Bolsas de trabajo escolares
-- Centros comunitarios
+**若い人向け:**
+- 家族や近所の人に聞く
+- 地元の店舗で「求人募集中」の看板を確認する
+- 学校の求人掲示板
+- コミュニティセンター
 
-**Para Adultos:**
-- Portales de empleo en línea (LinkedIn, Indeed)
-- Sitios web de empresas
-- Eventos de networking
-- Agencias de reclutamiento
-- Contactos profesionales
+**大人向け:**
+- オンライン求人サイト（LinkedIn、Indeed）
+- 企業のウェブサイト
+- ネットワーキングイベント
+- 人材紹介会社
+- 職業上のつながり
 
-Tip: ¡Muchos trabajos se encuentran a través de personas que conoces!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+ヒント: 多くの仕事は知り合いを通じて見つかります！',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4750,11 +4836,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'Interview Skills',
-  'Habilidades para Entrevistas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '面接のスキル',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4768,7 +4854,7 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# Making a Good Impression
 
 **Before the interview:**
@@ -4787,26 +4873,26 @@ INSERT INTO "ContentTranslation" (
 **After the interview:**
 - Send a thank-you email within 24 hours
 - Follow up if you haven''t heard back in a week',
-  '# Causando una Buena Impresión
+  '# 良い印象を与える
 
-**Antes de la entrevista:**
-- Investiga sobre la empresa
-- Prepara respuestas a preguntas comunes
-- Elige ropa apropiada
-- Llega 10 minutos antes
+**面接の前:**
+- 会社について調べる
+- よくある質問への答えを準備する
+- 適切な服装を選ぶ
+- 10分前に到着する
 
-**Durante la entrevista:**
-- Estrecha la mano con firmeza
-- Mantén contacto visual
-- Habla con claridad y confianza
-- Haz preguntas reflexivas
-- Muestra entusiasmo
+**面接中:**
+- しっかりと握手する
+- アイコンタクトをする
+- はっきりと自信を持って話す
+- よく考えた質問をする
+- 熱意を示す
 
-**Después de la entrevista:**
-- Envía un correo electrónico de agradecimiento dentro de las 24 horas
-- Haz seguimiento si no has recibido respuesta en una semana',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**面接の後:**
+- 24時間以内にお礼のメールを送る
+- 1週間経っても返事がない場合はフォローアップする',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4820,11 +4906,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'First Day Tips',
-  'Consejos para el Primer Día',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '初日のアドバイス',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4838,7 +4924,7 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# Starting Strong
 
 **Your first day:**
@@ -4857,26 +4943,26 @@ INSERT INTO "ContentTranslation" (
 - Build relationships with colleagues
 
 Remember: Everyone was new once. People want you to succeed!',
-  '# Comenzando con Fuerza
+  '# 好調なスタートを切る
 
-**Tu primer día:**
-- Llega temprano
-- Lleva un cuaderno y un bolígrafo
-- Haz preguntas (¡demuestra que te importa!)
-- Aprende los nombres de tus compañeros de trabajo
-- Observa la cultura del lugar de trabajo
-- Toma notas sobre los procesos
+**初日について：**
+- 早めに到着する
+- ノートとペンを持参する
+- 質問をする（やる気を示すことになります！）
+- 同僚の名前を覚える
+- 職場の文化を観察する
+- 業務手順についてメモを取る
 
-**Primera semana/mes:**
-- Sé confiable (llega a tiempo)
-- Toma la iniciativa
-- Acepta la retroalimentación con gracia
-- No tengas miedo de admitir errores
-- Construye relaciones con tus colegas
+**最初の1週間/1ヶ月：**
+- 信頼できる人になる（時間通りに出勤する）
+- 自ら進んで行動する
+- フィードバックを素直に受け入れる
+- 間違いを認めることを恐れない
+- 同僚との関係を築く
 
-Recuerda: Todos fuimos nuevos alguna vez. ¡La gente quiere que tengas éxito!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+覚えておきましょう：誰もが最初は新人でした。周りの人たちはあなたの成功を願っています！',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4890,11 +4976,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'What should you do before a job interview?',
-  '¿Qué debes hacer antes de una entrevista de trabajo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '面接の前に何をすべきですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4908,11 +4994,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'Nothing, just show up',
-  'Nada, solo preséntate',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '何もしない、ただ行くだけ',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4926,11 +5012,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'Research the company',
-  'Investigar la empresa',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '企業について調べる',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4944,11 +5030,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'Memorize your resume',
-  'Memorizar tu currículum',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '履歴書を暗記する',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4962,11 +5048,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'Bring your parents',
-  'Llevar a tus padres',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '両親を連れて行く',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4980,11 +5066,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'Researching the company shows you''re serious and helps you answer questions better.',
-  'Investigar sobre la empresa demuestra que eres serio y te ayuda a responder las preguntas de mejor manera.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '会社について調べることで、あなたが真剣であることを示し、質問により良く答えることができます。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -4998,11 +5084,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'How early should you arrive for an interview?',
-  '¿Con cuánta anticipación deberías llegar a una entrevista?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '面接には何分前に到着すべきですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5016,11 +5102,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   '1 hour early',
-  '1 hora antes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '1時間前',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5034,11 +5120,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   'Exactly on time',
-  'Exactamente a tiempo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '時間ぴったりに',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5052,11 +5138,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   '10 minutes early',
-  '10 minutos antes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '10分前',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5070,11 +5156,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   '10 minutes late',
-  '10 minutos tarde',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '10分遅刻',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5088,11 +5174,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'Arriving 10 minutes early shows punctuality without being too early.',
-  'Llegar 10 minutos antes demuestra puntualidad sin ser demasiado temprano.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '10分前に到着することは、早すぎることなく時間厳守を示します。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5106,11 +5192,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'What does "networking" mean when job hunting?',
-  '¿Qué significa "hacer networking" al buscar trabajo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '求職活動における「ネットワーキング」とはどういう意味ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5124,11 +5210,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   'Using the internet',
-  'Usar internet',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'インターネットを使うこと',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5142,11 +5228,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   'Building professional connections',
-  'Construir conexiones profesionales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '専門的な人脈を築くこと',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5160,11 +5246,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   'Working with computers',
-  'Trabajar con computadoras',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'コンピューターを使って働くこと',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5178,11 +5264,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   'Social media posting',
-  'Publicar en redes sociales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ソーシャルメディアへの投稿',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5196,11 +5282,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   'Networking is building relationships with people who can help your career.',
-  'Hacer networking es construir relaciones con personas que pueden ayudar a tu carrera.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ネットワーキングとは、キャリアに役立つ人々との関係を築くことです。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5214,11 +5300,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'On your first day, you should:',
-  'En tu primer día, deberías:',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '初日には、次のことをすべきです：',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5232,11 +5318,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   'Pretend to know everything',
-  'Fingir que sabes todo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'すべてを知っているふりをする',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5250,11 +5336,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   'Stay quiet and don''t ask questions',
-  'Mantenerte callado y no hacer preguntas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '静かにして質問をしないようにする',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5268,11 +5354,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   'Ask questions and take notes',
-  'Hacer preguntas y tomar notas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '質問をして、メモを取る',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5286,11 +5372,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   'Leave early to avoid mistakes',
-  'Irte temprano para evitar errores',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '間違いを避けるために早く帰る',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5304,11 +5390,11 @@ INSERT INTO "ContentTranslation" (
   '5955651c-67ce-4cfb-abab-edac88f942a5',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   'Asking questions and taking notes shows you want to learn and do well.',
-  'Hacer preguntas y tomar notas demuestra que quieres aprender y hacerlo bien.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '質問をしたりメモを取ったりすることは、学びたい、良い仕事をしたいという意欲を示します。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5322,11 +5408,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'Why Diversify',
-  'Por qué diversificar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# なぜ分散させるのか',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5340,7 +5426,7 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# Don''t Put All Eggs in One Basket
 
 **Why multiple income streams matter:**
@@ -5356,23 +5442,23 @@ Sarah has:
 - Weekend tutoring: $5,000/year
 - Rental property: $10,000/year
 - Total: $65,000/year with backup plans!',
-  '# No Pongas Todos los Huevos en Una Sola Canasta
+  '# すべての卵を一つのかごに入れない
 
-**Por qué importan múltiples fuentes de ingreso:**
+**複数の収入源が重要な理由:**
 
-1. **Seguridad:** Si pierdes una fuente, tienes otras
-2. **Crecimiento:** Múltiples fuentes = más ingreso total
-3. **Libertad:** Menos dependencia de un solo empleador
-4. **Oportunidades:** Aprender nuevas habilidades
+1. **安全性:** 一つの収入源を失っても、他の収入源があります
+2. **成長:** 複数の収入源 = より多くの総収入
+3. **自由:** 一つの雇用主への依存度が低くなります
+4. **機会:** 新しいスキルを学べます
 
-**Ejemplo real:**
-Sarah tiene:
-- Trabajo de tiempo completo: $50,000/año
-- Tutorías los fines de semana: $5,000/año
-- Propiedad en alquiler: $10,000/año
-- Total: $65,000/año ¡con planes de respaldo!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**実例:**
+サラの場合:
+- フルタイムの仕事: 年間50,000ドル
+- 週末の家庭教師: 年間5,000ドル
+- 賃貸物件: 年間10,000ドル
+- 合計: 年間65,000ドル、しかもバックアッププランあり!',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5386,11 +5472,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'Side Hustles',
-  'Trabajos Secundarios',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'サイドハッスル（副業）',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5404,7 +5490,7 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# Extra Income Ideas
 
 **Popular side hustles:**
@@ -5428,31 +5514,31 @@ INSERT INTO "ContentTranslation" (
 - Choose something you enjoy
 - Don''t burn yourself out
 - Track income and expenses',
-  '# Ideas para Generar Ingresos Extra
+  '# 追加収入のアイデア
 
-**Trabajos secundarios populares:**
+**人気のある副業：**
 
-**En línea:**
-- Escritura freelance, diseño, programación
-- Tutorías en línea
-- Vender artesanías en Etsy
-- Creación de contenido en YouTube
-- Marketing de afiliados
+**オンライン：**
+- フリーランスのライティング、デザイン、プログラミング
+- オンライン家庭教師
+- Etsyでハンドメイド作品を販売
+- YouTubeコンテンツ制作
+- アフィリエイトマーケティング
 
-**Fuera de línea:**
-- Conducir para aplicaciones de transporte (Uber, Lyft)
-- Entrega de comida a domicilio
-- Cuidado de mascotas/paseo de perros
-- Reparaciones del hogar/servicios de mantenimiento
-- Fotografía para eventos
+**オフライン：**
+- ライドシェアドライバー（Uber、Lyft）
+- フードデリバリー
+- ペットシッター/犬の散歩代行
+- 住宅修理/便利屋サービス
+- イベント撮影
 
-**Consejos:**
-- Empieza pequeño, crece gradualmente
-- Elige algo que disfrutes
-- No te agotes
-- Lleva registro de ingresos y gastos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**ヒント：**
+- 小さく始めて、徐々に成長させましょう
+- 楽しめることを選びましょう
+- 無理をしないようにしましょう
+- 収入と支出を記録しましょう',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5466,11 +5552,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'Investment Income',
-  'Ingresos por Inversiones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '投資収入',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5484,7 +5570,7 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# Money Making Money
 
 **Investment income types:**
@@ -5510,33 +5596,33 @@ INSERT INTO "ContentTranslation" (
 - Ongoing maintenance needed
 
 **Key:** Start investing early, even small amounts grow over time!',
-  '# El Dinero Generando Dinero
+  '# お金がお金を生む
 
-**Tipos de ingresos por inversión:**
+**投資収入の種類：**
 
-**1. Dividendos:**
-- Las empresas pagan a los accionistas
-- Usualmente trimestralmente
-- Puedes reinvertir o recibir en efectivo
+**1. 配当金：**
+- 企業が株主に支払います
+- 通常は四半期ごとです
+- 再投資するか現金で受け取ることができます
 
-**2. Intereses:**
-- De cuentas de ahorro
-- Los bonos pagan intereses
-- Generalmente de menor riesgo
+**2. 利子：**
+- 貯蓄口座から得られます
+- 債券は利子を支払います
+- 一般的にリスクは低いです
 
-**3. Ganancias de Capital:**
-- Vender inversiones con ganancia
-- Comprar acciones a $50, vender a $100 = $50 de ganancia
-- Puede ser arriesgado
+**3. キャピタルゲイン（売却益）：**
+- 投資を利益を得て売却します
+- 株を50ドルで買い、100ドルで売る = 50ドルの利益
+- リスクを伴う場合があります
 
-**4. Ingresos por Alquiler:**
-- Poseer propiedades, alquilar a inquilinos
-- Requiere capital inicial significativo
-- Se necesita mantenimiento continuo
+**4. 賃貸収入：**
+- 不動産を所有し、入居者に貸します
+- 多額の初期資本が必要です
+- 継続的なメンテナンスが必要です
 
-**Clave:** ¡Comienza a invertir temprano, incluso las pequeñas cantidades crecen con el tiempo!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**重要なポイント：** 早くから投資を始めましょう。少額でも時間とともに成長します！',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5550,11 +5636,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'Why is having multiple income streams beneficial?',
-  '¿Por qué es beneficioso tener múltiples fuentes de ingresos?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '複数の収入源を持つことはなぜ有益なのでしょうか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5568,11 +5654,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'It''s more complicated',
-  'Es más complicado',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '複雑になるから',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5586,11 +5672,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'Provides financial security if one source fails',
-  'Proporciona seguridad financiera si una fuente falla',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '一つの収入源が途絶えた場合に経済的な安定を提供します',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5604,11 +5690,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'You work less',
-  'Trabajas menos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '働く時間が減る',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5622,11 +5708,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'It''s required by law',
-  'Es requerido por ley',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '法律で義務付けられているため',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5640,11 +5726,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'Multiple income streams provide security - if one stops, you still have others.',
-  'Múltiples fuentes de ingresos proporcionan seguridad: si una se detiene, aún tienes otras.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '複数の収入源があれば安心です。一つが止まっても、他の収入源がまだあります。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5658,11 +5744,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'What is a "side hustle"?',
-  '¿Qué es un "side hustle" o trabajo adicional?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'サイドハッスル（副業）とは何ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5676,11 +5762,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   'Your main job',
-  'Tu trabajo principal',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'あなたの本業',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5694,11 +5780,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   'A dance move',
-  'Un movimiento de baile',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'サイドステップのダンス',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5712,11 +5798,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   'Extra work for additional income',
-  'Trabajo extra para ingresos adicionales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '追加収入を得るための副業',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5730,11 +5816,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   'A type of investment',
-  'Un tipo de inversión',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '投資の一種',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5748,11 +5834,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'A side hustle is extra work outside your main job to earn more money.',
-  'Un side hustle es trabajo extra fuera de tu empleo principal para ganar más dinero.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'サイドハッスルとは、本業以外で収入を得るための副業のことです。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5766,11 +5852,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'What are dividends?',
-  '¿Qué son los dividendos?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '配当金とは何ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5784,11 +5870,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   'Money companies pay shareholders',
-  'Dinero que las empresas pagan a los accionistas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '企業が株主に支払うお金',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5802,11 +5888,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   'Bank fees',
-  'Tarifas bancarias',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '銀行手数料',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5820,11 +5906,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   'Types of savings accounts',
-  'Tipos de cuentas de ahorro',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '貯蓄口座の種類',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5838,11 +5924,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   'Job bonuses',
-  'Bonificaciones laborales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '仕事のボーナス',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5856,11 +5942,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   'Dividends are payments companies make to shareholders from profits.',
-  'Los dividendos son pagos que las empresas hacen a los accionistas a partir de sus ganancias.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '配当金とは、企業が利益から株主に対して支払うお金のことです。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5874,11 +5960,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'Which is considered passive investment income?',
-  '¿Cuál se considera ingreso pasivo de inversión?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '投資による受動的所得とみなされるのはどれですか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5892,11 +5978,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   'Salary from your job',
-  'Salario de tu trabajo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '仕事からの給与',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5910,11 +5996,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   'Dividends from stocks',
-  'Dividendos de acciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '株式からの配当金',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5928,11 +6014,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   'Payment for freelance work',
-  'Pago por trabajo independiente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'フリーランスの仕事に対する報酬',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5946,11 +6032,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   'Tips from waiting tables',
-  'Propinas de mesero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'チップ（ウェイター・ウェイトレスとしての接客）',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5964,11 +6050,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   'Dividends are passive income - you earn them without active daily work.',
-  'Los dividendos son ingresos pasivos: los ganas sin trabajo activo diario.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '配当金は受動的収入です。毎日積極的に働かなくても得られる収入です。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -5982,11 +6068,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'ja',
   'When starting a side hustle, you should:',
-  'Al comenzar un negocio secundario, deberías:',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'サイドビジネスを始める際には、次のことをすべきです：',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6000,11 +6086,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'ja',
   'Quit your main job immediately',
-  'Renunciar a tu trabajo principal inmediatamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'すぐにメインの仕事を辞める',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6018,11 +6104,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'ja',
   'Start small and grow gradually',
-  'Comenzar en pequeño y crecer gradualmente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '小さく始めて徐々に成長させる',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6036,11 +6122,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'ja',
   'Ignore tracking income',
-  'Ignorar el seguimiento de ingresos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '収入の記録を無視する',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6054,11 +6140,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'ja',
   'Never tell anyone',
-  'Nunca contarle a nadie',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '誰にも言わない',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6072,11 +6158,11 @@ INSERT INTO "ContentTranslation" (
   '7e095164-09e5-4dd8-a818-60830a1b7b30',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'ja',
   'It''s smart to start small, test the market, and grow sustainably.',
-  'Es inteligente empezar en pequeño, probar el mercado y crecer de manera sostenible.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '小さく始めて、市場をテストし、持続可能な成長を目指すことが賢明です。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6090,11 +6176,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'Essential Expenses',
-  'Gastos Esenciales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '必需的支出',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6108,7 +6194,7 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# What You Need to Survive
 
 **Needs** = Things required for survival and basic well-being
@@ -6123,22 +6209,22 @@ True needs:
 
 **For kids:** School supplies, healthy food
 **For adults:** Mortgage/rent, insurance, basic groceries',
-  '# Lo Que Necesitas Para Sobrevivir
+  '# 生きるために必要なもの
 
-**Necesidades** = Cosas requeridas para la supervivencia y el bienestar básico
+**ニーズ（必要なもの）** = 生存と基本的な健康のために必要なもの
 
-Necesidades verdaderas:
-- Comida y agua
-- Vivienda (hogar)
-- Ropa (apropiada para el clima)
-- Atención médica
-- Transporte básico (al trabajo/escuela)
-- Servicios públicos (electricidad, agua, calefacción)
+本当に必要なもの：
+- 食べ物と水
+- 住居（家）
+- 衣服（天候に適したもの）
+- 医療
+- 基本的な交通手段（仕事・学校への移動）
+- 光熱費（電気、水道、暖房）
 
-**Para niños:** Útiles escolares, comida saludable
-**Para adultos:** Hipoteca/alquiler, seguro, alimentos básicos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**子どもの場合：** 学用品、健康的な食べ物
+**大人の場合：** 住宅ローン・家賃、保険、基本的な食料品',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6152,11 +6238,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'Discretionary Spending',
-  'Gasto Discrecional',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '任意支出',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6170,7 +6256,7 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# Things That Make Life Better
 
 **Wants** = Things that improve life but aren''t necessary for survival
@@ -6184,21 +6270,21 @@ Examples:
 - Toys and games
 
 Wants aren''t bad! But needs come first.',
-  '# Cosas que mejoran la vida
+  '# 生活をより良くするもの
 
-**Deseos** = Cosas que mejoran la vida pero no son necesarias para sobrevivir
+**欲しいもの** = 生活を向上させるが、生存には必要ではないもの
 
-Ejemplos:
-- Comidas en restaurantes (puedes cocinar en casa)
-- Teléfono último modelo (un modelo anterior funciona)
-- Ropa de marca (ropa regular te cubre)
-- Servicios de streaming
-- Vacaciones
-- Juguetes y juegos
+例：
+- レストランでの食事（家で料理できます）
+- 最新の携帯電話（古いモデルでも使えます）
+- ブランド服（普通の服で十分です）
+- ストリーミングサービス
+- 休暇旅行
+- おもちゃやゲーム
 
-¡Los deseos no son malos! Pero las necesidades van primero.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+欲しいものは悪いことではありません！しかし、必要なものが優先です。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6212,11 +6298,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'Making Choices',
-  'Tomando Decisiones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '選択をする',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6230,7 +6316,7 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# The Tricky Middle Ground
 
 Some purchases are both:
@@ -6248,25 +6334,25 @@ Some purchases are both:
 - Want: Designer brand coat
 
 **Smart spending = Meet needs first, enjoy wants within budget**',
-  '# La Zona Intermedia Complicada
+  '# 判断が難しい中間領域
 
-Algunas compras son ambas cosas:
+購入するものには、両方の側面があるものもあります:
 
-**Teléfono:**
-- Necesidad: Teléfono básico para seguridad/trabajo
-- Deseo: Modelo insignia de $1,200
+**電話:**
+- 必要なもの: 安全や仕事のための基本的な電話
+- 欲しいもの: 1,200ドルの最新フラッグシップモデル
 
-**Comida:**
-- Necesidad: Comidas nutritivas
-- Deseo: Restaurante costoso todos los días
+**食べ物:**
+- 必要なもの: 栄養のある食事
+- 欲しいもの: 毎日高級レストランでの食事
 
-**Ropa:**
-- Necesidad: Abrigo abrigado en invierno
-- Deseo: Abrigo de marca de diseñador
+**衣類:**
+- 必要なもの: 冬の暖かいコート
+- 欲しいもの: デザイナーブランドのコート
 
-**Gasto inteligente = Cubrir necesidades primero, disfrutar deseos dentro del presupuesto**',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**賢い支出 = まず必要なものを満たし、予算内で欲しいものを楽しむ**',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6280,11 +6366,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'Which of these is a true NEED?',
-  '¿Cuál de estos es una NECESIDAD verdadera?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'どれが本当の「ニーズ（必要なもの）」ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6298,11 +6384,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'Designer sneakers',
-  'Zapatillas de marca',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'デザイナーブランドのスニーカー',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6316,11 +6402,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'Basic shelter',
-  'Refugio básico',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '基本的な住居',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6334,11 +6420,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'Video games',
-  'Videojuegos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ビデオゲーム',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6352,11 +6438,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'Vacation',
-  'Vacaciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '休暇',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6370,11 +6456,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'Shelter is essential for survival, making it a need.',
-  'El refugio es esencial para la supervivencia, lo que lo convierte en una necesidad.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '住居は生存に不可欠なものであるため、ニーズ（必要なもの）です。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6388,11 +6474,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'Which is a WANT?',
-  '¿Cuál es un DESEO?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'どれが「欲しいもの」ですか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6406,11 +6492,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   'Medicine when sick',
-  'Medicina cuando estás enfermo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '病気の時の薬',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6424,11 +6510,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   'Water to drink',
-  'Agua para beber',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '飲み水',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6442,11 +6528,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   'Streaming service subscription',
-  'Suscripción a servicio de streaming',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ストリーミングサービスの定期購読',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6460,11 +6546,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   'Winter coat in cold climate',
-  'Abrigo de invierno en clima frío',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '寒冷地での冬用コート',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6478,11 +6564,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'Streaming services are entertainment wants, not survival needs.',
-  'Los servicios de streaming son deseos de entretenimiento, no necesidades de supervivencia.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ストリーミングサービスは娯楽の「欲しいもの」であり、生存に必要な「必要なもの」ではありません。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6496,11 +6582,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'Why is it important to identify needs vs wants?',
-  '¿Por qué es importante identificar necesidades vs deseos?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ニーズとウォンツを区別することはなぜ重要ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6514,11 +6600,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   'To never enjoy anything',
-  'Para nunca disfrutar nada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '何も楽しまないため',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6532,11 +6618,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   'To prioritize spending wisely',
-  'Para priorizar los gastos de manera inteligente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '賢く支出に優先順位をつけるため',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6550,13 +6636,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   'Wants are illegal',
-  'Wants are illegal
-
-**Los deseos son ilegales**',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '欲しいものは違法です',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6570,11 +6654,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   'Needs are free',
-  'Las necesidades son gratuitas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '必要なものは無料です',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6588,11 +6672,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   'Identifying needs vs wants helps you spend money on essentials first.',
-  'Identificar necesidades vs deseos te ayuda a gastar dinero en lo esencial primero.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ニーズ（必要なもの）とウォンツ（欲しいもの）を区別することで、まず生活必需品にお金を使うことができます。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6606,11 +6690,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'A $1,200 phone when a $300 phone works is an example of:',
-  'Un teléfono de $1,200 cuando un teléfono de $300 funciona es un ejemplo de:',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '300ドルの携帯電話で十分なのに1,200ドルの携帯電話を選ぶことは、次のうちどれの例ですか：',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6624,11 +6708,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   'A need',
-  'Una necesidad',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '必要なもの',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6642,11 +6726,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   'Smart spending',
-  'Gasto inteligente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'スマートな支出',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6660,11 +6744,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   'Upgrading a need to a want',
-  'Convertir una necesidad en un deseo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '必要なものを欲しいものにアップグレードすること',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6678,11 +6762,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   'Required spending',
-  'Gasto necesario',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '必要な支出',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6696,11 +6780,11 @@ INSERT INTO "ContentTranslation" (
   '3918e2c1-e1bc-44d8-9c16-49473ae6bd5c',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   'The basic phone is the need; the expensive one adds want features.',
-  'El teléfono básico es la necesidad; el costoso agrega características de deseos.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '基本的な携帯電話が「必要なもの」であり、高価なものは「欲しいもの」の機能が追加されています。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6714,11 +6798,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'Comparing Prices',
-  'Comparar Precios',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '価格の比較',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6732,7 +6816,7 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# Finding the Best Deal
 
 **Price comparison tips:**
@@ -6747,22 +6831,22 @@ Cereal A: $4 for 12 oz = $0.33/oz
 Cereal B: $5 for 18 oz = $0.28/oz
 
 Cereal B is the better deal!',
-  '# Encontrando la Mejor Oferta
+  '# 最良の取引を見つける
 
-**Consejos para comparar precios:**
+**価格比較のヒント:**
 
-1. **Revisa múltiples tiendas** - Mismo artículo, precios diferentes
-2. **Usa sitios web de comparación de precios** - Google Shopping, CamelCamelCamel
-3. **Considera el precio unitario** - Precio por onza, por artículo
-4. **Observa los ciclos de ofertas** - Los productos electrónicos bajan de precio antes de los nuevos modelos
+1. **複数の店舗を確認する** - 同じ商品でも価格が異なります
+2. **価格比較ウェブサイトを利用する** - Google Shopping、CamelCamelCamel
+3. **単価を考慮する** - オンスあたり、個あたりの価格
+4. **セールサイクルに注目する** - 電化製品は新モデルの前に値下がりします
 
-**Ejemplo:**
-Cereal A: $4 por 12 oz = $0.33/oz
-Cereal B: $5 por 18 oz = $0.28/oz
+**例:**
+シリアルA: 12オンスで4ドル = 0.33ドル/オンス
+シリアルB: 18オンスで5ドル = 0.28ドル/オンス
 
-¡El Cereal B es la mejor oferta!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+シリアルBの方がお得です!',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6776,11 +6860,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'Coupons and Discounts',
-  'Cupones y Descuentos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'クーポンと割引',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6794,7 +6878,7 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# Free Money Savers
 
 **Where to find deals:**
@@ -6812,25 +6896,25 @@ INSERT INTO "ContentTranslation" (
 ❌ Don''t let coupons expire unused
 
 Saving $1 on something you don''t need = wasting money!',
-  '# Formas Gratuitas de Ahorrar Dinero
+  '# 無料でできる節約術
 
-**Dónde encontrar ofertas:**
-- Aplicaciones de tiendas y programas de lealtad
-- Boletines informativos por correo electrónico
-- Sitios web de cupones (RetailMeNot, Honey)
-- Descuentos para estudiantes/adultos mayores
-- Tarjetas de crédito con reembolso
-- Ofertas de lleva uno y lleva otro gratis (BOGO)
+**お得な情報の見つけ方:**
+- 店舗アプリとポイントプログラム
+- メールマガジン
+- クーポンサイト(RetailMeNot、Honey)
+- 学生割引/シニア割引
+- キャッシュバック付きクレジットカード
+- 1つ買うともう1つ無料(BOGO)オファー
 
-**Reglas para usar cupones:**
-✅ Úsalos solo para cosas que realmente necesitas
-❌ No compres solo porque está en oferta
-✅ Combina cupones cuando sea posible
-❌ No dejes que los cupones se venzan sin usarlos
+**クーポンのルール:**
+✅ 本当に必要なものにだけ使いましょう
+❌ セール品だからという理由だけで買わないようにしましょう
+✅ 可能な場合はクーポンを重ねて使いましょう
+❌ クーポンを使わずに期限切れにしないようにしましょう
 
-¡Ahorrar $1 en algo que no necesitas = desperdiciar dinero!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+必要のないものに1ドル節約しても = お金の無駄遣いです!',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6844,11 +6928,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'Avoiding Impulse Buys',
-  'Evitar las Compras Impulsivas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '衝動買いを避ける',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6862,7 +6946,7 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# Stop and Think First
 
 **Impulse buying** = Buying without planning, usually emotionally
@@ -6881,26 +6965,26 @@ INSERT INTO "ContentTranslation" (
 - "Limited time offer!" (false urgency)
 - Sale signs everywhere (not always deals)
 - Pleasant smells/music (makes you linger)',
-  '# Detente y piensa primero
+  '# まず立ち止まって考えましょう
 
-**Compra impulsiva** = Comprar sin planificar, usualmente de forma emocional
+**衝動買い** = 計画せずに買うこと、通常は感情的に買ってしまうこと
 
-**Cómo resistir:**
+**抵抗する方法:**
 
-1. **La regla de las 24 horas** - Espera un día antes de comprar deseos
-2. **Haz una lista** - Solo compra lo que está en la lista
-3. **Evita comprar cuando estés emocional** - Triste, feliz o aburrido
-4. **Cancela la suscripción a correos de marketing**
-5. **Deja las tarjetas de crédito en casa** - Usa efectivo para compras discrecionales
-6. **Calcula el costo en horas trabajadas** - "¿$100 en zapatos = 5 horas de trabajo. ¿Vale la pena?"
+1. **24時間ルール** - 欲しいものを買う前に1日待ちましょう
+2. **リストを作る** - リストにあるものだけを買いましょう
+3. **感情的なときは買い物を避ける** - 悲しいとき、嬉しいとき、退屈なとき
+4. **マーケティングメールの配信を停止する**
+5. **クレジットカードは家に置いておく** - 自由裁量の買い物には現金を使いましょう
+6. **働いた時間でコストを計算する** - 「100ドルの靴 = 5時間の労働。それだけの価値がある?」
 
-**Trucos de las tiendas a los que debes prestar atención:**
-- Dulces en la caja (tentación)
-- "¡Oferta por tiempo limitado!" (urgencia falsa)
-- Carteles de oferta por todas partes (no siempre son gangas)
-- Aromas agradables/música (te hace quedarte más tiempo)',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**注意すべきお店のトリック:**
+- レジのところにあるお菓子(誘惑)
+- 「期間限定!」(偽の緊急性)
+- あちこちにあるセールの看板(必ずしもお得ではありません)
+- 心地よい香りや音楽(長居させるため)',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6914,11 +6998,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'What should you compare when shopping for the best deal?',
-  '¿Qué debes comparar al buscar la mejor oferta?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '最もお得な買い物をするために、何を比較すべきですか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6932,11 +7016,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'Only the total price',
-  'Solo el precio total',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '合計金額のみ',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6950,11 +7034,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'Brand name only',
-  'Solamente la marca',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ブランド名のみ',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6968,11 +7052,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'Unit price and quality',
-  'Precio unitario y calidad',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '単位価格と品質',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -6986,11 +7070,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'The prettiest package',
-  'El paquete más bonito',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '一番きれいなパッケージ',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7004,11 +7088,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'Comparing unit price (price per unit) and quality gives you the best value.',
-  'Comparar el precio unitario (precio por unidad) y la calidad te da el mejor valor.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '単位価格（1個あたりの価格）と品質を比較することで、最もお得な買い物ができます。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7022,11 +7106,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'What is the 24-hour rule?',
-  '¿Qué es la regla de las 24 horas?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '24時間ルールとは何ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7040,11 +7124,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   'Stores are open 24 hours',
-  'Las tiendas están abiertas 24 horas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '店舗は24時間営業です',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7058,11 +7142,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   'Wait a day before buying wants',
-  'Espera un día antes de comprar deseos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '欲しいものを買う前に1日待つ',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7076,11 +7160,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   'Shop for 24 hours straight',
-  'Comprar durante 24 horas seguidas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '24時間ぶっ通しで買い物をする',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7094,11 +7178,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   'Sales last 24 hours',
-  'Las ofertas duran 24 horas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'セールは24時間続く',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7112,11 +7196,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'The 24-hour rule means waiting a day to avoid impulse purchases.',
-  'La regla de las 24 horas significa esperar un día para evitar compras impulsivas.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '24時間ルールとは、衝動買いを避けるために1日待つことを意味します。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7130,11 +7214,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'When should you use coupons?',
-  '¿Cuándo deberías usar cupones?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'クーポンはいつ使うべきですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7148,11 +7232,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   'For everything on sale',
-  'Para todo lo que esté en oferta',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'セール中のすべての商品に使用する',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7166,11 +7250,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   'Only for items you actually need',
-  'Solo para artículos que realmente necesitas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '実際に必要なものだけに使う',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7184,11 +7268,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   'Never',
-  'Nunca',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '決して使わない',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7202,11 +7286,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   'Only on weekends',
-  'Solo los fines de semana',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '週末だけ',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7220,11 +7304,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   'Coupons save money only if used for things you actually need.',
-  'Los cupones ahorran dinero solo si se usan para cosas que realmente necesitas.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'クーポンは、実際に必要なものに使う場合にのみお金を節約できます。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7238,11 +7322,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'What is an impulse buy?',
-  '¿Qué es una compra impulsiva?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '衝動買いとは何ですか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7256,11 +7340,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   'A planned purchase',
-  'Una compra planificada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '計画的な購入',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7274,11 +7358,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   'Buying without planning, often emotionally',
-  'Comprar sin planificar, frecuentemente de manera emocional',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '計画せずに購入すること、しばしば感情的に',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7292,11 +7376,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   'Buying groceries',
-  'Comprar alimentos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '食料品を買うこと',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7310,11 +7394,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   'Using a coupon',
-  'Usar un cupón',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'クーポンを使うこと',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7328,11 +7412,11 @@ INSERT INTO "ContentTranslation" (
   '113416ff-e665-44cc-b3cc-a6777de4c761',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   'Impulse buying is unplanned purchasing driven by emotion rather than need.',
-  'La compra impulsiva es una compra no planificada impulsada por la emoción en lugar de la necesidad.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '衝動買いとは、必要性ではなく感情によって引き起こされる計画外の購入のことです。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7346,11 +7430,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'Price vs Quality',
-  'Precio vs Calidad',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '価格と品質',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7364,7 +7448,7 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# Good, Fast, Cheap - Pick Two
 
 **Value = Quality ÷ Price**
@@ -7384,27 +7468,27 @@ $20 shoes (last 6 months) = $40/year
 $80 shoes (last 3 years) = $27/year
 
 Expensive shoes are actually cheaper!',
-  '# Bueno, Rápido, Barato - Elige Dos
+  '# 良い・速い・安い - 2つを選ぶ
 
-**Valor = Calidad ÷ Precio**
+**価値 = 品質 ÷ 価格**
 
-**A veces lo caro vale la pena:**
-- Zapatos que duran 5 años vs 6 meses
-- Herramientas duraderas vs las que se rompen
-- Comida saludable vs comida chatarra barata
+**高価でも価値がある場合があります:**
+- 5年持つ靴 vs 6ヶ月しか持たない靴
+- 丈夫な工具 vs すぐ壊れる工具
+- 健康的な食品 vs 安いジャンクフード
 
-**A veces lo barato está bien:**
-- Artículos básicos (papel, lápices)
-- Artículos que usas raramente
-- Artículos de moda que pasan de moda
+**安くても問題ない場合があります:**
+- 基本的な用品（紙、鉛筆）
+- めったに使わないもの
+- 流行遅れになる流行品
 
-**Ejemplo:**
-Zapatos de $20 (duran 6 meses) = $40/año
-Zapatos de $80 (duran 3 años) = $27/año
+**例:**
+20ドルの靴（6ヶ月持つ） = 年間40ドル
+80ドルの靴（3年持つ） = 年間27ドル
 
-¡Los zapatos caros son en realidad más baratos!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+高価な靴の方が実際には安くなります！',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7418,11 +7502,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'Long-term Cost',
-  'Costo a largo plazo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '長期的なコスト',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7436,7 +7520,7 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# Total Cost of Ownership
 
 Look beyond the price tag!
@@ -7461,32 +7545,32 @@ Look beyond the price tag!
 - 5 years = $22,000 + $10,000 = $32,000
 
 Cheaper car actually costs $5,500 MORE!',
-  '# Costo Total de Propiedad
+  '# 総所有コスト
 
-¡Mira más allá del precio de etiqueta!
+価格表示だけを見るのではなく、もっと先を見ましょう！
 
-**Considera:**
-- Costos de mantenimiento
-- Costos de reparación
-- Costos de energía/combustible
-- Vida útil
-- Valor de reventa
+**考慮すべき点：**
+- メンテナンス費用
+- 修理費用
+- エネルギー/燃料費用
+- 耐用年数
+- 再販価値
 
-**Ejemplo: Dos Autos**
+**例：2台の車**
 
-**Auto A: $15,000**
-- Usa mucha gasolina: $3,000/año
-- Reparaciones frecuentes: $1,500/año
-- 5 años = $15,000 + $22,500 = $37,500
+**車A：15,000ドル**
+- ガソリンを多く使う：年間3,000ドル
+- 頻繁な修理：年間1,500ドル
+- 5年間 = 15,000ドル + 22,500ドル = 37,500ドル
 
-**Auto B: $22,000**
-- Uso eficiente de gasolina: $1,500/año
-- Confiable, pocas reparaciones: $500/año
-- 5 años = $22,000 + $10,000 = $32,000
+**車B：22,000ドル**
+- 効率的なガソリン使用：年間1,500ドル
+- 信頼性が高く、修理が少ない：年間500ドル
+- 5年間 = 22,000ドル + 10,000ドル = 32,000ドル
 
-¡El auto más barato en realidad cuesta $5,500 MÁS!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+安い車の方が実際には5,500ドルも多く費用がかかります！',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7500,11 +7584,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'Brand vs Generic',
-  'Marca vs Genérico',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ブランド品とジェネリック品',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7518,7 +7602,7 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# When Brand Names Matter
 
 **Generic/store brand often fine for:**
@@ -7541,30 +7625,30 @@ INSERT INTO "ContentTranslation" (
 4. If generic works, stick with it!
 
 Often, generic is made in the same factory as brand names!',
-  '# Cuándo Importan las Marcas
+  '# ブランド名が重要な場合
 
-**Los productos genéricos/de marca propia suelen ser buenos para:**
-- Alimentos básicos (harina, azúcar, arroz)
-- Medicamentos de venta libre (mismos ingredientes)
-- Productos de limpieza
-- Útiles escolares
-- Ropa básica
+**ジェネリック/ストアブランドで十分なもの:**
+- 基本的な食品(小麦粉、砂糖、お米)
+- 市販薬(同じ成分)
+- 掃除用品
+- 学用品
+- 基本的な衣類
 
-**Las marcas pueden valer la pena para:**
-- Electrónicos (mejor soporte)
-- Herramientas especializadas
-- Artículos con aspectos de seguridad
-- Cosas que usas a diario
+**ブランド品が価値のあるもの:**
+- 電子機器(より良いサポート)
+- 専門的な工具
+- 安全性に関わるもの
+- 毎日使うもの
 
-**Cómo decidir:**
-1. Revisa ingredientes/materiales
-2. Lee reseñas
-3. Prueba lo genérico primero
-4. ¡Si lo genérico funciona, quédate con eso!
+**判断する方法:**
+1. 成分/素材を確認する
+2. レビューを読む
+3. まずジェネリックを試す
+4. ジェネリックで問題なければ、それを使い続ける!
 
-¡A menudo, los productos genéricos se fabrican en la misma fábrica que las marcas!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+多くの場合、ジェネリック商品はブランド品と同じ工場で作られています!',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7578,11 +7662,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'What does "value" mean in shopping?',
-  '¿Qué significa "valor" al hacer compras?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '買い物における「価値」とはどういう意味ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7596,11 +7680,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'The cheapest price',
-  'El precio más barato',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '最も安い値段',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7614,11 +7698,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'Quality divided by price',
-  'Calidad dividida por precio',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '価格で割った品質',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7632,11 +7716,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'The most expensive item',
-  'El artículo más caro',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '最も高価な商品',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7650,11 +7734,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'Brand name',
-  'Marca reconocida',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ブランド名',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7668,11 +7752,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'Value is the balance between quality and price - best quality for the price paid.',
-  'El valor es el equilibrio entre calidad y precio - la mejor calidad por el precio pagado.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '価値とは、品質と価格のバランスです。支払った価格に対して最高の品質を得ることを意味します。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7686,11 +7770,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'Why might expensive shoes be a better value?',
-  '¿Por qué unos zapatos costosos podrían ser una mejor inversión?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '高価な靴の方が価値が高い理由は何ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7704,11 +7788,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   'They look better',
-  'Se ven mejor',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'より見た目が良いです',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7722,11 +7806,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   'They last longer, costing less per year',
-  'Duran más tiempo, costando menos por año',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '長持ちするので、年間あたりのコストが安くなります',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7740,11 +7824,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   'Expensive is always better',
-  'Caro siempre es mejor',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '高価なものは常に優れています',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7758,11 +7842,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   'They''re trendy',
-  'Son de moda',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '流行している',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7776,11 +7860,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'If expensive shoes last much longer, the cost per year of use is often lower.',
-  'Si los zapatos costosos duran mucho más tiempo, el costo por año de uso suele ser menor.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '高価な靴がずっと長持ちする場合、年間の使用コストは低くなることがよくあります。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7794,11 +7878,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'What is "total cost of ownership"?',
-  '¿Qué es el "costo total de propiedad"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '「総所有コスト」とは何ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7812,11 +7896,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   'Just the purchase price',
-  'Solo el precio de compra',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '購入価格のみ',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7830,11 +7914,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   'All costs including maintenance over time',
-  'Todos los costos incluyendo el mantenimiento a lo largo del tiempo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '維持費を含む全ての費用',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7848,11 +7932,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   'The price including tax',
-  'El precio incluyendo impuestos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '税込み価格',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7866,11 +7950,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   'What you can sell it for later',
-  'Lo que puedes venderlo después',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '後で売却できる価格',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7884,11 +7968,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   'Total cost includes purchase price plus all future costs like maintenance and fuel.',
-  'El costo total incluye el precio de compra más todos los costos futuros como mantenimiento y combustible.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '総費用には、購入価格に加えて、メンテナンスや燃料などの将来のすべての費用が含まれます。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7902,11 +7986,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'When is generic/store brand usually fine?',
-  '¿Cuándo suele estar bien la marca genérica/de tienda?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ジェネリック/ストアブランドが通常問題ない場合はいつですか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7920,11 +8004,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   'Never',
-  'Nunca',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '決して良くない',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7938,11 +8022,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   'Always',
-  'Siempre',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'いつでも',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7956,11 +8040,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   'For basic items like flour or medicine',
-  'Para artículos básicos como harina o medicamentos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '小麦粉や薬などの基本的な商品の場合',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7974,11 +8058,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   'Only for food',
-  'Solo para alimentos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '食品のみ',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -7992,11 +8076,11 @@ INSERT INTO "ContentTranslation" (
   '3b2fc54b-6810-4979-abad-7e78f0a53be8',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   'Generic brands often have the same quality as name brands for basic items.',
-  'Las marcas genéricas a menudo tienen la misma calidad que las marcas reconocidas para artículos básicos.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ジェネリックブランド（プライベートブランド）は、基本的な商品において、有名ブランドと同じ品質を持つことがよくあります。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8010,11 +8094,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'Marketing Tactics',
-  'Tácticas de Marketing',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'マーケティング戦略',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8028,7 +8112,7 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# How Stores Make You Spend More
 
 **Common tricks:**
@@ -8044,23 +8128,23 @@ INSERT INTO "ContentTranslation" (
 - Research prices beforehand
 - Don''t shop when emotional
 - Question "deals" carefully',
-  '# Cómo las tiendas te hacen gastar más
+  '# お店があなたにもっとお金を使わせる方法
 
-**Trucos comunes:**
+**よくある手口:**
 
-1. **Precio de anclaje:** "¡$200 $99!" - Hace que $99 parezca barato
-2. **Precio señuelo:** Pequeño ($3), Mediano ($5), Grande ($5.50) - Todos eligen el grande
-3. **Escasez:** "¡Solo quedan 3!" - Crea urgencia falsa
-4. **Mínimo para envío gratis:** "Envío gratis en compras mayores a $50" - Gastas $50 para ahorrar $5
-5. **Paquetes:** "Compra 3 y ahorra 10%" - Solo necesitabas 1
+1. **アンカー価格:** "200ドル → 99ドル!" - 99ドルが安く見えるようにする
+2. **おとり価格:** 小(3ドル)、中(5ドル)、大(5.50ドル) - 誰もが大を選ぶ
+3. **希少性:** "残り3個だけ!" - 偽りの緊急性を作り出す
+4. **送料無料の最低購入額:** "50ドル以上で送料無料" - 5ドルを節約するために50ドルを使わせる
+5. **セット販売:** "3個購入で10%オフ" - 必要なのは1個だけだったのに
 
-**Cómo resistir:**
-- Conoce tu presupuesto antes de comprar
-- Investiga precios con anticipación
-- No compres cuando estés emocional
-- Cuestiona las "ofertas" cuidadosamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**抵抗する方法:**
+- 買い物の前に予算を把握しておく
+- 事前に価格を調べる
+- 感情的な時には買い物をしない
+- 「お得な情報」を慎重に見極める',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8074,11 +8158,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'Subscription Traps',
-  'Trampas de Suscripción',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'サブスクリプションの罠',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8092,7 +8176,7 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# The Slow Money Leak
 
 **Subscription risks:**
@@ -8117,32 +8201,32 @@ INSERT INTO "ContentTranslation" (
 - Use virtual cards that expire
 - Ask yourself: "Used it this month? Keep it. Not used? Cancel it."
 - Cancel immediately after free trials',
-  '# La Fuga Lenta de Dinero
+  '# ゆっくりとしたお金の流出
 
-**Riesgos de las suscripciones:**
+**サブスクリプションのリスク:**
 
-**Pruebas gratuitas que no son gratuitas:**
-- Requieren tarjeta de crédito
-- Se renuevan automáticamente después de la prueba
-- Difíciles de cancelar
-- Te olvidas de ellas
+**無料ではない無料トライアル:**
+- クレジットカードの登録が必要
+- トライアル期間後に自動更新される
+- 解約が難しい
+- 存在を忘れてしまう
 
-**Las suscripciones mensuales se acumulan:**
-- Streaming: $15
-- Música: $10
-- Videojuegos: $15
-- Software: $20
-- Gimnasio (sin usar): $40
-- **Total: $100/mes = $1,200/año!**
+**月額サブスクリプションは積み重なります:**
+- 動画配信サービス: $15
+- 音楽配信サービス: $10
+- ゲーム: $15
+- ソフトウェア: $20
+- ジム(未使用): $40
+- **合計: $100/月 = $1,200/年!**
 
-**Estrategias de protección:**
-- Configura recordatorios en el calendario para cuando terminen las pruebas
-- Revisa las suscripciones mensualmente
-- Usa tarjetas virtuales que expiren
-- Pregúntate: "¿Lo usé este mes? Consérvalo. ¿No lo usé? Cancélalo."
-- Cancela inmediatamente después de las pruebas gratuitas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**保護戦略:**
+- トライアル期間終了日のカレンダーリマインダーを設定する
+- 毎月サブスクリプションを見直す
+- 有効期限付きのバーチャルカードを使用する
+- 自分に問いかける: 「今月使った? 継続。使わなかった? 解約。」
+- 無料トライアル後はすぐに解約する',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8156,11 +8240,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'Hidden Fees',
-  'Tarifas Ocultas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '隠れた手数料',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8174,7 +8258,7 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# Reading the Fine Print
 
 **Watch out for:**
@@ -8202,35 +8286,35 @@ INSERT INTO "ContentTranslation" (
 2. Ask about total cost upfront
 3. Look for "fee-free" alternatives
 4. Calculate true cost before committing',
-  '# Leyendo la Letra Pequeña
+  '# 細かい文字を読む
 
-**Ten cuidado con:**
+**注意すべきもの:**
 
-**Tarifas de resort/hotel:**
-- Habitación: $100/noche
-- "Tarifa de resort": $30/noche
-- Estacionamiento: $25/noche
-- **Costo real: $155/noche!**
+**リゾート/ホテルの料金:**
+- 客室: $100/泊
+- 「リゾート料金」: $30/泊
+- 駐車場: $25/泊
+- **実際の費用: $155/泊!**
 
-**Tarifas de boletos:**
-- Boleto de concierto: $50
-- "Cargo por servicio": $15
-- "Tarifa de instalaciones": $8
-- **Costo real: $73**
+**チケット料金:**
+- コンサートチケット: $50
+- 「サービス料」: $15
+- 「施設使用料」: $8
+- **実際の費用: $73**
 
-**Tarifas bancarias:**
-- Tarifas por sobregiro
-- Tarifas de cajero automático
-- Tarifas de mantenimiento mensual
-- Tarifas por transacciones internacionales
+**銀行手数料:**
+- 当座貸越手数料
+- ATM手数料
+- 月額口座維持手数料
+- 海外取引手数料
 
-**Cómo evitarlas:**
-1. Lee TODOS los términos antes de comprar
-2. Pregunta por el costo total por adelantado
-3. Busca alternativas "sin tarifas"
-4. Calcula el costo real antes de comprometerte',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**回避する方法:**
+1. 購入前にすべての規約を読みます
+2. 総費用を事前に確認します
+3. 「手数料無料」の代替案を探します
+4. 契約前に実際の費用を計算します',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8244,11 +8328,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'What is "anchor pricing"?',
-  '¿Qué es el "precio ancla"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'アンカー・プライシング（アンカー価格）とは何ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8262,11 +8346,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'Selling boat anchors',
-  'Vender anclas de barco',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ボートの錨を販売すること',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8280,11 +8364,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'Showing a high price crossed out to make sale price look better',
-  'Mostrar un precio alto tachado para que el precio de oferta se vea mejor',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '高い価格に取り消し線を引いて、セール価格をより魅力的に見せること',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8298,11 +8382,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'Giving discounts to sailors',
-  'Dar descuentos a marineros',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '船乗りに割引を提供すること',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8316,11 +8400,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'Setting the lowest price',
-  'Establecer el precio más bajo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '最低価格を設定すること',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8334,11 +8418,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'Anchor pricing shows a high "original" price to make the sale price seem like a great deal.',
-  'El precio ancla muestra un precio "original" alto para hacer que el precio de oferta parezca una gran oportunidad.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'アンカープライシングとは、高い「元の」価格を表示することで、セール価格がとてもお得に見えるようにする手法です。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8352,11 +8436,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'Why are "free trials" sometimes a trap?',
-  '¿Por qué las "pruebas gratuitas" a veces son una trampa?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'なぜ「無料トライアル」が罠になることがあるのでしょうか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8370,11 +8454,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   'They''re actually free',
-  'Son realmente gratis',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '実際に無料です',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8388,11 +8472,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   'They auto-renew and charge your card',
-  'Se renuevan automáticamente y cobran a tu tarjeta',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自動更新されてカードに請求されるため',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8406,11 +8490,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   'They give you free stuff',
-  'Te dan cosas gratis',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '無料で商品がもらえるから',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8424,11 +8508,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   'They''re illegal',
-  'Son ilegales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '違法だから',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8442,11 +8526,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'Free trials often auto-renew into paid subscriptions that charge your card.',
-  'Las pruebas gratuitas a menudo se renuevan automáticamente en suscripciones pagadas que cargan tu tarjeta.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '無料トライアルは、多くの場合、有料サブスクリプションに自動更新され、クレジットカードに請求されます。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8460,11 +8544,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'If you have 5 subscriptions at $15 each, how much per year?',
-  'Si tienes 5 suscripciones a $15 cada una, ¿cuánto pagas al año?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '月額15ドルのサブスクリプションを5つ持っている場合、年間でいくらになりますか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8478,11 +8562,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   '$75',
   '$75',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8496,11 +8580,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   '$180',
   '$180',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8514,11 +8598,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   '$900',
   '$900',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8532,11 +8616,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   '$750',
   '$750',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8550,11 +8634,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   '5 × $15 = $75/month × 12 months = $900/year.',
-  '5 × $15 = $75/mes × 12 meses = $900/año.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '5 × $15 = $75/月 × 12ヶ月 = $900/年',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8568,11 +8652,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'What are "hidden fees"?',
-  '¿Qué son los "cargos ocultos"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '「隠れた手数料」とは何ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8586,11 +8670,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   'Illegal charges',
-  'Cargos ilegales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '違法な請求',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8604,11 +8688,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   'Additional costs not shown in advertised price',
-  'Costos adicionales no mostrados en el precio anunciado',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '広告価格に表示されていない追加費用',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8622,11 +8706,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   'Fees for hiding things',
-  'Tarifas por esconder cosas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '物を隠すための費用',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8640,11 +8724,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   'Discounts',
-  'Descuentos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '割引',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8658,11 +8742,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   'Hidden fees are extra costs added on top of the advertised price.',
-  'Las tarifas ocultas son costos adicionales que se agregan al precio anunciado.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '隠れた手数料とは、広告表示価格に上乗せされる追加費用のことです。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8676,11 +8760,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'ja',
   'Best way to avoid subscription traps:',
-  'Mejor manera de evitar trampas de suscripción:',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'サブスクリプションの罠を避ける最善の方法：',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8694,11 +8778,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'ja',
   'Never subscribe to anything',
-  'Nunca suscribirse a nada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '何も購読しない',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8712,11 +8796,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'ja',
   'Review and cancel unused subscriptions regularly',
-  'Revisar y cancelar suscripciones no utilizadas regularmente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '未使用のサブスクリプションを定期的に確認し、解約する',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8730,11 +8814,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'ja',
   'Subscribe to everything',
-  'Suscribirse a todo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'すべてに登録する',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8748,11 +8832,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'ja',
   'Ignore your bank statements',
-  'Ignorar tus estados de cuenta bancarios',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '銀行の明細書を無視する',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8766,11 +8850,11 @@ INSERT INTO "ContentTranslation" (
   '5f5b4583-e170-4021-aef1-dcb5863d2c09',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'ja',
   'Regularly reviewing subscriptions helps you cancel ones you don''t use.',
-  'Revisar regularmente las suscripciones te ayuda a cancelar aquellas que no usas.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '定期的にサブスクリプションを見直すことで、使っていないものを解約することができます。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8784,11 +8868,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'Emergency Fund',
-  'Fondo de Emergencia',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '緊急資金',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8802,7 +8886,7 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# Preparing for the Unexpected
 
 **Emergency fund** = Money saved for unexpected problems
@@ -8824,29 +8908,29 @@ INSERT INTO "ContentTranslation" (
 - Peace of mind
 
 **Goal:** 3-6 months of living expenses',
-  '# Preparándose para lo Inesperado
+  '# 予期せぬ出来事への備え
 
-**Fondo de emergencia** = Dinero ahorrado para problemas inesperados
+**緊急資金** = 予期しない問題のために貯めておくお金
 
-**Por qué lo necesitas:**
-- El auto se descompone: reparación de $500
-- Emergencia médica: cuenta de $1,000
-- Pérdida de empleo: Necesitas gastos de 3-6 meses
-- Reparación del hogar: Calentador de agua descompuesto
+**必要な理由：**
+- 車の故障：修理代5万円
+- 医療上の緊急事態：医療費10万円
+- 失業：3〜6ヶ月分の生活費が必要
+- 家の修理：給湯器の故障
 
-**Sin fondo de emergencia:**
-- Te endeudas (tarjetas de crédito, préstamos)
-- No puedes pagar las cuentas
-- Estrés y preocupación
+**緊急資金がない場合：**
+- 借金をすることになる（クレジットカード、ローン）
+- 請求書を支払えない
+- ストレスや心配
 
-**Con fondo de emergencia:**
-- Manejas los problemas con calma
-- No necesitas endeudarte
-- Tranquilidad mental
+**緊急資金がある場合：**
+- 落ち着いて問題に対処できる
+- 借金の必要がない
+- 心の平穏
 
-**Meta:** 3-6 meses de gastos de vida',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**目標：** 3〜6ヶ月分の生活費',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8860,11 +8944,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'Future Goals',
-  'Metas Futuras',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# 将来の目標',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8878,7 +8962,7 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# Saving for What You Want
 
 **Short-term goals (< 1 year):**
@@ -8900,29 +8984,29 @@ INSERT INTO "ContentTranslation" (
 - Starting a business
 
 Saving lets you afford your dreams without debt!',
-  '# Ahorrar para lo que Quieres
+  '# 欲しいもののために貯金する
 
-**Metas a corto plazo (< 1 año):**
-- Teléfono nuevo
-- Fiesta de cumpleaños
-- Viaje escolar
-- Regalos de festividades
+**短期目標(1年未満):**
+- 新しい携帯電話
+- 誕生日パーティー
+- 修学旅行
+- 休日のプレゼント
 
-**Metas a mediano plazo (1-5 años):**
-- Automóvil
-- Universidad
-- Boda
-- Cuota inicial de una vivienda
+**中期目標(1年〜5年):**
+- 車
+- 大学
+- 結婚式
+- 住宅の頭金
 
-**Metas a largo plazo (5+ años):**
-- Jubilación
-- Educación de los hijos
-- Vacaciones soñadas
-- Iniciar un negocio
+**長期目標(5年以上):**
+- 退職後の生活
+- 子供の教育
+- 夢の休暇
+- ビジネスの立ち上げ
 
-¡Ahorrar te permite alcanzar tus sueños sin deudas!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+貯金をすれば、借金なしで夢を叶えることができます!',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8936,11 +9020,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'Financial Security',
-  'Seguridad Financiera',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '経済的な安心',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -8954,7 +9038,7 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# Peace of Mind
 
 **Financial security means:**
@@ -8972,25 +9056,25 @@ INSERT INTO "ContentTranslation" (
 5. **Future you** - Will thank present you!
 
 "Don''t save what''s left after spending; spend what''s left after saving." - Warren Buffett',
-  '# Tranquilidad Mental
+  '# 心の平穏
 
-**La seguridad financiera significa:**
-- No vivir de quincena en quincena
-- Poder manejar emergencias
-- No estar estresado por el dinero
-- Libertad para tomar decisiones
-- Poder ayudar a otros
+**経済的安定とは：**
+- 給料日から給料日まで何とか暮らすような生活をしない
+- 緊急事態に対応できる
+- お金のことでストレスを感じない
+- 選択の自由がある
+- 他の人を助けることができる
 
-**Beneficios de ahorrar:**
-1. **Libertad** - Decir no a malos empleos
-2. **Oportunidades** - Aprovechar oportunidades para cumplir sueños
-3. **Menos estrés** - Dormir mejor por la noche
-4. **Independencia** - No depender de otros
-5. **Tu yo futuro** - ¡Te lo agradecerá!
+**貯蓄の利点：**
+1. **自由** - 悪い仕事を断ることができます
+2. **機会** - 夢に挑戦できます
+3. **ストレスの軽減** - 夜ぐっすり眠れます
+4. **自立** - 他人に頼らなくて済みます
+5. **未来の自分** - 今の自分に感謝するでしょう！
 
-"No ahorres lo que queda después de gastar; gasta lo que queda después de ahorrar." - Warren Buffett',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+「使った後に残ったお金を貯めるのではなく、貯めた後に残ったお金を使いなさい。」- ウォーレン・バフェット',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9004,11 +9088,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'What is an emergency fund?',
-  '¿Qué es un fondo de emergencia?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '緊急資金とは何ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9022,11 +9106,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'Money for vacations',
-  'Dinero para vacaciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '休暇のためのお金',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9040,11 +9124,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'Money saved for unexpected problems',
-  'Dinero ahorrado para problemas inesperados',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '予期しない問題に備えて貯めたお金',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9058,11 +9142,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'Money for shopping',
-  'Dinero para compras',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '買い物のためのお金',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9076,11 +9160,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'Money you never touch',
-  'Dinero que nunca tocas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '絶対に手をつけないお金',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9094,11 +9178,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'An emergency fund is savings set aside for unexpected expenses or emergencies.',
-  'Un fondo de emergencia es dinero ahorrado que se reserva para gastos inesperados o emergencias.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '緊急資金とは、予期しない出費や緊急事態のために取っておく貯金のことです。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9112,11 +9196,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'How many months of expenses should an emergency fund cover?',
-  '¿Cuántos meses de gastos debe cubrir un fondo de emergencia?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '緊急資金は何ヶ月分の支出をカバーすべきですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9130,11 +9214,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   '1 week',
-  '1 semana',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '1週間',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9148,11 +9232,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   '1 month',
-  '1 mes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '1ヶ月',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9166,11 +9250,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   '3-6 months',
-  '3-6 meses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '3〜6ヶ月',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9184,11 +9268,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   '10 years',
-  '10 años',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '10年',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9202,11 +9286,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'Financial experts recommend 3-6 months of living expenses for emergencies.',
-  'Los expertos financieros recomiendan tener ahorros equivalentes a 3-6 meses de gastos de vida para emergencias.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '金融の専門家は、緊急時のために3〜6ヶ月分の生活費を貯蓄することを推奨しています。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9220,11 +9304,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'Which is a short-term savings goal?',
-  '¿Cuál es una meta de ahorro a corto plazo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '短期的な貯蓄目標はどれですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9238,11 +9322,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   'Retirement',
-  'Jubilación',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '退職後の生活資金',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9256,11 +9340,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   'College in 10 years',
-  'Universidad en 10 años',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '10年後の大学進学',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9274,11 +9358,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   'New video game in 3 months',
-  'Videojuego nuevo en 3 meses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '3ヶ月後の新しいビデオゲーム',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9292,11 +9376,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   'Buying a house',
-  'Comprar una casa',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '家を購入すること',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9310,11 +9394,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   'Short-term goals are things you want to buy within a year.',
-  'Los objetivos a corto plazo son cosas que quieres comprar en un plazo de un año.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '短期目標とは、1年以内に購入したいものを指します。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9328,11 +9412,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'What does Warren Buffett say about saving?',
-  '¿Qué dice Warren Buffett sobre el ahorro?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ウォーレン・バフェットは貯蓄について何と言っていますか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9346,11 +9430,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   'Spend first, save what''s left',
-  'Gasta primero, ahorra lo que sobre',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '最初に使って、残ったものを貯金する',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9364,11 +9448,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   'Save first, spend what''s left',
-  'Ahorra primero, gasta lo que sobra',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '最初に貯蓄し、残りを使う',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9382,11 +9466,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   'Never save anything',
-  'Nunca ahorres nada',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '何も貯蓄しない',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9400,11 +9484,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   'Save everything',
-  'Ahorra todo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'すべて貯金する',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9418,11 +9502,11 @@ INSERT INTO "ContentTranslation" (
   'be722ff4-5b5e-4683-8a43-c05d1a3e5ebb',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   'Buffett advises to save first (pay yourself first), then spend what remains.',
-  'Buffett aconseja ahorrar primero (págate a ti mismo primero), luego gastar lo que queda.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'バフェット氏は、まず貯蓄する（自分自身に最初に支払う）ことを勧めており、その後残ったお金を使うようにとアドバイスしています。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9436,11 +9520,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'SMART Goals',
-  'Metas SMART',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'SMART目標',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9454,7 +9538,7 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# Setting Goals That Work
 
 **SMART = Specific, Measurable, Achievable, Relevant, Time-bound**
@@ -9475,28 +9559,28 @@ INSERT INTO "ContentTranslation" (
 3. Set a deadline
 4. Calculate monthly savings needed
 5. Make sure it''s realistic for your income',
-  '# Estableciendo Metas que Funcionan
+  '# 効果的な目標の設定
 
-**SMART = Específica, Medible, Alcanzable, Relevante, con Plazo definido**
+**SMART = 具体的、測定可能、達成可能、関連性がある、期限がある**
 
-❌ Meta mala: "Ahorrar más dinero"
-✅ Meta SMART: "Ahorrar $1,200 para una computadora portátil nueva para el 31 de diciembre"
+❌ 悪い目標：「もっとお金を貯める」
+✅ SMART目標：「12月31日までに新しいノートパソコンのために1,200ドルを貯める」
 
-**Desglosándola:**
-- **Específica:** Computadora portátil nueva
-- **Medible:** $1,200
-- **Alcanzable:** $100/mes durante 12 meses
-- **Relevante:** Necesaria para la escuela/trabajo
-- **con Plazo definido:** Para el 31 de diciembre
+**詳しく見てみましょう：**
+- **具体的：** 新しいノートパソコン
+- **測定可能：** 1,200ドル
+- **達成可能：** 12か月間、月100ドル
+- **関連性がある：** 学校や仕事で必要
+- **期限がある：** 12月31日まで
 
-**Cómo crear metas SMART:**
-1. Decide exactamente qué quieres
-2. Investiga el costo
-3. Establece una fecha límite
-4. Calcula el ahorro mensual necesario
-5. Asegúrate de que sea realista para tus ingresos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**SMART目標の立て方：**
+1. 欲しいものを正確に決める
+2. 費用を調べる
+3. 期限を設定する
+4. 毎月必要な貯蓄額を計算する
+5. 自分の収入で実現可能か確認する',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9510,11 +9594,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'Short-term vs Long-term',
-  'Corto plazo vs Largo plazo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '短期目標と長期目標',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9528,7 +9612,7 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# Different Goals, Different Strategies
 
 **Short-term (< 1 year):**
@@ -9550,29 +9634,29 @@ INSERT INTO "ContentTranslation" (
 - Examples: Retirement, house
 
 Match your savings strategy to your timeline!',
-  '# Diferentes Metas, Diferentes Estrategias
+  '# 目標が違えば、戦略も違う
 
-**Corto plazo (< 1 año):**
-- Mantener en cuenta de ahorros
-- Fácil acceso
-- Menor riesgo
-- Ejemplos: Bicicleta nueva, boletos para concierto
+**短期目標（1年未満）：**
+- 普通預金口座に預ける
+- 簡単にアクセス可能
+- リスクが低い
+- 例：新しい自転車、コンサートチケット
 
-**Mediano plazo (1-5 años):**
-- Ahorros de alto rendimiento o certificados de depósito
-- Algo de crecimiento, aún accesible
-- Riesgo bajo-medio
-- Ejemplos: Auto, universidad, boda
+**中期目標（1年〜5年）：**
+- 高金利預金口座または定期預金
+- ある程度の成長があり、引き出しも可能
+- リスクは低〜中程度
+- 例：車、大学、結婚式
 
-**Largo plazo (5+ años):**
-- Se puede invertir en acciones/bonos
-- Mayor potencial de crecimiento
-- Riesgo medio-alto (tiempo para recuperar pérdidas)
-- Ejemplos: Jubilación, casa
+**長期目標（5年以上）：**
+- 株式や債券への投資が可能
+- より高い成長の可能性
+- リスクは中〜高程度（損失を回復する時間がある）
+- 例：退職後の資金、家
 
-¡Adapta tu estrategia de ahorro a tu plazo de tiempo!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+貯蓄戦略は目標の期間に合わせましょう！',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9586,11 +9670,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'Tracking Progress',
-  'Seguimiento del Progreso',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '進捗の記録',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9604,7 +9688,7 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# Stay Motivated
 
 **Ways to track:**
@@ -9629,32 +9713,32 @@ INSERT INTO "ContentTranslation" (
 - 50% saved: Tell a friend
 - 75% saved: Plan how you''ll use it
 - 100%: Achievement unlocked! 🎉',
-  '# Mantén la Motivación
+  '# モチベーションを維持する
 
-**Formas de hacer seguimiento:**
+**追跡方法:**
 
-1. **Rastreadores visuales:**
-   - Termómetro de ahorros
-   - Tabla para colorear (colorea incrementos de $10)
-   - Foto del artículo objetivo como fondo de pantalla del teléfono
+1. **視覚的なトラッカー:**
+   - 貯蓄温度計
+   - 塗り絵チャート（10ドルごとに塗りつぶす）
+   - 目標のアイテムの写真をスマホの壁紙に
 
-2. **Aplicaciones y hojas de cálculo:**
-   - Mint, YNAB, Personal Capital
-   - Excel/Google Sheets simple
-   - Metas de ahorro en la aplicación del banco
+2. **アプリとスプレッドシート:**
+   - Mint、YNAB、Personal Capital
+   - シンプルなExcel/Googleスプレッドシート
+   - 銀行アプリの貯蓄目標機能
 
-3. **Métodos físicos:**
-   - Frasco/sobre separado para cada meta
-   - Transferir dinero a una cuenta separada
-   - Revisiones semanales con un compañero de rendición de cuentas
+3. **物理的な方法:**
+   - 各目標ごとに別々の瓶/封筒
+   - 別の口座にお金を移動する
+   - 責任パートナーとの週次チェックイン
 
-**Celebra los hitos:**
-- 25% ahorrado: Pequeño premio
-- 50% ahorrado: Cuéntale a un amigo
-- 75% ahorrado: Planifica cómo lo usarás
-- 100%: ¡Logro desbloqueado! 🎉',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**マイルストーンを祝いましょう:**
+- 25%貯蓄達成: ちょっとしたご褒美
+- 50%貯蓄達成: 友達に話す
+- 75%貯蓄達成: どう使うか計画する
+- 100%達成: 目標達成です! 🎉',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9668,11 +9752,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'What does SMART goals stand for?',
-  '¿Qué significa la sigla SMART para las metas?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'SMART目標とは何の略ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9686,11 +9770,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'Simple, Money, Achievable, Real, Timely',
-  'Simple, Dinero, Alcanzable, Real, Oportuno',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'シンプル、お金、達成可能、現実的、期限付き',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9704,11 +9788,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'Specific, Measurable, Achievable, Relevant, Time-bound',
-  'Específico, Medible, Alcanzable, Relevante, con Tiempo definido',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '具体的、測定可能、達成可能、関連性のある、期限のある',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9722,11 +9806,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'Save, Make, Acquire, Reach, Total',
-  'Ahorrar, Hacer, Adquirir, Alcanzar, Total',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '貯蓄、稼ぐ、獲得、到達、合計',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9740,11 +9824,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'Spend, Manage, Allocate, Record, Track',
-  'Gastar, Manejar, Asignar, Registrar, Rastrear',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '使う、管理する、配分する、記録する、追跡する',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9758,11 +9842,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'SMART is an acronym for Specific, Measurable, Achievable, Relevant, Time-bound.',
-  'SMART es un acrónimo de Específico, Medible, Alcanzable, Relevante, con Tiempo límite.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'SMARTとは、Specific(具体的)、Measurable(測定可能)、Achievable(達成可能)、Relevant(関連性がある)、Time-bound(期限がある)の頭文字を取ったものです。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9776,11 +9860,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'For a goal 8 years away, where should you keep the money?',
-  'Para una meta a 8 años de distancia, ¿dónde deberías guardar el dinero?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '8年後の目標のために、お金はどこに保管すべきですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9794,11 +9878,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   'Under your mattress',
-  'Debajo de tu colchón',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'マットレスの下',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9812,11 +9896,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   'In your wallet',
-  'En tu billetera',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'お財布の中',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9830,11 +9914,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   'Can invest in stocks for growth',
-  'Puede invertir en acciones para crecimiento',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '成長のために株式に投資できます',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9848,11 +9932,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   'In a piggy bank',
-  'En una alcancía',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '貯金箱に入れる',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9866,11 +9950,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'Long-term goals (5+ years) can be invested for higher growth potential.',
-  'Las metas a largo plazo (5+ años) pueden invertirse para obtener un mayor potencial de crecimiento.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '長期目標（5年以上）は、より高い成長の可能性を求めて投資することができます。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9884,11 +9968,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'If you want to save $600 in 6 months, how much per month?',
-  'Si quieres ahorrar $600 en 6 meses, ¿cuánto por mes?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '6ヶ月で600ドルを貯めたい場合、1ヶ月あたりいくら必要ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9902,11 +9986,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   '$50',
   '$50',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9920,11 +10004,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   '$100',
   '$100',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9938,11 +10022,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   '$150',
   '$150',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9956,11 +10040,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   '$200',
   '$200',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9974,11 +10058,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   '$600 ÷ 6 months = $100 per month.',
-  '$600 ÷ 6 meses = $100 por mes.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '$600 ÷ 6ヶ月 = 月$100',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -9992,11 +10076,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'Why is tracking progress important?',
-  '¿Por qué es importante dar seguimiento al progreso?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'なぜ進捗を追跡することが重要なのでしょうか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10010,11 +10094,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   'It''s not important',
-  'No es importante',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '重要ではありません',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10028,11 +10112,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   'Helps you stay motivated and on track',
-  'Te ayuda a mantenerte motivado y en el camino correcto',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'モチベーションを維持し、目標に向かって順調に進むことができます',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10046,11 +10130,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   'Required by law',
-  'Requerido por ley',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '法律で義務付けられているため',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10064,11 +10148,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   'Banks force you to',
-  'Los bancos te obligan a',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '銀行があなたに強制するから',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10082,11 +10166,11 @@ INSERT INTO "ContentTranslation" (
   '39b8e772-03e3-4b0b-8f2a-98d6f61b386e',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   'Tracking progress keeps you motivated and helps ensure you reach your goal.',
-  'Hacer seguimiento del progreso te mantiene motivado y ayuda a asegurar que alcances tu meta.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '進捗を追跡することで、モチベーションを維持し、目標達成を確実にすることができます。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10100,11 +10184,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'Savings Accounts',
-  'Cuentas de Ahorro',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '普通預金口座',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10118,7 +10202,7 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# Basic Savings at Banks
 
 **Savings account features:**
@@ -10134,23 +10218,23 @@ INSERT INTO "ContentTranslation" (
 - Money you might need soon
 
 **Tip:** Some accounts have fees if balance is too low. Choose fee-free accounts!',
-  '# Ahorros Básicos en Bancos
+  '# 銀行の基本的な普通預金
 
-**Características de la cuenta de ahorros:**
-- Gana intereses (usualmente 0.01% a 0.50%)
-- Asegurada por la FDIC (hasta $250,000)
-- Fácil acceso al dinero
-- Saldo mínimo bajo o nulo
-- Puede tener límites de retiro
+**普通預金口座の特徴：**
+- 利息がつきます（通常0.01%から0.50%）
+- FDIC保険付き（最大25万ドルまで）
+- お金に簡単にアクセスできます
+- 最低残高が低い、または不要です
+- 引き出し回数に制限がある場合があります
 
-**Cuándo usar:**
-- Fondo de emergencia
-- Metas a corto plazo
-- Dinero que podrías necesitar pronto
+**いつ使うか：**
+- 緊急時の資金
+- 短期的な目標
+- すぐに必要になるかもしれないお金
 
-**Consejo:** Algunas cuentas cobran comisiones si el saldo es muy bajo. ¡Elige cuentas sin comisiones!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**ヒント：** 残高が低すぎると手数料がかかる口座もあります。手数料無料の口座を選びましょう！',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10164,11 +10248,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'Interest Rates',
-  'Tasas de Interés',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '金利',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10182,7 +10266,7 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# How Your Money Grows
 
 **Interest** = Money the bank pays you for keeping money there
@@ -10205,30 +10289,30 @@ INSERT INTO "ContentTranslation" (
 
 At 1%: $1,000 → $1,104 in 10 years
 At 5%: $1,000 → $1,629 in 10 years',
-  '# Cómo Crece Tu Dinero
+  '# お金が増える仕組み
 
-**Interés** = Dinero que el banco te paga por mantener tu dinero allí
+**利息** = 銀行にお金を預けておくことで銀行があなたに支払うお金
 
-**Ejemplo:**
-- Ahorras $1,000
-- Tasa de interés: 5% por año
-- Después de 1 año: $1,050
-- Después de 2 años: $1,102.50 (¡interés compuesto!)
+**例:**
+- 1,000ドルを貯金
+- 金利:年5%
+- 1年後:1,050ドル
+- 2年後:1,102.50ドル(複利です!)
 
-**Interés compuesto** = Ganar interés sobre tu interés
+**複利** = 利息に対して利息が付くこと
 
-**Dónde encontrar interés más alto:**
-- Bancos en línea (1% a 5%+)
-- Cuentas de ahorro de alto rendimiento
-- Certificados de Depósito (CDs)
-- Cuentas del mercado monetario
+**より高い金利を見つけられる場所:**
+- オンライン銀行(1%から5%以上)
+- 高利回り普通預金口座
+- 定期預金(CD)
+- マネーマーケット口座
 
-**Compara las tasas** - ¡Pequeñas diferencias = gran diferencia con el tiempo!
+**金利を比較しましょう** - わずかな違いが、時間が経つと大きな違いになります!
 
-Al 1%: $1,000 → $1,104 en 10 años
-Al 5%: $1,000 → $1,629 en 10 años',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+1%の場合:1,000ドル → 10年後に1,104ドル
+5%の場合:1,000ドル → 10年後に1,629ドル',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10242,11 +10326,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'Bank vs Credit Union',
-  'Banco vs Cooperativa de Crédito',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '銀行と信用組合',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10260,7 +10344,7 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# Where to Open an Account
 
 **Banks:**
@@ -10284,31 +10368,31 @@ INSERT INTO "ContentTranslation" (
 - Need branches/ATMs? → Bank
 - Want better rates? → Credit Union
 - Can use online banking? → Online bank (best rates)',
-  '# Dónde Abrir una Cuenta
+  '# 口座を開設する場所
 
-**Bancos:**
-- Empresas con fines de lucro
-- Más ubicaciones y cajeros automáticos
-- Mejor tecnología/aplicaciones
-- Tasas de interés más bajas generalmente
-- Ejemplos: Chase, Bank of America
+**銀行：**
+- 営利企業
+- 支店とATMが多い
+- より優れた技術/アプリ
+- 通常、金利は低め
+- 例：Chase、Bank of America
 
-**Cooperativas de Crédito:**
-- Sin fines de lucro, propiedad de los miembros
-- Tasas de interés más altas
-- Tarifas más bajas
-- Menos ubicaciones
-- Pueden requerir membresía
-- Ejemplos: Navy Federal, cooperativas de crédito locales
+**信用組合：**
+- 非営利、組合員所有
+- より高い金利
+- より低い手数料
+- 支店が少ない
+- 組合員資格が必要な場合がある
+- 例：Navy Federal、地域の信用組合
 
-**Ambos son seguros** - asegurados por FDIC (bancos) o NCUA (cooperativas de crédito)
+**どちらも安全です** - FDIC（銀行）またはNCUA（信用組合）による保険付き
 
-**Para Elegir:**
-- ¿Necesitas sucursales/cajeros automáticos? → Banco
-- ¿Quieres mejores tasas? → Cooperativa de Crédito
-- ¿Puedes usar banca en línea? → Banco en línea (mejores tasas)',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**選び方：**
+- 支店/ATMが必要？ → 銀行
+- より良い金利が欲しい？ → 信用組合
+- オンラインバンキングを利用できる？ → オンライン銀行（最高金利）',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10322,11 +10406,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'What is FDIC insurance?',
-  '¿Qué es el seguro de la FDIC?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'FDIC保険とは何ですか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10340,11 +10424,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'Car insurance',
-  'Seguro de automóvil',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自動車保険',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10358,11 +10442,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'Protection for bank deposits up to $250,000',
-  'Protección para depósitos bancarios hasta $250,000',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '銀行預金を最大25万ドルまで保護する制度',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10376,11 +10460,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'Health insurance',
-  'Seguro de salud',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '健康保険',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10394,11 +10478,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'A type of savings account',
-  'Una clase de cuenta de ahorros',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '貯蓄口座の一種',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10412,11 +10496,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'FDIC insurance protects your bank deposits up to $250,000 if the bank fails.',
-  'El seguro de la FDIC protege tus depósitos bancarios hasta $250,000 si el banco quiebra.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'FDIC保険は、銀行が破綻した場合、あなたの銀行預金を最大25万ドルまで保護します。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10430,11 +10514,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'What is compound interest?',
-  '¿Qué es el interés compuesto?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '複利とは何ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10448,11 +10532,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   'Flat interest rate',
-  'Tasa de interés fija',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '固定金利',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10466,11 +10550,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   'Interest earned on both principal and previous interest',
-  'Interés ganado sobre el capital inicial y los intereses previos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '元本と過去の利息の両方に対して得られる利息',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10484,11 +10568,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   'Interest you pay on loans',
-  'Interés que pagas por préstamos',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ローンに対して支払う利息',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10502,11 +10586,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   'No interest',
-  'Sin interés',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '無利子',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10520,11 +10604,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'Compound interest means you earn interest on your interest, accelerating growth.',
-  'El interés compuesto significa que ganas intereses sobre tus intereses, acelerando el crecimiento.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '複利とは、利息に対しても利息が付くことを意味し、成長を加速させます。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10538,11 +10622,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'Where typically find the highest interest rates?',
-  '¿Dónde se suelen encontrar las tasas de interés más altas?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '定期預金口座では通常、最も高い金利が得られます',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10556,11 +10640,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   'Traditional bank branches',
-  'Sucursales bancarias tradicionales',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '従来型の銀行店舗',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10574,11 +10658,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   'Under your mattress',
-  'Debajo de tu colchón',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'マットレスの下',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10592,11 +10676,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   'Online banks and credit unions',
-  'Bancos en línea y cooperativas de crédito',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'オンライン銀行と信用組合',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10610,11 +10694,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   'Piggy banks',
-  'Alcancías',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '貯金箱',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10628,11 +10712,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   'Online banks and credit unions often offer higher interest rates than traditional banks.',
-  'Los bancos en línea y las cooperativas de crédito a menudo ofrecen tasas de interés más altas que los bancos tradicionales.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'オンライン銀行や信用組合は、従来の銀行よりも高い金利を提供することが多いです。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10646,11 +10730,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'If you save $100 at 4% interest for 1 year, how much will you have?',
-  'Si ahorras $100 al 4% de interés durante 1 año, ¿cuánto tendrás?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '年利4%で100ドルを1年間貯金した場合、いくらになりますか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10664,11 +10748,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   '$100',
   '$100',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10682,11 +10766,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   '$104',
   '$104',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10700,11 +10784,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   '$400',
   '$400',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10718,11 +10802,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   '$140',
   '$140',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10736,11 +10820,11 @@ INSERT INTO "ContentTranslation" (
   'cd864aa8-ed00-4126-b30e-61d94eb0f6f9',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   '$100 + ($100 × 0.04) = $104.',
-  '$100 + ($100 × 0,04) = $104.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '$100 + ($100 × 0.04) = $104。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10754,11 +10838,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'Pay Yourself First',
-  'Págate a Ti Mismo Primero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自分自身への支払いを最優先にする',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10772,7 +10856,7 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# The Golden Rule of Saving
 
 **"Pay yourself first"** = Save before spending on anything else
@@ -10797,32 +10881,32 @@ INSERT INTO "ContentTranslation" (
 - Savings actually happen
 
 "Don''t save what is left after spending; spend what is left after saving."',
-  '# La Regla de Oro del Ahorro
+  '# 貯蓄の黄金ルール
 
-**"Págate a ti mismo primero"** = Ahorra antes de gastar en cualquier otra cosa
+**「最初に自分に支払う」** = 他の支出よりも先に貯蓄する
 
-**Cómo funciona:**
+**仕組み:**
 
-❌ Forma antigua:
-1. Recibir el salario
-2. Pagar las cuentas
-3. Comprar cosas
-4. Ahorrar lo que queda (usualmente $0)
+❌ 古い方法:
+1. 給料を受け取る
+2. 請求書を支払う
+3. 物を買う
+4. 残ったものを貯蓄する(通常$0)
 
-✅ Forma nueva:
-1. Recibir el salario
-2. **Ahorrar inmediatamente el 10-20%**
-3. Pagar las cuentas
-4. Comprar cosas con lo que queda
+✅ 新しい方法:
+1. 給料を受け取る
+2. **すぐに10-20%を貯蓄する**
+3. 請求書を支払う
+4. 残ったもので物を買う
 
-**Por qué funciona:**
-- Trata el ahorro como una cuenta (no negociable)
-- Ajustas tus gastos a lo que queda
-- El ahorro realmente sucede
+**効果がある理由:**
+- 貯蓄を請求書として扱います(交渉の余地なし)
+- 残った金額に合わせて支出を調整します
+- 貯蓄が実際に実現します
 
-"No ahorres lo que queda después de gastar; gasta lo que queda después de ahorrar."',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+「支出した後に残ったものを貯蓄するのではなく、貯蓄した後に残ったものを支出しましょう。」',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10836,11 +10920,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'Automatic Transfers',
-  'Transferencias Automáticas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自動振替',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10854,7 +10938,7 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# Set It and Forget It
 
 **Automatic savings** = Money moves to savings without you doing anything
@@ -10881,34 +10965,34 @@ INSERT INTO "ContentTranslation" (
 - No forgetting
 - Consistent progress
 - "Out of sight, out of mind"',
-  '# Configúralo y Olvídate
+  '# 設定したら忘れるだけ
 
-**Ahorro automático** = El dinero se transfiere a ahorros sin que hagas nada
+**自動貯蓄** = 何もしなくてもお金が貯蓄口座に移動します
 
-**Cómo configurarlo:**
+**設定方法:**
 
-1. **División de nómina:**
-   - Solicita a tu empleador que deposite un % en ahorros
-   - El resto va a cuenta corriente
-   - Ocurre con cada pago de nómina
+1. **給与の分割:**
+   - 雇用主に貯蓄口座へ一定の割合を振り込むよう依頼
+   - 残りは普通預金口座へ
+   - 毎回の給与支払い時に実行されます
 
-2. **Transferencia automática bancaria:**
-   - Configura una transferencia recurrente
-   - Cada día de pago, $X se transfiere a ahorros
-   - Puedes ajustar o pausar en cualquier momento
+2. **銀行の自動振替:**
+   - 定期振替を設定
+   - 給料日ごとに、指定した金額が貯蓄口座へ移動
+   - いつでも調整または一時停止が可能
 
-3. **Ahorra según un calendario:**
-   - Semanal: Más fácil psicológicamente
-   - Quincenal: Coincide con el calendario de pago
-   - Mensual: Simple, montos mayores
+3. **スケジュールに沿って貯蓄:**
+   - 毎週: 心理的に楽
+   - 隔週: 給与支払いスケジュールに合わせる
+   - 毎月: シンプルで、より大きな金額
 
-**Beneficios:**
-- No se necesita fuerza de voluntad
-- No se te olvida
-- Progreso consistente
-- "Ojos que no ven, corazón que no siente"',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**メリット:**
+- 意志の力は不要
+- 忘れることがない
+- 一貫した進歩
+- 「目に見えなければ、気にならない」',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10922,11 +11006,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'Round-up Apps',
-  'Aplicaciones de Redondeo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ラウンドアップアプリ',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -10940,7 +11024,7 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# Painless Micro-Savings
 
 **Round-up apps** = Round purchases to nearest dollar, save the difference
@@ -10968,35 +11052,35 @@ Saves difference: $0.50
 - Save raises (increase auto-transfer when salary increases)
 
 **Key:** Start small! $1/day = $365/year',
-  '# Micro-ahorros sin dolor
+  '# 痛みのない少額貯蓄
 
-**Apps de redondeo** = Redondean compras al dólar más cercano, ahorran la diferencia
+**端数切り上げアプリ** = 買い物を最も近いドルに切り上げ、差額を貯蓄
 
-**Cómo funcionan:**
+**仕組み:**
 
-Compras café: $4.50
-App redondea a: $5.00
-Ahorra la diferencia: $0.50
+コーヒーを購入: $4.50
+アプリが切り上げ: $5.00
+差額を貯蓄: $0.50
 
-10 compras × $0.50 promedio = $5/día = $150/mes!
+10回の買い物 × 平均$0.50 = 1日$5 = 月$150!
 
-**Apps populares:**
+**人気のアプリ:**
 - Acorns
 - Digit
 - Qapital
-- Chime (tiene esta función)
-- Muchos bancos ofrecen esto
+- Chime (この機能があります)
+- 多くの銀行がこのサービスを提供
 
-**Otros trucos de micro-ahorro:**
-- Ahorra todos los billetes de $5 que recibas
-- Ahorra todas las monedas al final del día
-- Ahorra el reembolso de impuestos inmediatamente
-- Ahorra bonos/regalos antes de gastar
-- Ahorra los aumentos (incrementa la transferencia automática cuando aumente el salario)
+**その他の少額貯蓄のコツ:**
+- 受け取った$5札をすべて貯める
+- 1日の終わりにすべての小銭を貯める
+- 税金の還付金をすぐに貯める
+- ボーナス/お祝い金を使う前に貯める
+- 昇給分を貯める(給与が増えたら自動振替額を増やす)
 
-**Clave:** ¡Empieza pequeño! $1/día = $365/año',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**重要:** 小さく始めましょう! 1日$1 = 年$365',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11010,11 +11094,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'What does "pay yourself first" mean?',
-  '¿Qué significa "págate a ti primero"?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '「自分に先に支払う」とはどういう意味ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11028,11 +11112,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   'Buy things for yourself',
-  'Comprar cosas para ti mismo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自分のために物を買う',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11046,11 +11130,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   'Save money before paying bills',
-  'Ahorrar dinero antes de pagar las cuentas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '請求書を支払う前にお金を貯める',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11064,11 +11148,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   'Give yourself a paycheck',
-  'Darte un sueldo a ti mismo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自分自身に給料を支払う',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11082,11 +11166,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   'Save money before spending on other things',
-  'Ahorrar dinero antes de gastarlo en otras cosas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '他のことにお金を使う前に貯金をすること',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11100,11 +11184,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'Pay yourself first means saving a portion of income before spending on anything else.',
-  'Pagarte a ti mismo primero significa ahorrar una parte de tus ingresos antes de gastar en cualquier otra cosa.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '「自分に最初に支払う」とは、他の何かにお金を使う前に、収入の一部を貯蓄することを意味します。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11118,11 +11202,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'What is automatic savings?',
-  '¿Qué es el ahorro automático?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自動貯蓄とは何ですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11136,11 +11220,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   'Money that appears magically',
-  'Dinero que aparece mágicamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '魔法のように現れるお金',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11154,11 +11238,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   'Automatic transfers from checking to savings',
-  'Transferencias automáticas de cuenta corriente a ahorros',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '当座預金口座から貯蓄口座への自動振替',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11172,11 +11256,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   'Savings that grow automatically',
-  'Ahorros que crecen automáticamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自動的に増える貯蓄',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11190,11 +11274,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   'A type of bank account',
-  'Una cuenta bancaria',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '銀行口座の種類',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11208,11 +11292,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'Automatic savings is when money automatically transfers from checking to savings.',
-  'El ahorro automático es cuando el dinero se transfiere automáticamente de la cuenta corriente a la cuenta de ahorros.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '自動貯蓄とは、お金が当座預金口座から貯蓄口座へ自動的に振り替えられることです。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11226,11 +11310,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'How do round-up apps work?',
-  '¿Cómo funcionan las aplicaciones de redondeo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ラウンドアップアプリはどのように機能しますか?',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11244,11 +11328,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   'Round down your balance',
-  'Redondean hacia abajo tu saldo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '残高を切り下げる',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11262,11 +11346,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   'Round purchases up and save the difference',
-  'Redondean las compras hacia arriba y ahorran la diferencia',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '購入金額を切り上げて、差額を貯蓄します',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11280,11 +11364,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   'Give you money',
-  'Te dan dinero',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'お金をくれる',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11298,11 +11382,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   'Round your interest',
-  'Redondean tus intereses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '利息を切り上げる',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11316,11 +11400,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   'Round-up apps round each purchase up to the nearest dollar and save the difference.',
-  'Las aplicaciones de redondeo redondean cada compra al dólar más cercano y ahorran la diferencia.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ラウンドアップアプリは、各購入を最も近いドルに切り上げて、その差額を貯蓄します。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11334,11 +11418,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'If a round-up app saves $0.50 per transaction and you make 200 transactions/month, how much saved?',
-  'Si una aplicación de redondeo ahorra $0.50 por transacción y realizas 200 transacciones/mes, ¿cuánto ahorras?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '端数切り上げアプリが1回の取引につき0.50ドルを貯蓄し、月に200回の取引を行う場合、いくら貯蓄できますか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11352,11 +11436,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   '$50',
   '$50',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11370,11 +11454,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   '$100',
   '$100',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11388,11 +11472,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   '$150',
   '$150',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11406,11 +11490,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   '$200',
   '$200',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11424,11 +11508,11 @@ INSERT INTO "ContentTranslation" (
   '72ecbef6-7613-45ac-909b-295e02fb9f5f',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   '200 transactions × $0.50 = $100 saved per month.',
-  '200 transacciones × $0.50 = $100 ahorrados por mes.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '200回の取引 × $0.50 = 月$100の節約になります。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11442,11 +11526,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[0].title',
   'en',
-  'es',
+  'ja',
   'How Much to Save',
-  '¿Cuánto ahorrar?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'どのくらい貯金すべきか',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11460,7 +11544,7 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[0].content',
   'en',
-  'es',
+  'ja',
   '# Your Emergency Fund Target
 
 **Standard recommendation: 3-6 months of expenses**
@@ -11485,32 +11569,32 @@ INSERT INTO "ContentTranslation" (
 - Income sources (single income = more needed)
 - Health (medical issues = more needed)
 - Dependents (kids = more needed)',
-  '# Tu Meta de Fondo de Emergencia
+  '# あなたの緊急資金の目標
 
-**Recomendación estándar: 3-6 meses de gastos**
+**標準的な推奨額：3～6ヶ月分の生活費**
 
-**Calcula tu número:**
+**あなたの金額を計算しましょう：**
 
-1. Lista de gastos mensuales:
-   - Alquiler/hipoteca: $1,000
-   - Servicios públicos: $150
-   - Comida: $400
-   - Transporte: $200
-   - Seguro: $150
-   - Otros gastos esenciales: $100
-   - **Total: $2,000/mes**
+1. 月々の支出をリストアップ：
+   - 家賃/住宅ローン：$1,000
+   - 光熱費：$150
+   - 食費：$400
+   - 交通費：$200
+   - 保険：$150
+   - その他の必需品：$100
+   - **合計：$2,000/月**
 
-2. Multiplica por 3-6:
-   - Mínimo: $6,000
-   - Ideal: $12,000
+2. 3～6倍にする：
+   - 最低額：$6,000
+   - 理想額：$12,000
 
-**Factores a considerar:**
-- Estabilidad laboral (inestable = 6+ meses)
-- Fuentes de ingreso (ingreso único = se necesita más)
-- Salud (problemas médicos = se necesita más)
-- Dependientes (hijos = se necesita más)',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**考慮すべき要素：**
+- 仕事の安定性（不安定 = 6ヶ月以上）
+- 収入源（単一収入 = より多く必要）
+- 健康状態（医療問題 = より多く必要）
+- 扶養家族（子供 = より多く必要）',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11524,11 +11608,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[1].title',
   'en',
-  'es',
+  'ja',
   'When to Use It',
-  'Cuándo usarlo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '# いつ使うべきか',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11542,7 +11626,7 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[1].content',
   'en',
-  'es',
+  'ja',
   '# True Emergencies Only
 
 **Use emergency fund for:**
@@ -11568,33 +11652,33 @@ Ask: "If I don''t spend this money, will something bad happen?"
 - No = Not an emergency
 
 Having separate "fun money" helps avoid dipping into emergency fund!',
-  '# Solo Emergencias Verdaderas
+  '# 本当の緊急事態のみ
 
-**Usa el fondo de emergencia para:**
+**緊急資金を使うべき場合:**
 
-✅ **Emergencias verdaderas:**
-- Pérdida de empleo
-- Emergencia médica
-- Reparación esencial del hogar (calentador de agua, caldera)
-- Reparación esencial del auto (no puedes llegar al trabajo)
-- Emergencia familiar
+✅ **本当の緊急事態:**
+- 失業
+- 医療上の緊急事態
+- 必要不可欠な家の修理（給湯器、暖房機器）
+- 必要不可欠な車の修理（通勤できない場合）
+- 家族の緊急事態
 
-❌ **NO son emergencias:**
-- Oferta en un televisor
-- Vacaciones
-- Ropa nueva
-- Salir a comer
-- Mejoras no esenciales
-- "Realmente lo quiero"
+❌ **緊急事態ではないもの:**
+- テレビのセール
+- 休暇
+- 新しい服
+- 外食
+- 必要不可欠ではないアップグレード
+- 「本当に欲しい」という理由
 
-**Regla general:**
-Pregunta: "Si no gasto este dinero, ¿pasará algo malo?"
-- Sí = Emergencia
-- No = No es una emergencia
+**基本的な考え方:**
+「このお金を使わなければ、何か悪いことが起こるか？」と自問してください
+- はい = 緊急事態
+- いいえ = 緊急事態ではない
 
-¡Tener "dinero para diversión" por separado ayuda a evitar usar el fondo de emergencia!',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+別に「楽しみのためのお金」を用意しておくと、緊急資金に手を出さずに済みます！',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11608,11 +11692,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[2].title',
   'en',
-  'es',
+  'ja',
   'Rebuilding After Use',
-  'Reconstruyendo Después de Usar',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '使用後の立て直し',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11626,7 +11710,7 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'sections[2].content',
   'en',
-  'es',
+  'ja',
   '# Getting Back on Track
 
 **If you use your emergency fund:**
@@ -11658,39 +11742,39 @@ INSERT INTO "ContentTranslation" (
 - Income: $3,000/month
 - Can save: $500/month
 - Rebuilt in: 4 months',
-  '# Retomando el Camino
+  '# 軌道に戻る
 
-**Si usas tu fondo de emergencia:**
+**緊急資金を使った場合:**
 
-**1. ¡No te sientas culpable!**
-- Para eso está
-- Planificaste correctamente con anticipación
-- Siéntete orgulloso de haberlo tenido
+**1. 罪悪感を感じないでください!**
+- それが緊急資金の目的です
+- あなたは正しく事前に計画していました
+- それがあったことを誇りに思ってください
 
-**2. Pausa otros ahorros temporalmente:**
-- Enfócate primero en reconstruir el fondo de emergencia
-- Otras metas pueden esperar
-- Fondo de emergencia = prioridad #1
+**2. 他の貯蓄を一時的に中断します:**
+- まず緊急資金の再構築に集中します
+- 他の目標は待つことができます
+- 緊急資金 = 最優先事項
 
-**3. Reconstruye tan rápido como sea razonablemente posible:**
-- Comienza inmediatamente (incluso $20 ayuda)
-- Usa cualquier ingreso extra (devolución de impuestos, bonificación)
-- Reduce temporalmente gastos discrecionales
-- Considera ingresos adicionales
+**3. 合理的に可能な限り早く再構築します:**
+- すぐに始めます(20ドルでも役立ちます)
+- 臨時収入を使います(税金の還付、ボーナス)
+- 一時的に自由裁量支出を削減します
+- 副収入を検討します
 
-**4. Revisa qué sucedió:**
-- ¿Era prevenible?
-- ¿Necesitas más seguro?
-- ¿Necesitas un fondo de emergencia más grande?
-- Ajusta tu plan según corresponda
+**4. 何が起こったかを見直します:**
+- 防ぐことはできましたか?
+- もっと保険が必要ですか?
+- もっと大きな緊急資金が必要ですか?
+- それに応じて計画を調整します
 
-**Ejemplo de plan de reconstrucción:**
-- Usado: $2,000
-- Ingreso: $3,000/mes
-- Puedes ahorrar: $500/mes
-- Reconstruido en: 4 meses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+**再構築計画の例:**
+- 使用額: 2,000ドル
+- 収入: 月3,000ドル
+- 貯蓄可能額: 月500ドル
+- 再構築期間: 4ヶ月',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11704,11 +11788,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].question',
   'en',
-  'es',
+  'ja',
   'How many months of expenses should an emergency fund cover?',
-  '¿Cuántos meses de gastos debería cubrir un fondo de emergencia?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '緊急資金はどのくらいの月数分の支出をカバーすべきですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11722,11 +11806,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].options[0]',
   'en',
-  'es',
+  'ja',
   '1 week',
-  '1 semana',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '1週間',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11740,11 +11824,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].options[1]',
   'en',
-  'es',
+  'ja',
   '1 month',
-  '1 mes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '1ヶ月',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11758,11 +11842,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].options[2]',
   'en',
-  'es',
+  'ja',
   '3-6 months',
-  '3-6 meses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '3〜6ヶ月',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11776,11 +11860,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].options[3]',
   'en',
-  'es',
+  'ja',
   '10 years',
-  '10 años',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '10年',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11794,11 +11878,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[0].explanation',
   'en',
-  'es',
+  'ja',
   'Financial experts recommend 3-6 months of living expenses.',
-  'Los expertos financieros recomiendan tener ahorros para cubrir entre 3 y 6 meses de gastos de vida.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'ファイナンシャルの専門家は、3〜6ヶ月分の生活費を推奨しています。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11812,11 +11896,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].question',
   'en',
-  'es',
+  'ja',
   'Which is a TRUE emergency for using your emergency fund?',
-  '¿Cuál es una emergencia VERDADERA para usar tu fondo de emergencia?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '緊急資金を使うべき**本当の緊急事態**はどれですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11830,11 +11914,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].options[0]',
   'en',
-  'es',
+  'ja',
   'TV is on sale',
-  'TV en oferta',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'テレビが安売りしている',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11848,11 +11932,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].options[1]',
   'en',
-  'es',
+  'ja',
   'Want to go on vacation',
-  'Querer ir de vacaciones',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '休暇に行きたい',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11866,11 +11950,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].options[2]',
   'en',
-  'es',
+  'ja',
   'Car breaks down and you can''t get to work',
-  'El auto se descompone y no puedes llegar al trabajo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '車が故障して、仕事に行けなくなった場合',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11884,11 +11968,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].options[3]',
   'en',
-  'es',
+  'ja',
   'New video game release',
-  'Lanzamiento de un nuevo videojuego',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '新しいビデオゲームの発売',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11902,11 +11986,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[1].explanation',
   'en',
-  'es',
+  'ja',
   'A car needed for work is a true emergency. Other examples are wants.',
-  'Un automóvil necesario para el trabajo es una verdadera emergencia. Los otros ejemplos son deseos.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '仕事に必要な車は真の緊急事態です。その他の例は欲しいものです。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11920,11 +12004,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].question',
   'en',
-  'es',
+  'ja',
   'If your monthly expenses are $2,500, what''s a minimum emergency fund?',
-  'Si tus gastos mensuales son $2,500, ¿cuál es el fondo de emergencia mínimo?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '毎月の支出が2,500ドルの場合、最低限の緊急資金はいくらですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11938,11 +12022,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].options[0]',
   'en',
-  'es',
+  'ja',
   '$2,500',
   '$2,500',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11956,11 +12040,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].options[1]',
   'en',
-  'es',
+  'ja',
   '$5,000',
   '$5,000',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11974,11 +12058,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].options[2]',
   'en',
-  'es',
+  'ja',
   '$7,500',
   '$7,500',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -11992,11 +12076,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].options[3]',
   'en',
-  'es',
+  'ja',
   '$25,000',
   '$25,000',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12010,11 +12094,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[2].explanation',
   'en',
-  'es',
+  'ja',
   '3 months × $2,500 = $7,500 minimum.',
-  '3 meses × $2,500 = $7,500 mínimo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '3ヶ月 × $2,500 = 最低$7,500',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12028,11 +12112,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].question',
   'en',
-  'es',
+  'ja',
   'After using emergency fund, what should you do?',
-  'Después de usar el fondo de emergencia, ¿qué deberías hacer?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '緊急資金を使用した後、何をすべきですか？',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12046,11 +12130,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].options[0]',
   'en',
-  'es',
+  'ja',
   'Forget about it',
-  'Olvidarte de ello',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '忘れる',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12064,11 +12148,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].options[1]',
   'en',
-  'es',
+  'ja',
   'Immediately rebuild it',
-  'Reconstruirlo inmediatamente',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'すぐに再構築する',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12082,11 +12166,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].options[2]',
   'en',
-  'es',
+  'ja',
   'Wait a year to rebuild',
-  'Esperar un año para reconstruirlo',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '1年待ってから再構築する',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12100,11 +12184,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].options[3]',
   'en',
-  'es',
+  'ja',
   'Use it for other things',
-  'Usarlo para otras cosas',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '他のことに使う',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12118,11 +12202,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[3].explanation',
   'en',
-  'es',
+  'ja',
   'Rebuild your emergency fund as soon as possible after using it.',
-  'Reconstruye tu fondo de emergencia lo antes posible después de usarlo.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '緊急時資金を使用した後は、できるだけ早く再構築しましょう。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12136,11 +12220,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].question',
   'en',
-  'es',
+  'ja',
   'Why might someone need 6+ months of expenses saved?',
-  '¿Por qué alguien podría necesitar ahorrar gastos de 6+ meses?',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '長期的な失業や深刻な健康問題に備えるため',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12154,11 +12238,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].options[0]',
   'en',
-  'es',
+  'ja',
   'They like big numbers',
-  'Les gustan los números grandes',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '大きな数字が好きだから',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12172,11 +12256,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].options[1]',
   'en',
-  'es',
+  'ja',
   'Unstable job or single income household',
-  'Trabajo inestable o hogar con un solo ingreso',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '不安定な仕事または単一収入の世帯',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12190,11 +12274,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].options[2]',
   'en',
-  'es',
+  'ja',
   'Banks require it',
-  'Los bancos lo requieren',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  '銀行がそれを要求するから',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12208,11 +12292,11 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].options[3]',
   'en',
-  'es',
+  'ja',
   'Everyone needs exactly 6 months',
-  'Todos necesitan exactamente 6 meses',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'すべての人に正確に6ヶ月分が必要',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 INSERT INTO "ContentTranslation" (
@@ -12226,17 +12310,17 @@ INSERT INTO "ContentTranslation" (
   'a0116417-9d22-479e-9a4e-c2b4848050bf',
   'quiz.questions[4].explanation',
   'en',
-  'es',
+  'ja',
   'Less stable situations warrant larger emergency funds for more protection.',
-  'Las situaciones menos estables requieren fondos de emergencia más grandes para mayor protección.',
-  '2026-01-06T01:00:52.314Z',
-  '2027-01-06T01:00:52.314Z'
+  'より不安定な状況では、より多くの保護のために、より大きな緊急資金が必要です。',
+  '2026-01-06T01:59:54.111Z',
+  '2027-01-06T01:59:54.111Z'
 );
 
 -- ========================================
 -- VERIFICATION
 -- ========================================
-SELECT 'Translation completed for es!' as message;
+SELECT 'Translation completed for ja!' as message;
 SELECT COUNT(*) as total_translations
 FROM "ContentTranslation"
-WHERE target_language = 'es';
+WHERE target_language = 'ja';
