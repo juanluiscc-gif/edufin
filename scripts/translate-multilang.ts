@@ -58,6 +58,21 @@ const LANGUAGE_CONFIG = {
     fullName: 'Chinese (Simplified)',
     instructions: 'Translate to Simplified Chinese (简体中文). Use clear, educational language.',
   },
+  hi: {
+    name: 'Hindi',
+    fullName: 'Hindi',
+    instructions: 'Translate to Hindi (हिन्दी). Use Devanagari script. Use clear, educational language appropriate for financial literacy.',
+  },
+  it: {
+    name: 'Italian',
+    fullName: 'Italian',
+    instructions: 'Translate to Italian (Italiano). Use clear, educational language.',
+  },
+  pt: {
+    name: 'Portuguese',
+    fullName: 'Portuguese (Brazilian)',
+    instructions: 'Translate to Brazilian Portuguese (Português Brasileiro). Use Brazilian spelling and terminology. Use clear, educational language.',
+  },
 };
 
 interface TranslationRecord {

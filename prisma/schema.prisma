@@ -84,6 +84,9 @@ enum Language {
   de
   ja
   zh
+  hi
+  it
+  pt
 }
 
 enum FriendshipStatus {

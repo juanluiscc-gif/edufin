@@ -1,0 +1,81 @@
+{
+  "integrations": {
+    "title": "Integrações de Negócios",
+    "connectYourBusiness": "Conecte seu Negócio",
+    "connected": "Conectado",
+    "notConnected": "Não Conectado",
+    "connect": "Conectar",
+    "disconnect": "Desconectar",
+    "manage": "Gerenciar",
+    "status": "Status",
+    "lastSync": "Última Sincronização",
+    "syncNow": "Sincronizar Agora",
+    "disconnectConfirm": "Tem certeza de que deseja desconectar esta integração?"
+  },
+  "services": {
+    "shopify": {
+      "name": "Shopify",
+      "description": "Gerencie pedidos, produtos e inventário da sua loja Shopify"
+    },
+    "woocommerce": {
+      "name": "WooCommerce",
+      "description": "Conecte sua loja WooCommerce"
+    },
+    "quickbooks": {
+      "name": "QuickBooks",
+      "description": "Gerencie faturas e despesas"
+    },
+    "xero": {
+      "name": "Xero",
+      "description": "Contabilidade e relatórios financeiros"
+    }
+  },
+  "tabs": {
+    "orders": "Pedidos",
+    "products": "Produtos",
+    "inventory": "Inventário",
+    "invoices": "Faturas",
+    "expenses": "Despesas",
+    "reports": "Relatórios",
+    "settings": "Configurações"
+  },
+  "orders": {
+    "title": "Pedidos",
+    "orderNumber": "Pedido #",
+    "customer": "Cliente",
+    "date": "Data",
+    "total": "Total",
+    "status": "Status",
+    "viewDetails": "Ver Detalhes",
+    "updateStatus": "Atualizar Status",
+    "refresh": "Atualizar"
+  },
+  "products": {
+    "title": "Produtos",
+    "addProduct": "Adicionar Produto",
+    "editProduct": "Editar Produto",
+    "deleteProduct": "Excluir Produto",
+    "productName": "Nome do Produto",
+    "sku": "SKU",
+    "price": "Preço",
+    "stock": "Estoque",
+    "image": "Imagem"
+  },
+  "inventory": {
+    "title": "Inventário",
+    "currentStock": "Estoque Atual",
+    "lowStock": "Estoque Baixo",
+    "outOfStock": "Sem Estoque",
+    "updateStock": "Atualizar Estoque",
+    "newQuantity": "Nova Quantidade"
+  },
+  "statuses": {
+    "pending": "Pendente",
+    "processing": "Processando",
+    "completed": "Concluído",
+    "failed": "Falhou",
+    "active": "Ativo",
+    "inactive": "Inativo",
+    "error": "Erro"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "expenses": {
+    "title": "Rastreamento de Despesas",
+    "addExpense": "Adicionar Despesa",
+    "editExpense": "Editar Despesa",
+    "deleteExpense": "Excluir Despesa",
+    "amount": "Valor",
+    "category": "Categoria",
+    "description": "Descrição",
+    "date": "Data",
+    "save": "Salvar Despesa",
+    "cancel": "Cancelar",
+    "deleteConfirm": "Tem certeza de que deseja excluir esta despesa?",
+    "expenseList": "Todas as Despesas",
+    "recentExpenses": "Despesas Recentes",
+    "viewAll": "Ver Todas"
+  },
+  "dashboard": {
+    "title": "Painel de Despesas",
+    "totalSpent": "Total Gasto Este Mês",
+    "budgetRemaining": "Orçamento Restante",
+    "topCategory": "Categoria Principal",
+    "daysRemaining": "Dias Restantes",
+    "avgDailyBudget": "Orçamento Diário Médio",
+    "onTrack": "No Caminho Certo",
+    "overBudget": "Acima do Orçamento",
+    "spendingOverview": "Visão Geral de Gastos",
+    "insights": "Insights de IA"
+  },
+  "budget": {
+    "title": "Configurações de Orçamento",
+    "monthlyBudget": "Orçamento Mensal",
+    "totalBudget": "Orçamento Total",
+    "categoryBudgets": "Orçamentos por Categoria",
+    "setAmount": "Definir Valor",
+    "percentage": "Porcentagem",
+    "used": "Usado",
+    "remaining": "Restante",
+    "saveBudget": "Salvar Orçamento"
+  },
+  "categories": {
+    "foodDining": "Alimentação e Refeições",
+    "housing": "Moradia",
+    "transportation": "Transporte",
+    "shopping": "Compras",
+    "entertainment": "Entretenimento",
+    "healthcare": "Saúde",
+    "utilities": "Utilidades",
+    "other": "Outros",
+    "addCategory": "Adicionar Categoria Personalizada"
+  },
+  "filters": {
+    "allCategories": "Todas as Categorias",
+    "thisWeek": "Esta Semana",
+    "thisMonth": "Este Mês",
+    "customRange": "Intervalo Personalizado",
+    "startDate": "Data de Início",
+    "endDate": "Data de Término",
+    "apply": "Aplicar Filtros"
+  }
+}

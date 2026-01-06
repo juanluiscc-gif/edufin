@@ -1,0 +1,164 @@
+{
+  "learningCenter": {
+    "title": "सीखने का केंद्र",
+    "description": "विषय के अनुसार व्यवस्थित इंटरैक्टिव पाठों के माध्यम से वित्तीय साक्षरता में महारत हासिल करें"
+  },
+  "learning": {
+    "title": "सीखने का केंद्र",
+    "subtitle": "विषय के अनुसार व्यवस्थित इंटरैक्टिव पाठों के माध्यम से वित्तीय साक्षरता में महारत हासिल करें",
+    "backToHome": "होम पर वापस जाएं",
+    "backToLearningCenter": "सीखने के केंद्र में वापस जाएं",
+    "forEveryone": "सभी के लिए",
+    "forAdults": "केवल वयस्कों के लिए",
+    "categories": "श्रेणियां",
+    "lessons": "पाठ",
+    "lessonsCount": "{count} पाठ",
+    "lessonsCompleted": "{completed}/{total} पाठ पूर्ण हुए",
+    "progress": "प्रगति",
+    "overallProgress": "समग्र प्रगति",
+    "completed": "पूर्ण",
+    "inProgress": "प्रगति में",
+    "notStarted": "शुरू नहीं हुआ",
+    "startLesson": "पाठ शुरू करें",
+    "startLearning": "सीखना शुरू करें",
+    "continue": "जारी रखें",
+    "continueLesson": "पाठ जारी रखें",
+    "reviewLesson": "पाठ की समीक्षा करें",
+    "markComplete": "पूर्ण के रूप में चिह्नित करें",
+    "difficulty": "कठिनाई",
+    "easy": "आसान",
+    "medium": "मध्यम",
+    "hard": "कठिन",
+    "estimatedTime": "अनुमानित समय",
+    "minutes": "{count} मिनट",
+    "module": "मॉड्यूल",
+    "modules": "मॉड्यूल",
+    "of": "का",
+    "backToCategory": "श्रेणी में वापस जाएं",
+    "backToLearning": "सीखने में वापस जाएं",
+    "locked": "लॉक है",
+    "completePrevious": "अनलॉक करने के लिए पिछली श्रेणी पूरी करें",
+    "completePreviousLesson": "इस पाठ को अनलॉक करने के लिए पिछला पाठ पूरा करें",
+    "noLessonsYet": "अभी तक कोई पाठ नहीं",
+    "noLessonsDescription": "एक बार डेटाबेस में जोड़े जाने पर पाठ यहां दिखाई देंगे",
+    "noLessonsInCategory": "इस श्रेणी में कोई पाठ नहीं",
+    "checkBackLater": "नई सामग्री के लिए बाद में वापस देखें!"
+  },
+  "categoryTitles": {
+    "allLessons": "वित्तीय शिक्षा",
+    "allLessonsDescription": "संपूर्ण वित्तीय साक्षरता पाठ्यक्रम"
+  },
+  "categories": {
+    "moneyBasics": {
+      "title": "पैसे की मूल बातें",
+      "description": "मुद्रा, मूल्य और विनिमय को समझना"
+    },
+    "earning": {
+      "title": "पैसे कमाना",
+      "description": "काम और अवसरों के माध्यम से कमाने के तरीके"
+    },
+    "spending": {
+      "title": "स्मार्ट खर्च",
+      "description": "बुद्धिमान खरीद निर्णय लेना"
+    },
+    "saving": {
+      "title": "बचत लक्ष्य",
+      "description": "बचत लक्ष्य निर्धारित करना और प्राप्त करना"
+    },
+    "budgeting": {
+      "title": "बजट बनाना और योजना",
+      "description": "मासिक बजट बनाना और प्रबंधित करना"
+    },
+    "investing": {
+      "title": "निवेश की मूल बातें",
+      "description": "शेयर, बॉन्ड और सेवानिवृत्ति का परिचय"
+    },
+    "business": {
+      "title": "व्यवसाय वित्त",
+      "description": "व्यवसाय राजस्व और खर्चों का प्रबंधन"
+    },
+    "credit": {
+      "title": "क्रेडिट और ऋण",
+      "description": "क्रेडिट स्कोर और ऋण प्रबंधन को समझना"
+    }
+  },
+  "ageGroups": {
+    "kid": "बच्चों के लिए",
+    "adult": "वयस्कों के लिए",
+    "both": "सभी आयु के लिए"
+  },
+  "lessons": {
+    "what-is-money": {
+      "title": "पैसा क्या है?",
+      "description": "पैसे की अवधारणा और हम इसका उपयोग क्यों करते हैं, यह जानें"
+    },
+    "different-types-of-currency": {
+      "title": "मुद्रा के विभिन्न प्रकार",
+      "description": "सिक्के, नोट, डिजिटल मनी और क्रिप्टोकरेंसी का अन्वेषण करें"
+    },
+    "how-money-gets-its-value": {
+      "title": "पैसे को उसका मूल्य कैसे मिलता है",
+      "description": "समझें कि पैसा कुछ क्यों लायक है"
+    },
+    "money-around-the-world": {
+      "title": "दुनिया भर में पैसा",
+      "description": "विभिन्न मुद्राओं और विनिमय दरों के बारे में जानें"
+    },
+    "inflation-and-purchasing-power": {
+      "title": "मुद्रास्फीति और क्रय शक्ति",
+      "description": "समझें कि मुद्रास्फीति आपके पैसे को कैसे प्रभावित करती है"
+    },
+    "ways-to-earn-money": {
+      "title": "पैसे कमाने के तरीके",
+      "description": "आय अर्जित करने के विभिन्न तरीकों का अन्वेषण करें"
+    },
+    "understanding-income": {
+      "title": "आय को समझना",
+      "description": "सकल आय, शुद्ध आय और कटौती के बारे में जानें"
+    },
+    "starting-your-first-job": {
+      "title": "अपनी पहली नौकरी शुरू करना",
+      "description": "अपनी पहली नौकरी खोजने और सफल होने के लिए सुझाव"
+    },
+    "building-multiple-income-streams": {
+      "title": "कई आय स्रोत बनाना",
+      "description": "वित्तीय सुरक्षा के लिए अपने आय स्रोतों में विविधता लाएं"
+    },
+    "needs-vs-wants": {
+      "title": "आवश्यकताएं बनाम इच्छाएं",
+      "description": "आवश्यक और विवेकाधीन खर्च के बीच अंतर करना सीखें"
+    },
+    "smart-shopping-strategies": {
+      "title": "स्मार्ट शॉपिंग रणनीतियां",
+      "description": "अपने पैसे के लिए सर्वोत्तम मूल्य कैसे प्राप्त करें, जानें"
+    },
+    "understanding-value": {
+      "title": "मूल्य को समझना",
+      "description": "जानें कि सस्ता हमेशा सबसे अच्छा नहीं होता - मूल्य पर ध्यान दें"
+    },
+    "avoiding-consumer-traps": {
+      "title": "उपभोक्ता जाल से बचना",
+      "description": "सामान्य विपणन चालों को पहचानें और उनसे बचें"
+    },
+    "why-save-money": {
+      "title": "पैसा क्यों बचाएं?",
+      "description": "अपने भविष्य के लिए बचत के महत्व को समझें"
+    },
+    "setting-savings-goals": {
+      "title": "बचत लक्ष्य निर्धारित करना",
+      "description": "प्रभावी बचत लक्ष्य निर्धारित करना और प्राप्त करना सीखें"
+    },
+    "where-to-keep-your-savings": {
+      "title": "अपनी बचत कहां रखें",
+      "description": "विभिन्न बचत खातों और विकल्पों के बारे में जानें"
+    },
+    "automating-your-savings": {
+      "title": "अपनी बचत को स्वचालित करना",
+      "description": "सहज प्रगति के लिए स्वचालित बचत सेट करें"
+    },
+    "building-an-emergency-fund": {
+      "title": "आपातकालीन निधि बनाना",
+      "description": "अपना वित्तीय सुरक्षा जाल कदम दर कदम बनाएं"
+    }
+  }
+}

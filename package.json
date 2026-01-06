@@ -17,7 +17,10 @@
     "translate:fr": "tsx scripts/translate-multilang.ts -- --lang=fr",
     "translate:de": "tsx scripts/translate-multilang.ts -- --lang=de",
     "translate:ja": "tsx scripts/translate-multilang.ts -- --lang=ja",
-    "translate:zh": "tsx scripts/translate-multilang.ts -- --lang=zh"
+    "translate:zh": "tsx scripts/translate-multilang.ts -- --lang=zh",
+    "translate:hi": "tsx scripts/translate-multilang.ts -- --lang=hi",
+    "translate:it": "tsx scripts/translate-multilang.ts -- --lang=it",
+    "translate:pt": "tsx scripts/translate-multilang.ts -- --lang=pt"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
@@ -29,6 +32,7 @@
     "@prisma/adapter-pg": "^7.2.0",
     "@prisma/client": "^7.2.0",
     "bcryptjs": "^3.0.3",
+    "framer-motion": "^12.24.7",
     "jose": "^6.1.3",
     "next": "16.1.1",
     "next-intl": "^4.6.1",

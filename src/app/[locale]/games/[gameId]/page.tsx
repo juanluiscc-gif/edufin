@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import QuizGame from '@/components/games/QuizGame';
+import ScenarioGame from '@/components/games/ScenarioGame';
 import ResultsModal from '@/components/games/ResultsModal';
 import { GameType } from '@prisma/client';
 
@@ -187,20 +188,12 @@ export default function GamePage() {
 
       case 'scenario':
         return (
-          <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-6xl mb-4">🎭</div>
-              <div className="text-xl text-gray-600 dark:text-gray-400 mb-4">
-                {t('games.comingSoon.scenario')}
-              </div>
-              <button
-                onClick={() => router.push(`/${locale}/games`)}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg"
-              >
-                {t('games.backToGames')}
-              </button>
-            </div>
-          </div>
+          <ScenarioGame
+            gameId={game.id}
+            gameTitle={game.title}
+            gameData={gameData}
+            onComplete={handleGameComplete}
+          />
         );
 
       default:

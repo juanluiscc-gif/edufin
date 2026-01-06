@@ -1,0 +1,59 @@
+{
+  "games": {
+    "title": "शैक्षिक खेल",
+    "subtitle": "मज़े करते हुए पैसे के बारे में सीखें!",
+    "playGame": "खेल खेलें",
+    "playNow": "अभी खेलें",
+    "score": "स्कोर",
+    "highScore": "उच्च स्कोर",
+    "leaderboard": "लीडरबोर्ड",
+    "viewLeaderboard": "लीडरबोर्ड देखें",
+    "playAgain": "फिर से खेलें",
+    "backToGames": "खेलों में वापस जाएं",
+    "backToHome": "होम पर वापस जाएं",
+    "difficulty": "कठिनाई",
+    "instructions": "निर्देश",
+    "hideInstructions": "निर्देश छिपाएं",
+    "showInstructions": "निर्देश दिखाएं",
+    "timeElapsed": "समय बीत गया",
+    "yourScore": "आपका स्कोर",
+    "finalScore": "अंतिम स्कोर",
+    "congratulations": "बधाई हो!",
+    "gameComplete": "खेल पूरा हुआ!",
+    "tryAgain": "फिर से प्रयास करें",
+    "exit": "खेल से बाहर निकलें",
+    "loadingGames": "खेल लोड हो रहे हैं...",
+    "loadingGame": "खेल लोड हो रहा है...",
+    "gameNotFound": "खेल नहीं मिला",
+    "noGamesFound": "इस फ़िल्टर के लिए कोई खेल नहीं मिला",
+    "totalGames": "कुल खेल",
+    "gamesPlayed": "खेले गए खेल",
+    "totalScore": "कुल स्कोर",
+    "profile": "प्रोफ़ाइल",
+    "allTypes": "सभी प्रकार",
+    "notPlayedYet": "अभी तक नहीं खेला गया",
+    "comingSoon": {
+      "simulation": "सिमुलेशन खेल जल्द आ रहे हैं!",
+      "puzzle": "पहेली खेल जल्द आ रहे हैं!",
+      "scenario": "परिदृश्य खेल जल्द आ रहे हैं!"
+    }
+  },
+  "gameTypes": {
+    "quiz": "क्विज़",
+    "simulation": "सिमुलेशन",
+    "puzzle": "पहेली",
+    "scenario": "परिदृश्य"
+  },
+  "leaderboard": {
+    "title": "लीडरबोर्ड",
+    "global": "वैश्विक",
+    "weekly": "इस सप्ताह",
+    "myAgeGroup": "मेरा आयु वर्ग",
+    "rank": "रैंक",
+    "player": "खिलाड़ी",
+    "score": "स्कोर",
+    "date": "तारीख",
+    "yourRank": "आपकी रैंक",
+    "notRanked": "अभी तक रैंक नहीं किया गया"
+  }
+}
