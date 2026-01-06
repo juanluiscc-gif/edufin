@@ -120,6 +120,8 @@ model User {
   insights              ExpenseInsight[]
   friendships           Friendship[]         @relation("UserFriendships")
   friend_of             Friendship[]         @relation("FriendFriendships")
+  inventory             PlayerInventory?
+  game_sessions         GameSession[]
 
   @@unique([oauth_provider, oauth_id])
   @@index([email])
@@ -388,4 +390,43 @@ model ContentTranslation {
 
   @@unique([content_type, content_id, field_name, target_language])
   @@index([expires_at])
+}
+
+// Scenario-Simulation Game System
+model PlayerInventory {
+  id           String   @id @default(uuid())
+  user_id      String   @unique
+  quantity     Int      @default(10)
+  last_updated DateTime @updatedAt
+
+  // Relations
+  user User @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@map("player_inventory")
+}
+
+enum SessionStatus {
+  active
+  completed
+  game_over
+}
+
+model GameSession {
+  id                      String        @id @default(uuid())
+  user_id                 String
+  current_level           Int           @default(1)
+  balance                 Int           @default(100)
+  reputation              Int           @default(3)
+  inventory               Int           @default(10)
+  conversations_completed Int           @default(0)
+  session_start           DateTime      @default(now())
+  session_end             DateTime?
+  status                  SessionStatus @default(active)
+
+  // Relations
+  user User @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@index([status])
+  @@map("game_sessions")
 }
