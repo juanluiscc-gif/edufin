@@ -6,10 +6,26 @@
  * Supports: English (en), Spanish (es), French (fr), German (de), Japanese (ja), Chinese (zh)
  */
 
+import 'dotenv/config';
 import { PrismaClient, Language } from '@prisma/client';
 import Anthropic from '@anthropic-ai/sdk';
+import { Pool } from 'pg';
+import { PrismaPg } from '@prisma/adapter-pg';
 
-const prisma = new PrismaClient();
+// Initialize Prisma with pg adapter (same as src/lib/prisma.ts)
+const connectionString = process.env.POSTGRES_URL_NON_POOLING || process.env.DATABASE_URL || process.env.POSTGRES_URL;
+
+if (!connectionString) {
+  throw new Error('DATABASE_URL, POSTGRES_URL, or POSTGRES_URL_NON_POOLING must be defined');
+}
+
+const pool = new Pool({
+  connectionString,
+  ssl: connectionString.includes('sslmode=require') ? { rejectUnauthorized: false } : undefined,
+});
+
+const adapter = new PrismaPg(pool);
+const prisma = new PrismaClient({ adapter });
 
 const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
