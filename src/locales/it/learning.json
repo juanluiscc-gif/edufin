@@ -1,0 +1,164 @@
+{
+  "learningCenter": {
+    "title": "Centro di Apprendimento",
+    "description": "Padroneggia l'alfabetizzazione finanziaria attraverso lezioni interattive organizzate per argomento"
+  },
+  "learning": {
+    "title": "Centro di Apprendimento",
+    "subtitle": "Padroneggia l'alfabetizzazione finanziaria attraverso lezioni interattive organizzate per argomento",
+    "backToHome": "Torna alla Home",
+    "backToLearningCenter": "Torna al Centro di Apprendimento",
+    "forEveryone": "Per Tutti",
+    "forAdults": "Solo per Adulti",
+    "categories": "Categorie",
+    "lessons": "lezioni",
+    "lessonsCount": "{count} lezioni",
+    "lessonsCompleted": "{completed}/{total} lezioni completate",
+    "progress": "Progresso",
+    "overallProgress": "Progresso Generale",
+    "completed": "Completato",
+    "inProgress": "In Corso",
+    "notStarted": "Non Iniziato",
+    "startLesson": "Inizia Lezione",
+    "startLearning": "Inizia ad Apprendere",
+    "continue": "Continua",
+    "continueLesson": "Continua Lezione",
+    "reviewLesson": "Rivedi Lezione",
+    "markComplete": "Segna come Completato",
+    "difficulty": "Difficoltà",
+    "easy": "Facile",
+    "medium": "Medio",
+    "hard": "Difficile",
+    "estimatedTime": "Tempo Stimato",
+    "minutes": "{count} min",
+    "module": "Modulo",
+    "modules": "Moduli",
+    "of": "di",
+    "backToCategory": "Torna alla Categoria",
+    "backToLearning": "Torna all'Apprendimento",
+    "locked": "Bloccato",
+    "completePrevious": "Completa la categoria precedente per sbloccare",
+    "completePreviousLesson": "Completa la lezione precedente per sbloccare questa",
+    "noLessonsYet": "Nessuna lezione ancora",
+    "noLessonsDescription": "Le lezioni appariranno qui una volta aggiunte al database",
+    "noLessonsInCategory": "Nessuna lezione in questa categoria",
+    "checkBackLater": "Torna più tardi per nuovi contenuti!"
+  },
+  "categoryTitles": {
+    "allLessons": "Educazione Finanziaria",
+    "allLessonsDescription": "Curriculum completo di alfabetizzazione finanziaria"
+  },
+  "categories": {
+    "moneyBasics": {
+      "title": "Fondamenti del Denaro",
+      "description": "Comprendere valuta, valore e scambio"
+    },
+    "earning": {
+      "title": "Guadagnare Denaro",
+      "description": "Modi per guadagnare attraverso il lavoro e le opportunità"
+    },
+    "spending": {
+      "title": "Spesa Intelligente",
+      "description": "Prendere decisioni di acquisto sagge"
+    },
+    "saving": {
+      "title": "Obiettivi di Risparmio",
+      "description": "Stabilire e raggiungere obiettivi di risparmio"
+    },
+    "budgeting": {
+      "title": "Budget e Pianificazione",
+      "description": "Creare e gestire budget mensili"
+    },
+    "investing": {
+      "title": "Fondamenti di Investimento",
+      "description": "Introduzione ad azioni, obbligazioni e pensionamento"
+    },
+    "business": {
+      "title": "Finanza Aziendale",
+      "description": "Gestire entrate e spese aziendali"
+    },
+    "credit": {
+      "title": "Credito e Debito",
+      "description": "Comprendere i punteggi di credito e la gestione del debito"
+    }
+  },
+  "ageGroups": {
+    "kid": "Per Bambini",
+    "adult": "Per Adulti",
+    "both": "Per Tutte le Età"
+  },
+  "lessons": {
+    "what-is-money": {
+      "title": "Cos'è il Denaro?",
+      "description": "Scopri il concetto di denaro e perché lo usiamo"
+    },
+    "different-types-of-currency": {
+      "title": "Diversi Tipi di Valuta",
+      "description": "Esplora monete, banconote, denaro digitale e criptovaluta"
+    },
+    "how-money-gets-its-value": {
+      "title": "Come il Denaro Ottiene il suo Valore",
+      "description": "Comprendi perché il denaro vale qualcosa"
+    },
+    "money-around-the-world": {
+      "title": "Denaro in Tutto il Mondo",
+      "description": "Scopri diverse valute e tassi di cambio"
+    },
+    "inflation-and-purchasing-power": {
+      "title": "Inflazione e Potere d'Acquisto",
+      "description": "Comprendi come l'inflazione influisce sul tuo denaro"
+    },
+    "ways-to-earn-money": {
+      "title": "Modi per Guadagnare Denaro",
+      "description": "Esplora diversi metodi per guadagnare reddito"
+    },
+    "understanding-income": {
+      "title": "Comprendere il Reddito",
+      "description": "Scopri reddito lordo, reddito netto e detrazioni"
+    },
+    "starting-your-first-job": {
+      "title": "Iniziare il Tuo Primo Lavoro",
+      "description": "Consigli per trovare e avere successo nel tuo primo lavoro"
+    },
+    "building-multiple-income-streams": {
+      "title": "Costruire Flussi di Reddito Multipli",
+      "description": "Diversifica le tue fonti di reddito per la sicurezza finanziaria"
+    },
+    "needs-vs-wants": {
+      "title": "Bisogni vs Desideri",
+      "description": "Impara a distinguere tra spese essenziali e discrezionali"
+    },
+    "smart-shopping-strategies": {
+      "title": "Strategie di Acquisto Intelligente",
+      "description": "Scopri come ottenere il miglior valore per il tuo denaro"
+    },
+    "understanding-value": {
+      "title": "Comprendere il Valore",
+      "description": "Impara che economico non è sempre meglio - concentrati sul valore"
+    },
+    "avoiding-consumer-traps": {
+      "title": "Evitare le Trappole per Consumatori",
+      "description": "Riconosci ed evita comuni trucchi di marketing"
+    },
+    "why-save-money": {
+      "title": "Perché Risparmiare Denaro?",
+      "description": "Comprendi l'importanza del risparmio per il tuo futuro"
+    },
+    "setting-savings-goals": {
+      "title": "Stabilire Obiettivi di Risparmio",
+      "description": "Impara a stabilire e raggiungere obiettivi di risparmio efficaci"
+    },
+    "where-to-keep-your-savings": {
+      "title": "Dove Tenere i Tuoi Risparmi",
+      "description": "Scopri diversi conti di risparmio e opzioni"
+    },
+    "automating-your-savings": {
+      "title": "Automatizzare i Tuoi Risparmi",
+      "description": "Imposta risparmi automatici per progressi senza sforzo"
+    },
+    "building-an-emergency-fund": {
+      "title": "Costruire un Fondo di Emergenza",
+      "description": "Crea la tua rete di sicurezza finanziaria passo dopo passo"
+    }
+  }
+}

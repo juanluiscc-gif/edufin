@@ -1,0 +1,61 @@
+{
+  "expenses": {
+    "title": "खर्च ट्रैकिंग",
+    "addExpense": "खर्च जोड़ें",
+    "editExpense": "खर्च संपादित करें",
+    "deleteExpense": "खर्च हटाएं",
+    "amount": "राशि",
+    "category": "श्रेणी",
+    "description": "विवरण",
+    "date": "तारीख",
+    "save": "खर्च सहेजें",
+    "cancel": "रद्द करें",
+    "deleteConfirm": "क्या आप वाकई इस खर्च को हटाना चाहते हैं?",
+    "expenseList": "सभी खर्च",
+    "recentExpenses": "हाल के खर्च",
+    "viewAll": "सभी देखें"
+  },
+  "dashboard": {
+    "title": "खर्च डैशबोर्ड",
+    "totalSpent": "इस महीने कुल खर्च",
+    "budgetRemaining": "बजट शेष",
+    "topCategory": "शीर्ष श्रेणी",
+    "daysRemaining": "दिन शेष",
+    "avgDailyBudget": "औसत दैनिक बजट",
+    "onTrack": "सही रास्ते पर",
+    "overBudget": "बजट से अधिक",
+    "spendingOverview": "खर्च अवलोकन",
+    "insights": "AI अंतर्दृष्टि"
+  },
+  "budget": {
+    "title": "बजट सेटिंग्स",
+    "monthlyBudget": "मासिक बजट",
+    "totalBudget": "कुल बजट",
+    "categoryBudgets": "श्रेणी बजट",
+    "setAmount": "राशि निर्धारित करें",
+    "percentage": "प्रतिशत",
+    "used": "उपयोग किया गया",
+    "remaining": "शेष",
+    "saveBudget": "बजट सहेजें"
+  },
+  "categories": {
+    "foodDining": "भोजन और डाइनिंग",
+    "housing": "आवास",
+    "transportation": "परिवहन",
+    "shopping": "शॉपिंग",
+    "entertainment": "मनोरंजन",
+    "healthcare": "स्वास्थ्य सेवा",
+    "utilities": "उपयोगिताएं",
+    "other": "अन्य",
+    "addCategory": "कस्टम श्रेणी जोड़ें"
+  },
+  "filters": {
+    "allCategories": "सभी श्रेणियां",
+    "thisWeek": "इस सप्ताह",
+    "thisMonth": "इस महीने",
+    "customRange": "कस्टम रेंज",
+    "startDate": "प्रारंभ तिथि",
+    "endDate": "समाप्ति तिथि",
+    "apply": "फ़िल्टर लागू करें"
+  }
+}

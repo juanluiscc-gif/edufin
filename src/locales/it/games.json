@@ -1,0 +1,59 @@
+{
+  "games": {
+    "title": "Giochi Educativi",
+    "subtitle": "Impara il denaro mentre ti diverti!",
+    "playGame": "Gioca",
+    "playNow": "Gioca Ora",
+    "score": "Punteggio",
+    "highScore": "Punteggio Massimo",
+    "leaderboard": "Classifica",
+    "viewLeaderboard": "Visualizza Classifica",
+    "playAgain": "Gioca Ancora",
+    "backToGames": "Torna ai Giochi",
+    "backToHome": "Torna alla Home",
+    "difficulty": "Difficoltà",
+    "instructions": "Istruzioni",
+    "hideInstructions": "Nascondi Istruzioni",
+    "showInstructions": "Mostra Istruzioni",
+    "timeElapsed": "Tempo Trascorso",
+    "yourScore": "Il Tuo Punteggio",
+    "finalScore": "Punteggio Finale",
+    "congratulations": "Congratulazioni!",
+    "gameComplete": "Gioco Completato!",
+    "tryAgain": "Riprova",
+    "exit": "Esci dal Gioco",
+    "loadingGames": "Caricamento giochi...",
+    "loadingGame": "Caricamento gioco...",
+    "gameNotFound": "Gioco non trovato",
+    "noGamesFound": "Nessun gioco trovato per questo filtro",
+    "totalGames": "Giochi Totali",
+    "gamesPlayed": "Giochi Giocati",
+    "totalScore": "Punteggio Totale",
+    "profile": "Profilo",
+    "allTypes": "Tutti i Tipi",
+    "notPlayedYet": "Non Ancora Giocato",
+    "comingSoon": {
+      "simulation": "Giochi di simulazione in arrivo!",
+      "puzzle": "Giochi di puzzle in arrivo!",
+      "scenario": "Giochi di scenario in arrivo!"
+    }
+  },
+  "gameTypes": {
+    "quiz": "Quiz",
+    "simulation": "Simulazione",
+    "puzzle": "Puzzle",
+    "scenario": "Scenario"
+  },
+  "leaderboard": {
+    "title": "Classifica",
+    "global": "Globale",
+    "weekly": "Questa Settimana",
+    "myAgeGroup": "La Mia Fascia d'Età",
+    "rank": "Posizione",
+    "player": "Giocatore",
+    "score": "Punteggio",
+    "date": "Data",
+    "yourRank": "La Tua Posizione",
+    "notRanked": "Non Ancora in Classifica"
+  }
+}

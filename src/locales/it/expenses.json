@@ -1,0 +1,61 @@
+{
+  "expenses": {
+    "title": "Tracciamento Spese",
+    "addExpense": "Aggiungi Spesa",
+    "editExpense": "Modifica Spesa",
+    "deleteExpense": "Elimina Spesa",
+    "amount": "Importo",
+    "category": "Categoria",
+    "description": "Descrizione",
+    "date": "Data",
+    "save": "Salva Spesa",
+    "cancel": "Annulla",
+    "deleteConfirm": "Sei sicuro di voler eliminare questa spesa?",
+    "expenseList": "Tutte le Spese",
+    "recentExpenses": "Spese Recenti",
+    "viewAll": "Visualizza Tutte"
+  },
+  "dashboard": {
+    "title": "Dashboard Spese",
+    "totalSpent": "Totale Speso Questo Mese",
+    "budgetRemaining": "Budget Rimanente",
+    "topCategory": "Categoria Principale",
+    "daysRemaining": "Giorni Rimanenti",
+    "avgDailyBudget": "Budget Giornaliero Medio",
+    "onTrack": "Sulla Buona Strada",
+    "overBudget": "Oltre il Budget",
+    "spendingOverview": "Panoramica Spese",
+    "insights": "Approfondimenti AI"
+  },
+  "budget": {
+    "title": "Impostazioni Budget",
+    "monthlyBudget": "Budget Mensile",
+    "totalBudget": "Budget Totale",
+    "categoryBudgets": "Budget per Categorie",
+    "setAmount": "Imposta Importo",
+    "percentage": "Percentuale",
+    "used": "Utilizzato",
+    "remaining": "Rimanente",
+    "saveBudget": "Salva Budget"
+  },
+  "categories": {
+    "foodDining": "Cibo e Ristoranti",
+    "housing": "Abitazione",
+    "transportation": "Trasporti",
+    "shopping": "Shopping",
+    "entertainment": "Intrattenimento",
+    "healthcare": "Assistenza Sanitaria",
+    "utilities": "Utenze",
+    "other": "Altro",
+    "addCategory": "Aggiungi Categoria Personalizzata"
+  },
+  "filters": {
+    "allCategories": "Tutte le Categorie",
+    "thisWeek": "Questa Settimana",
+    "thisMonth": "Questo Mese",
+    "customRange": "Intervallo Personalizzato",
+    "startDate": "Data Inizio",
+    "endDate": "Data Fine",
+    "apply": "Applica Filtri"
+  }
+}

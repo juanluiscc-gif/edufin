@@ -1,0 +1,81 @@
+{
+  "integrations": {
+    "title": "Integrazioni Aziendali",
+    "connectYourBusiness": "Collega la Tua Azienda",
+    "connected": "Connesso",
+    "notConnected": "Non Connesso",
+    "connect": "Connetti",
+    "disconnect": "Disconnetti",
+    "manage": "Gestisci",
+    "status": "Stato",
+    "lastSync": "Ultima Sincronizzazione",
+    "syncNow": "Sincronizza Ora",
+    "disconnectConfirm": "Sei sicuro di voler disconnettere questa integrazione?"
+  },
+  "services": {
+    "shopify": {
+      "name": "Shopify",
+      "description": "Gestisci ordini, prodotti e inventario del tuo negozio Shopify"
+    },
+    "woocommerce": {
+      "name": "WooCommerce",
+      "description": "Collega il tuo negozio WooCommerce"
+    },
+    "quickbooks": {
+      "name": "QuickBooks",
+      "description": "Gestisci fatture e spese"
+    },
+    "xero": {
+      "name": "Xero",
+      "description": "Contabilità e report finanziari"
+    }
+  },
+  "tabs": {
+    "orders": "Ordini",
+    "products": "Prodotti",
+    "inventory": "Inventario",
+    "invoices": "Fatture",
+    "expenses": "Spese",
+    "reports": "Report",
+    "settings": "Impostazioni"
+  },
+  "orders": {
+    "title": "Ordini",
+    "orderNumber": "Ordine #",
+    "customer": "Cliente",
+    "date": "Data",
+    "total": "Totale",
+    "status": "Stato",
+    "viewDetails": "Visualizza Dettagli",
+    "updateStatus": "Aggiorna Stato",
+    "refresh": "Aggiorna"
+  },
+  "products": {
+    "title": "Prodotti",
+    "addProduct": "Aggiungi Prodotto",
+    "editProduct": "Modifica Prodotto",
+    "deleteProduct": "Elimina Prodotto",
+    "productName": "Nome Prodotto",
+    "sku": "SKU",
+    "price": "Prezzo",
+    "stock": "Stock",
+    "image": "Immagine"
+  },
+  "inventory": {
+    "title": "Inventario",
+    "currentStock": "Stock Corrente",
+    "lowStock": "Stock Basso",
+    "outOfStock": "Esaurito",
+    "updateStock": "Aggiorna Stock",
+    "newQuantity": "Nuova Quantità"
+  },
+  "statuses": {
+    "pending": "In Attesa",
+    "processing": "In Elaborazione",
+    "completed": "Completato",
+    "failed": "Fallito",
+    "active": "Attivo",
+    "inactive": "Inattivo",
+    "error": "Errore"
+  }
+}
