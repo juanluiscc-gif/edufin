@@ -145,7 +145,7 @@ export default function UnifiedScenarioGame({ onComplete, onExit }: UnifiedScena
           name: conversation.name,
           avatar: '👤',
           type: 'cliente',
-          trait: 'normal',
+          trait: 'amigable',
         },
         message: `Hola, estoy interesado en tus productos. ¿Tienes disponibilidad?`,
         isPlayerTurn: true,
