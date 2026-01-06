@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
     }
 
     const decoded = await verifyToken(token);
-    if (!decoded?.userId) {
+    if (!decoded?.user_id) {
       return NextResponse.json({ error: 'Invalid token' }, { status: 401 });
     }
 
@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     // Create new session
     const session = await prisma.gameSession.create({
       data: {
-        user_id: decoded.userId,
+        user_id: decoded.user_id,
         balance,
         reputation,
         inventory,
@@ -60,13 +60,13 @@ export async function GET(request: NextRequest) {
     }
 
     const decoded = await verifyToken(token);
-    if (!decoded?.userId) {
+    if (!decoded?.user_id) {
       return NextResponse.json({ error: 'Invalid token' }, { status: 401 });
     }
 
     // Get last session (active or completed)
     const lastSession = await prisma.gameSession.findFirst({
-      where: { user_id: decoded.userId },
+      where: { user_id: decoded.user_id },
       orderBy: { session_start: 'desc' },
     });
 

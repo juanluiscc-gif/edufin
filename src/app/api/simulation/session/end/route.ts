@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
     }
 
     const decoded = await verifyToken(token);
-    if (!decoded?.userId) {
+    if (!decoded?.user_id) {
       return NextResponse.json({ error: 'Invalid token' }, { status: 401 });
     }
 
@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
 
     // Update session
     const session = await prisma.gameSession.update({
-      where: { id: sessionId, user_id: decoded.userId },
+      where: { id: sessionId, user_id: decoded.user_id },
       data: {
         balance: finalBalance,
         reputation: finalReputation,
@@ -48,10 +48,10 @@ export async function POST(request: NextRequest) {
 
     // Update inventory in persistent table
     await prisma.playerInventory.upsert({
-      where: { user_id: decoded.userId },
+      where: { user_id: decoded.user_id },
       update: { quantity: finalInventory },
       create: {
-        user_id: decoded.userId,
+        user_id: decoded.user_id,
         quantity: finalInventory,
       },
     });

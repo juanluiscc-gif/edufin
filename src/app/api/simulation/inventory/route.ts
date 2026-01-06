@@ -14,20 +14,20 @@ export async function GET(request: NextRequest) {
     }
 
     const decoded = await verifyToken(token);
-    if (!decoded?.userId) {
+    if (!decoded?.user_id) {
       return NextResponse.json({ error: 'Invalid token' }, { status: 401 });
     }
 
     // Get or create inventory
     let inventory = await prisma.playerInventory.findUnique({
-      where: { user_id: decoded.userId },
+      where: { user_id: decoded.user_id },
     });
 
     if (!inventory) {
       // Create initial inventory
       inventory = await prisma.playerInventory.create({
         data: {
-          user_id: decoded.userId,
+          user_id: decoded.user_id,
           quantity: 10,
         },
       });
@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
     }
 
     const decoded = await verifyToken(token);
-    if (!decoded?.userId) {
+    if (!decoded?.user_id) {
       return NextResponse.json({ error: 'Invalid token' }, { status: 401 });
     }
 
@@ -68,10 +68,10 @@ export async function POST(request: NextRequest) {
 
     // Update or create inventory
     const inventory = await prisma.playerInventory.upsert({
-      where: { user_id: decoded.userId },
+      where: { user_id: decoded.user_id },
       update: { quantity },
       create: {
-        user_id: decoded.userId,
+        user_id: decoded.user_id,
         quantity,
       },
     });
