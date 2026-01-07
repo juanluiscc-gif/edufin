@@ -10,13 +10,13 @@
  * - Ensures variety and unpredictability
  */
 
-import type { SimulationMessage } from '@/types/simulation';
+import type { ScenarioDefinition } from '@/types/simulation';
 
 /**
  * Level 1 Conversations (Balance $0-$149)
  * Easiest scenarios - helpful, straightforward customers
  */
-export const LEVEL_1_CONVERSATIONS: SimulationMessage[] = [
+export const LEVEL_1_CONVERSATIONS: ScenarioDefinition[] = [
   {
     id: 'l1-indeciso-1',
     name: 'Ana López',
@@ -53,7 +53,7 @@ export const LEVEL_1_CONVERSATIONS: SimulationMessage[] = [
  * Level 2 Conversations (Balance $150-$299)
  * Moderate difficulty - requires negotiation skills
  */
-export const LEVEL_2_CONVERSATIONS: SimulationMessage[] = [
+export const LEVEL_2_CONVERSATIONS: ScenarioDefinition[] = [
   {
     id: 'l2-exigente-1',
     name: 'María González',
@@ -100,7 +100,8 @@ export const LEVEL_2_CONVERSATIONS: SimulationMessage[] = [
  * Level 3 Conversations (Balance $300-$449)
  * Higher difficulty - fraud detection and ethics
  */
-export const LEVEL_3_CONVERSATIONS: SimulationMessage[] = [
+// This tool call handles the remaining ones
+export const LEVEL_3_CONVERSATIONS: ScenarioDefinition[] = [
   {
     id: 'l3-estafa-proveedor-1',
     name: 'Carlos Rodríguez',
@@ -127,7 +128,7 @@ export const LEVEL_3_CONVERSATIONS: SimulationMessage[] = [
  * Level 4 Conversations (Balance $450+)
  * Most difficult - B2B negotiations and complex deals
  */
-export const LEVEL_4_CONVERSATIONS: SimulationMessage[] = [
+export const LEVEL_4_CONVERSATIONS: ScenarioDefinition[] = [
   {
     id: 'l4-corporativo-1',
     name: 'Lic. Martín Rojas',
@@ -143,7 +144,7 @@ export const LEVEL_4_CONVERSATIONS: SimulationMessage[] = [
 /**
  * Get conversations for a specific level
  */
-export function getConversationsForLevel(level: number): SimulationMessage[] {
+export function getConversationsForLevel(level: number): ScenarioDefinition[] {
   switch (level) {
     case 1:
       return LEVEL_1_CONVERSATIONS;
@@ -161,7 +162,7 @@ export function getConversationsForLevel(level: number): SimulationMessage[] {
 /**
  * Get random conversation from appropriate level
  */
-export function getRandomConversation(level: number): SimulationMessage {
+export function getRandomConversation(level: number): ScenarioDefinition {
   const conversations = getConversationsForLevel(level);
   const randomIndex = Math.floor(Math.random() * conversations.length);
   return conversations[randomIndex];
@@ -173,7 +174,7 @@ export function getRandomConversation(level: number): SimulationMessage {
 export function getMultipleConversations(
   level: number,
   count: number
-): SimulationMessage[] {
+): ScenarioDefinition[] {
   const conversations = getConversationsForLevel(level);
 
   // Shuffle and take 'count' conversations

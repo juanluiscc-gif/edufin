@@ -26,6 +26,8 @@ export interface SimulationMessage {
   scenarioContext?: string;
 }
 
+export type ScenarioDefinition = Pick<SimulationMessage, 'id' | 'name' | 'avatar' | 'type' | 'trait' | 'difficulty' | 'initialMessage' | 'scenarioContext'>;
+
 export interface SimulationGameState {
   // Persistent (saved to DB)
   balance: number;
