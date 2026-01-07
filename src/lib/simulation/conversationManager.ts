@@ -9,8 +9,10 @@ import {
   getConversationsForLevel as getPoolConversations,
   getMultipleConversations,
 } from './conversationPool';
-import type { ScenarioDefinition as ConversationPoolEntry } from '@/types/simulation';
 import type { SimulationMessage, ScenarioDefinition } from '@/types/simulation';
+
+// Alias for clarity and backward compatibility
+type ConversationPoolEntry = ScenarioDefinition;
 
 export type ConversationType =
   | 'client'
