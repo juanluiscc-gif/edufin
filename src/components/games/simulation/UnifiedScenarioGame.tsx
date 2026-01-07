@@ -163,12 +163,12 @@ export default function UnifiedScenarioGame({ onComplete, onExit }: UnifiedScena
     const conversationTree = generateConversationTree({
       id: fullData.id,
       name: fullData.name,
-      avatar: (fullData as any).avatar || '👤',
+      avatar: fullData.avatar || '👤',
       type: fullData.type,
-      trait: (fullData as any).trait || 'regular',
-      difficulty: fullData.difficulty,
-      initialMessage: (fullData as any).initialMessage || '...',
-      scenarioContext: (fullData as any).scenarioContext || '',
+      trait: fullData.trait || 'regular',
+      difficulty: fullData.difficulty || 1,
+      initialMessage: fullData.initialMessage || '...',
+      scenarioContext: fullData.scenarioContext || '',
     });
 
     // Map conversation type to message type
