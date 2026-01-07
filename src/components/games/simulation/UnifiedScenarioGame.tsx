@@ -12,6 +12,8 @@ import ResponseOptions from '../ResponseOptions';
 import { getCurrentLevel, getLevelConfig, shouldLevelUp } from '@/lib/simulation/levelSystem';
 import { processOrder, shouldShowAlert, getProfitPerUnit } from '@/lib/simulation/inventoryManager';
 import { selectNextConversation } from '@/lib/simulation/conversationManager';
+import { getConversationsForLevel } from '@/lib/simulation/conversationPool';
+import { generateConversationTree } from '@/lib/simulation/conversationGenerator';
 import type { SimulationGameState, SimulationMessage, GameEndResult } from '@/types/simulation';
 import type { ConversationNode, ResponseOption } from '@/types/scenario';
 
@@ -127,65 +129,54 @@ export default function UnifiedScenarioGame({ onComplete, onExit }: UnifiedScena
   ]);
 
   const generateNewMessage = () => {
-    // For now, create a simple test message
-    // TODO: Replace with actual conversation selection from pool
-    const conversation = selectNextConversation(
-      gameState.currentLevel,
-      gameState.inventory,
-      gameState.messages.map((m) => m.conversationId)
+    // Get conversation pool for current level
+    const levelConversations = getConversationsForLevel(gameState.currentLevel);
+
+    // Filter out already used conversations
+    const usedIds = gameState.messages.map((m) => m.conversationId);
+    const availableConversations = levelConversations.filter(
+      (conv) => !usedIds.includes(conv.id)
     );
 
-    if (!conversation) return;
+    if (availableConversations.length === 0) {
+      console.log('No more conversations available for this level');
+      return;
+    }
 
-    // Create mock conversation data (temporary until we have real data)
-    const mockConversationTree: ConversationNode[] = [
-      {
-        id: 'start',
-        character: {
-          name: conversation.name,
-          avatar: '👤',
-          type: 'cliente',
-          trait: 'amigable',
-        },
-        message: `Hola, estoy interesado en tus productos. ¿Tienes disponibilidad?`,
-        isPlayerTurn: true,
-        options: [
-          {
-            id: 'opt-1',
-            text: 'Sí, tengo productos disponibles',
-            consequences: {
-              balanceChange: 20,
-              reputationChange: 0,
-              nextNodeId: 'END',
-            },
-            feedback: 'Venta exitosa',
-            isCorrect: true,
-          },
-          {
-            id: 'opt-2',
-            text: 'No tengo inventario',
-            consequences: {
-              balanceChange: 0,
-              reputationChange: -1,
-              nextNodeId: 'END',
-            },
-            feedback: 'Cliente insatisfecho',
-            isCorrect: false,
-          },
-        ],
-      },
-    ];
+    // Select random conversation from available
+    const randomIndex = Math.floor(Math.random() * availableConversations.length);
+    const conversation = availableConversations[randomIndex];
+
+    // Generate conversation tree based on metadata
+    const conversationTree = generateConversationTree({
+      id: conversation.id,
+      name: conversation.name,
+      avatar: conversation.avatar,
+      type: conversation.type,
+      trait: conversation.trait,
+      difficulty: conversation.difficulty,
+      initialMessage: conversation.initialMessage,
+      scenarioContext: conversation.scenarioContext,
+    });
+
+    // Map conversation type to message type
+    const messageType: 'client' | 'supplier' | 'government' =
+      conversation.type === 'proveedor'
+        ? 'supplier'
+        : conversation.type === 'gobierno'
+        ? 'government'
+        : 'client';
 
     const newMessage: SimulationMessage = {
       id: `msg-${Date.now()}-${Math.random()}`,
       conversationId: conversation.id,
       sender: conversation.name,
-      avatar: '👤',
-      type: 'client',
-      preview: `Hola, estoy interesado en tus productos...`,
+      avatar: conversation.avatar,
+      type: messageType,
+      preview: conversation.initialMessage.substring(0, 60) + '...',
       status: 'pending',
       receivedAt: Date.now(),
-      conversationData: mockConversationTree,
+      conversationData: conversationTree,
       currentNodeIndex: 0,
     };
 

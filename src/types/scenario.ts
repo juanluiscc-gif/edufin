@@ -13,7 +13,10 @@ export type CharacterTrait =
   | 'honesto'      // Honest person
   | 'confundido'   // Confused/unclear
   | 'agresivo'     // Aggressive
-  | 'amigable';    // Friendly
+  | 'amigable'     // Friendly
+  | 'deshonesto'   // Dishonest
+  | 'indeciso'     // Indecisive
+  | 'rapido';      // Fast/urgent
 
 export interface Character {
   name: string;
@@ -28,6 +31,7 @@ export interface ResponseOption {
   consequences: {
     balanceChange: number;     // Money gained/lost
     reputationChange: number;  // Reputation points (-5 to +5)
+    inventoryChange?: number;  // Inventory change (for simulation games)
     nextNodeId: string | 'END' | 'WIN' | 'LOSE';
   };
   feedback: string;  // Explanation shown after selection

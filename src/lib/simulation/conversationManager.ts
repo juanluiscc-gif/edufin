@@ -1,18 +1,22 @@
 /**
  * Conversation Manager for Scenario-Simulation Game
  * Selects appropriate conversations based on level and context
+ *
+ * Integrates with conversationPool.ts for actual conversation data
  */
 
+import {
+  getConversationsForLevel as getPoolConversations,
+  getMultipleConversations,
+  type ConversationPoolEntry,
+} from './conversationPool';
+import type { SimulationMessage } from '@/types/simulation';
+
 export type ConversationType =
-  | 'client_normal'
-  | 'client_urgent'
-  | 'client_indecisive'
-  | 'client_demanding'
-  | 'client_fraud'
-  | 'supplier_reliable'
-  | 'supplier_slow'
-  | 'supplier_fake'
-  | 'government';
+  | 'cliente'
+  | 'proveedor'
+  | 'socio'
+  | 'gobierno';
 
 export interface ConversationMetadata {
   id: string;
@@ -23,85 +27,92 @@ export interface ConversationMetadata {
 }
 
 /**
- * Conversation pools organized by level
- * Estos IDs corresponden a los scenarios existentes
+ * Conversation metadata organized by level
+ * Metadata references the actual conversations in conversationPool.ts
  */
 export const CONVERSATION_POOLS: Record<number, ConversationMetadata[]> = {
   1: [
     {
-      id: 'cliente-indeciso',
-      type: 'client_indecisive',
+      id: 'l1-indeciso-1',
+      type: 'cliente',
       difficulty: 1,
-      name: 'El Cliente Indeciso',
-      description: 'Cliente que hace muchas preguntas antes de decidir',
+      name: 'Cliente Indeciso',
+      description: 'Cliente que necesita orientación para decidir',
     },
     {
-      id: 'problema-legitimo',
-      type: 'client_normal',
+      id: 'l1-rapido-1',
+      type: 'cliente',
       difficulty: 1,
-      name: 'El Problema Legítimo',
-      description: 'Cliente con una queja razonable',
+      name: 'Cliente Rápido',
+      description: 'Cliente con prisa que necesita servicio eficiente',
     },
     {
-      id: 'cliente-rapido',
-      type: 'client_urgent',
+      id: 'l1-regular-1',
+      type: 'cliente',
       difficulty: 1,
-      name: 'El Cliente Rápido',
-      description: 'Cliente que necesita entrega urgente',
+      name: 'Cliente Regular',
+      description: 'Cliente leal que valora el reconocimiento',
     },
   ],
   2: [
     {
-      id: 'cliente-exigente',
-      type: 'client_demanding',
+      id: 'l2-exigente-1',
+      type: 'cliente',
       difficulty: 2,
-      name: 'El Cliente Exigente',
-      description: 'Cliente que pide descuentos y trato especial',
+      name: 'Cliente Exigente',
+      description: 'Requiere negociación de descuentos y condiciones',
     },
     {
-      id: 'negociacion-dificil',
-      type: 'client_demanding',
+      id: 'l2-estafador-cliente-1',
+      type: 'cliente',
       difficulty: 2,
-      name: 'Negociación Difícil',
-      description: 'Cliente experto en regateo',
+      name: 'Cliente Estafador',
+      description: 'Intento de fraude con devolución falsa',
+    },
+    {
+      id: 'l2-problema-legitimo-1',
+      type: 'cliente',
+      difficulty: 2,
+      name: 'Problema Legítimo',
+      description: 'Producto defectuoso, requiere buen servicio al cliente',
+    },
+    {
+      id: 'l2-influencer-falso-1',
+      type: 'cliente',
+      difficulty: 2,
+      name: 'Influencer Falso',
+      description: 'Evaluar legitimidad de colaboración de marketing',
     },
   ],
   3: [
     {
-      id: 'estafa-proveedor',
-      type: 'supplier_fake',
+      id: 'l3-estafa-proveedor-1',
+      type: 'proveedor',
       difficulty: 3,
-      name: 'La Estafa del Proveedor',
-      description: 'Proveedor que intenta vender productos defectuosos',
+      name: 'Estafa del Proveedor',
+      description: 'Detectar fraude y red flags en oferta de proveedor',
     },
     {
-      id: 'intento-fraude',
-      type: 'client_fraud',
+      id: 'l3-socio-deshonesto-1',
+      type: 'socio',
       difficulty: 3,
-      name: 'Intento de Fraude',
-      description: 'Cliente que intenta estafar con pago falso',
+      name: 'Socio Deshonesto',
+      description: 'Ética empresarial y consecuencias legales',
     },
   ],
   4: [
     {
-      id: 'fraude-sofisticado',
-      type: 'client_fraud',
+      id: 'l4-corporativo-1',
+      type: 'cliente',
       difficulty: 4,
-      name: 'Fraude Sofisticado',
-      description: 'Estafa elaborada difícil de detectar',
-    },
-    {
-      id: 'crisis-multiple',
-      type: 'client_demanding',
-      difficulty: 4,
-      name: 'Crisis Múltiple',
-      description: 'Varios problemas al mismo tiempo',
+      name: 'Cliente Corporativo',
+      description: 'Negociación B2B compleja de alto valor',
     },
   ],
 };
 
 /**
- * Get available conversations for a level
+ * Get available conversations metadata for a level
  */
 export function getConversationsForLevel(level: number): ConversationMetadata[] {
   // Include conversations from current level and all previous levels
@@ -110,6 +121,21 @@ export function getConversationsForLevel(level: number): ConversationMetadata[] 
     conversations.push(...(CONVERSATION_POOLS[i] || []));
   }
   return conversations;
+}
+
+/**
+ * Get actual conversation data by ID from pool
+ */
+export function getConversationData(conversationId: string): ConversationPoolEntry | null {
+  const allMessages = getPoolConversations(4); // Get all levels
+  return allMessages.find((msg) => msg.id === conversationId) || null;
+}
+
+/**
+ * Get multiple conversation data for multi-chat
+ */
+export function getMultipleConversationData(level: number, count: number): ConversationPoolEntry[] {
+  return getMultipleConversations(level, count);
 }
 
 /**
