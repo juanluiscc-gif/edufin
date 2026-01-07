@@ -172,24 +172,26 @@ export default function UnifiedScenarioGame({ onComplete, onExit }: UnifiedScena
     });
 
     // Map conversation type to message type
-    const messageType: 'client' | 'supplier' | 'government' =
-      fullData.type === 'proveedor' || fullData.type.startsWith('supplier')
-        ? 'supplier'
-        : fullData.type === 'gobierno'
-        ? 'government'
-        : 'client';
+    const messageType = fullData.type;
 
     const newMessage: SimulationMessage = {
       id: `msg-${Date.now()}-${Math.random()}`,
       conversationId: fullData.id,
       sender: fullData.name,
-      avatar: (fullData as any).avatar || '👤',
+      avatar: fullData.avatar || '👤',
       type: messageType,
-      preview: ((fullData as any).initialMessage || '').substring(0, 60) + '...',
+      preview: (fullData.initialMessage || '').substring(0, 60) + '...',
       status: 'pending',
       receivedAt: Date.now(),
       conversationData: conversationTree,
       currentNodeIndex: 0,
+            
+      // Metadata fields
+      name: fullData.name,
+      trait: fullData.trait,
+      difficulty: fullData.difficulty,
+      initialMessage: fullData.initialMessage,
+      scenarioContext: fullData.scenarioContext,
     };
 
     setGameState((prev) => ({
