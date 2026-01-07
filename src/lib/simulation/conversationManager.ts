@@ -9,14 +9,13 @@ import {
   getConversationsForLevel as getPoolConversations,
   getMultipleConversations,
 } from './conversationPool';
-import type { SimulationMessage as ConversationPoolEntry } from '@/types/simulation';
-import type { SimulationMessage } from '@/types/simulation';
+import type { ScenarioDefinition as ConversationPoolEntry } from '@/types/simulation';
+import type { SimulationMessage, ScenarioDefinition } from '@/types/simulation';
 
 export type ConversationType =
-  | 'cliente'
-  | 'proveedor'
-  | 'socio'
-  | 'gobierno';
+  | 'client'
+  | 'supplier'
+  | 'government';
 
 export interface ConversationMetadata {
   id: string;
@@ -34,21 +33,21 @@ export const CONVERSATION_POOLS: Record<number, ConversationMetadata[]> = {
   1: [
     {
       id: 'l1-indeciso-1',
-      type: 'cliente',
+      type: 'client',
       difficulty: 1,
       name: 'Cliente Indeciso',
       description: 'Cliente que necesita orientación para decidir',
     },
     {
       id: 'l1-rapido-1',
-      type: 'cliente',
+      type: 'client',
       difficulty: 1,
       name: 'Cliente Rápido',
       description: 'Cliente con prisa que necesita servicio eficiente',
     },
     {
       id: 'l1-regular-1',
-      type: 'cliente',
+      type: 'client',
       difficulty: 1,
       name: 'Cliente Regular',
       description: 'Cliente leal que valora el reconocimiento',
@@ -57,28 +56,28 @@ export const CONVERSATION_POOLS: Record<number, ConversationMetadata[]> = {
   2: [
     {
       id: 'l2-exigente-1',
-      type: 'cliente',
+      type: 'client',
       difficulty: 2,
       name: 'Cliente Exigente',
       description: 'Requiere negociación de descuentos y condiciones',
     },
     {
       id: 'l2-estafador-cliente-1',
-      type: 'cliente',
+      type: 'client',
       difficulty: 2,
       name: 'Cliente Estafador',
       description: 'Intento de fraude con devolución falsa',
     },
     {
       id: 'l2-problema-legitimo-1',
-      type: 'cliente',
+      type: 'client',
       difficulty: 2,
       name: 'Problema Legítimo',
       description: 'Producto defectuoso, requiere buen servicio al cliente',
     },
     {
       id: 'l2-influencer-falso-1',
-      type: 'cliente',
+      type: 'client',
       difficulty: 2,
       name: 'Influencer Falso',
       description: 'Evaluar legitimidad de colaboración de marketing',
@@ -87,14 +86,14 @@ export const CONVERSATION_POOLS: Record<number, ConversationMetadata[]> = {
   3: [
     {
       id: 'l3-estafa-proveedor-1',
-      type: 'proveedor',
+      type: 'supplier',
       difficulty: 3,
       name: 'Estafa del Proveedor',
       description: 'Detectar fraude y red flags en oferta de proveedor',
     },
     {
       id: 'l3-socio-deshonesto-1',
-      type: 'socio',
+      type: 'supplier',
       difficulty: 3,
       name: 'Socio Deshonesto',
       description: 'Ética empresarial y consecuencias legales',
@@ -103,7 +102,7 @@ export const CONVERSATION_POOLS: Record<number, ConversationMetadata[]> = {
   4: [
     {
       id: 'l4-corporativo-1',
-      type: 'cliente',
+      type: 'client',
       difficulty: 4,
       name: 'Cliente Corporativo',
       description: 'Negociación B2B compleja de alto valor',
