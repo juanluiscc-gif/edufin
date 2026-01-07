@@ -11,7 +11,16 @@ console.log('POSTGRES_URL loaded:', process.env.POSTGRES_URL ? 'Yes ✓' : 'No �
 
 const prisma = new PrismaClient();
 
-async function main() {
+  // Debug: Log if DATABASE_URL is loaded
+  console.log('DATABASE_URL loaded:', process.env.DATABASE_URL ? 'Yes ✓' : 'No ✗');
+  console.log('POSTGRES_URL loaded:', process.env.POSTGRES_URL ? 'Yes ✓' : 'No ✗');
+
+const connectionString = process.env.DATABASE_URL!;
+const pool = new Pool({ connectionString });
+const adapter = new PrismaPg(pool);
+const prisma = new PrismaClient({ adapter });
+
+  async function main() {
   console.log('Starting database seed...');
 
   // Seed Lessons

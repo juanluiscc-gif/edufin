@@ -11,7 +11,7 @@ import ChatMessage from '../ChatMessage';
 import ResponseOptions from '../ResponseOptions';
 import { getCurrentLevel, getLevelConfig, shouldLevelUp } from '@/lib/simulation/levelSystem';
 import { processOrder, shouldShowAlert, getProfitPerUnit } from '@/lib/simulation/inventoryManager';
-import { selectNextConversation } from '@/lib/simulation/conversationManager';
+import { selectNextConversation, getConversationData } from '@/lib/simulation/conversationManager';
 import { getConversationsForLevel } from '@/lib/simulation/conversationPool';
 import { generateConversationTree } from '@/lib/simulation/conversationGenerator';
 import type { SimulationGameState, SimulationMessage, GameEndResult } from '@/types/simulation';
@@ -129,51 +129,63 @@ export default function UnifiedScenarioGame({ onComplete, onExit }: UnifiedScena
   ]);
 
   const generateNewMessage = () => {
-    // Get conversation pool for current level
-    const levelConversations = getConversationsForLevel(gameState.currentLevel);
+    // Get currently active conversation IDs to avoid repetition
+    const activeIds = gameState.messages.map((m) => m.conversationId);
 
-    // Filter out already used conversations
-    const usedIds = gameState.messages.map((m) => m.conversationId);
-    const availableConversations = levelConversations.filter(
-      (conv) => !usedIds.includes(conv.id)
+    // Select next conversation using manager logic (handles suppliers, etc.)
+    const candidateMetadata = selectNextConversation(
+      gameState.currentLevel,
+      gameState.inventory,
+      activeIds
     );
 
-    if (availableConversations.length === 0) {
-      console.log('No more conversations available for this level');
+    if (!candidateMetadata) {
+      // Pool exhausted or no suitable conversation found
       return;
     }
 
-    // Select random conversation from available
-    const randomIndex = Math.floor(Math.random() * availableConversations.length);
-    const conversation = availableConversations[randomIndex];
+    // Retrieve full conversation data from the pool
+    const fullData = getConversationData(candidateMetadata.id);
+
+    if (!fullData) {
+      console.error(`Conversation data not found for ID: ${candidateMetadata.id}`);
+      return;
+    }
+
+    // Check if we already have this message active (sanity check)
+    if (activeIds.includes(candidateMetadata.id)) {
+      return;
+    }
 
     // Generate conversation tree based on metadata
+    // We cast fullData to any because the type definition in manager might be partial 
+    // compared to the runtime data from pool
     const conversationTree = generateConversationTree({
-      id: conversation.id,
-      name: conversation.name,
-      avatar: conversation.avatar,
-      type: conversation.type,
-      trait: conversation.trait,
-      difficulty: conversation.difficulty,
-      initialMessage: conversation.initialMessage,
-      scenarioContext: conversation.scenarioContext,
+      id: fullData.id,
+      name: fullData.name,
+      avatar: (fullData as any).avatar || '👤',
+      type: fullData.type,
+      trait: (fullData as any).trait || 'regular',
+      difficulty: fullData.difficulty,
+      initialMessage: (fullData as any).initialMessage || '...',
+      scenarioContext: (fullData as any).scenarioContext || '',
     });
 
     // Map conversation type to message type
     const messageType: 'client' | 'supplier' | 'government' =
-      conversation.type === 'proveedor'
+      fullData.type === 'proveedor' || fullData.type.startsWith('supplier')
         ? 'supplier'
-        : conversation.type === 'gobierno'
+        : fullData.type === 'gobierno'
         ? 'government'
         : 'client';
 
     const newMessage: SimulationMessage = {
       id: `msg-${Date.now()}-${Math.random()}`,
-      conversationId: conversation.id,
-      sender: conversation.name,
-      avatar: conversation.avatar,
+      conversationId: fullData.id,
+      sender: fullData.name,
+      avatar: (fullData as any).avatar || '👤',
       type: messageType,
-      preview: conversation.initialMessage.substring(0, 60) + '...',
+      preview: ((fullData as any).initialMessage || '').substring(0, 60) + '...',
       status: 'pending',
       receivedAt: Date.now(),
       conversationData: conversationTree,
