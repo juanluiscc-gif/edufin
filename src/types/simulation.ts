@@ -17,6 +17,13 @@ export interface SimulationMessage {
   receivedAt: number;
   conversationData: ConversationNode[];
   currentNodeIndex: number;
+  
+  // Metadata fields needed for game logic
+  name: string;
+  trait?: string;
+  difficulty?: number;
+  initialMessage?: string;
+  scenarioContext?: string;
 }
 
 export interface SimulationGameState {
