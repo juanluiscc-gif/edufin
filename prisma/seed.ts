@@ -1,11 +1,15 @@
 import { config } from 'dotenv';
-import { Pool } from 'pg';
-import { PrismaPg } from '@prisma/adapter-pg';
 import { PrismaClient, AgeGroup, GameType } from '@prisma/client';
 
 // Load environment variables explicitly
 config({ path: '.env' });
 config({ path: '.env.local' });
+
+// Debug: Log if DATABASE_URL is loaded
+console.log('DATABASE_URL loaded:', process.env.DATABASE_URL ? 'Yes ✓' : 'No ✗');
+console.log('POSTGRES_URL loaded:', process.env.POSTGRES_URL ? 'Yes ✓' : 'No ✗');
+
+const prisma = new PrismaClient();
 
   // Debug: Log if DATABASE_URL is loaded
   console.log('DATABASE_URL loaded:', process.env.DATABASE_URL ? 'Yes ✓' : 'No ✗');
