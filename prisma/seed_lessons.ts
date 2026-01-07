@@ -3,9 +3,14 @@
  * Run with: npm run db:seed-lessons
  */
 
+import { Pool } from 'pg';
+import { PrismaPg } from '@prisma/adapter-pg';
 import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient();
+const connectionString = process.env.DATABASE_URL!;
+const pool = new Pool({ connectionString });
+const adapter = new PrismaPg(pool);
+const prisma = new PrismaClient({ adapter });
 
 interface LessonContent {
   sections: Array<{
@@ -50,7 +55,7 @@ const lessons: LessonData[] = [
       sections: [
         {
           title: 'Introduction',
-          content: '# What is Money?\n\nMoney is what we use to buy things we need and want. It's a tool that makes trading easier!\n\n**For Kids:** Money is like tickets at an arcade - you exchange them for prizes!\n\n**For Adults:** Money serves as a medium of exchange, eliminating the inefficiencies of barter systems.',
+          content: '# What is Money?\n\nMoney is what we use to buy things we need and want. It\'s a tool that makes trading easier!\n\n**For Kids:** Money is like tickets at an arcade - you exchange them for prizes!\n\n**For Adults:** Money serves as a medium of exchange, eliminating the inefficiencies of barter systems.',
           order: 1,
         },
         {
