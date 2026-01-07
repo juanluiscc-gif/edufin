@@ -1,23 +1,19 @@
 import { config } from 'dotenv';
 import { PrismaClient, AgeGroup, GameType } from '@prisma/client';
+import { Pool } from '@neondatabase/serverless';
+import { PrismaNeon } from '@prisma/adapter-neon';
 
 // Load environment variables explicitly
 config({ path: '.env' });
 config({ path: '.env.local' });
 
-// Debug: Log if DATABASE_URL is loaded
-console.log('DATABASE_URL loaded:', process.env.DATABASE_URL ? 'Yes ✓' : 'No ✗');
-console.log('POSTGRES_URL loaded:', process.env.POSTGRES_URL ? 'Yes ✓' : 'No ✗');
+if (!process.env.DATABASE_URL) {
+  throw new Error('DATABASE_URL is not defined');
+}
 
-const prisma = new PrismaClient();
-
-  // Debug: Log if DATABASE_URL is loaded
-  console.log('DATABASE_URL loaded:', process.env.DATABASE_URL ? 'Yes ✓' : 'No ✗');
-  console.log('POSTGRES_URL loaded:', process.env.POSTGRES_URL ? 'Yes ✓' : 'No ✗');
-
-const connectionString = process.env.DATABASE_URL!;
+const connectionString = process.env.DATABASE_URL;
 const pool = new Pool({ connectionString });
-const adapter = new PrismaPg(pool);
+const adapter = new PrismaNeon(pool);
 const prisma = new PrismaClient({ adapter });
 
   async function main() {
@@ -500,6 +496,17 @@ Credit is a tool - use it wisely!`,
   // Seed Games
   console.log('Seeding games...');
 
+  // Cleanup: Remove old scenario/simulation games to ensure clean state for Unified Game
+  // This prevents duplicates or mixing legacy scenarios with the new unified system
+  console.log('Cleaning up old scenario games...');
+  await prisma.game.deleteMany({
+    where: {
+      game_type: {
+        in: [GameType.scenario, GameType.simulation]
+      }
+    }
+  });
+
   const games = [
     {
       title: 'Money Math Challenge',
@@ -525,14 +532,7 @@ Credit is a tool - use it wisely!`,
       difficulty_level: 1,
       max_score: 100,
     },
-    {
-      title: 'Birthday Money Decision',
-      description: 'You got birthday money! What will you do with it?',
-      game_type: GameType.scenario,
-      age_group: AgeGroup.kid,
-      difficulty_level: 1,
-      max_score: 100,
-    },
+// Removed Birthday Money Decision
     {
       title: 'Budget Master',
       description: 'Create and manage a monthly budget challenge',
@@ -565,14 +565,7 @@ Credit is a tool - use it wisely!`,
       difficulty_level: 3,
       max_score: 100,
     },
-    {
-      title: 'Emergency Fund Scenario',
-      description: 'Navigate unexpected expenses and make smart financial decisions',
-      game_type: GameType.scenario,
-      age_group: AgeGroup.adult,
-      difficulty_level: 4,
-      max_score: 100,
-    },
+    // Removed Emergency Fund Scenario
   ];
 
   for (const game of games) {
