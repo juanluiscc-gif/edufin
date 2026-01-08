@@ -115,22 +115,7 @@ export default function GamesPage() {
           </Link>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap gap-3 mb-8">
-          {filterButtons.map(({ type, emoji }) => (
-            <button
-              key={type}
-              onClick={() => setActiveFilter(type)}
-              className={`px-5 py-2 rounded-lg font-medium transition-colors ${
-                activeFilter === type
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700'
-              }`}
-            >
-              {emoji} {type === 'all' ? t('games.allTypes') : tTypes(type)}
-            </button>
-          ))}
-        </div>
+
 
         {/* Games Grid */}
         {filteredGames.length > 0 ? (

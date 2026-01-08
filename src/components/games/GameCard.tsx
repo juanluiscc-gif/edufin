@@ -85,7 +85,7 @@ export default function GameCard({
 
       {/* Play Button */}
       <Link
-        href={`/${locale}/games/${id}`}
+        href={id === 'unified-sim-game-001' ? `/${locale}/games/simulation` : `/${locale}/games/${id}`}
         className="mt-auto w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded text-center transition-colors duration-200"
       >
         Play Now
