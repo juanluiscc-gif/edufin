@@ -78,17 +78,19 @@ export default function ResponseOptions({
                   {option.text}
                 </p>
 
-                {/* Consequences Preview */}
-                <div className="flex gap-3 text-sm">
-                  <div className={`flex items-center gap-1 ${getImpactColor(balanceChange, reputationChange)}`}>
-                    <span>💰</span>
-                    <span className="font-semibold">{formatBalanceChange(balanceChange)}</span>
+                {/* Consequences Feedback (Hidden until selection) */}
+                {isSelected && showFeedback && (
+                  <div className="flex gap-3 text-sm mt-2 mb-2 p-2 bg-gray-50 dark:bg-gray-700/50 rounded">
+                    <div className={`flex items-center gap-1 ${getImpactColor(balanceChange, reputationChange)}`}>
+                      <span>💰</span>
+                      <span className="font-semibold">{formatBalanceChange(balanceChange)}</span>
+                    </div>
+                    <div className={`flex items-center gap-1 ${getImpactColor(balanceChange, reputationChange)}`}>
+                      <span>⭐</span>
+                      <span className="font-semibold">{formatReputationChange(reputationChange)}</span>
+                    </div>
                   </div>
-                  <div className={`flex items-center gap-1 ${getImpactColor(balanceChange, reputationChange)}`}>
-                    <span>⭐</span>
-                    <span className="font-semibold">{formatReputationChange(reputationChange)}</span>
-                  </div>
-                </div>
+                )}
 
                 {/* Feedback (shown after selection) */}
                 {isSelected && showFeedback && (
