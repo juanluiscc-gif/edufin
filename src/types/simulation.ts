@@ -40,8 +40,11 @@ export interface SimulationGameState {
   messages: SimulationMessage[];
   activeChatId: string | null;
   conversationsCompleted: number;
+  activeChatId: string | null;
+  conversationsCompleted: number;
   sessionStartTime: number;
   elapsedTime: number;
+  hoaxEncounters: string[];
 
   // UI state
   showInventoryAlert: boolean;

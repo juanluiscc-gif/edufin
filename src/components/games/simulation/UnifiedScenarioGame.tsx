@@ -38,6 +38,7 @@ export default function UnifiedScenarioGame({ onComplete, onExit }: UnifiedScena
     conversationsCompleted: 0,
     sessionStartTime: Date.now(),
     elapsedTime: 0,
+    hoaxEncounters: [],
     showInventoryAlert: false,
     showSupplierDialog: false,
     gameStatus: 'playing',
@@ -207,6 +208,9 @@ export default function UnifiedScenarioGame({ onComplete, onExit }: UnifiedScena
     setGameState((prev) => ({
       ...prev,
       messages: [...prev.messages, newMessage],
+      hoaxEncounters: isHoax 
+        ? [...prev.hoaxEncounters, fullData.trait || 'regular']
+        : prev.hoaxEncounters,
     }));
   };
 
@@ -392,7 +396,8 @@ export default function UnifiedScenarioGame({ onComplete, onExit }: UnifiedScena
 
     const finalScore = Math.max(0, balanceScore + reputationScore + conversationScore + levelBonus - timePenalty);
 
-    onComplete(finalScore, gameState.elapsedTime);
+    // We do NOT call onComplete here anymore to prevent auto-closing.
+    // The user must click "Salir" or "Jugar de nuevo".
   };
 
   const handleStartGame = () => {
@@ -443,39 +448,122 @@ export default function UnifiedScenarioGame({ onComplete, onExit }: UnifiedScena
 
   // Game over screen
   if (gameState.gameStatus !== 'playing') {
+    // Determine feedback based on hoax encounters
+    let feedbackPhrase = "La duda puede ser una gran herramienta a tu favor."; // Default
+    
+    if (gameState.hoaxEncounters.length > 0) {
+      // Prioritize unique hoaxes
+      if (gameState.hoaxEncounters.includes('indeciso')) {
+        feedbackPhrase = "A veces dedicarle mucho tiempo a un cliente, puede hacerte perder a otros clientes.";
+      } else if (gameState.hoaxEncounters.includes('rapido') || gameState.hoaxEncounters.includes('agresivo')) {
+        feedbackPhrase = "No siempre la prisa es real, sino una forma de presionarte y obtener de ti lo que quieren.";
+      } else if (gameState.hoaxEncounters.includes('amigable') || gameState.hoaxEncounters.includes('regular')) {
+        feedbackPhrase = "La confianza se gana o se pierde, y no dudes en arriesgarte cuando lo creas necesario.";
+      }
+    }
+
+    const calculateFinalScore = () => {
+      const balanceDelta = gameState.balance - 100;
+      const balanceScore = balanceDelta * 10;
+      const reputationScore = gameState.reputation * 200;
+      const conversationScore = gameState.conversationsCompleted * 50;
+      const levelBonus = gameState.currentLevel * 100;
+      const timePenalty = gameState.elapsedTime;
+      return Math.max(0, balanceScore + reputationScore + conversationScore + levelBonus - timePenalty);
+    };
+
+    const finalScore = calculateFinalScore();
+
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center p-8">
         <motion.div
-          className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 max-w-md"
+          className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 max-w-lg w-full"
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
         >
-          <h2 className="text-3xl font-bold text-center mb-4">
-            {gameState.gameStatus === 'completed' ? '🎉 ¡Jornada Completa!' : '😢 Jornada Terminada'}
-          </h2>
-          <div className="space-y-3 mb-6">
-            <p className="text-center text-gray-700 dark:text-gray-300">
-              Balance final: <span className="font-bold">${gameState.balance}</span>
-            </p>
-            <p className="text-center text-gray-700 dark:text-gray-300">
-              Reputación final: <span className="font-bold">{'⭐'.repeat(gameState.reputation)}</span>
-            </p>
-            <p className="text-center text-gray-700 dark:text-gray-300">
-              Inventario: <span className="font-bold">{gameState.inventory} unidades</span>
-            </p>
-            <p className="text-center text-gray-700 dark:text-gray-300">
-              Conversaciones: <span className="font-bold">{gameState.conversationsCompleted}</span>
-            </p>
-            <p className="text-center text-gray-700 dark:text-gray-300">
-              Nivel alcanzado: <span className="font-bold">{gameState.currentLevel}</span>
+          <div className="text-center mb-6">
+            <span className="text-6xl mb-4 block">
+              {gameState.gameStatus === 'completed' ? '🏆' : '📉'}
+            </span>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
+              {gameState.gameStatus === 'completed' ? '¡Jornada Completa!' : 'Jornada Terminada'}
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 mt-2">
+              {gameState.gameStatus === 'completed' 
+                ? 'Has gestionado tu negocio exitosamente.' 
+                : 'Tu negocio no ha podido continuar.'}
             </p>
           </div>
-          <button
-            onClick={onExit}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-          >
-            Volver a Juegos
-          </button>
+
+          {/* Feedback Section */}
+          <div className="bg-yellow-50 dark:bg-yellow-900/30 border-l-4 border-yellow-500 p-4 mb-6 rounded-r">
+            <h3 className="font-bold text-yellow-800 dark:text-yellow-200 text-sm uppercase tracking-wide mb-1">
+              Reflexión del Día
+            </h3>
+            <p className="text-yellow-900 dark:text-yellow-100 italic">
+              "{feedbackPhrase}"
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4 mb-8 text-center">
+            <div className="bg-gray-100 dark:bg-gray-700 p-3 rounded">
+              <p className="text-xs text-gray-500 uppercase">Puntaje</p>
+              <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">{finalScore}</p>
+            </div>
+            <div className="bg-gray-100 dark:bg-gray-700 p-3 rounded">
+              <p className="text-xs text-gray-500 uppercase">Balance</p>
+              <p className={`text-2xl font-bold ${gameState.balance >= 100 ? 'text-green-600' : 'text-red-600'}`}>
+                ${gameState.balance}
+              </p>
+            </div>
+            <div className="bg-gray-100 dark:bg-gray-700 p-3 rounded">
+              <p className="text-xs text-gray-500 uppercase">Reputación</p>
+              <p className="text-2xl font-bold text-yellow-600">{'⭐'.repeat(gameState.reputation)}</p>
+            </div>
+            <div className="bg-gray-100 dark:bg-gray-700 p-3 rounded">
+              <p className="text-xs text-gray-500 uppercase">Nivel</p>
+              <p className="text-2xl font-bold text-purple-600">{gameState.currentLevel}</p>
+            </div>
+          </div>
+
+          <div className="flex gap-4">
+            <button
+              onClick={() => {
+                // Determine final reason or just generic
+                onExit();
+                 // We call onComplete too to save score if needed, but onExit handles navigation
+                 onComplete(finalScore, gameState.elapsedTime);
+              }}
+              className="flex-1 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 font-bold py-3 px-6 rounded-lg transition-colors"
+            >
+              Salir
+            </button>
+            <button
+              onClick={() => {
+                // Reset State completely
+                setGameState({
+                  balance: 100,
+                  reputation: 3,
+                  inventory: 10,
+                  currentLevel: 1,
+                  messages: [],
+                  activeChatId: null,
+                  conversationsCompleted: 0,
+                  sessionStartTime: Date.now(),
+                  elapsedTime: 0,
+                  showInventoryAlert: false,
+                  showSupplierDialog: false,
+                  gameStatus: 'playing',
+                  hoaxEncounters: [],
+                });
+                setShowInstructions(false); // Skip instructions on replay? Or true to show again?
+                                          // Let's skip to keep it fluid
+              }}
+              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            >
+              Jugar de Nuevo
+            </button>
+          </div>
         </motion.div>
       </div>
     );
