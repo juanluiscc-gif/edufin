@@ -525,12 +525,29 @@ Credit is a tool - use it wisely!`,
       max_score: 100,
     },
     {
-      title: 'Coin Sorter',
-      description: 'Sort coins and make exact change as fast as you can',
+      id: 'puzzle-needs-wants-001',
+      title: 'Desafío: Necesidad vs Deseo',
+      description: JSON.stringify({
+        instructions: "¡Clasifica rápido! \n¿Lo necesitas para vivir (Necesidad) o solo lo quieres (Deseo)?\n\n- Necesidad: Comida, Techo, Salud.\n- Deseo: Entretenimiento, Lujos, Moda.",
+        items: [
+          { id: 1, text: "Comida / Despensa", type: "need", icon: "🥦" },
+          { id: 2, text: "Alquiler / Casa", type: "need", icon: "🏠" },
+          { id: 3, text: "Nuevo Videojuego", type: "want", icon: "🎮" },
+          { id: 4, text: "iPhone 16 Pro", type: "want", icon: "📱" },
+          { id: 5, text: "Medicinas", type: "need", icon: "💊" },
+          { id: 6, text: "Café de Starbucks", type: "want", icon: "☕" },
+          { id: 7, text: "Electricidad", type: "need", icon: "💡" },
+          { id: 8, text: "Zapatillas de Lujo", type: "want", icon: "👟" },
+          { id: 9, text: "Transporte / Bus", type: "need", icon: "🚌" },
+          { id: 10, text: "Suscripción Netflix", type: "want", icon: "📺" },
+          { id: 11, text: "Agua Potable", type: "need", icon: "💧" },
+          { id: 12, text: "Escapada fin de semana", type: "want", icon: "🏖️" }
+        ]
+      }),
       game_type: GameType.puzzle,
       age_group: AgeGroup.kid,
       difficulty_level: 1,
-      max_score: 100,
+      max_score: 1500,
     },
 // Removed Birthday Money Decision
     {
