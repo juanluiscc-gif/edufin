@@ -13,7 +13,16 @@ export interface ConversationMetadata {
   trait: string;
   difficulty: number;
   initialMessage: string;
+  initialMessage: string;
   scenarioContext: string;
+  isHoax?: boolean;
+}
+
+/**
+ * Helper to shuffle options and ensure no pattern
+ */
+function shuffleOptions(options: any[]) {
+  return [...options].sort(() => Math.random() - 0.5);
 }
 
 /**
@@ -21,38 +30,252 @@ export interface ConversationMetadata {
  * Creates contextually appropriate options based on conversation type and trait
  */
 export function generateConversationTree(metadata: ConversationMetadata): ConversationNode[] {
-  const { name, avatar, type, trait, initialMessage, difficulty } = metadata;
+  const { name, avatar, type, trait, initialMessage, difficulty, isHoax } = metadata;
 
   // Base rewards and penalties scale with difficulty
   const baseReward = 20 + (difficulty * 10);
   const basePenalty = -10 - (difficulty * 5);
 
-  // Generate conversation based on trait
+  let conversationNodes: ConversationNode[] = [];
+
+  // Generate conversation based on trait and hoax flag
   switch (trait) {
     case 'confundido':
     case 'indeciso':
-      return generateIndecisoConversation(name, avatar, initialMessage, baseReward, basePenalty);
+      conversationNodes = isHoax
+        ? generateIndecisoHoaxConversation(name, avatar, initialMessage, baseReward, basePenalty)
+        : generateIndecisoConversation(name, avatar, initialMessage, baseReward, basePenalty);
+      break;
 
     case 'agresivo':
     case 'rapido':
-      return generateRapidoConversation(name, avatar, initialMessage, baseReward, basePenalty);
+      conversationNodes = isHoax
+        ? generateRapidoHoaxConversation(name, avatar, initialMessage, baseReward, basePenalty)
+        : generateRapidoConversation(name, avatar, initialMessage, baseReward, basePenalty);
+      break;
 
     case 'amigable':
     case 'regular':
-      return generateAmigableConversation(name, avatar, initialMessage, baseReward, basePenalty);
+      conversationNodes = isHoax
+        ? generateAmigableHoaxConversation(name, avatar, initialMessage, baseReward, basePenalty)
+        : generateAmigableConversation(name, avatar, initialMessage, baseReward, basePenalty);
+      break;
 
     case 'exigente':
-      return generateExigenteConversation(name, avatar, initialMessage, baseReward, basePenalty);
+      conversationNodes = generateExigenteConversation(name, avatar, initialMessage, baseReward, basePenalty);
+      break;
 
     case 'estafador':
-      return generateEstafadorConversation(name, avatar, initialMessage, baseReward, basePenalty);
+      conversationNodes = generateEstafadorConversation(name, avatar, initialMessage, baseReward, basePenalty);
+      break;
 
     case 'deshonesto':
-      return generateDeshonestoConversation(name, avatar, initialMessage, baseReward, basePenalty);
+      conversationNodes = generateDeshonestoConversation(name, avatar, initialMessage, baseReward, basePenalty);
+      break;
 
     default:
-      return generateDefaultConversation(name, avatar, initialMessage, baseReward, basePenalty);
+      conversationNodes = generateDefaultConversation(name, avatar, initialMessage, baseReward, basePenalty);
   }
+
+  // Shuffle options for the start node to hide the "best first" pattern
+  if (conversationNodes.length > 0 && conversationNodes[0].options) {
+    conversationNodes[0].options = shuffleOptions(conversationNodes[0].options);
+  }
+
+  return conversationNodes;
+}
+
+// ... (Existing functions: generateIndecisoConversation, generateRapidoConversation, etc.)
+
+// --- HOAX SCENARIOS ---
+
+// Cliente Indeciso Hoax - Pierde tiempo (4 interacciones)
+function generateIndecisoHoaxConversation(
+  name: string,
+  avatar: string,
+  initialMessage: string,
+  reward: number,
+  penalty: number
+): ConversationNode[] {
+  return [
+    {
+      id: 'start',
+      character: { name, avatar, type: 'cliente', trait: 'indeciso' },
+      message: initialMessage,
+      isPlayerTurn: true,
+      options: [
+        {
+          id: 'opt-1',
+          text: '🧘 Te explico todo con calma',
+          consequences: { balanceChange: 0, reputationChange: 0, nextNodeId: 'step-2' },
+          feedback: 'El cliente sigue dudando...',
+        },
+        {
+          id: 'opt-2',
+          text: '❓ ¿Qué es lo que buscas exactamente?',
+          consequences: { balanceChange: 0, reputationChange: 0, nextNodeId: 'step-2' },
+          feedback: 'El cliente no sabe qué decir...',
+        },
+        {
+          id: 'opt-3',
+          text: '⏰ Por favor decídete pronto',
+          consequences: { balanceChange: penalty, reputationChange: -1, nextNodeId: 'END' },
+          feedback: 'Presionaste demasiado y se fue.',
+          isCorrect: false
+        },
+      ],
+    },
+    {
+      id: 'step-2',
+      character: { name, avatar, type: 'cliente', trait: 'indeciso' },
+      message: 'Es que... mmm... no sé si el color rojo me convence. ¿Y si mejor el azul?',
+      isPlayerTurn: true,
+      options: [
+        {
+          id: 'opt-2-1',
+          text: '🔵 El azul es muy buena opción',
+          consequences: { balanceChange: 0, reputationChange: 0, nextNodeId: 'step-3' },
+          feedback: 'Sigue pensando...',
+        },
+        {
+          id: 'opt-2-2',
+          text: '🚫 Solo tengo rojo ahora mismo',
+          consequences: { balanceChange: 0, reputationChange: 0, nextNodeId: 'step-3' },
+          feedback: 'No le convence la respuesta...',
+        },
+      ],
+    },
+    {
+      id: 'step-3',
+      character: { name, avatar, type: 'cliente', trait: 'indeciso' },
+      message: 'Ay, pero ahora pienso que el precio... ¿estás seguro que vale la pena?',
+      isPlayerTurn: true,
+      options: [
+        {
+          id: 'opt-3-1',
+          text: '💎 Calidad garantizada',
+          consequences: { balanceChange: reward, reputationChange: 1, inventoryChange: -1, nextNodeId: 'END' },
+          feedback: '¡Por fin! Después de mucho tiempo, compró.',
+          isCorrect: true
+        },
+        {
+          id: 'opt-3-2',
+          text: '😤 Ya basta, compra o vete',
+          consequences: { balanceChange: penalty, reputationChange: -2, nextNodeId: 'END' },
+          feedback: 'Perdiste la paciencia y el cliente.',
+          isCorrect: false
+        },
+      ],
+    },
+  ];
+}
+
+// Cliente Rápido Hoax - Estafador con billete falso
+function generateRapidoHoaxConversation(
+  name: string,
+  avatar: string,
+  initialMessage: string,
+  reward: number,
+  penalty: number
+): ConversationNode[] {
+  return [
+    {
+      id: 'start',
+      character: { name, avatar, type: 'cliente', trait: 'rapido' },
+      message: initialMessage + ' ¡Toma, aquí está el dinero, cóbrate rápido y dame el cambio!',
+      isPlayerTurn: true,
+      options: [
+        {
+          id: 'opt-1',
+          text: '💨 ¡Claro! Aquí tienes tu cambio y producto',
+          consequences: {
+            balanceChange: penalty - 10, // Pérdida por billete falso
+            reputationChange: -1,
+            inventoryChange: -1,
+            nextNodeId: 'END',
+          },
+          feedback: '¡CAÍSTE! El billete era falso. Perdiste dinero e inventario por las prisas.',
+          isCorrect: false,
+        },
+        {
+          id: 'opt-2',
+          text: '🔍 Un momento, necesito verificar el billete',
+          consequences: {
+            balanceChange: 0,
+            reputationChange: 1,
+            nextNodeId: 'END',
+          },
+          feedback: '¡Estafador detectado! Salió corriendo al ver que revisabas el dinero.',
+          isCorrect: true,
+        },
+      ],
+    },
+  ];
+}
+
+// Cliente Amigable Hoax - Loop de descuentos
+function generateAmigableHoaxConversation(
+  name: string,
+  avatar: string,
+  initialMessage: string,
+  reward: number,
+  penalty: number
+): ConversationNode[] {
+  return [
+    {
+      id: 'start',
+      character: { name, avatar, type: 'cliente', trait: 'amigable' },
+      message: initialMessage + ' Por cierto, como soy tan buen cliente, ¿me das un descuento especial?',
+      isPlayerTurn: true,
+      options: [
+        {
+          id: 'opt-1',
+          text: '📉 Está bien, 10% de descuento',
+          consequences: { balanceChange: 0, reputationChange: 0, nextNodeId: 'demand-2' },
+          feedback: 'Parece que quiere más...',
+        },
+        {
+          id: 'opt-2',
+          text: '❌ Lo siento, precio fijo',
+          consequences: { balanceChange: penalty, reputationChange: -1, nextNodeId: 'END' },
+          feedback: 'Se ofendió y se fue.',
+          isCorrect: false
+        },
+      ],
+    },
+    {
+      id: 'demand-2',
+      character: { name, avatar, type: 'cliente', trait: 'amigable' },
+      message: 'Mmm... he visto que a otros les das más. ¿Qué tal un 20% y prometo traer amigos?',
+      isPlayerTurn: true,
+      options: [
+        {
+          id: 'opt-2-1',
+          text: '📉 Bueno, 20% para que estés feliz',
+          consequences: {
+            balanceChange: reward * 0.5, // Ganancia muy reducida
+            reputationChange: 1,
+            inventoryChange: -1,
+            nextNodeId: 'END',
+          },
+          feedback: 'Aceptó, pero tu ganancia fue mínima. Cuidado con ceder tanto.',
+          isCorrect: false
+        },
+        {
+          id: 'opt-2-2',
+          text: '✋ El 10% es mi mejor oferta',
+          consequences: {
+            balanceChange: reward * 0.8,
+            reputationChange: 2,
+            inventoryChange: -1,
+            nextNodeId: 'END',
+          },
+          feedback: 'Aceptó el trato justo. Mantuviste tu margen.',
+          isCorrect: true
+        },
+      ],
+    },
+  ];
 }
 
 // Cliente Indeciso - Necesita orientación

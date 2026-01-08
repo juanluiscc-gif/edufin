@@ -162,6 +162,9 @@ export default function UnifiedScenarioGame({ onComplete, onExit }: UnifiedScena
     const randomName = getRandomName();
     const randomAvatar = getRandomAvatar(fullData.type);
 
+    // HOAX LOGIC: 25% chance of being a hoax/trap
+    const isHoax = Math.random() < 0.25;
+
     // Generate conversation tree based on metadata
     // We cast fullData to any because the type definition in manager might be partial 
     // compared to the runtime data from pool
@@ -174,6 +177,7 @@ export default function UnifiedScenarioGame({ onComplete, onExit }: UnifiedScena
       difficulty: fullData.difficulty || 1,
       initialMessage: fullData.initialMessage || '...',
       scenarioContext: fullData.scenarioContext || '',
+      isHoax: isHoax,
     });
 
     // Map conversation type to message type
@@ -197,6 +201,7 @@ export default function UnifiedScenarioGame({ onComplete, onExit }: UnifiedScena
       difficulty: fullData.difficulty,
       initialMessage: fullData.initialMessage,
       scenarioContext: fullData.scenarioContext,
+      isHoax: isHoax,
     };
 
     setGameState((prev) => ({
