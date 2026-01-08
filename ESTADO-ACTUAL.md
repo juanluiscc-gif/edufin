@@ -67,3 +67,13 @@ Juega una partida completa (2 mins) y verifica:
 Hacer commit y push de los cambios para que Vercel actualice la versión `edufin-02`.
 
 ---
+
+## 🔮 FUTURO / ESCALABILIDAD (ROADMAP)
+1. **Persistencia de Progreso:**
+   - Una vez que los 3 juegos (Simulación, Quiz, Puzzle) tengan sus versiones "jugables" (MVP), actualizar el esquema de base de datos.
+   - **Requisito:** Crear columna/variable en DB para guardar el puntaje/presupuesto del jugador por juego, permitiendo retomar progreso o "subir de nivel" globalmente.
+   - *Nota:* No implementar SQL individual por juego ahora, esperar al paquete completo.
+
+2. **Juegos Faltantes:**
+   - Desarrollar Quiz Game.
+   - Desarrollar Puzzle Game.
