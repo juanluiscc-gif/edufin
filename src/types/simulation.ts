@@ -24,6 +24,7 @@ export interface SimulationMessage {
   difficulty?: number;
   initialMessage?: string;
   scenarioContext?: string;
+  isHoax?: boolean;
 }
 
 export type ScenarioDefinition = Pick<SimulationMessage, 'id' | 'name' | 'avatar' | 'type' | 'trait' | 'difficulty' | 'initialMessage' | 'scenarioContext'>;
