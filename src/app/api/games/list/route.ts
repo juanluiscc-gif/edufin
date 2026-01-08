@@ -7,6 +7,9 @@ import { prisma } from '@/lib/prisma';
  * Fetch all games filtered by user's age category
  * Returns games with user's high scores
  */
+
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: NextRequest) {
   try {
     // Get user from token
