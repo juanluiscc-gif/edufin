@@ -14,6 +14,7 @@ import { processOrder, shouldShowAlert, getProfitPerUnit } from '@/lib/simulatio
 import { selectNextConversation, getConversationData } from '@/lib/simulation/conversationManager';
 import { getConversationsForLevel } from '@/lib/simulation/conversationPool';
 import { generateConversationTree } from '@/lib/simulation/conversationGenerator';
+import { getRandomName, getRandomAvatar } from '@/lib/simulation/nameGenerator';
 import type { SimulationGameState, SimulationMessage, GameEndResult } from '@/types/simulation';
 import type { ConversationNode, ResponseOption } from '@/types/scenario';
 
@@ -157,13 +158,17 @@ export default function UnifiedScenarioGame({ onComplete, onExit }: UnifiedScena
       return;
     }
 
+    // Generate random identity
+    const randomName = getRandomName();
+    const randomAvatar = getRandomAvatar(fullData.type);
+
     // Generate conversation tree based on metadata
     // We cast fullData to any because the type definition in manager might be partial 
     // compared to the runtime data from pool
     const conversationTree = generateConversationTree({
       id: fullData.id,
-      name: fullData.name,
-      avatar: fullData.avatar || '👤',
+      name: randomName, // Use dynamic name
+      avatar: randomAvatar, // Use dynamic avatar
       type: fullData.type,
       trait: fullData.trait || 'regular',
       difficulty: fullData.difficulty || 1,
@@ -177,8 +182,8 @@ export default function UnifiedScenarioGame({ onComplete, onExit }: UnifiedScena
     const newMessage: SimulationMessage = {
       id: `msg-${Date.now()}-${Math.random()}`,
       conversationId: fullData.id,
-      sender: fullData.name,
-      avatar: fullData.avatar || '👤',
+      sender: randomName, // Use dynamic name
+      avatar: randomAvatar, // Use dynamic avatar
       type: messageType,
       preview: (fullData.initialMessage || '').substring(0, 60) + '...',
       status: 'pending',
@@ -187,7 +192,7 @@ export default function UnifiedScenarioGame({ onComplete, onExit }: UnifiedScena
       currentNodeIndex: 0,
             
       // Metadata fields
-      name: fullData.name,
+      name: randomName, // Use dynamic name
       trait: fullData.trait,
       difficulty: fullData.difficulty,
       initialMessage: fullData.initialMessage,
