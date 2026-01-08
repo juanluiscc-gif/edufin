@@ -81,7 +81,7 @@ export default function QuizGame({ gameId, gameTitle, gameData, onComplete }: Qu
         // Quiz complete
         handleComplete();
       }
-    }, 2000);
+    }, 3000);
   };
 
   const handleComplete = () => {

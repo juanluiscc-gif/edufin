@@ -502,7 +502,7 @@ Credit is a tool - use it wisely!`,
   await prisma.game.deleteMany({
     where: {
       game_type: {
-        in: [GameType.scenario, GameType.simulation]
+        in: [GameType.scenario, GameType.simulation, GameType.quiz]
       }
     }
   });
@@ -558,12 +558,77 @@ Credit is a tool - use it wisely!`,
       max_score: 100,
     },
     {
+      id: 'quiz-credit-score-001',
       title: 'Credit Score Quiz',
-      description: 'Test your knowledge of credit scores and credit cards',
+      description: JSON.stringify({
+        instructions: "Test your knowledge about credit scores, how they work, and why they matter for your financial future.",
+        questions: [
+          {
+            id: 1,
+            text: "What is a credit score?",
+            options: [
+              "A number that shows how much money you have",
+              "A rating of your trustworthiness to repay a loan",
+              "A score based on your job performance",
+              "The number of credit cards you own"
+            ],
+            correctIndex: 1,
+            explanation: "A credit score is a numerical rating that measures a person's likelihood to repay a debt."
+          },
+          {
+            id: 2,
+            text: "Which of these factors has the BIGGEST impact on your credit score?",
+            options: [
+              "Payment History",
+              "Types of Credit",
+              "Length of Credit History",
+              "New Credit Inquiries"
+            ],
+            correctIndex: 0,
+            explanation: "Payment history accounts for 35% of your FICO score, making it the most important factor."
+          },
+          {
+            id: 3,
+            text: "What is typically considered a 'Good' credit score?",
+            options: [
+              "300-500",
+              "500-600",
+              "670-739",
+              "850+"
+            ],
+            correctIndex: 2,
+            explanation: "Scores between 670 and 739 are generally considered 'Good' by most lenders."
+          },
+          {
+            id: 4,
+            text: "Does checking your own credit score lower it?",
+            options: [
+              "Yes, always",
+              "No, never",
+              "Only if you check it too often",
+              "Yes, by 5 points"
+            ],
+            correctIndex: 1,
+            explanation: "Checking your own score is a 'soft inquiry' and does not affect your credit score."
+          },
+          {
+            id: 5,
+            text: "What is the best way to improve a low credit score?",
+            options: [
+              "Close all your credit cards",
+              "Pay your bills on time and reduce debt",
+              "Open many new accounts",
+              "Stop using credit completely"
+            ],
+            correctIndex: 1,
+            explanation: "Paying on time and lowering your credit utilization ratio are the most effective ways to improve your score."
+          }
+        ]
+      }),
       game_type: GameType.quiz,
       age_group: AgeGroup.adult,
       difficulty_level: 3,
-      max_score: 100,
+      max_score: 500,
     },
     // Removed Emergency Fund Scenario
   ];
