@@ -13,7 +13,6 @@ export interface ConversationMetadata {
   trait: string;
   difficulty: number;
   initialMessage: string;
-  initialMessage: string;
   scenarioContext: string;
   isHoax?: boolean;
 }
