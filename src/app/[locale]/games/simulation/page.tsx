@@ -1,14 +1,12 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter, useParams } from 'next/navigation';
 import UnifiedScenarioGame from '@/components/games/simulation/UnifiedScenarioGame';
 
-export default function SimulationGamePage({
-  params: { locale },
-}: {
-  params: { locale: string };
-}) {
+export default function SimulationGamePage() {
   const router = useRouter();
+  const params = useParams();
+  const locale = params.locale as string;
 
   const handleGameComplete = async (score: number, timeTaken: number) => {
     try {

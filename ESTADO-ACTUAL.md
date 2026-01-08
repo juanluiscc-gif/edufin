@@ -1,21 +1,34 @@
 # ESTADO ACTUAL DEL PROYECTO - HANDOFF DOCUMENT
 
-**Última actualización:** 2026-01-07 15:35
+**Última actualización:** 2026-01-07 18:10
 **Sesión ID:** cmk30rts20000inoojjmn6nq5
-**Estado:** Completado - Juego unificado implementado y verificado (carga correcta)
+**Estado:** PENDIENTE - Infraestructura lista, pero lógica de juego y navegación con bugs críticos.
 
 ---
 
 ## 🎯 CONTEXTO INMEDIATO
 
 ### ¿Qué estábamos haciendo?
-Implementando la página y lógica del **Unified Scenario-Simulation Game**.
+Depurando la carga y ejecución del "Simulación de Negocio Unificado".
 
 ### ¿Qué completamos hoy?
-1. ✅ **Página Implementada:** Creado `src/app/[locale]/games/simulation/page.tsx`.
-2. ✅ **Integración Lógica:** Conectado `UnifiedScenarioGame.tsx` al conversation pool real (usando `conversationManager`).
-3. ✅ **Database Seed:** Ejecutado seed exitosamente con la entrada del juego "Simulación de Negocio Unificado".
-4. ✅ **Verificación:** La página carga correctamente (`/games/simulation`) mostrando el botón de inicio.
+1. ✅ **Infraestructura:** Build Vercel arreglado, DB limpia (solo 3 juegos correctos), UI limpia (sin filtros).
+2. ✅ **Navegación Inicial:** El juego unificado carga en `/games/simulation`.
+3. ❌ **Lógica del Juego:** El timer corre pero **no llegan mensajes**.
+4. ❌ **Navegación Final:** Al terminar, redirige a error 404 (`/es/undefined/games`).
+
+### 🐛 BUGS CRÍTICOS A RESOLVER (PRIORIDAD ALTA)
+1. **Redirección Rota (Locale Undefined):**
+   - **Síntoma:** Al salir del juego, va a `.../es/undefined/games`.
+   - **Causa probable:** En `src/app/[locale]/games/simulation/page.tsx`, la variable `locale` llega como `undefined`. En Next.js 15+, `params` suele ser una Promesa o requiere `useParams()` en componentes cliente de forma específica.
+
+2. **Loop de Juego Silencioso (No Messages):**
+   - **Síntoma:** El juego inicia, el reloj avanza, pero no aparece ningún mensaje.
+   - **Causa probable:** `useEffect` en `UnifiedScenarioGame.tsx` no está disparando la carga inicial, o el `conversationManager` devuelve array vacío.
+
+---
+
+## 📂 ARCHIVOS CRÍTICOS
 
 ### ¿Qué falta?
 1. ⏩ **Pruebas de Jugabilidad:** Jugar una partida completa para verificar balance y eventos.

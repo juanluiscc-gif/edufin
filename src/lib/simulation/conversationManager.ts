@@ -8,6 +8,7 @@
 import {
   getConversationsForLevel as getPoolConversations,
   getMultipleConversations,
+  ALL_CONVERSATIONS,
 } from './conversationPool';
 import type { SimulationMessage, ScenarioDefinition } from '@/types/simulation';
 
@@ -128,8 +129,7 @@ export function getConversationsForLevel(level: number): ConversationMetadata[] 
  * Get actual conversation data by ID from pool
  */
 export function getConversationData(conversationId: string): ConversationPoolEntry | null {
-  const allMessages = getPoolConversations(4); // Get all levels
-  return allMessages.find((msg) => msg.id === conversationId) || null;
+  return ALL_CONVERSATIONS.find((msg) => msg.id === conversationId) || null;
 }
 
 /**
