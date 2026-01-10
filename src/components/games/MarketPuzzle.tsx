@@ -70,6 +70,7 @@ export default function MarketPuzzleGame() {
       if (data.correct) {
         setScore(s => s + 100 + (streak * 10)); // Bonus for streak
         setStreak(s => s + 1);
+        // Auto advance on correct? Maybe wait for user to see result.
       } else {
         setStreak(0);
       }
@@ -81,132 +82,154 @@ export default function MarketPuzzleGame() {
 
   if (loading && !challenge) {
     return (
-      <div className="flex justify-center items-center h-64">
+      <div className="flex justify-center items-center min-h-screen bg-gray-50">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
       </div>
     );
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-4">
-      {/* Header Info */}
-      <div className="flex justify-between items-center mb-6 bg-white p-4 rounded-xl shadow-sm">
-        <div>
-          <h2 className="text-sm text-gray-500 uppercase font-bold">Puntuación</h2>
-          <p className="text-2xl font-bold text-indigo-600">{score}</p>
-        </div>
-        <div className="text-center">
-          <h2 className="text-sm text-gray-500 uppercase font-bold">Racha</h2>
-          <div className="flex items-center justify-center space-x-1">
-            <span className="text-xl">🔥</span>
-            <span className="text-xl font-bold text-orange-500">{streak}</span>
-          </div>
-        </div>
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4 overflow-hidden font-sans">
+      
+      {/* Header Stats */}
+      <div className="absolute top-0 left-0 right-0 p-6 flex justify-between items-start max-w-4xl mx-auto w-full">
+         <div className="bg-white p-3 rounded-lg shadow-md">
+            <p className="text-xs uppercase text-gray-500 font-bold">Puntuación</p>
+            <p className="text-2xl font-bold text-indigo-600">{score}</p>
+         </div>
+         
+         <div className="bg-white p-3 rounded-lg shadow-md">
+            <p className="text-xs uppercase text-gray-500 font-bold">Racha</p>
+            <p className="text-2xl font-bold text-orange-500">🔥 {streak}</p>
+         </div>
       </div>
 
-      <AnimatePresence mode="wait">
-        {challenge && (
-          <motion.div
-            key={challenge.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden"
-          >
-            {/* Asset Header */}
-            <div className="p-6 border-b border-gray-100 flex justify-between items-start">
-              <div>
-                <div className="flex items-center space-x-2">
-                  <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-md">
-                    {challenge.asset.type.toUpperCase()}
-                  </span>
-                  <span className="text-gray-400 text-sm">{challenge.asset.sector}</span>
+      <div className="relative w-full max-w-5xl flex flex-col items-center">
+        
+        {/* Feedback Overlay */}
+        <AnimatePresence>
+          {gameState === 'result' && lastResult && (
+             <motion.div 
+               initial={{ opacity: 0, scale: 0.5, y: 0 }}
+               animate={{ opacity: 1, scale: 1.2, y: -50 }}
+               exit={{ opacity: 0 }}
+               className="absolute top-[-100px] z-50 flex flex-col items-center"
+             >
+                <div className={`text-6xl font-bold ${lastResult.correct ? 'text-green-500' : 'text-red-500'}`}>
+                   {lastResult.correct ? '✅' : '❌'}
                 </div>
-                <h1 className="text-3xl font-bold text-gray-800 mt-1">{challenge.asset.symbol}</h1>
-                <p className="text-gray-500">{challenge.asset.name}</p>
-              </div>
-              <div className="text-right">
-                <span className="text-xs text-gray-400">Dificultad</span>
-                <div className="flex space-x-1 mt-1">
-                  {[...Array(3)].map((_, i) => (
-                    <div 
-                      key={i} 
-                      className={`h-2 w-6 rounded-full ${i < challenge.difficulty ? 'bg-indigo-500' : 'bg-gray-200'}`}
-                    />
-                  ))}
+                <div className="bg-white px-4 py-2 rounded-full shadow-lg mt-4 text-sm font-bold text-gray-600">
+                   El precio {lastResult.actual === 'UP' ? 'SUBIÓ 📈' : 'BAJÓ 📉'}
                 </div>
-              </div>
-            </div>
-
-            {/* Chart Simulation (Simplified Bars) */}
-            <div className="p-8 bg-slate-50 relative h-64 flex items-end justify-between space-x-2">
-              {challenge.data_points.map((value, i) => {
-                const max = Math.max(...challenge.data_points);
-                const min = Math.min(...challenge.data_points);
-                const range = max - min || 1;
-                const normalize = (v: number) => ((v - min) / range) * 80 + 10; // 10% to 90% height
-                
-                const isLast = i === challenge.data_points.length - 1;
-                
-                return (
-                  <div key={i} className="flex-1 flex flex-col items-center justify-end h-full group">
-                    <div 
-                      className={`w-full rounded-t-sm transition-all duration-500 ${isLast ? 'bg-blue-500' : 'bg-slate-300 group-hover:bg-slate-400'}`}
-                      style={{ height: `${normalize(value)}%` }}
-                    ></div>
-                    {/* Tooltipish price */}
-                    <span className="text-[10px] text-gray-400 mt-1">${value}</span>
-                  </div>
-                );
-              })}
-              
-              {/* Mystery Bar */}
-              <div className="flex-1 flex flex-col items-center justify-end h-full border-l-2 border-dashed border-gray-300 ml-4 pl-4 opacity-50">
-                 <div className="h-full w-full flex items-center justify-center text-3xl">
-                    ❓
-                 </div>
-              </div>
-            </div>
-
-            {/* Actions / Feedback */}
-            <div className="p-6">
-              {gameState === 'playing' ? (
-                <div className="flex space-x-4">
-                  <button
-                    onClick={() => handlePrediction('DOWN')}
-                    className="flex-1 py-4 bg-red-50 hover:bg-red-100 text-red-600 rounded-xl font-bold text-lg transition-colors border-2 border-transparent hover:border-red-200 flex items-center justify-center space-x-2"
-                  >
-                    <span>📉</span>
-                    <span>BAJARÁ</span>
-                  </button>
-                  <button
-                    onClick={() => handlePrediction('UP')}
-                    className="flex-1 py-4 bg-green-50 hover:bg-green-100 text-green-600 rounded-xl font-bold text-lg transition-colors border-2 border-transparent hover:border-green-200 flex items-center justify-center space-x-2"
-                  >
-                    <span>📈</span>
-                    <span>SUBIRÁ</span>
-                  </button>
-                </div>
-              ) : (
-                <div className="text-center animate-in fade-in zoom-in duration-300">
-                  <div className={`text-xl font-bold mb-2 ${lastResult?.correct ? 'text-green-600' : 'text-red-500'}`}>
-                    {lastResult?.correct ? '¡PREDICCIÓN CORRECTA! 🎉' : 'Oops... Predicción fallida ❌'}
-                  </div>
-                  <p className="text-gray-600 mb-6">
-                    El mercado se movió hacia: <strong>{lastResult?.actual === 'UP' ? 'ALZA 📈' : 'BAJA 📉'}</strong>
-                  </p>
-                  <button
+                <button
                     onClick={fetchChallenge}
-                    className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-semibold shadow-lg shadow-indigo-200 transition-all hover:scale-105"
+                    className="mt-4 px-6 py-2 bg-indigo-600 text-white rounded-full font-bold shadow-lg hover:scale-105 transition-transform"
                   >
-                    Siguiente Activo ➔
-                  </button>
-                </div>
-              )}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                    Siguiente ➔
+                </button>
+             </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* 3-Column Layout */}
+        <div className="flex items-center justify-between w-full gap-4 md:gap-8 mt-12">
+           
+           {/* LEFT: BAJA */}
+           <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => gameState === 'playing' && handlePrediction('DOWN')}
+              disabled={gameState !== 'playing'}
+              className={`flex-1 h-64 border-4 border-dashed rounded-2xl flex flex-col items-center justify-center transition-all group
+                ${gameState === 'playing' 
+                  ? 'border-red-300 bg-red-50 hover:bg-red-100 cursor-pointer' 
+                  : 'border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed'}`}
+           >
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">📉</div>
+              <span className={`text-2xl font-black uppercase tracking-wider ${gameState === 'playing' ? 'text-red-600' : 'text-gray-400'}`}>
+                BAJA
+              </span>
+              <span className="text-sm font-medium text-red-400 mt-2 opacity-0 group-hover:opacity-100">
+                (Vender)
+              </span>
+           </motion.button>
+
+           {/* CENTER: ASSET CARD */}
+           <div className="relative w-80 md:w-96 perspective-1000">
+             <AnimatePresence mode='wait'>
+                {challenge && (
+                   <motion.div
+                      key={challenge.id}
+                      initial={{ scale: 0.8, opacity: 0, y: 50 }}
+                      animate={{ scale: 1, opacity: 1, y: 0 }}
+                      exit={{ scale: 0.8, opacity: 0, transition: { duration: 0.2 } }}
+                      className="bg-white rounded-xl shadow-2xl border border-gray-200 p-6 text-center z-10 w-full"
+                   >
+                      <div className="flex justify-between items-center mb-4 border-b border-gray-100 pb-2">
+                        <span className="text-xs font-bold bg-gray-100 text-gray-600 px-2 py-1 rounded">
+                          {challenge.asset.type.toUpperCase()}
+                        </span>
+                        <span className="text-xs text-gray-400">{challenge.asset.sector}</span>
+                      </div>
+                      
+                      <div className="mb-6">
+                        <h2 className="text-4xl font-black text-gray-900 mb-1">{challenge.asset.symbol}</h2>
+                        <p className="text-gray-500 font-medium">{challenge.asset.name}</p>
+                      </div>
+
+                      {/* Mini Chart */}
+                      <div className="h-32 flex items-end justify-between space-x-1 mb-4">
+                        {challenge.data_points.map((value, i) => {
+                           const min = Math.min(...challenge.data_points);
+                           const max = Math.max(...challenge.data_points);
+                           const range = max - min || 1;
+                           const h = ((value - min) / range) * 80 + 10;
+                           return (
+                             <div key={i} className="flex-1 bg-indigo-100 rounded-t-sm relative group">
+                               <div 
+                                 className="absolute bottom-0 left-0 right-0 bg-indigo-500 rounded-t-sm transition-all"
+                                 style={{ height: `${h}%` }}
+                               />
+                             </div>
+                           )
+                        })}
+                        {/* Question Mark Bar */}
+                        <div className="flex-1 flex items-center justify-center text-2xl opacity-50">❓</div>
+                      </div>
+                      
+                      <p className="text-xs text-gray-400">¿Cuál será el siguiente movimiento?</p>
+                   </motion.div>
+                )}
+             </AnimatePresence>
+             
+             {/* Card Stack Effect */}
+             <div className="absolute top-2 left-2 right-[-8px] bottom-[-8px] bg-gray-200 rounded-xl -z-10" />
+           </div>
+
+           {/* RIGHT: ALZA */}
+           <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => gameState === 'playing' && handlePrediction('UP')}
+              disabled={gameState !== 'playing'}
+              className={`flex-1 h-64 border-4 border-dashed rounded-2xl flex flex-col items-center justify-center transition-all group
+                ${gameState === 'playing' 
+                  ? 'border-green-300 bg-green-50 hover:bg-green-100 cursor-pointer' 
+                  : 'border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed'}`}
+           >
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">📈</div>
+              <span className={`text-2xl font-black uppercase tracking-wider ${gameState === 'playing' ? 'text-green-600' : 'text-gray-400'}`}>
+                ALZA
+              </span>
+              <span className="text-sm font-medium text-green-400 mt-2 opacity-0 group-hover:opacity-100">
+                (Comprar)
+              </span>
+           </motion.button>
+        </div>
+
+        <p className="text-gray-400 mt-8 text-sm font-medium animate-pulse">
+           Toca el lado correcto para predecir el mercado
+        </p>
+
+      </div>
     </div>
   );
 }
