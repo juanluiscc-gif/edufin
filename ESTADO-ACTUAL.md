@@ -1,79 +1,59 @@
 # ESTADO ACTUAL DEL PROYECTO - HANDOFF DOCUMENT
 
-**Última actualización:** 2026-01-07 18:10
-**Sesión ID:** cmk30rts20000inoojjmn6nq5
-**Estado:** PENDIENTE - Infraestructura lista, pero lógica de juego y navegación con bugs críticos.
+**Última actualización:** 2026-01-08 17:30
+**Sesión ID:** f82c2142... (AntiGravity)
+**Estado:** ✅ ESTABLE - Funcionalidad Core completa. 3 Juegos Activos.
 
 ---
 
-## 🎯 CONTEXTO INMEDIATO
+## 🎯 LOGROS DE LA SESIÓN
 
-### ¿Qué estábamos haciendo?
-Depurando la carga y ejecución del "Simulación de Negocio Unificado".
+### 1. Juegos (Los 3 Reyes Magos 👑)
+*   **Simulación de Negocio:**
+    *   ✅ Bug de "Mensajes Vacíos" solucionado.
+    *   ✅ Implementada mecánica de "Hoax" (Fraudes/Trampas).
+    *   ✅ Game Over persistente con puntuación.
+*   **Quiz (Historial Crediticio):**
+    *   ✅ **Localizado al Español** (hackeo vía SQL directo).
+    *   ✅ Bug "Juego no encontrado" arreglado (IDs corregidos).
+    *   ⚠️ **Pendiente:** Traducir UI (Timer, Points, Exit Button).
+*   **Puzzle (Necesidad vs Deseo):**
+    *   ✅ **¡FUNCIONANDO!** Se corrigió el filtro de edad ('kid' -> 'both') y el problema de caché.
+    *   ✅ Lógica de juego de clasificación activa.
 
-### ¿Qué completamos hoy?
-1. ✅ **Infraestructura:** Build Vercel arreglado, DB limpia (solo 3 juegos correctos), UI limpia (sin filtros).
-2. ✅ **Navegación Inicial:** El juego unificado carga en `/games/simulation`.
-3. ❌ **Lógica del Juego:** El timer corre pero **no llegan mensajes**.
-4. ❌ **Navegación Final:** Al terminar, redirige a error 404 (`/es/undefined/games`).
-
-### 🐛 BUGS CRÍTICOS A RESOLVER (PRIORIDAD ALTA)
-1. **Redirección Rota (Locale Undefined):**
-   - **Síntoma:** Al salir del juego, va a `.../es/undefined/games`.
-   - **Causa probable:** En `src/app/[locale]/games/simulation/page.tsx`, la variable `locale` llega como `undefined`. En Next.js 15+, `params` suele ser una Promesa o requiere `useParams()` en componentes cliente de forma específica.
-
-2. **Loop de Juego Silencioso (No Messages):**
-   - **Síntoma:** El juego inicia, el reloj avanza, pero no aparece ningún mensaje.
-   - **Causa probable:** `useEffect` en `UnifiedScenarioGame.tsx` no está disparando la carga inicial, o el `conversationManager` devuelve array vacío.
-
----
-
-## 📂 ARCHIVOS CRÍTICOS
-
-### ¿Qué falta?
-1. ⏩ **Pruebas de Jugabilidad:** Jugar una partida completa para verificar balance y eventos.
-2. ⏩ **Verificar Auth:** Confirmar que el juego aparezca en la lista `/games` cuando el usuario está logueado.
-3. ⏩ **Deploy:** Desplegar y probar en Vercel.
+### 2. Contenido Educativo
+*   ✅ **Extracción Exitosa:** Se generó `ALL_LESSONS_CONTENT.md` con el texto completo de las 7 lecciones base.
+*   ✅ **Limpieza de Base de Datos:** Se eliminaron las 25 lecciones duplicadas (fantasmas) y se dejaron solo las 7 reales.
+*   ❌ **Acceso a Lecciones (Bug Identificado):**
+    *   **Síntoma:** Error "Cannot access lesson" al abrir una lección.
+    *   **Causa:** La API (`api/lessons/[id]`) intenta hacer `JSON.parse()` del contenido, pero en la DB guardamos texto Markdown plano.
+    *   **Solución (Próxima Sesión):** Quitar el `JSON.parse` de `src/app/api/lessons/[lessonId]/route.ts`.
 
 ---
 
-## 📂 ARCHIVOS CRÍTICOS
+## 🏗️ PRÓXIMOS PASOS (ROADMAP)
 
-### Nuevos Archivos
-```
-src/app/[locale]/games/simulation/page.tsx   ✅ Creado
-```
+### Inmediato (Next Session)
+1.  **Fix Lecciones:** Editar `src/app/api/lessons/[lessonId]/route.ts` para que acepte texto plano (Markdown) y no rompa el visor.
+2.  **UI Quiz:** Traducir etiquetas "Time", "Points", "Question" en `QuizGame.tsx`.
+3.  **Global Rankings:** Diseñar e implementar el sistema de comparación por edad/país.
 
-### Archivos Modificados
-```
-src/components/games/simulation/UnifiedScenarioGame.tsx  ✅ Lógica de pool real conectada
-prisma/seed.ts                                          ✅ Ejecutado
-```
+### Infraestructural
+- **Persistencia:** Guardar progreso del usuario (Score/Presupuesto) en DB al terminar cada juego.
+- **Traducción:** Usar `ALL_LESSONS_CONTENT.md` para expandir el contenido y volver a inyectarlo.
 
----
-
-## 🏗️ PRÓXIMOS PASOS
-
-### Para el Usuario / Próximo Agente:
-
-#### PASO 1: Probar Jugabilidad
-Inicia sesión en la aplicación y navega a Juegos -> Simulación.
-Juega una partida completa (2 mins) y verifica:
-- Que lleguen mensajes de diferentes tipos.
-- Que funcione el inventario.
-- Que el puntaje final se guarde.
-
-#### PASO 2: Verificar Deploy
-Hacer commit y push de los cambios para que Vercel actualice la versión `edufin-02`.
+### 🔮 EVOLUCIÓN PUZZLE: "Market Predictor" (Machine Learning)
+*   **Visión:** Evolucionar el juego de clasificación simple a un predictor de mercado de valores.
+*   **Mecánica:** Presentar un activo financiero (acción/producto) y el usuario predice tendencia: **Alza 📈** o **Baja 📉**.
+*   **Tecnología:**
+    *   **Data Source:** API de Bolsa de Valores (Tiempo real/Diario).
+    *   **ML:** Modelo de Machine Learning para predecir/validar tendencias futuras.
+    *   **Objetivo:** Enseñar sobre volatilidad y análisis de tendencias.
 
 ---
 
-## 🔮 FUTURO / ESCALABILIDAD (ROADMAP)
-1. **Persistencia de Progreso:**
-   - Una vez que los 3 juegos (Simulación, Quiz, Puzzle) tengan sus versiones "jugables" (MVP), actualizar el esquema de base de datos.
-   - **Requisito:** Crear columna/variable en DB para guardar el puntaje/presupuesto del jugador por juego, permitiendo retomar progreso o "subir de nivel" globalmente.
-   - *Nota:* No implementar SQL individual por juego ahora, esperar al paquete completo.
+## 📂 ARCHIVOS CLAVE GENERADOS
 
-2. **Juegos Faltantes:**
-   - Desarrollar Quiz Game.
-   - Desarrollar Puzzle Game.
+*   `manual_game_update.sql`: Script maestro que limpió duplicados y arregló los juegos en Neon.
+*   `ALL_LESSONS_CONTENT.md`: Backup del contenido educativo para trabajar offline.
+*   `walkthrough.md`: Registro detallado de los cambios técnicos.

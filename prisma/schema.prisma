@@ -430,3 +430,26 @@ model GameSession {
   @@index([status])
   @@map("game_sessions")
 }
+
+// Market Predictor Puzzle System
+model MarketAsset {
+  id          String            @id @default(uuid())
+  symbol      String            @unique // e.g. "AAPL", "BTC", "GOLD"
+  name        String
+  sector      String?           // e.g. "Technology", "Crypto", "Commodities"
+  type        String            // "stock", "crypto", "forex", "utility"
+  challenges  MarketChallenge[]
+}
+
+model MarketChallenge {
+  id          String      @id @default(uuid())
+  asset_id    String
+  date_target DateTime    // The date relative to the data points provided
+  data_points Json        // Array of historical OHLCV data points hidden/shown to user
+  outcome     String      // "UP" (Bull) or "DOWN" (Bear)
+  difficulty  Int         @default(1)
+  
+  asset       MarketAsset @relation(fields: [asset_id], references: [id], onDelete: Cascade)
+
+  @@index([asset_id])
+}

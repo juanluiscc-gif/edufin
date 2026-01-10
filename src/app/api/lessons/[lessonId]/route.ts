@@ -86,14 +86,19 @@ export async function GET(
       },
     });
 
-    // Parse content JSON (always in English from DB)
-    let content;
+    // Parse content
+    // modification: The content is now stored as raw Markdown in the DB, not JSON stringified.
+    // We assign it directly to avoid JSON.parse errors.
+    const content = lesson.content; 
+    /* 
     try {
       content = JSON.parse(lesson.content);
     } catch (error) {
       console.error('[API] Failed to parse lesson content:', error);
-      return NextResponse.json({ error: 'Invalid lesson content' }, { status: 500 });
+      // Fallback to raw content if parse fails, or just use raw content if that's the new standard
+      content = lesson.content;
     }
+    */
 
     // If locale is not English, apply translations from ContentTranslation table
     if (locale !== 'en') {

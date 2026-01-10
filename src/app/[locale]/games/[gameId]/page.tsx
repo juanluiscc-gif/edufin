@@ -5,6 +5,7 @@ import { useParams, useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import QuizGame from '@/components/games/QuizGame';
 import PuzzleGame from '@/components/games/PuzzleGame';
+import MarketPuzzleGame from '@/components/games/MarketPuzzle';
 import ScenarioGame from '@/components/games/ScenarioGame';
 import ResultsModal from '@/components/games/ResultsModal';
 import { GameType } from '@prisma/client';
@@ -170,6 +171,11 @@ export default function GamePage() {
         );
 
       case 'puzzle':
+        // Check if game is the new "Market Predictor" or the old "Needs vs Wants"
+        if (game.id.includes('market') || game.description.includes('stock')) {
+           return <MarketPuzzleGame />;
+        }
+        
         return (
           <PuzzleGame
             gameId={game.id}
